@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./037.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./039.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        .a1[target] {
+            background-color: yellow;
+        }
+        .a2[target=_blank] {
+            background-color: yellow;
+        }
+        .div3 img[title~=flower] {
+            border: 5px solid yellow;
+        }
+        .div4 [class|=top] {
+            background: yellow;
+        }
+        .div5 [class^="top"] {
+            background: yellow;
+        }
+        .div6 [class$="test"] {
+            background: yellow;
+        }
+        .div7 [class*="te"] {
+            background: yellow;
+        }
+        .div8 input[type=text] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            background-color: yellow;
+        }
+        .div8 input[type=button] {
+            width: 120px;
+            margin-left: 35px;
+            display: block;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <p>- The links with a target attribute gets a yellow background:</p>
+                <a class="a1" href="http://www.w3schools.com">w3schools.com</a>
+                <a class="a1" href="http://www.disney.com" target="_blank">disney.com</a>
+                <a class="a1" href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+                <!--new example-->
+                <p>- The link with target="_blank" gets a yellow background:</p>
+                <a class="a2" href="http://www.w3schools.com">w3schools.com</a>
+                <a class="a2" href="http://www.disney.com" target="_blank">disney.com</a>
+                <a class="a2" href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+                <p>
+                    <b>Note:</b> For [<i>attribute</i>] to work in IE8 and earlier, 
+                    a DOCTYPE must be declared.
+                </p>
+                <!--new example-->
+                <p>
+                    - All images with the title attribute containing the word 
+                    "flower" get a yellow border.
+                </p>
+                <div class="div3">
+                    <img src="./images/klematis.jpg" 
+                         title="klematis flower" width="150" height="113">
+                    <img src="./images/img_flwr.gif" 
+                         title="flower" width="224" height="162">
+                    <img src="./images/img_tree.gif" 
+                         title="tree" width="200" height="358">
+                </div>
+                <!--new example-->
+                <div class="div4">                    
+                    <h1 class="top-header">- Welcome</h1>
+                    <p class="top-text">Hello world!</p>
+                    <p class="topcontent">Are you learning CSS?</p>
+                </div>
+                <!--new example-->
+                <div class="div5">                    
+                    <h1 class="top-header">- Welcome</h1>
+                    <p class="top-text">Hello world!</p>
+                    <p class="topcontent">Are you learning CSS?</p>
+                </div>
+                <!--new example-->
+                <div class="div6"> 
+                    <div class="first_test">- The first div element.</div>
+                    <div class="second">The second div element.</div>
+                    <div class="my-test">The third div element.</div>
+                    <p class="mytest">This is some text in a paragraph.</p>
+                </div>
+                <!--new example-->
+                <div class="div7">
+                    <div class="first_test">- The first div element.</div>
+                    <div class="second">The second div element.</div>
+                    <div class="my-test">The third div element.</div>
+                    <p class="mytest">This is some text in a paragraph.</p>
+                </div>
+                <!--new example-->
+                <div class="div8">
+                    <form name="input" action="" method="get">
+                      - Firstname:<input type="text" name="Name" value="Peter" size="20">
+                      Lastname:<input type="text" name="Name" value="Griffin" size="20">
+                      <input type="button" value="Button">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            .a1[target] {
+                background-color: yellow;
+            }
+            .a2[target=_blank] {
+                background-color: yellow;
+            }
+            .div3 img[title~=flower] {
+                border: 5px solid yellow;
+            }
+            .div4 [class|=top] {
+                background: yellow;
+            }
+            .div5 [class^="top"] {
+                background: yellow;
+            }
+            .div6 [class$="test"] {
+                background: yellow;
+            }
+            .div7 [class*="te"] {
+                background: yellow;
+            }
+            .div8 input[type=text] {
+                width: 150px;
+                display: block;
+                margin-bottom: 10px;
+                background-color: yellow;
+            }
+            .div8 input[type=button] {
+                width: 120px;
+                margin-left: 35px;
+                display: block;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &ltp>- The links with a target attribute gets a yellow background:&lt/p>
+        &lta class="a1" href="http://www.w3schools.com">w3schools.com&lt/a>
+        &lta class="a1" href="http://www.disney.com" target="_blank">disney.com&lt/a>
+        &lta class="a1" href="http://www.wikipedia.org" target="_top">wikipedia.org&lt/a>
+        &lt!--new example-->
+        &ltp>- The link with target="_blank" gets a yellow background:&lt/p>
+        &lta class="a2" href="http://www.w3schools.com">w3schools.com&lt/a>
+        &lta class="a2" href="http://www.disney.com" target="_blank">disney.com&lt/a>
+        &lta class="a2" href="http://www.wikipedia.org" target="_top">wikipedia.org&lt/a>
+        &ltp>
+            &ltb>Note:&lt/b> For [&lti>attribute&lt/i>] to work in IE8 and earlier, 
+            a DOCTYPE must be declared.
+        &lt/p>
+        &lt!--new example-->
+        &ltp>
+            - All images with the title attribute containing the word 
+            "flower" get a yellow border.
+        &lt/p>
+        &ltdiv class="div3">
+            &ltimg src="./images/klematis.jpg" 
+                 title="klematis flower" width="150" height="113">
+            &ltimg src="./images/img_flwr.gif" 
+                 title="flower" width="224" height="162">
+            &ltimg src="./images/img_tree.gif" 
+                 title="tree" width="200" height="358">
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div4">                    
+            &lth1 class="top-header">- Welcome&lt/h1>
+            &ltp class="top-text">Hello world!&lt/p>
+            &ltp class="topcontent">Are you learning CSS?&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div5">                    
+            &lth1 class="top-header">- Welcome&lt/h1>
+            &ltp class="top-text">Hello world!&lt/p>
+            &ltp class="topcontent">Are you learning CSS?&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div6"> 
+            &ltdiv class="first_test">- The first div element.&lt/div>
+            &ltdiv class="second">The second div element.&lt/div>
+            &ltdiv class="my-test">The third div element.&lt/div>
+            &ltp class="mytest">This is some text in a paragraph.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div7">
+            &ltdiv class="first_test">- The first div element.&lt/div>
+            &ltdiv class="second">The second div element.&lt/div>
+            &ltdiv class="my-test">The third div element.&lt/div>
+            &ltp class="mytest">This is some text in a paragraph.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div8">
+            &ltform name="input" action="" method="get">
+              - Firstname:&ltinput type="text" name="Name" value="Peter" size="20">
+              Lastname:&ltinput type="text" name="Name" value="Griffin" size="20">
+              &ltinput type="button" value="Button">
+            &lt/form>
+        &lt/div>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./037.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./039.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./013.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./015.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript Objects</h2>
+                <p>- JavaScript objects are containers for named values called 
+                        properties or methods.</p>
+                <p>Objects are Variables Containing Variables</p>
+                <p>Creating and using an object method.</p>
+                <p>An object method is a function definition, stored as a property value.</p>
+                <p id="demo1"></p>
+                <script>
+                    var person = {
+                        firstName: "John",
+                        lastName : "Doe",
+                        id       : 5566,
+                        fullName : function() {
+                           return this.firstName + " " + this.lastName;
+                        }
+                    };
+                    document.getElementById("demo1").innerHTML = person.fullName();
+                </script>
+                <!--new example-->
+                <p>- Using an Object Constructor</p>
+                <p id="demo2"></p>
+                <script>
+                    function person(first, last, age, eye) {
+                        this.firstName = first;
+                        this.lastName = last;
+                        this.age = age;
+                        this.eyeColor = eye;
+                    }
+                    var myFather = new person("John", "Doe", 50, "blue");
+                    var myMother = new person("Sally", "Rally", 48, "green");
+                    document.getElementById("demo2").innerHTML =
+                    "My father is " + myFather.age + ". My mother is " + myMother.age; 
+                </script>
+                <!--new example-->
+                <p>- There is no need to use String(), Number(), Boolean(), Array(), 
+                        and RegExp()</p>
+                <p>Read the JavaScript tutorials.</p>
+                <p id="demo3"></p>
+                <script>
+                    var x1 = new Object();   // A new Object object
+                    var x2 = new String();   // A new String object
+                    var x3 = new Number();   // A new Number object
+                    var x4 = new Boolean();  // A new Boolean object
+                    var x5 = new Array();    // A new Array object
+                    var x6 = new RegExp();   // A new RegExp object
+                    var x7 = new Function(); // A new Function object
+                    var x8 = new Date();     // A new Date object
+                    var x1 = {};
+                    var x2 = "";
+                    var x3 = 0;
+                    var x4 = false;
+                    var x5 = [];
+                    var x6 = /()/;
+                    var x7 = function(){};
+                    document.getElementById("demo3").innerHTML =
+                    "x1: " + typeof x1 + "<br>" +
+                    "x2: " + typeof x2 + "<br>" +
+                    "x3: " + typeof x3 + "<br>" +
+                    "x4: " + typeof x4 + "<br>" +
+                    "x5: " + typeof x5 + "<br>" +
+                    "x6: " + typeof x6 + "<br>" +
+                    "x7: " + typeof x7 + "<br>";
+                </script>
+                <!--new example-->
+                <p>- JavaScript objects are mutable.</p>
+                <p>Any changes to a copy of an object will also change the original.</p>
+                <p id="demo4"></p>
+                <script>
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+                    var x = person;
+                    x.age = 10;
+                    document.getElementById("demo4").innerHTML =
+                    person.firstName + " is " + person.age + " years old.";
+                </script>
+                <!--new example-->
+                <p>- Iteratate through object properties</p>
+                <p id="demo5"></p>
+                <script>
+                    var txt = "";
+                    var person = {fname:"John", lname:"Doe", age:25}; 
+                    var x;
+                    for (x in person) {
+                        txt += person[x] + " ";
+                    }
+                    document.getElementById("demo5").innerHTML = txt;
+                </script>
+                <!--new example-->
+                <p>- You can add and delete object properties.</p>
+                <p id="demo6"></p>
+                <p id="demo7"></p>
+                <script>
+                    var person = {
+                        firstname:"John",
+                        lastname:"Doe",
+                        age:50,
+                        eyecolor:"blue"
+                    };
+                    person.nationality="USA"
+                    document.getElementById("demo6").innerHTML =
+                            person.nationality
+                    delete person.age;
+                    document.getElementById("demo7").innerHTML =
+                            person.firstname + " is " + person.age + " years old.";
+                </script>
+                <!--new example-->
+                <p>- Call object method</p>
+                <p id="demo8"></p>
+                <script>
+                    function person(firstName,lastName,age,eyeColor) {
+                        this.firstName = firstName;
+                        this.lastName = lastName;
+                        this.age = age;
+                        this.eyeColor = eyeColor;
+                        this.changeName = function (name) {
+                            this.lastName = name;
+                        }
+                    }
+                    var myMother = new person("Sally","Rally",48,"green");
+                    myMother.changeName("Doe");
+                    document.getElementById("demo8").innerHTML =
+                    "My mother's last name is " + myMother.lastName;
+                </script>
+                <!--new example-->
+                <p>- The standard way to create an object prototype is to use an 
+                            object constructor function:</p>
+                <p>Adding a new method to an existing object is easy. </p>
+                <p>Adding a new method to an existing prototype is also easy. </p>
+                <p>Modify your own prototypes. Never modify the prototypes of 
+                            standard JavaScript objects.</p>
+                <p id="demo9"></p>
+                <p id="demo10"></p>
+                <p id="demo11"></p>
+                <script>
+                    function Person(first, last, age, eye) {
+                        this.firstName = first;
+                        this.lastName = last;
+                        this.age = age;
+                        this.eyeColor = eye;
+                    }
+                    var myFather = new Person("John", "Doe", 50, "blue");
+                    var myMother = new Person("Sally", "Rally", 48, "green");
+                    myFather.name = function() {
+                        return this.firstName + " " + this.lastName;
+                    };
+                    document.getElementById("demo9").innerHTML =
+                    "My father is " + myFather.name(); 
+
+                    Person.prototype.name = function() {
+                        return this.firstName + " " + this.lastName + "!";
+                    };
+                    document.getElementById("demo10").innerHTML =
+                    "My father is " + myFather.name(); 
+                    document.getElementById("demo11").innerHTML =
+                    "My mother is " + myMother.name(); 
+                </script>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>JavaScript Objects&lt/h2>
+        &ltp>- JavaScript objects are containers for named values called 
+                properties or methods.&lt/p>
+        &ltp>Objects are Variables Containing Variables&lt/p>
+        &ltp>Creating and using an object method.&lt/p>
+        &ltp>An object method is a function definition, stored as a property value.&lt/p>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+            var person = {
+                firstName: "John",
+                lastName : "Doe",
+                id       : 5566,
+                fullName : function() {
+                   return this.firstName + " " + this.lastName;
+                }
+            };
+            document.getElementById("demo1").innerHTML = person.fullName();
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Using an Object Constructor&lt/p>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            function person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+            var myFather = new person("John", "Doe", 50, "blue");
+            var myMother = new person("Sally", "Rally", 48, "green");
+            document.getElementById("demo2").innerHTML =
+            "My father is " + myFather.age + ". My mother is " + myMother.age; 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- There is no need to use String(), Number(), Boolean(), Array(), 
+                and RegExp()&lt/p>
+        &ltp>Read the JavaScript tutorials.&lt/p>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+            var x1 = new Object();   // A new Object object
+            var x2 = new String();   // A new String object
+            var x3 = new Number();   // A new Number object
+            var x4 = new Boolean();  // A new Boolean object
+            var x5 = new Array();    // A new Array object
+            var x6 = new RegExp();   // A new RegExp object
+            var x7 = new Function(); // A new Function object
+            var x8 = new Date();     // A new Date object
+            var x1 = {};
+            var x2 = "";
+            var x3 = 0;
+            var x4 = false;
+            var x5 = [];
+            var x6 = /()/;
+            var x7 = function(){};
+            document.getElementById("demo3").innerHTML =
+            "x1: " + typeof x1 + "&ltbr>" +
+            "x2: " + typeof x2 + "&ltbr>" +
+            "x3: " + typeof x3 + "&ltbr>" +
+            "x4: " + typeof x4 + "&ltbr>" +
+            "x5: " + typeof x5 + "&ltbr>" +
+            "x6: " + typeof x6 + "&ltbr>" +
+            "x7: " + typeof x7 + "&ltbr>";
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- JavaScript objects are mutable.&lt/p>
+        &ltp>Any changes to a copy of an object will also change the original.&lt/p>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+            var x = person;
+            x.age = 10;
+            document.getElementById("demo4").innerHTML =
+            person.firstName + " is " + person.age + " years old.";
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Iteratate through object properties&lt/p>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            var txt = "";
+            var person = {fname:"John", lname:"Doe", age:25}; 
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("demo5").innerHTML = txt;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- You can add and delete object properties.&lt/p>
+        &ltp id="demo6">&lt/p>
+        &ltp id="demo7">&lt/p>
+        &ltscript>
+            var person = {
+                firstname:"John",
+                lastname:"Doe",
+                age:50,
+                eyecolor:"blue"
+            };
+            person.nationality="USA"
+            document.getElementById("demo6").innerHTML =
+                    person.nationality
+            delete person.age;
+            document.getElementById("demo7").innerHTML =
+                    person.firstname + " is " + person.age + " years old.";
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Call object method&lt/p>
+        &ltp id="demo8">&lt/p>
+        &ltscript>
+            function person(firstName,lastName,age,eyeColor) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.eyeColor = eyeColor;
+                this.changeName = function (name) {
+                    this.lastName = name;
+                }
+            }
+            var myMother = new person("Sally","Rally",48,"green");
+            myMother.changeName("Doe");
+            document.getElementById("demo8").innerHTML =
+            "My mother's last name is " + myMother.lastName;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- The standard way to create an object prototype is to use an 
+                    object constructor function:&lt/p>
+        &ltp>Adding a new method to an existing object is easy. &lt/p>
+        &ltp>Adding a new method to an existing prototype is also easy. &lt/p>
+        &ltp>Modify your own prototypes. Never modify the prototypes of 
+                    standard JavaScript objects.&lt/p>
+        &ltp id="demo9">&lt/p>
+        &ltp id="demo10">&lt/p>
+        &ltp id="demo11">&lt/p>
+        &ltscript>
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+            var myFather = new Person("John", "Doe", 50, "blue");
+            var myMother = new Person("Sally", "Rally", 48, "green");
+            myFather.name = function() {
+                return this.firstName + " " + this.lastName;
+            };
+            document.getElementById("demo9").innerHTML =
+            "My father is " + myFather.name(); 
+
+            Person.prototype.name = function() {
+                return this.firstName + " " + this.lastName + "!";
+            };
+            document.getElementById("demo10").innerHTML =
+            "My father is " + myFather.name(); 
+            document.getElementById("demo11").innerHTML =
+            "My mother is " + myMother.name(); 
+        &lt/script>            
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./013.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./015.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

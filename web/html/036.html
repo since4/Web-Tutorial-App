@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./035.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./037.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        .img1 {
+            float: right;
+            margin: 10px 0 10px 10px;
+        }
+        .div2 {
+            border: 3px solid #73AD21;
+        }
+        .img2 {
+            float: right;
+        }
+        .clearfix2 {
+            overflow: auto;
+        }
+        .div3 {
+            border: 3px solid blue;
+        }
+        .clearfix3 {
+            overflow: auto;
+        }
+        .nav3 {
+            float: left;
+            width: 200px;
+            border: 3px solid #73AD21;
+        }
+        .section3 {
+            margin-left: 206px;
+            border: 3px solid red;
+        }
+        .ul4 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        .li4 {
+            float: left;
+        }
+        li a.a4 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a.a4:hover {
+            background-color: #111;
+        }
+        div.container5 {
+            width: 100%;
+            margin: 0px;
+            border: 1px solid gray;
+            line-height: 150%;
+        }
+        div.header5, div.footer5 {
+            padding: 0.5em;
+            color: white;
+            background-color: gray;
+            clear: left;
+        }
+        h1.header5 {
+            padding: 0;
+            margin: 0;
+        }
+        div.left5 {
+            float: left;
+            width: 160px;
+            margin: 0;
+            padding: 1em;
+        }
+        div.content5 {
+            margin-left: 190px;
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+        .floating-box6 {
+            float: left;
+            width: 150px;
+            height: 75px;
+            margin: 10px;
+            border: 3px solid #73AD21;  
+        }
+        .after-box6 {
+            clear: left;
+            border: 3px solid red;      
+        }
+        .floating-box7 {
+            display: inline-block;
+            width: 150px;
+            height: 75px;
+            margin: 10px;
+            border: 3px solid #73AD21;  
+        }
+        .after-box7 {
+            border: 3px solid red; 
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <p>In this example, the image will float to the right in the 
+                    paragraph, and the text in the paragraph will wrap around 
+                    the image.
+                </p>
+                <p style='text-align: justify;'>
+                    <img src="./images/w3css.gif" alt="W3Schools.com" width="100" 
+                        height="140" class='img1'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Phasellus imperdiet, nulla et dictum interdum, nisi lorem 
+                    egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+                    Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. 
+                    Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, 
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis 
+                    urna a lacus interdum ut hendrerit risus congue. Nunc sagittis 
+                    dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero 
+                    sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui 
+                    eget tellus gravida venenatis. Integer fringilla congue eros 
+                    non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac 
+                    leo purus. Mauris quis diam velit.
+                </p>
+                <!--new example-->
+                <p>
+                    In this example, the image is taller than the element 
+                    containing it, and it is floated, so it overflows outside 
+                    of its container:
+                </p>
+                <div class='div2'>
+                    <img class="img2" src="./images/w3css.gif" alt="W3Schools.com" 
+                          width="100" height="140">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Phasellus imperdiet, nulla et dictum interdum...
+                </div>
+                <p style="clear:right">
+                    Add a clearfix class with overflow: auto; to the containing 
+                    element, to fix this problem:
+                </p>
+                <div class="clearfix2 div2">
+                    <img class="img2" src="./images/w3css.gif" 
+                         alt="W3Schools.com" width="100" height="140">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Phasellus imperdiet, nulla et dictum interdum...
+                </div>
+                <!--new example-->
+                <br><br>
+                <div class="clearfix div3">
+                    <nav class='nav3'>
+                      <span>nav</span>
+                        <ul>
+                          <li><a target="_blank" href="/default.asp">Home</a></li>
+                          <li><a target="_blank" href="default.asp">CSS</a></li>
+                          <li><a target="_blank" href="/html/default.asp">HTML</a></li>
+                          <li><a target="_blank" href="/js/default.asp">JavaScript</a></li>
+                        </ul>
+                    </nav>
+                    <section class='section3'>
+                        <span>section</span>
+                        <p>
+                            Notice we have put a clearfix on the div container. 
+                            It is not needed in this example, but it would be 
+                            if the nav element was longer than the non-floated 
+                            section content.
+                        </p>
+                    </section>
+                    <section class='section3'>
+                        <span>section</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Phasellus imperdiet, nulla et dictum interdum, 
+                            nisi lorem egestas odio, vitae scelerisque enim 
+                            ligula venenatis dolor. Maecenas nisl est, ultrices 
+                            nec congue eget, auctor vitae massa. Fusce luctus 
+                            vestibulum augue ut aliquet.
+                        </p>
+                    </section>
+                </div>
+                <!--new example-->
+                <br><br>
+                <ul class='ul4'>
+                  <li class='li4'><a class="a4" href="#home">Home</a></li>
+                  <li class='li4'><a class='a4' href="#news">News</a></li>
+                  <li class='li4'><a class='a4' href="#contact">Contact</a></li>
+                  <li class='li4'><a class='a4' href="#about">About</a></li>
+                </ul>
+                <!--new example-->
+                <br><br>
+                <div>
+                    <div class="container5">
+                        <div class="header5">
+                            <h1 class="header5">W3Schools.com</h1>
+                        </div>
+                        <div class="left5">
+                            <p>"Never increase, beyond what is necessary, 
+                                the number of entities required to explain 
+                                anything." William of Ockham (1285-1349)</p>
+                        </div>
+                        <div class="content5">
+                            <h2>Free Web Building Tutorials</h2>
+                            <p>At W3Schools you will find all the Web-building 
+                                tutorials you need.
+                            </p>
+                            <p>W3Schools.com - The largest Web Developers' Site 
+                                on the internet!
+                            </p>
+                        </div>
+                        <div class="footer5">
+                            © Copyright by Refsnes Data.
+                        </div>
+                    </div>
+                </div>
+                <!--new example-->
+                <h2>The Old Way - using float</h2>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="floating-box6">Floating box</div>
+                <div class="after-box6">Another box, after the floating boxes...</div>
+                <!--new example-->
+                <h2>The inline-block Value</h2>
+                <p>
+                    It has been possible for a long time to create a grid of 
+                    boxes that fills the 
+                    browser width and wraps nicely (when the browser is resized), 
+                    by using the <code class="codespan">float</code> property.
+                </p>
+                <p>
+                    However, the <code class="codespan">inline-block</code> 
+                    value of the <code class="codespan">display</code> 
+                    property makes this even easier.
+                </p>
+                <p>
+                    inline-block elements are like inline elements but they 
+                    can have a width and a height. 
+                </p>              
+                <h2>The New Way - using inline-block</h2>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="floating-box7">Floating box</div>
+                <div class="after-box7">Another box, after the floating boxes...</div>              
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            .img1 {
+                float: right;
+                margin: 10px 0 10px 10px;
+            }
+            .div2 {
+                border: 3px solid #73AD21;
+            }
+            .img2 {
+                float: right;
+            }
+            .clearfix2 {
+                overflow: auto;
+            }
+            .div3 {
+                border: 3px solid blue;
+            }
+            .clearfix3 {
+                overflow: auto;
+            }
+            .nav3 {
+                float: left;
+                width: 200px;
+                border: 3px solid #73AD21;
+            }
+            .section3 {
+                margin-left: 206px;
+                border: 3px solid red;
+            }
+            .ul4 {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            .li4 {
+                float: left;
+            }
+            li a.a4 {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a.a4:hover {
+                background-color: #111;
+            }
+            div.container5 {
+                width: 100%;
+                margin: 0px;
+                border: 1px solid gray;
+                line-height: 150%;
+            }
+            div.header5, div.footer5 {
+                padding: 0.5em;
+                color: white;
+                background-color: gray;
+                clear: left;
+            }
+            h1.header5 {
+                padding: 0;
+                margin: 0;
+            }
+            div.left5 {
+                float: left;
+                width: 160px;
+                margin: 0;
+                padding: 1em;
+            }
+            div.content5 {
+                margin-left: 190px;
+                border-left: 1px solid gray;
+                padding: 1em;
+                overflow: hidden;
+            }
+            .floating-box6 {
+                float: left;
+                width: 150px;
+                height: 75px;
+                margin: 10px;
+                border: 3px solid #73AD21;  
+            }
+            .after-box6 {
+                clear: left;
+                border: 3px solid red;      
+            }
+            .floating-box7 {
+                display: inline-block;
+                width: 150px;
+                height: 75px;
+                margin: 10px;
+                border: 3px solid #73AD21;  
+            }
+            .after-box7 {
+                border: 3px solid red; 
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &ltp>In this example, the image will float to the right in the 
+            paragraph, and the text in the paragraph will wrap around 
+            the image.
+        &lt/p>
+        &ltp style='text-align: justify;'>
+            &ltimg src="./images/w3css.gif" alt="W3Schools.com" width="100" 
+                height="140" class='img1'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem 
+            egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. 
+            Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, 
+            facilisis sed ornare eu, lobortis in odio. Praesent convallis 
+            urna a lacus interdum ut hendrerit risus congue. Nunc sagittis 
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero 
+            sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui 
+            eget tellus gravida venenatis. Integer fringilla congue eros 
+            non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac 
+            leo purus. Mauris quis diam velit.
+        &lt/p>
+        &lt!--new example-->
+        &ltp>
+            In this example, the image is taller than the element 
+            containing it, and it is floated, so it overflows outside 
+            of its container:
+        &lt/p>
+        &ltdiv class='div2'>
+            &ltimg class="img2" src="./images/w3css.gif" alt="W3Schools.com" 
+                  width="100" height="140">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Phasellus imperdiet, nulla et dictum interdum...
+        &lt/div>
+        &ltp style="clear:right">
+            Add a clearfix class with overflow: auto; to the containing 
+            element, to fix this problem:
+        &lt/p>
+        &ltdiv class="clearfix2 div2">
+            &ltimg class="img2" src="./images/w3css.gif" 
+                 alt="W3Schools.com" width="100" height="140">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Phasellus imperdiet, nulla et dictum interdum...
+        &lt/div>
+        &lt!--new example-->
+        &ltbr>&ltbr>
+        &ltdiv class="clearfix div3">
+            &ltnav class='nav3'>
+              &ltspan>nav&lt/span>
+                &ltul>
+                  &ltli>&lta target="_blank" href="/default.asp">Home&lt/a>&lt/li>
+                  &ltli>&lta target="_blank" href="default.asp">CSS&lt/a>&lt/li>
+                  &ltli>&lta target="_blank" href="/html/default.asp">HTML&lt/a>&lt/li>
+                  &ltli>&lta target="_blank" href="/js/default.asp">JavaScript&lt/a>&lt/li>
+                &lt/ul>
+            &lt/nav>
+            &ltsection class='section3'>
+                &ltspan>section&lt/span>
+                &ltp>
+                    Notice we have put a clearfix on the div container. 
+                    It is not needed in this example, but it would be 
+                    if the nav element was longer than the non-floated 
+                    section content.
+                &lt/p>
+            &lt/section>
+            &ltsection class='section3'>
+                &ltspan>section&lt/span>
+                &ltp>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing 
+                    elit. Phasellus imperdiet, nulla et dictum interdum, 
+                    nisi lorem egestas odio, vitae scelerisque enim 
+                    ligula venenatis dolor. Maecenas nisl est, ultrices 
+                    nec congue eget, auctor vitae massa. Fusce luctus 
+                    vestibulum augue ut aliquet.
+                &lt/p>
+            &lt/section>
+        &lt/div>
+        &lt!--new example-->
+        &ltbr>&ltbr>
+        &ltul class='ul4'>
+          &ltli class='li4'>&lta class="a4" href="#home">Home&lt/a>&lt/li>
+          &ltli class='li4'>&lta class='a4' href="#news">News&lt/a>&lt/li>
+          &ltli class='li4'>&lta class='a4' href="#contact">Contact&lt/a>&lt/li>
+          &ltli class='li4'>&lta class='a4' href="#about">About&lt/a>&lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &ltbr>&ltbr>
+        &ltdiv>
+            &ltdiv class="container5">
+                &ltdiv class="header5">
+                    &lth1 class="header5">W3Schools.com&lt/h1>
+                &lt/div>
+                &ltdiv class="left5">
+                    &ltp>"Never increase, beyond what is necessary, 
+                        the number of entities required to explain 
+                        anything." William of Ockham (1285-1349)&lt/p>
+                &lt/div>
+                &ltdiv class="content5">
+                    &lth2>Free Web Building Tutorials&lt/h2>
+                    &ltp>At W3Schools you will find all the Web-building 
+                        tutorials you need.
+                    &lt/p>
+                    &ltp>W3Schools.com - The largest Web Developers' Site 
+                        on the internet!
+                    &lt/p>
+                &lt/div>
+                &ltdiv class="footer5">
+                    © Copyright by Refsnes Data.
+                &lt/div>
+            &lt/div>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>The Old Way - using float&lt/h2>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="floating-box6">Floating box&lt/div>
+        &ltdiv class="after-box6">Another box, after the floating boxes...&lt/div>
+        &lt!--new example-->
+        &lth2>The inline-block Value&lt/h2>
+        &ltp>
+            It has been possible for a long time to create a grid of 
+            boxes that fills the 
+            browser width and wraps nicely (when the browser is resized), 
+            by using the &ltcode class="codespan">float&lt/code> property.
+        &lt/p>
+        &ltp>
+            However, the &ltcode class="codespan">inline-block&lt/code> 
+            value of the &ltcode class="codespan">display&lt/code> 
+            property makes this even easier.
+        &lt/p>
+        &ltp>
+            inline-block elements are like inline elements but they 
+            can have a width and a height. 
+        &lt/p>              
+        &lth2>The New Way - using inline-block&lt/h2>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="floating-box7">Floating box&lt/div>
+        &ltdiv class="after-box7">Another box, after the floating boxes...&lt/div>         
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./035.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./037.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

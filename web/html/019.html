@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./018.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./020.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript HTML DOM Elements (Nodes)</h2>
+                <div id = "example1">
+                    <p>- Change background colour</p>
+                    <p>This is a p element</p>
+                    <p>This is also a p element.</p>
+                    <p>This is also a p element - 
+                        Click the button to change the background color 
+                        of all p elements in this document container(div).</p>
+                </div>
+                <button onclick="myFunction1()">Try it</button>
+                <script>
+                    function myFunction1() {
+                        var nodeclass = document.getElementById("example1")
+                        var myNodelist = nodeclass.getElementsByTagName("p");
+                        var i;
+                        for (i = 0; i < myNodelist.length; i++) {
+                            myNodelist[i].style.backgroundColor = "red";
+                        }
+                    }
+                </script>
+                <!--new example-->
+                <div id="div11">
+                    <p>- 1 Append child</p>
+                    <p id="p11">1 This is a paragraph.</p>
+                    <p id="p21">1 This is another paragraph.</p>
+                </div>
+                <script>
+                    var para = document.createElement("p");
+                    var node = document.createTextNode("1 This is new.");
+                    para.appendChild(node);
+                    var element = document.getElementById("div11");
+                    element.appendChild(para);
+                </script>
+                <!--new example-->
+                <div id="div12">
+                    <p>- 2 Insert child</p>
+                    <p id="p12">2 This is a paragraph.</p>
+                    <p id="p22">2 This is another paragraph.</p>
+                </div>
+                <script>
+                    var para = document.createElement("p");
+                    var node = document.createTextNode("2 This is new.");
+                    para.appendChild(node);
+                    var element = document.getElementById("div12");
+                    var child = document.getElementById("p12");
+                    element.insertBefore(para,child);
+                </script>
+                <!--new example-->
+                <div id="div13">
+                    <p>- 3 Remove child</p>
+                    <p id="p13">3 This is a paragraph.</p>
+                    <p id="p23">3 This is another paragraph.</p>
+                </div>
+                <script>
+                    var parent = document.getElementById("div13");
+                    var child = document.getElementById("p13");
+                    parent.removeChild(child);
+                </script>
+                <!--new example-->
+                <div id="div14">
+                    <p>- 4 Replace child</p>
+                    <p id="p14">4 This is a paragraph.</p>
+                    <p id="p24">4 This is another paragraph.</p>
+                </div>
+                <script>
+                    var parent = document.getElementById("div14");
+                    var child = document.getElementById("p14");
+                    var para = document.createElement("p");
+                    var node = document.createTextNode("This is new.");
+                    para.appendChild(node);
+                    parent.replaceChild(para,child);
+                </script>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>JavaScript HTML DOM Elements (Nodes)&lt/h2>
+        &ltdiv id = "example1">
+            &ltp>- Change background colour&lt/p>
+            &ltp>This is a p element&lt/p>
+            &ltp>This is also a p element.&lt/p>
+            &ltp>This is also a p element - 
+                Click the button to change the background color 
+                of all p elements in this document container(div).&lt/p>
+        &lt/div>
+        &ltbutton onclick="myFunction1()">Try it&lt/button>
+        &ltscript>
+            function myFunction1() {
+                var nodeclass = document.getElementById("example1")
+                var myNodelist = nodeclass.getElementsByTagName("p");
+                var i;
+                for (i = 0; i &lt myNodelist.length; i++) {
+                    myNodelist[i].style.backgroundColor = "red";
+                }
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltdiv id="div11">
+            &ltp>- 1 Append child&lt/p>
+            &ltp id="p11">1 This is a paragraph.&lt/p>
+            &ltp id="p21">1 This is another paragraph.&lt/p>
+        &lt/div>
+        &ltscript>
+            var para = document.createElement("p");
+            var node = document.createTextNode("1 This is new.");
+            para.appendChild(node);
+            var element = document.getElementById("div11");
+            element.appendChild(para);
+        &lt/script>
+        &lt!--new example-->
+        &ltdiv id="div12">
+            &ltp>- 2 Insert child&lt/p>
+            &ltp id="p12">2 This is a paragraph.&lt/p>
+            &ltp id="p22">2 This is another paragraph.&lt/p>
+        &lt/div>
+        &ltscript>
+            var para = document.createElement("p");
+            var node = document.createTextNode("2 This is new.");
+            para.appendChild(node);
+            var element = document.getElementById("div12");
+            var child = document.getElementById("p12");
+            element.insertBefore(para,child);
+        &lt/script>
+        &lt!--new example-->
+        &ltdiv id="div13">
+            &ltp>- 3 Remove child&lt/p>
+            &ltp id="p13">3 This is a paragraph.&lt/p>
+            &ltp id="p23">3 This is another paragraph.&lt/p>
+        &lt/div>
+        &ltscript>
+            var parent = document.getElementById("div13");
+            var child = document.getElementById("p13");
+            parent.removeChild(child);
+        &lt/script>
+        &lt!--new example-->
+        &ltdiv id="div14">
+            &ltp>- 4 Replace child&lt/p>
+            &ltp id="p14">4 This is a paragraph.&lt/p>
+            &ltp id="p24">4 This is another paragraph.&lt/p>
+        &lt/div>
+        &ltscript>
+            var parent = document.getElementById("div14");
+            var child = document.getElementById("p14");
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is new.");
+            para.appendChild(node);
+            parent.replaceChild(para,child);
+        &lt/script>   
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./018.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./020.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

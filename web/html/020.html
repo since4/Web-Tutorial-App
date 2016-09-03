@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./019.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./021.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript HTML DOM Elements</h2>
+                <h3>Finding HTML Elements</h3>
+                <p>- Often, with JavaScript, you want to manipulate HTML elements.</p>
+                <p>To do so, you have to find the elements first. 
+                    There are a couple of ways to do this:</p>
+                <ul>
+                    <li>Finding HTML elements by id</li>
+                    <li>Finding HTML elements by tag name </li>
+                    <li>Finding HTML elements by class name</li>
+                    <li>Finding HTML elements by CSS selectors</li>
+                    <li>Finding HTML elements by HTML object collections</li>
+                </ul>
+                <!--new example-->
+                <p>- Hello World!</p>
+                <div id="main1">
+                    <p>The DOM is very useful.</p>
+                    <p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+                </div>
+                <p id="demo1"></p>
+                <script>
+                    var x = document.getElementById("main1");
+                    var y = x.getElementsByTagName("p");
+                    document.getElementById("demo1").innerHTML =
+                            'The first paragraph (index 0) inside "div class main" is: ' + 
+                            y[0].innerHTML;
+                </script>
+                <!--new example-->
+                <p>- Hello World!</p>
+                <p class="intro2">The DOM is very useful.</p>
+                <p class="intro2">This example demonstrates the 
+                        <b>getElementsByClassName</b> method.</p>
+                <p id="demo2"></p>
+                <script>
+                    var x = document.getElementsByClassName("intro2");
+                    document.getElementById("demo2").innerHTML =
+                            'The first paragraph (index 0) with class="intro2": ' + 
+                                x[0].innerHTML;
+                </script>
+                <!--new example-->
+                <p>- Hello World!</p>
+                <p class="intro3">The DOM is very useful.</p>
+                <p class="intro3">This example demonstrates the 
+                        <b>querySelectorAll</b> method.</p>
+                <div>
+                    If you want to find all HTML elements that matches a specified CSS 
+                    selector (id, class names, types, attributes, values of attributes, 
+                    etc), use the querySelectorAll() method.
+                </div>
+                <p id="demo3"></p>
+                <script>
+                    var x = document.querySelectorAll("p.intro3");
+                    document.getElementById("demo3").innerHTML =
+                            'The first paragraph (index 0) with class="intro3": ' + 
+                                x[0].innerHTML;
+                </script>
+                <!--new example-->
+                <form id="frm14" action="../php/001.html">
+                    - First name: <input type="text" name="fname" value="Donald"><br>
+                    Last name: <input type="text" name="lname" value="Duck"><br><br>
+                    <input type="submit" value="Submit">
+                </form> 
+                <p>Click "Try it" to display the value of each element in the form.</p>
+                <button onclick="myFunction4()">Try it</button>
+                <p id="demo4"></p>
+                <script>
+                    function myFunction4() {
+                        var x = document.forms["frm14"];
+                        var text = "";
+                        var i;
+                        for (i = 0; i < x.length; i++) {
+                            text += x.elements[i].value + "<br>";
+                        }
+                        document.getElementById("demo4").innerHTML = text;
+                    }
+                </script>
+                <!--new example-->
+                <a name="html">- HTML Tutorial</a><br>
+                <a name="css">CSS Tutorial</a><br>
+                <a name="xml">XML Tutorial</a><br>
+                <p id="demo5"></p>
+                <script>
+                    document.getElementById("demo5").innerHTML =
+                            "Number of anchors are: " + document.anchors.length;
+                </script>
+                <!--new example-->
+                <p id="demo6"></p>
+                <script>
+                    alert(document.body.innerHTML);
+                </script>
+                <!--new example-->
+                <p id="demo7"></p>
+                <script>
+                    alert(document.documentElement.innerHTML);
+                </script>
+                <!--new example-->
+                <form action="">
+                    - First name: <input type="text" name="fname" value="Donald">
+                    <input type="submit" value="Submit">
+                </form>
+                <!--new example-->
+                <p id="demo8"></p>
+                <script>
+                    document.getElementById("demo8").innerHTML =
+                            "- Number of forms: " + document.forms.length;
+                </script>
+                <!--new example-->
+                <p id="demo9"></p>
+                <script>
+                    document.getElementById("demo9").innerHTML =
+                            "- Number of embeds: " + document.embeds.length;
+                </script>
+                <!--new example-->
+                <p id="demo10"></p>
+                <script>
+                    document.getElementById("demo10").innerHTML =
+                            "- Document head" + document.head;
+                </script>
+                <!--new example-->
+                <img src="./images/pic_htmltree.gif">
+                <img src="./images/pic_navigate.gif">
+                <p id="demo11"></p>
+                <script>
+                    document.getElementById("demo11").innerHTML =
+                            "- Number of images: " + document.images.length;
+                </script>
+                <!--new example-->
+                <p>
+                    <a href="./images/pic_htmltree.gif">- pic_htmltree</a>
+                    <br>
+                    <a href="./images/pic_navigate.gif">pic_navigate</a>
+                </p>
+                <p id="demo12"></p>
+                <script>
+                    document.getElementById("demo12").innerHTML =
+                            "- Number of links: " + document.links.length;
+                </script>
+                <!--new example-->
+                <p id="demo13"></p>
+                <script>
+                    document.getElementById("demo13").innerHTML =
+                            "- Number of scripts: " + document.scripts.length;
+                </script>
+                <!--new example-->
+                <p id="demo14"></p>
+                <script>
+                    document.getElementById("demo14").innerHTML =
+                            "- The title of this document is: " + document.title;
+                </script>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>JavaScript HTML DOM Elements&lt/h2>
+        &lth3>Finding HTML Elements&lt/h3>
+        &ltp>- Often, with JavaScript, you want to manipulate HTML elements.&lt/p>
+        &ltp>To do so, you have to find the elements first. 
+            There are a couple of ways to do this:&lt/p>
+        &ltul>
+            &ltli>Finding HTML elements by id&lt/li>
+            &ltli>Finding HTML elements by tag name &lt/li>
+            &ltli>Finding HTML elements by class name&lt/li>
+            &ltli>Finding HTML elements by CSS selectors&lt/li>
+            &ltli>Finding HTML elements by HTML object collections&lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &ltp>- Hello World!&lt/p>
+        &ltdiv id="main1">
+            &ltp>The DOM is very useful.&lt/p>
+            &ltp>This example demonstrates the &ltb>getElementsByTagName&lt/b> method&lt/p>
+        &lt/div>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+            var x = document.getElementById("main1");
+            var y = x.getElementsByTagName("p");
+            document.getElementById("demo1").innerHTML =
+                    'The first paragraph (index 0) inside "div class main" is: ' + 
+                    y[0].innerHTML;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Hello World!&lt/p>
+        &ltp class="intro2">The DOM is very useful.&lt/p>
+        &ltp class="intro2">This example demonstrates the 
+                &ltb>getElementsByClassName&lt/b> method.&lt/p>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            var x = document.getElementsByClassName("intro2");
+            document.getElementById("demo2").innerHTML =
+                    'The first paragraph (index 0) with class="intro2": ' + 
+                        x[0].innerHTML;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Hello World!&lt/p>
+        &ltp class="intro3">The DOM is very useful.&lt/p>
+        &ltp class="intro3">This example demonstrates the 
+                &ltb>querySelectorAll&lt/b> method.&lt/p>
+        &ltdiv>
+            If you want to find all HTML elements that matches a specified CSS 
+            selector (id, class names, types, attributes, values of attributes, 
+            etc), use the querySelectorAll() method.
+        &lt/div>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+            var x = document.querySelectorAll("p.intro3");
+            document.getElementById("demo3").innerHTML =
+                    'The first paragraph (index 0) with class="intro3": ' + 
+                        x[0].innerHTML;
+        &lt/script>
+        &lt!--new example-->
+        &ltform id="frm14" action="../php/001.html">
+            - First name: &ltinput type="text" name="fname" value="Donald">&ltbr>
+            Last name: &ltinput type="text" name="lname" value="Duck">&ltbr>&ltbr>
+            &ltinput type="submit" value="Submit">
+        &lt/form> 
+        &ltp>Click "Try it" to display the value of each element in the form.&lt/p>
+        &ltbutton onclick="myFunction4()">Try it&lt/button>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            function myFunction4() {
+                var x = document.forms["frm14"];
+                var text = "";
+                var i;
+                for (i = 0; i &lt x.length; i++) {
+                    text += x.elements[i].value + "&ltbr>";
+                }
+                document.getElementById("demo4").innerHTML = text;
+            }
+        &lt/script>
+        &lt!--new example-->
+        &lta name="html">- HTML Tutorial&lt/a>&ltbr>
+        &lta name="css">CSS Tutorial&lt/a>&ltbr>
+        &lta name="xml">XML Tutorial&lt/a>&ltbr>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            document.getElementById("demo5").innerHTML =
+                    "Number of anchors are: " + document.anchors.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo6">&lt/p>
+        &ltscript>
+            alert(document.body.innerHTML);
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo7">&lt/p>
+        &ltscript>
+            alert(document.documentElement.innerHTML);
+        &lt/script>
+        &lt!--new example-->
+        &ltform action="">
+            - First name: &ltinput type="text" name="fname" value="Donald">
+            &ltinput type="submit" value="Submit">
+        &lt/form>
+        &lt!--new example-->
+        &ltp id="demo8">&lt/p>
+        &ltscript>
+            document.getElementById("demo8").innerHTML =
+                    "- Number of forms: " + document.forms.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo9">&lt/p>
+        &ltscript>
+            document.getElementById("demo9").innerHTML =
+                    "- Number of embeds: " + document.embeds.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo10">&lt/p>
+        &ltscript>
+            document.getElementById("demo10").innerHTML =
+                    "- Document head" + document.head;
+        &lt/script>
+        &lt!--new example-->
+        &ltimg src="./images/pic_htmltree.gif">
+        &ltimg src="./images/pic_navigate.gif">
+        &ltp id="demo11">&lt/p>
+        &ltscript>
+            document.getElementById("demo11").innerHTML =
+                    "- Number of images: " + document.images.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>
+            &lta href="./images/pic_htmltree.gif">- pic_htmltree&lt/a>
+            &ltbr>
+            &lta href="./images/pic_navigate.gif">pic_navigate&lt/a>
+        &lt/p>
+        &ltp id="demo12">&lt/p>
+        &ltscript>
+            document.getElementById("demo12").innerHTML =
+                    "- Number of links: " + document.links.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo13">&lt/p>
+        &ltscript>
+            document.getElementById("demo13").innerHTML =
+                    "- Number of scripts: " + document.scripts.length;
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo14">&lt/p>
+        &ltscript>
+            document.getElementById("demo14").innerHTML =
+                    "- The title of this document is: " + document.title;
+        &lt/script>                 
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./019.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./021.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

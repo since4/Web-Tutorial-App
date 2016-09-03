@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./010.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./012.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript Statements</h2>
+                <p>- Statements are separated by semicolons.</p>
+                <p>The variables x, y, and z are assigned the values 5, 6, and 11:</p>
+                <p id="demo1"></p>
+                <script>
+                    var x = 5;
+                    var y = 6;
+                    var z = x + y;
+                    document.getElementById("demo1").innerHTML = z;
+                </script>
+                <!--new example-->
+                <p>- Number can be written with or without decimals.</p>
+                <p id="demo2"></p>
+                <script>
+                    document.getElementById("demo2").innerHTML = 10.50;
+                </script>
+                <!--new example-->
+                <p>- Strings can be written with double or single quotes.</p>
+                <p id="demo3"></p>
+                <script>
+                    document.getElementById("demo3").innerHTML = 'John Doe';
+                </script>
+                <!--new example-->
+                <p>- JavaScript uses arithmetic operators to compute values 
+                    (just like algebra).</p>
+                <p id="demo4"></p>
+                <script>
+                    document.getElementById("demo4").innerHTML = (5 + 6) * 10;
+                </script>
+                <!--new example-->
+                <p>- Expressions compute to values.</p>
+                <p id="demo5"></p>
+                <script>
+                    document.getElementById("demo5").innerHTML = "John" + " "  + "Doe";
+                </script>
+                <p id="demo6"></p>
+                <script>
+                    var x = 5;
+                    // var x = 6; I will not be executed
+                    document.getElementById("demo6").innerHTML = x;
+                </script>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>JavaScript Statements&lt/h2>
+        &ltp>Statements are separated by semicolons.&lt/p>
+        &ltp>The variables x, y, and z are assigned the values 5, 6, and 11:&lt/p>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+            var x = 5;
+            var y = 6;
+            var z = x + y;
+            document.getElementById("demo1").innerHTML = z;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>Number can be written with or without decimals.&lt/p>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            document.getElementById("demo2").innerHTML = 10.50;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>Strings can be written with double or single quotes.&lt/p>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+            document.getElementById("demo3").innerHTML = 'John Doe';
+        &lt/script>
+        &lt!--new example-->
+        &ltp>JavaScript uses arithmetic operators to compute values 
+            (just like algebra).&lt/p>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            document.getElementById("demo4").innerHTML = (5 + 6) * 10;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>Expressions compute to values.&lt/p>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            document.getElementById("demo5").innerHTML = "John" + " "  + "Doe";
+        &lt/script>
+        &ltp id="demo6">&lt/p>
+        &ltscript>
+            var x = 5;
+            // var x = 6; I will not be executed
+            document.getElementById("demo6").innerHTML = x;
+        &lt/script>  
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./010.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./012.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

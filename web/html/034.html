@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./033.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./035.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        ol.color {
+            background: #ff9999;
+            padding: 20px;
+        }
+        ul.color {
+            background: #3399ff;
+            padding: 20px;
+        }
+        ol li.color {
+            background: #ffe5e5;
+            padding: 5px;
+            margin-left: 35px;
+        }
+        ul li.color {
+            background: #cce5ff;
+            margin: 5px;
+        }
+        #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #customers tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }       
+        .input1[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .input1[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .input1[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .div1 {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .div2 ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+        .div2 li::before {
+            counter-increment: section;
+            content: counters(section,".") " ";
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2></h2>
+                <!--new example-->
+                <h1>Styling Lists With Colors:</h1>
+                <ol class="color">
+                  <li class="color">Coffee</li>
+                  <li class="color">Tea</li>
+                  <li class="color">Coca Cola</li>
+                </ol>
+
+                <ul class="color">
+                  <li class="color">Coffee</li>
+                  <li class="color">Tea</li>
+                  <li class="color">Coca Cola</li>
+                </ul>
+                <!--new example-->
+                <h2>Responsive Table</h2>
+                <p>A responsive table will display a horizontal scroll bar 
+                    if the screen is too 
+                    small to display the full content. Resize the browser window 
+                    to see the effect:
+                </p>
+                <p>To create a responsive table, add a container element 
+                    (like div) with <strong>overflow-x:auto</strong> around 
+                    the table element:
+                </p>
+                <div style="overflow-x:auto;">
+                    <table id="customers">
+                      <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                      </tr>
+                      <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                      </tr>
+                      <tr>
+                        <td>Berglunds snabbköp</td>
+                        <td>Christina Berglund</td>
+                        <td>Sweden</td>
+                      </tr>
+                      <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                      </tr>
+                      <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                      </tr>
+                      <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                      </tr>
+                      <tr>
+                        <td>Königlich Essen</td>
+                        <td>Philip Cramer</td>
+                        <td>Germany</td>
+                      </tr>
+                      <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                      </tr>
+                      <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                      </tr>
+                      <tr>
+                        <td>North/South</td>
+                        <td>Simon Crowther</td>
+                        <td>UK</td>
+                      </tr>
+                      <tr>
+                        <td>Paris spécialités</td>
+                        <td>Marie Bertrand</td>
+                        <td>France</td>
+                      </tr>
+                    </table>
+                </div>
+                <!--new example-->
+                <h3>Using CSS to style a HTML Form</h3>
+                <div class='div1'>
+                  <form action="action_page.php">
+                    <label for="fname">First Name</label>
+                    <input class='input1' type="text" id="fname" name="firstname">
+
+                    <label for="lname">Last Name</label>
+                    <input class='input1' type="text" id="lname" name="lastname">
+
+                    <label for="country">State</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <input class='input1' type="submit" value="Submit">
+                  </form>
+                </div>
+                <!--new example-->
+                <div class="div2">
+                    <ol>
+                      <li>item</li>
+                      <li>item     
+                        <ol>
+                          <li>item</li>
+                          <li>item</li>
+                          <li>item
+                            <ol>
+                              <li>item</li>
+                              <li>item</li>
+                              <li>item</li>
+                            </ol>
+                          </li>
+                          <li>item</li>
+                        </ol>
+                      </li>
+                      <li>item</li>
+                      <li>item</li>
+                    </ol>
+                    <ol>
+                      <li>item</li>
+                      <li>item</li>
+                    </ol>
+                </div>              
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            ol.color {
+                background: #ff9999;
+                padding: 20px;
+            }
+            ul.color {
+                background: #3399ff;
+                padding: 20px;
+            }
+            ol li.color {
+                background: #ffe5e5;
+                padding: 5px;
+                margin-left: 35px;
+            }
+            ul li.color {
+                background: #cce5ff;
+                margin: 5px;
+            }
+            #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #customers tr:nth-child(even){
+                background-color: #f2f2f2;
+            }
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }       
+            .input1[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            .input1[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .input1[type=submit]:hover {
+                background-color: #45a049;
+            }
+            .div1 {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            .div2 ol {
+                counter-reset: section;
+                list-style-type: none;
+            }
+            .div2 li::before {
+                counter-increment: section;
+                content: counters(section,".") " ";
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &lth1>Styling Lists With Colors:&lt/h1>
+        &ltol class="color">
+          &ltli class="color">Coffee&lt/li>
+          &ltli class="color">Tea&lt/li>
+          &ltli class="color">Coca Cola&lt/li>
+        &lt/ol>
+
+        &ltul class="color">
+          &ltli class="color">Coffee&lt/li>
+          &ltli class="color">Tea&lt/li>
+          &ltli class="color">Coca Cola&lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &lth2>Responsive Table&lt/h2>
+        &ltp>A responsive table will display a horizontal scroll bar 
+            if the screen is too 
+            small to display the full content. Resize the browser window 
+            to see the effect:
+        &lt/p>
+        &ltp>To create a responsive table, add a container element 
+            (like div) with &ltstrong>overflow-x:auto&lt/strong> around 
+            the table element:
+        &lt/p>
+        &ltdiv style="overflow-x:auto;">
+            &lttable id="customers">
+              &lttr>
+                &ltth>Company&lt/th>
+                &ltth>Contact&lt/th>
+                &ltth>Country&lt/th>
+              &lt/tr>
+              &lttr>
+                &lttd>Alfreds Futterkiste&lt/td>
+                &lttd>Maria Anders&lt/td>
+                &lttd>Germany&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Berglunds snabbköp&lt/td>
+                &lttd>Christina Berglund&lt/td>
+                &lttd>Sweden&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Centro comercial Moctezuma&lt/td>
+                &lttd>Francisco Chang&lt/td>
+                &lttd>Mexico&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Ernst Handel&lt/td>
+                &lttd>Roland Mendel&lt/td>
+                &lttd>Austria&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Island Trading&lt/td>
+                &lttd>Helen Bennett&lt/td>
+                &lttd>UK&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Königlich Essen&lt/td>
+                &lttd>Philip Cramer&lt/td>
+                &lttd>Germany&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Laughing Bacchus Winecellars&lt/td>
+                &lttd>Yoshi Tannamuri&lt/td>
+                &lttd>Canada&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Magazzini Alimentari Riuniti&lt/td>
+                &lttd>Giovanni Rovelli&lt/td>
+                &lttd>Italy&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>North/South&lt/td>
+                &lttd>Simon Crowther&lt/td>
+                &lttd>UK&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>Paris spécialités&lt/td>
+                &lttd>Marie Bertrand&lt/td>
+                &lttd>France&lt/td>
+              &lt/tr>
+            &lt/table>
+        &lt/div>
+        &lt!--new example-->
+        &lth3>Using CSS to style a HTML Form&lt/h3>
+        &ltdiv class='div1'>
+          &ltform action="action_page.php">
+            &ltlabel for="fname">First Name&lt/label>
+            &ltinput class='input1' type="text" id="fname" name="firstname">
+
+            &ltlabel for="lname">Last Name&lt/label>
+            &ltinput class='input1' type="text" id="lname" name="lastname">
+
+            &ltlabel for="country">State&lt/label>
+            &ltselect id="country" name="country">
+              &ltoption value="australia">Australia&lt/option>
+              &ltoption value="canada">Canada&lt/option>
+              &ltoption value="usa">USA&lt/option>
+            &lt/select>
+            &ltinput class='input1' type="submit" value="Submit">
+          &lt/form>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div2">
+            &ltol>
+              &ltli>item&lt/li>
+              &ltli>item     
+                &ltol>
+                  &ltli>item&lt/li>
+                  &ltli>item&lt/li>
+                  &ltli>item
+                    &ltol>
+                      &ltli>item&lt/li>
+                      &ltli>item&lt/li>
+                      &ltli>item&lt/li>
+                    &lt/ol>
+                  &lt/li>
+                  &ltli>item&lt/li>
+                &lt/ol>
+              &lt/li>
+              &ltli>item&lt/li>
+              &ltli>item&lt/li>
+            &lt/ol>
+            &ltol>
+              &ltli>item&lt/li>
+              &ltli>item&lt/li>
+            &lt/ol>
+        &lt/div>       
+        &lt/code>
+        &lt/pre>
+        &lt/div>
+    &lt/div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./033.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./035.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

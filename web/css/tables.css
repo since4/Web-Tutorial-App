@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 20, 2016, 3:36:49 PM
+    Author     : benzro
+*/
+
+/*anker tags*/
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/*fancy table*/
+table.fancy_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /*makes equal column width*/
+}
+table.fancy_table td, table.fancy_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+table.fancy_table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table.fancy_table tr:hover {
+    background-color: #ddd;
+}
+table.fancy_table th {
+    width: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*simple table*/
+table.simple_table {
+    /*center a div box of fixed width*/
+    margin: 0px auto;
+    width: 90%; 
+    padding: 50px;
+    background-color: lightgray;
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Header navigation-->
+        
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./012.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./014.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript Functions</h2>
+                <p>- This example calls a function which performs a calculation, 
+                            and returns the result:</p>
+                <p id="demo1"></p>
+                <script>
+                    function myFunction1(a, b) {
+                        return a * b;
+                    }
+                    document.getElementById("demo1").innerHTML = myFunction1(4, 3);
+                </script>
+                <!--new example-->
+                <p>- Accessing a function without (), will return the function 
+                            definition:</p>
+                <p id="demo2"></p>
+                <script>
+                    function toCelsius(f) {
+                        return (5 / 9) * (f - 32);
+                    }
+                    document.getElementById("demo2").innerHTML = toCelsius;
+                </script>
+                <!--new example-->
+                <p>- A function expression can be stored in a variable:</p>
+                <p>After a function has been stored in a variable,
+                    the variable can be used as a function:</p>
+                <p id="demo3"></p>
+                <script>
+                    var x = function (a, b) {
+                        return a * b
+                    };
+                    document.getElementById("demo3").innerHTML = x(4, 3);
+                </script>
+                <!--new example-->
+                <p>- Functions can be invoked automatically without being called:</p>
+                <p id="demo4"></p>
+                <script>
+                    (function () {
+                        document.getElementById("demo4").innerHTML = "Hello! I called myself";
+                    })();
+                </script>
+                <!--new example-->
+                <p>- Normal function definition</p>
+                <p id="demo5"></p>
+                <script>
+                    function myFunction5(x, y) {
+                        if (y === undefined) {
+                            y = 0;
+                        }
+                        return x * y;
+                    }
+                    document.getElementById("demo5").innerHTML = myFunction5(4);
+                </script>
+                <!--new example-->
+                <p>- JavaScript functions have a built-in object called the 
+                        arguments object.</p>
+                <p>The argument object contains an array of the arguments used 
+                        when the function was called (invoked).</p>
+                <p>Finding the largest number.</p>
+                <p id="demo6"></p>
+                <script>
+                    function findMax() {
+                        var i;
+                        var max = -Infinity;
+                        for (i = 0; i < arguments.length; i++) {
+                            if (arguments[i] > max) {
+                                max = arguments[i];
+                            }
+                        }
+                        return max;
+                    }
+                    document.getElementById("demo6").innerHTML = findMax(4, 5, 6);
+                </script>
+                <!--new example-->
+                <p>- Arguments are Passed by Value</p>
+                <p>Changes to arguments are not visible (reflected) outside the function.</p>
+                <p>Objects are Passed by Reference</p>
+                <p>Objects are Passed by Reference</p>
+                <p>A global function like myFunction() automatically becomes a window method.</p>
+                <p>myFunction() is the same as window.myFunction().</p>
+                <p id="demo7"></p>
+                <script>
+                    function myFunction(a, b) {
+                        return a * b;
+                    }
+                    document.getElementById("demo7").innerHTML = window.myFunction(10, 2); 
+                </script>
+                <!--new example-->
+                <p>- myObject.fullName() will return John Doe:</p>
+                <p id="demo8"></p>
+                <script>
+                    var myObject = {
+                        firstName:"John",
+                        lastName: "Doe",
+                        fullName: function() {
+                            return this.firstName + " " + this.lastName;
+                        }
+                    }
+                    document.getElementById("demo8").innerHTML = myObject.fullName(); 
+                </script>
+                <!--new example-->
+                <p>- In this example, myFunction is a function constructor:</p>
+                <p id="demo9"></p>
+                <script>
+                    function myFunction(arg1, arg2) {
+                        this.firstName = arg1;
+                        this.lastName  = arg2;
+                    }
+                    var x = new myFunction("John","Doe")
+                    document.getElementById("demo9").innerHTML = x.firstName; 
+                </script>
+                <!--new example-->
+                <p>- call() and apply() are predefined JavaScript function methods. </p>
+                <p>Both methods can be used to invoke a function, and both methods 
+                        must have the owner object as first parameter. </p>
+                <p id="demo10"></p>
+                <script>
+                    var myObject;
+                    function myFunction(a, b) {
+                        return a * b;
+                    }
+                    myObject = myFunction.call(myObject, 10, 2);    // Will return 20 
+                    document.getElementById("demo10").innerHTML = myObject; 
+                </script>
+                <!--new example-->
+                <p id="demo11"></p>
+                <script>
+                    var myObject, myArray;
+                    function myFunction(a, b) {
+                        return a * b;
+                    }
+                    myArray = [10, 2];
+                    myObject = myFunction.apply(myObject, myArray);      // Will return 20 
+                    document.getElementById("demo11").innerHTML = myObject; 
+                </script>
+                <!--new example-->
+                <p>- Variables created without the keyword var, are always global, 
+                        even if they are created inside a function.</p>
+                <p>A function can access variables defined outside the function:</p>
+                <button type="button" onclick="myFunction1()">Click Me!</button>
+                <p id="demo12"></p>
+                <script>
+                    var a = 4;
+                    function myFunction1() {
+                        document.getElementById("demo12").innerHTML = a * a;
+                    } 
+                </script>
+                <!--new example-->
+                <p>- JavaScript supports nested functions. Nested functions have 
+                        access to the scope "above" them. </p>
+                <p>Counting with a local variable.</p>
+                <p id="demo13">0</p>
+                <script>
+                    document.getElementById("demo13").innerHTML = add();
+                    function add() {
+                        var counter = 0;
+                        function plus() {counter += 1;}
+                        plus();    
+                        return counter; 
+                    }
+                </script>
+                <!--new example-->
+                <div>
+                    - A closure is a function having access to the parent 
+                    scope, even after the parent function has closed.
+                    The variable add is assigned the return value of 
+                    a self-invoking function.
+                    The self-invoking function only runs once. It sets 
+                    the counter to zero (0), and returns a function expression.
+                    This way add becomes a function. The "wonderful" part 
+                    is that it can access the counter in the parent scope.
+                    This is called a JavaScript closure. It makes it 
+                    possible for a function to have "private" variables.
+                    The counter is protected by the scope of the anonymous 
+                    function, and can only be changed using the add function.
+                </div>
+                <p>Counting with a local variable.</p>
+                <button type="button" onclick="myFunction2()">Count!</button>
+                <p id="demo14">0</p>
+                <script>
+                    var add = (function () {
+                        var counter = 0;
+                        return function () {return counter += 1;}
+                    })();
+
+                    function myFunction2(){
+                        document.getElementById("demo14").innerHTML = add();
+                    }
+                </script>       
+            </div>
+        </div>
+
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>JavaScript Functions&lt/h2>
+        &ltp>- This example calls a function which performs a calculation, 
+                    and returns the result:&lt/p>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+            function myFunction1(a, b) {
+                return a * b;
+            }
+            document.getElementById("demo1").innerHTML = myFunction1(4, 3);
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Accessing a function without (), will return the function 
+                    definition:&lt/p>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            function toCelsius(f) {
+                return (5 / 9) * (f - 32);
+            }
+            document.getElementById("demo2").innerHTML = toCelsius;
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- A function expression can be stored in a variable:&lt/p>
+        &ltp>After a function has been stored in a variable,
+            the variable can be used as a function:&lt/p>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+            var x = function (a, b) {
+                return a * b
+            };
+            document.getElementById("demo3").innerHTML = x(4, 3);
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Functions can be invoked automatically without being called:&lt/p>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            (function () {
+                document.getElementById("demo4").innerHTML = "Hello! I called myself";
+            })();
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Normal function definition&lt/p>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            function myFunction5(x, y) {
+                if (y === undefined) {
+                    y = 0;
+                }
+                return x * y;
+            }
+            document.getElementById("demo5").innerHTML = myFunction5(4);
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- JavaScript functions have a built-in object called the 
+                arguments object.&lt/p>
+        &ltp>The argument object contains an array of the arguments used 
+                when the function was called (invoked).&lt/p>
+        &ltp>Finding the largest number.&lt/p>
+        &ltp id="demo6">&lt/p>
+        &ltscript>
+            function findMax() {
+                var i;
+                var max = -Infinity;
+                for (i = 0; i &lt arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById("demo6").innerHTML = findMax(4, 5, 6);
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Arguments are Passed by Value&lt/p>
+        &ltp>Changes to arguments are not visible (reflected) outside the function.&lt/p>
+        &ltp>Objects are Passed by Reference&lt/p>
+        &ltp>Objects are Passed by Reference&lt/p>
+        &ltp>A global function like myFunction() automatically becomes a window method.&lt/p>
+        &ltp>myFunction() is the same as window.myFunction().&lt/p>
+        &ltp id="demo7">&lt/p>
+        &ltscript>
+            function myFunction(a, b) {
+                return a * b;
+            }
+            document.getElementById("demo7").innerHTML = window.myFunction(10, 2); 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- myObject.fullName() will return John Doe:&lt/p>
+        &ltp id="demo8">&lt/p>
+        &ltscript>
+            var myObject = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            document.getElementById("demo8").innerHTML = myObject.fullName(); 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- In this example, myFunction is a function constructor:&lt/p>
+        &ltp id="demo9">&lt/p>
+        &ltscript>
+            function myFunction(arg1, arg2) {
+                this.firstName = arg1;
+                this.lastName  = arg2;
+            }
+            var x = new myFunction("John","Doe")
+            document.getElementById("demo9").innerHTML = x.firstName; 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- call() and apply() are predefined JavaScript function methods. &lt/p>
+        &ltp>Both methods can be used to invoke a function, and both methods 
+            must have the owner object as first parameter. &lt/p>
+        &ltp id="demo10">&lt/p>
+        &ltscript>
+            var myObject;
+            function myFunction(a, b) {
+                return a * b;
+            }
+            myObject = myFunction.call(myObject, 10, 2);    // Will return 20 
+            document.getElementById("demo10").innerHTML = myObject; 
+        &lt/script>
+        &lt!--new example-->
+        &ltp id="demo11">&lt/p>
+        &ltscript>
+            var myObject, myArray;
+            function myFunction(a, b) {
+                return a * b;
+            }
+            myArray = [10, 2];
+            myObject = myFunction.apply(myObject, myArray);      // Will return 20 
+            document.getElementById("demo11").innerHTML = myObject; 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Variables created without the keyword var, are always global, 
+            even if they are created inside a function.&lt/p>
+        &ltp>A function can access variables defined outside the function:&lt/p>
+        &ltbutton type="button" onclick="myFunction1()">Click Me!&lt/button>
+        &ltp id="demo12">&lt/p>
+        &ltscript>
+            var a = 4;
+            function myFunction1() {
+                document.getElementById("demo12").innerHTML = a * a;
+            } 
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- JavaScript supports nested functions. Nested functions 
+            have access to the scope "above" them. &lt/p>
+        &ltp>Counting with a local variable.&lt/p>
+        &ltp id="demo13">0&lt/p>
+        &ltscript>
+            document.getElementById("demo13").innerHTML = add();
+            function add() {
+                var counter = 0;
+                function plus() {counter += 1;}
+                plus();    
+                return counter; 
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltdiv>
+            - A closure is a function having access to the parent 
+            scope, even after the parent function has closed.
+            The variable add is assigned the return value of a 
+            self-invoking function.
+            The self-invoking function only runs once. It sets the 
+            counter to zero (0), and returns a function expression.
+            This way add becomes a function. The "wonderful" part 
+            is that it can access the counter in the parent scope.
+            This is called a JavaScript closure. It makes it possible 
+            for a function to have "private" variables.
+            The counter is protected by the scope of the anonymous 
+            function, and can only be changed using the add function.
+        &lt/div>
+        &ltp>Counting with a local variable.&lt/p>
+        &ltbutton type="button" onclick="myFunction2()">Count!&lt/button>
+        &ltp id="demo14">0&lt/p>
+        &ltscript>
+            var add = (function () {
+                var counter = 0;
+                return function () {return counter += 1;}
+            })();
+
+            function myFunction2(){
+                document.getElementById("demo14").innerHTML = add();
+            }
+        &lt/script> 
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./012.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./014.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

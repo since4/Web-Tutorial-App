@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./038.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./040.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        .div1 p {
+            background-color: yellow;
+        }
+        .div2 > p {
+            background-color: yellow;
+        }
+        .div3 + p {
+            background-color: yellow;
+        }
+        .div4 ~ p {
+            background-color: yellow;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <h2>CSS Combinators</h2>
+                <div>
+                  <p>
+                      A combinator is something that explains the relationship 
+                      between the selectors.
+                  </p>
+                </div>
+                <p>
+                    A CSS selector can contain more than one simple selector. 
+                    Between the simple 
+                    selectors, we can include a combinator.
+                </p>
+                <p>There are four different combinators in CSS3:</p>
+                <ul>
+                    <li>descendant selector (space)</li>
+                    <li>child selector (&gt;)</li>
+                    <li>adjacent sibling selector (+)</li>
+                    <li>general sibling selector (~)</li>
+                </ul>
+                <!--new example-->
+                <h2>Descendant Selector</h2>
+                <div class="div1">
+                  <p>- Paragraph 1 in the div.</p>
+                  <p>Paragraph 2 in the div.</p>
+                  <span><p>Paragraph 3 in the div.</p></span>
+                </div>
+                <p>Paragraph 4. Not in a div.</p>
+                <p>Paragraph 5. Not in a div.</p>               
+                <!--new example-->
+                <h2>Child Selector</h2>
+                <div class="div2">
+                  <p>- Paragraph 1 in the div.</p>
+                  <p>Paragraph 2 in the div.</p>
+                  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+                </div>
+                <p>Paragraph 4. Not in a div.</p>
+                <p>Paragraph 5. Not in a div.</p>
+                <!--new example-->
+                <h2>Adjacent Sibling Selector</h2>
+                <div class="div3">
+                  <p>- Paragraph 1 in the div.</p>
+                  <p>Paragraph 2 in the div.</p>
+                </div>
+                <p>Paragraph 3. Not in a div.</p>
+                <p>Paragraph 4. Not in a div.</p>
+                <!--new example-->
+                <h2>General Sibling Selector</h2>
+                <div class="div4">
+                  <p>- Paragraph 1 in the div.</p>
+                  <p>Paragraph 2 in the div.</p>
+                </div>
+                <p>Paragraph 3. Not in a div.</p>
+                <p>Paragraph 4. Not in a div.</p>               
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            .div1 p {
+                background-color: yellow;
+            }
+            .div2 > p {
+                background-color: yellow;
+            }
+            .div3 + p {
+                background-color: yellow;
+            }
+            .div4 ~ p {
+                background-color: yellow;
+            }
+        &lt/style>
+        &lt!--Body content-->
+         &lt!--new example-->
+        &lth2>CSS Combinators&lt/h2>
+        &ltdiv>
+          &ltp>
+              A combinator is something that explains the relationship 
+              between the selectors.
+          &lt/p>
+        &lt/div>
+        &ltp>
+            A CSS selector can contain more than one simple selector. 
+            Between the simple 
+            selectors, we can include a combinator.
+        &lt/p>
+        &ltp>There are four different combinators in CSS3:&lt/p>
+        &ltul>
+            &ltli>descendant selector (space)&lt/li>
+            &ltli>child selector (&gt;)&lt/li>
+            &ltli>adjacent sibling selector (+)&lt/li>
+            &ltli>general sibling selector (~)&lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &lth2>Descendant Selector&lt/h2>
+        &ltdiv class="div1">
+          &ltp>- Paragraph 1 in the div.&lt/p>
+          &ltp>Paragraph 2 in the div.&lt/p>
+          &ltspan>&ltp>Paragraph 3 in the div.&lt/p>&lt/span>
+        &lt/div>
+        &ltp>Paragraph 4. Not in a div.&lt/p>
+        &ltp>Paragraph 5. Not in a div.&lt/p>               
+        &lt!--new example-->
+        &lth2>Child Selector&lt/h2>
+        &ltdiv class="div2">
+          &ltp>- Paragraph 1 in the div.&lt/p>
+          &ltp>Paragraph 2 in the div.&lt/p>
+          &ltspan>&ltp>Paragraph 3 in the div.&lt/p>&lt/span> &lt!-- not Child but Descendant -->
+        &lt/div>
+        &ltp>Paragraph 4. Not in a div.&lt/p>
+        &ltp>Paragraph 5. Not in a div.&lt/p>
+        &lt!--new example-->
+        &lth2>Adjacent Sibling Selector&lt/h2>
+        &ltdiv class="div3">
+          &ltp>- Paragraph 1 in the div.&lt/p>
+          &ltp>Paragraph 2 in the div.&lt/p>
+        &lt/div>
+        &ltp>Paragraph 3. Not in a div.&lt/p>
+        &ltp>Paragraph 4. Not in a div.&lt/p>
+        &lt!--new example-->
+        &lth2>General Sibling Selector&lt/h2>
+        &ltdiv class="div4">
+          &ltp>- Paragraph 1 in the div.&lt/p>
+          &ltp>Paragraph 2 in the div.&lt/p>
+        &lt/div>
+        &ltp>Paragraph 3. Not in a div.&lt/p>
+        &ltp>Paragraph 4. Not in a div.&lt/p> 
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./038.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./040.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

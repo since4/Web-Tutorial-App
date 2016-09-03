@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./029.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./031.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        div.boxmodel1 {
+            background-color: lightgrey;
+            width: 500px;
+            border: 25px solid green;
+            padding: 25px;
+            margin: 25px;
+        }
+        div.boxmodel2 {
+            width: 350px;
+            padding: 10px;
+            border: 5px solid gray;
+            margin: 5px;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2>Demonstrating the Box Model</h2>
+                <p>The CSS box model is essentially a box that wraps around 
+                    every HTML element. It consists of: borders, padding, 
+                    margins, and the actual content.</p>
+                <div class="boxmodel1">
+                    This text is the actual content of the box. 
+                    We have added a 25px padding, 25px margin and 
+                    a 25px green border. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim 
+                    id est laborum.
+                </div>
+                <h2>Width and Height of an Element</h2>
+                <p>In order to set the width and height of an element correctly 
+                    in all browsers, you need to know how the box model works.</p>       
+                <img src="./images/Boxmodel.png" width="350" height="263" 
+                     alt="CSS/HTML Boxmodel">
+                <div class="w3-panel w3-note">
+                  <p><b>Important:</b> When you set the width and height 
+                      properties of an element with CSS, you just set the 
+                      width and height of the <b>content area</b>. To 
+                      calculate the full size of an element, you must 
+                      also add padding, borders and margins.(not in Firefox)</p>
+                </div>
+                <p>Assume we want to style a &lt;div&gt; 
+                    element to have a total width of 350px:</p>                              
+                <h2>Calculate the total width:</h2>
+                <img src="./images/klematis4_big.jpg" width="350" height="263" 
+                     alt="Klematis">
+                <div class="boxmodel2">The picture above is 350px wide. 
+                    The total width of this element is also 350px.
+                    But only at http://www.w3schools.com/css/css_boxmodel.asp
+                    not on my Webproject loaded in Firefox.  (see remark below)
+                </div>
+                <p>Here is the math:<br>
+                </p><div class="w3-leftbar w3-border w3-padding w3-theme-border">
+                320px (width)<br>
+                + 20px (left + right padding)<br>
+                + 10px (left + right border)<br>
+                + 0px (left + right margin)<br>
+                <strong>= 350px
+                </strong>
+                </div>
+                <p>The total width of an element should be calculated like this:</p>
+                <p>Total element width = width + left padding + right padding + left 
+                border + right border + left margin + right margin</p>
+                <p>The total height of an element should be calculated like this:</p>
+                <p>Total element height = height + top padding + bottom padding + top 
+                border + bottom border + top margin + bottom margin</p>
+                <p><strong>Note for old IE:</strong> Internet Explorer 8 and 
+                    earlier versions, include padding and border in the width property.
+                    To fix this problem, add a &lt;!DOCTYPE html&gt; to the HTML page.</p>               
+                <p><strong>Note for FIREFOX:</strong> width property seems to be:
+                    width=content+2*padding+2*border</p>                   
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            div.boxmodel1 {
+                background-color: lightgrey;
+                width: 500px;
+                border: 25px solid green;
+                padding: 25px;
+                margin: 25px;
+            }
+            div.boxmodel2 {
+                width: 350px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 5px;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lth2>Demonstrating the Box Model&lt/h2>
+        &ltp>The CSS box model is essentially a box that wraps around 
+            every HTML element. It consists of: borders, padding, 
+            margins, and the actual content.&lt/p>
+        &ltdiv class="boxmodel1">
+            This text is the actual content of the box. 
+            We have added a 25px padding, 25px margin and 
+            a 25px green border. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi 
+            ut aliquip ex ea commodo consequat. Duis aute 
+            irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim 
+            id est laborum.
+        &lt/div>
+        &lth2>Width and Height of an Element&lt/h2>
+        &ltp>In order to set the width and height of an element correctly 
+            in all browsers, you need to know how the box model works.&lt/p>       
+        &ltimg src="./images/Boxmodel.png" width="350" height="263" 
+             alt="CSS/HTML Boxmodel">
+        &ltdiv class="w3-panel w3-note">
+          &ltp>&ltb>Important:&lt/b> When you set the width and height 
+              properties of an element with CSS, you just set the 
+              width and height of the &ltb>content area&lt/b>. To 
+              calculate the full size of an element, you must 
+              also add padding, borders and margins.(not in Firefox)&lt/p>
+        &lt/div>
+        &ltp>Assume we want to style a &lt;div&gt; 
+            element to have a total width of 350px:&lt/p>                              
+        &lth2>Calculate the total width:&lt/h2>
+        &ltimg src="./images/klematis4_big.jpg" width="350" height="263" 
+             alt="Klematis">
+        &ltdiv class="boxmodel2">The picture above is 350px wide. 
+            The total width of this element is also 350px.
+            But only at http://www.w3schools.com/css/css_boxmodel.asp
+            not on my Webproject loaded in Firefox.  (see remark below)
+        &lt/div>
+        &ltp>Here is the math:&ltbr>
+        &lt/p>&ltdiv class="w3-leftbar w3-border w3-padding w3-theme-border">
+        320px (width)&ltbr>
+        + 20px (left + right padding)&ltbr>
+        + 10px (left + right border)&ltbr>
+        + 0px (left + right margin)&ltbr>
+        &ltstrong>= 350px
+        &lt/strong>
+        &lt/div>
+        &ltp>The total width of an element should be calculated like this:&lt/p>
+        &ltp>Total element width = width + left padding + right padding + left 
+        border + right border + left margin + right margin&lt/p>
+        &ltp>The total height of an element should be calculated like this:&lt/p>
+        &ltp>Total element height = height + top padding + bottom padding + top 
+        border + bottom border + top margin + bottom margin&lt/p>
+        &ltp>&ltstrong>Note for old IE:&lt/strong> Internet Explorer 8 and 
+            earlier versions, include padding and border in the width property.
+            To fix this problem, add a &lt;!DOCTYPE html&gt; to the HTML page.&lt/p>               
+        &ltp>&ltstrong>Note for FIREFOX:&lt/strong> width property seems to be:
+            width=content+2*padding+2*border&lt/p>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./029.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./031.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

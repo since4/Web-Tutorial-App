@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./027.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./029.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        div.margin1 {
+            border: 1px solid black;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+            background-color: lightblue;
+        }
+        div.margin2 {
+            width:300px;
+            margin: auto;
+            border: 1px solid red;
+        }
+        h1.margin1 {
+            margin: 0 0 50px 0;
+        }
+
+        h2.margin1 {
+            margin: 20px 0 0 0;
+        }
+        div.padding1 {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2>Using individual margin and padding properties</h2>
+                <div class="margin1">This div element has a top margin of 100px, 
+                    a right margin of 150px, a bottom margin of 100px, 
+                    and a left margin of 80px.
+                </div>
+                <h2>The auto Value</h2>
+                <p>You can set the margin property to <code class="w3-codespan">auto</code> 
+                    to horizontally center the element within its container.</p>
+                <p>The element will then take up the specified width, and the 
+                    remaining space will be split equally between the 
+                    left and right margins:</p>
+                <div class="margin2">
+                    This div will be centered because it has margin: auto;
+                </div>
+                <p>In this example the h1 element has a bottom margin of 50px 
+                    and the h2 element has a top margin of 20px. Then, the 
+                    vertical margin between h1 and h2 should have been 
+                    70px (50px + 20px). However, due to margin collapse, 
+                    the actual margin ends up being 50px.</p>
+                <h1 class="margin1">Heading 1</h1>
+                <h2 class="margin1">Heading 2</h2>
+                <div class="margin2 padding1">
+                    This div will be centered because it has margin: auto;
+                    The text inside div is placed with padding class.
+                </div>                         
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        <!--Internal Stylesheet-->
+        &ltstyle>
+            div.margin1 {
+                border: 1px solid black;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+                background-color: lightblue;
+            }
+            div.margin2 {
+                width:300px;
+                margin: auto;
+                border: 1px solid red;
+            }
+            h1.margin1 {
+                margin: 0 0 50px 0;
+            }
+
+            h2.margin1 {
+                margin: 20px 0 0 0;
+            }
+            div.padding1 {
+                padding-top: 50px;
+                padding-right: 30px;
+                padding-bottom: 50px;
+                padding-left: 80px;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lth2>Using individual margin and padding properties&lt/h2>
+        &ltdiv class="margin1">This div element has a top margin of 100px, 
+            a right margin of 150px, a bottom margin of 100px, 
+            and a left margin of 80px.
+        &lt/div>
+        &lth2>The auto Value&lt/h2>
+        &ltp>You can set the margin property to &ltcode class="w3-codespan">auto&lt/code> 
+            to horizontally center the element within its container.&lt/p>
+        &ltp>The element will then take up the specified width, and the 
+            remaining space will be split equally between the 
+            left and right margins:&lt/p>
+        &ltdiv class="margin2">
+            This div will be centered because it has margin: auto;
+        &lt/div>
+        &ltp>In this example the h1 element has a bottom margin of 50px 
+            and the h2 element has a top margin of 20px. Then, the 
+            vertical margin between h1 and h2 should have been 
+            70px (50px + 20px). However, due to margin collapse, 
+            the actual margin ends up being 50px.&lt/p>
+        &lth1 class="margin1">Heading 1&lt/h1>
+        &lth2 class="margin1">Heading 2&lt/h2>
+        &ltdiv class="margin2 padding1">
+            This div will be centered because it has margin: auto;
+            The text inside div is placed with padding class.
+        &lt/div>
+        </code>
+        </pre>
+        </div>
+    </div>    
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./027.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./029.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./034.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./036.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        div.static1 {
+            position: static;
+            border: 3px solid #73AD21;
+        }
+        div.relative2 {
+            position: relative;
+            left: 30px;
+            border: 3px solid #73AD21;
+        }
+        div.fixed3 {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            border: 3px solid #73AD21;
+        }
+        div.relative4 {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+        } 
+        div.absolute4 {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+        img.absolute5 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+        div.scroll6 {
+            background-color: #00FFFF;
+            width: 100px;
+            height: 100px;
+            overflow: scroll;
+        }
+        div.hidden6 {
+            background-color: #00FF00;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div.overflow7 {
+            background-color: #00FFFF;
+            width: 150px;
+            height: 150px;
+            overflow: auto;
+        }
+        .container8 {
+            position: relative;
+        }
+        .topleft8 {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
+        img.pos8 { 
+            width: 100%;
+            height: auto;
+            opacity: 0.6;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2></h2>
+                <!--new example-->
+                <h2>position: static;</h2>
+                <p>
+                    An element with position: static; is not positioned in 
+                    any special way; it is always positioned according to the 
+                    normal flow of the page:
+                </p>
+                <div class="static1">
+                    This div element has position: static;
+                </div>
+                <!--new example-->
+                <h2>position: relative;</h2>
+                <p>
+                    An element with position: relative; is positioned relative to 
+                    its normal position:
+                </p>
+                <div class="relative2">
+                    This div element has position: relative; (left: 30px;)
+                </div>
+                <!--new example-->
+                <h2>position: fixed;</h2>
+                <p>
+                    An element with position: fixed; is positioned relative to 
+                    the viewport, which means it always stays in the same place 
+                    even if the page is scrolled:
+                </p>
+                <div class="fixed3">
+                    This div element has position: fixed;
+                </div>
+                <!--new example-->
+                <h2>position: absolute;</h2>
+                <p>
+                    An element with position: absolute; is positioned relative 
+                    to the nearest positioned ancestor (instead of positioned 
+                    relative to the viewport, like fixed):
+                </p>
+                <div class="relative4">
+                    This div element has position: relative;
+                    <div class="absolute4">
+                        This div element has position: absolute;  
+                        (top: 80px;ight: 0;)
+                    </div>
+                </div>
+                <!--new example-->
+                <h1>This is a heading</h1>
+                <div style="position: relative; z-index: 1; height:140px">
+                    <img src="./images/w3css.gif" class="absolute5" 
+                         width="100" height="140">
+                    <p>
+                        Because the image has a z-index of -1, it will be placed 
+                        behind the text. But also behind the background color.
+                        Therefore to see the image the div must have a positive
+                        z-index.
+                    </p>                  
+                </div>                                  
+                <!--new example-->
+                <p>
+                    The overflow property specifies what to do if the content of 
+                    an element exceeds the size of the element's box.
+                </p>               
+                <p>Result with overflow:scroll</p>
+                <div class="scroll6">
+                    You can use the overflow property when you 
+                    want to have better control of the layout. The default 
+                    value is visible.
+                </div>
+                <p>Result with overflow:hidden</p>
+                <div class="hidden6">
+                    You can use the overflow property when 
+                    you want to have better control of the layout. 
+                    The default value is visible.
+                </div>
+                <!--new example-->
+                <p>
+                    The overflow property decides what to do if the content 
+                    inside an element exceeds the given width and height 
+                    properties.
+                </p>
+                <div class="overflow7">
+                    You can use the overflow property when you want to have 
+                    better control of the layout. Try to change the overflow 
+                    property to: visible, hidden, scroll, or inherit and see 
+                    what happens. The default value is visible.The auto is 
+                    scroll.
+                </div>
+                <!--new example-->
+                <h2>Image Text</h2>
+                <p>Add some text to an image in the top left corner:</p>
+                <div class="container8">
+                     <img src="./images/trolltunga.jpg" class="pos8" alt="Norway" 
+                          width="1000" height="300">
+                     <div class="topleft8">Top Left</div>
+                </div>     
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            div.static1 {
+                position: static;
+                border: 3px solid #73AD21;
+            }
+            div.relative2 {
+                position: relative;
+                left: 30px;
+                border: 3px solid #73AD21;
+            }
+            div.fixed3 {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 100px;
+                border: 3px solid #73AD21;
+            }
+            div.relative4 {
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 3px solid #73AD21;
+            } 
+            div.absolute4 {
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73AD21;
+            }
+            img.absolute5 {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: -1;
+            }
+            div.scroll6 {
+                background-color: #00FFFF;
+                width: 100px;
+                height: 100px;
+                overflow: scroll;
+            }
+            div.hidden6 {
+                background-color: #00FF00;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+            }
+            div.overflow7 {
+                background-color: #00FFFF;
+                width: 150px;
+                height: 150px;
+                overflow: auto;
+            }
+            .container8 {
+                position: relative;
+            }
+            .topleft8 {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-size: 18px;
+            }
+            img.pos8 { 
+                width: 100%;
+                height: auto;
+                opacity: 0.6;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &lth2>position: static;&lt/h2>
+        &ltp>
+            An element with position: static; is not positioned in 
+            any special way; it is always positioned according to the 
+            normal flow of the page:
+        &lt/p>
+        &ltdiv class="static1">
+            This div element has position: static;
+        &lt/div>
+        &lt!--new example-->
+        &lth2>position: relative;&lt/h2>
+        &ltp>
+            An element with position: relative; is positioned relative to 
+            its normal position:
+        &lt/p>
+        &ltdiv class="relative2">
+            This div element has position: relative; (left: 30px;)
+        &lt/div>
+        &lt!--new example-->
+        &lth2>position: fixed;&lt/h2>
+        &ltp>
+            An element with position: fixed; is positioned relative to 
+            the viewport, which means it always stays in the same place 
+            even if the page is scrolled:
+        &lt/p>
+        &ltdiv class="fixed3">
+            This div element has position: fixed;
+        &lt/div>
+        &lt!--new example-->
+        &lth2>position: absolute;&lt/h2>
+        &ltp>
+            An element with position: absolute; is positioned relative 
+            to the nearest positioned ancestor (instead of positioned 
+            relative to the viewport, like fixed):
+        &lt/p>
+        &ltdiv class="relative4">
+            This div element has position: relative;
+            &ltdiv class="absolute4">
+                This div element has position: absolute;  
+                (top: 80px;ight: 0;)
+            &lt/div>
+        &lt/div>
+        &lt!--new example-->
+        &lth1>This is a heading&lt/h1>
+        &ltdiv style="position: relative; z-index: 1; height:140px">
+            &ltimg src="./images/w3css.gif" class="absolute5" 
+                 width="100" height="140">
+            &ltp>
+                Because the image has a z-index of -1, it will be placed 
+                behind the text. But also behind the background color.
+                Therefore to see the image the div must have a positive
+                z-index.
+            &lt/p>                  
+        &lt/div>                                  
+        &lt!--new example-->
+        &ltp>
+            The overflow property specifies what to do if the content of 
+            an element exceeds the size of the element's box.
+        &lt/p>               
+        &ltp>Result with overflow:scroll&lt/p>
+        &ltdiv class="scroll6">
+            You can use the overflow property when you 
+            want to have better control of the layout. The default 
+            value is visible.
+        &lt/div>
+        &ltp>Result with overflow:hidden&lt/p>
+        &ltdiv class="hidden6">
+            You can use the overflow property when 
+            you want to have better control of the layout. 
+            The default value is visible.
+        &lt/div>
+        &lt!--new example-->
+        &ltp>
+            The overflow property decides what to do if the content 
+            inside an element exceeds the given width and height 
+            properties.
+        &lt/p>
+        &ltdiv class="overflow7">
+            You can use the overflow property when you want to have 
+            better control of the layout. Try to change the overflow 
+            property to: visible, hidden, scroll, or inherit and see 
+            what happens. The default value is visible.The auto is 
+            scroll.
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Image Text&lt/h2>
+        &ltp>Add some text to an image in the top left corner:&lt/p>
+        &ltdiv class="container8">
+             &ltimg src="./images/trolltunga.jpg" class="pos8" alt="Norway" 
+                  width="1000" height="300">
+             &ltdiv class="topleft8">Top Left&lt/div>
+        &lt/div>  
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./034.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./036.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

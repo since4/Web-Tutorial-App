@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./002.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./004.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript can change HTML attributes.</h2>
+                <p>In this case JavaScript changes the src (source) attribute of an image.</p>
+                <div style="text-align: center">
+                    <button onclick="document.getElementById('myImage').src = './images/pic_bulbon.gif'">Turn on the light</button>
+                    <img id="myImage" src="./images/pic_bulboff.gif" style="width:100px">
+                    <button onclick="document.getElementById('myImage').src = './images/pic_bulboff.gif'">Turn off the light</button>
+                </div>
+            </div>    
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &ltbutton onclick="document.getElementById('myImage').src=
+            './images/pic_bulbon.gif'">Turn on the light&lt/button>
+        &ltimg id="myImage" src="./images/pic_bulboff.gif" style="width:100px">
+        &ltbutton onclick="document.getElementById('myImage').src=
+            './images/pic_bulboff.gif'">Turn off the light&lt/button>
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./002.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./004.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

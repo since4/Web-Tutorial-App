@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./032.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./034.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        p.serif {
+            font-family: "Times New Roman", Times, serif;
+        }
+        p.sansserif {
+            font-family: Arial, Helvetica, sans-serif;
+        }        
+        p.normal {
+        font-style: normal;
+        }
+        p.italic {
+            font-style: italic;
+        }
+        p.oblique {
+            font-style: oblique;
+        }      
+        h1.fontsize_px {
+            font-size: 40px;
+        }
+        h2.fontsize_px {
+            font-size: 30px;
+        }
+        p.fontsize_px {
+            font-size: 14px;
+        }       
+        h1.fontsize_em {
+            font-size: 2.5em; /* 40px/16=2.5em */
+        }
+        h2.fontsize_em {
+            font-size: 1.875em; /* 30px/16=1.875em */
+         }
+        p.fontsize_em {
+            font-size: 0.875em; /* 14px/16=0.875em */
+        }       
+        body.fontsize {
+            font-size: 100%;
+        }
+        h1.fontsize {
+            font-size: 2.5em;
+        }
+        h2.fontsize {
+            font-size: 1.875em;
+        }
+        p.fontsize {
+            font-size: 0.875em;
+        }        
+        p.normal {
+            font-weight: normal;
+        }
+        p.light {
+            font-weight: lighter;
+        }
+        p.thick {
+            font-weight: bold;
+        }
+        p.thicker {
+            font-weight: 900;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2></h2>
+                <!--new example-->
+                <h1>CSS font-family</h1>
+                <p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+                <p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+                <!--new example-->
+                <p class="normal">This is a paragraph in normal style.</p>
+                <p class="italic">This is a paragraph in italic style.</p>
+                <p class="oblique">This is a paragraph in oblique style.</p>
+                <!--new example-->
+                <p>The font-size value can be an absolute, or relative size.</p>
+                <p>Absolute size:</p>
+                <ul>
+                <li>Sets the text to a specified size</li>
+                <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+                <li>Absolute size is useful when the physical size of the output is known</li>
+                </ul>
+                <p>Relative size:</p>
+                <ul>
+                <li>Sets the size relative to surrounding elements</li>
+                <li>Allows a user to change the text size in browsers</li>
+                </ul>
+                <p><strong>Note:</strong> If you do not specify a font size, 
+                      the default size for normal text, like paragraphs, 
+                      is 16px (16px=1em).</p>
+                <!--new example-->
+                <h1 class="fontsize_em">This is heading 1</h1>
+                <h2 class="fontsize_em">This is heading 2</h2>
+                <p class="fontsize_em">This is a paragraph.</p>
+                <p class="fontsize_em">
+                    Specifying the font-size in em allows all 
+                    major browsers to resize the text.
+                    Unfortunately, there is still a problem with 
+                    older versions of IE. When resizing the text, 
+                    it becomes larger/smaller than it should.
+                </p>
+                <!--new example-->
+                <h1 class="fontsize_px">This is heading 1</h1>
+                <h2 class="fontsize_px">This is heading 2</h2>
+                <p class="fontsize_px">This is a paragraph.</p>
+                <p class="fontsize_px">This is another paragraph.</p>
+                <div>Tip: If you use pixels, you can still use the 
+                    zoom tool to resize the entire page.
+                </div>
+                <!--new example-->
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <p>This is a paragraph.</p>
+                <p>Specifying the font-size in percent and em displays 
+                    the same size in all major browsers, and allows all 
+                    browsers to resize the text!
+                </p>
+                <!--new example-->
+                <p class="normal">This is a paragraph.</p>
+                <p class="light">This is a paragraph.</p>
+                <p class="thick">This is a paragraph.</p>
+                <p class="thicker">This is a paragraph.</p>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            p.serif {
+                font-family: "Times New Roman", Times, serif;
+            }
+            p.sansserif {
+                font-family: Arial, Helvetica, sans-serif;
+            }        
+            p.normal {
+            font-style: normal;
+            }
+            p.italic {
+                font-style: italic;
+            }
+            p.oblique {
+                font-style: oblique;
+            }      
+            h1.fontsize_px {
+                font-size: 40px;
+            }
+            h2.fontsize_px {
+                font-size: 30px;
+            }
+            p.fontsize_px {
+                font-size: 14px;
+            }       
+            h1.fontsize_em {
+                font-size: 2.5em; /* 40px/16=2.5em */
+            }
+            h2.fontsize_em {
+                font-size: 1.875em; /* 30px/16=1.875em */
+             }
+            p.fontsize_em {
+                font-size: 0.875em; /* 14px/16=0.875em */
+            }       
+            body.fontsize {
+                font-size: 100%;
+            }
+            h1.fontsize {
+                font-size: 2.5em;
+            }
+            h2.fontsize {
+                font-size: 1.875em;
+            }
+            p.fontsize {
+                font-size: 0.875em;
+            }        
+            p.normal {
+                font-weight: normal;
+            }
+            p.light {
+                font-weight: lighter;
+            }
+            p.thick {
+                font-weight: bold;
+            }
+            p.thicker {
+                font-weight: 900;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lth2>&lt/h2>
+        &lt!--new example-->
+        &lth1>CSS font-family&lt/h1>
+        &ltp class="serif">This is a paragraph, shown in the Times New Roman font.&lt/p>
+        &ltp class="sansserif">This is a paragraph, shown in the Arial font.&lt/p>
+        &lt!--new example-->
+        &ltp class="normal">This is a paragraph in normal style.&lt/p>
+        &ltp class="italic">This is a paragraph in italic style.&lt/p>
+        &ltp class="oblique">This is a paragraph in oblique style.&lt/p>
+        &lt!--new example-->
+        &ltp>The font-size value can be an absolute, or relative size.&lt/p>
+        &ltp>Absolute size:&lt/p>
+        &ltul>
+        &ltli>Sets the text to a specified size&lt/li>
+        &ltli>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)&lt/li>
+        &ltli>Absolute size is useful when the physical size of the output is known&lt/li>
+        &lt/ul>
+        &ltp>Relative size:&lt/p>
+        &ltul>
+        &ltli>Sets the size relative to surrounding elements&lt/li>
+        &ltli>Allows a user to change the text size in browsers&lt/li>
+        &lt/ul>
+        &ltp>&ltstrong>Note:&lt/strong> If you do not specify a font size, 
+              the default size for normal text, like paragraphs, 
+              is 16px (16px=1em).&lt/p>
+        &lt!--new example-->
+        &lth1 class="fontsize_em">This is heading 1&lt/h1>
+        &lth2 class="fontsize_em">This is heading 2&lt/h2>
+        &ltp class="fontsize_em">This is a paragraph.&lt/p>
+        &ltp class="fontsize_em">
+            Specifying the font-size in em allows all 
+            major browsers to resize the text.
+            Unfortunately, there is still a problem with 
+            older versions of IE. When resizing the text, 
+            it becomes larger/smaller than it should.
+        &lt/p>
+        &lt!--new example-->
+        &lth1 class="fontsize_px">This is heading 1&lt/h1>
+        &lth2 class="fontsize_px">This is heading 2&lt/h2>
+        &ltp class="fontsize_px">This is a paragraph.&lt/p>
+        &ltp class="fontsize_px">This is another paragraph.&lt/p>
+        &ltdiv>Tip: If you use pixels, you can still use the 
+            zoom tool to resize the entire page.
+        &lt/div>
+        &lt!--new example-->
+        &lth1>This is heading 1&lt/h1>
+        &lth2>This is heading 2&lt/h2>
+        &ltp>This is a paragraph.&lt/p>
+        &ltp>Specifying the font-size in percent and em displays 
+            the same size in all major browsers, and allows all 
+            browsers to resize the text!
+        &lt/p>
+        &lt!--new example-->
+        &ltp class="normal">This is a paragraph.&lt/p>
+        &ltp class="light">This is a paragraph.&lt/p>
+        &ltp class="thick">This is a paragraph.&lt/p>
+        &ltp class="thicker">This is a paragraph.&lt/p>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./032.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./034.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./015.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./017.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>My First JavaScript Animation</h2>
+                <p>All animations should be relative to a container element.</p>
+                <style>
+                    #container {
+                      width: 400px;
+                      height: 400px;
+                      position: relative;
+                      background: yellow;
+                    }
+                    #animate {
+                      width: 50px;
+                      height: 50px;
+                      position: absolute;
+                      background-color: red;
+                    }
+                </style>
+                <p><button onclick="myMove()">Click Me</button></p> 
+                <div id ="container">
+                    <div id ="animate"></div>
+                </div>
+                <script>
+                    function myMove() {
+                      var elem = document.getElementById("animate");   
+                      var pos = 0;
+                      /*timer gets: function to run repeatedly every x millisecs*/
+                      var id = setInterval(frame, 10);
+                      function frame() {
+                        /* test for finished */        
+                        if (pos == 350) {
+                          clearInterval(id);
+                        /* code to change the element style */        
+                        } else {
+                          pos++; 
+                          elem.style.top = pos + 'px'; 
+                          elem.style.left = pos + 'px'; 
+                        }
+                      }
+                    }
+                </script>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth1>My First JavaScript Animation&lt/h1>
+        &ltp>All animations should be relative to a container element.&lt/p>
+        &ltstyle>
+            #container {
+              width: 400px;
+              height: 400px;
+              position: relative;
+              background: yellow;
+            }
+            #animate {
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              background-color: red;
+            }
+        &lt/style>
+        &ltp>&ltbutton onclick="myMove()">Click Me&lt/button>&lt/p> 
+        &ltdiv id ="container">
+            &ltdiv id ="animate">&lt/div>
+        &lt/div>
+        &ltscript>
+            function myMove() {
+              var elem = document.getElementById("animate");   
+              var pos = 0;
+              var id = setInterval(frame, 5);
+              function frame() {
+                /* test for finished */        
+                if (pos == 350) {
+                  clearInterval(id);
+                /* code to change the element style */        
+                } else {
+                  pos++; 
+                  elem.style.top = pos + 'px'; 
+                  elem.style.left = pos + 'px'; 
+                }
+              }
+            }
+        &lt/script>           
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./015.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./017.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

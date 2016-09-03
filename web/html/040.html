@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./039.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./041.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    <link rel="stylesheet" type="text/css" href="../css/tables.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+        /* visited link (not working in my5 firefox)*/
+        a:visited {
+            color: green;
+        }
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+        a.highlight:hover {
+            color: #ff0000;
+        } 
+        .div1 {
+            background-color: green;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .div1:hover {
+            background-color: blue;
+        }
+        .p2 {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
+        .div2:hover .p2 {
+            display: block;
+        }
+        .div3 p:first-child {
+            color: blue;
+        }
+        .div4 p i:first-child {
+            color: blue;
+        } 
+        .div5 q:lang(no) {
+            quotes: "~" "~";
+        }
+        .div6 input:focus {
+            background-color: yellow;
+        }      
+        .div7 p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        .div8 p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+        .div9 p.intro::first-letter {
+            color: #ff0000;
+            font-size:200%;
+        }  
+        .div10 h1::before {
+            content: url(../css/images/smiley.jpeg);
+        }       
+        .div11 ::-moz-selection { /* Code for Firefox */
+            color: red;
+            background: yellow;
+        }
+        .div11 ::selection {
+            color: red;
+            background: yellow;
+        }      
+    </style>
+     
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <h2>What are Pseudo-classes?</h2>
+                <p>
+                    A pseudo-class is used to define a special state 
+                    of an element.
+                </p>
+                <p>For example, it can be used to:</p>
+                <ul>
+                    <li>Style an element when a user mouses over it</li>
+                    <li>Style visited and unvisited links differently</li>
+                    <li>Style an element when it gets focus</li>
+                </ul>          
+                <!--new example-->
+                <p>
+                    <b>
+                        <a href="../php/001.html" target="_blank">This is a link</a>
+                    </b>
+                </p>
+                <p>
+                    <b>Note:</b>
+                    a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.
+                </p>
+                <p>
+                    <b>Note:</b> 
+                    a:active MUST come after a:hover in the CSS definition in order to be effective.
+                </p>
+                <!--new example-->
+                <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+                <p><a href="../php/001.html">CSS Tutorial</a></p>
+                <!--new example-->
+                <p>Mouse over the div element below to change its background 
+                    color:</p>
+                <div class="div1">Mouse Over Me</div>
+                <!--new example-->
+                <div class="div2">Hover over me to show the p element
+                  <p class="p2">Tada! Here I am!</p>
+                </div>
+                <!--new example-->
+                <div class="div3">
+                    <p>This is some text.</p>
+                    <p>This is some text.</p>
+                </div>
+                <!--new example-->
+                <div class="div4">
+                    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+                    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+                </div>
+                <!--new example-->
+                <div class="div5">
+                    <p>
+                        Some text <q lang="no">A quote in a paragraph</q> Some text.
+                    </p>
+                    <p>In this example, :lang defines the quotation marks 
+                        for q elements with lang="no":
+                    </p>
+                </div>
+                <!--new example-->
+                <div class="div6">
+                    <form action="form_action.asp" method="get">
+                      First name: <input type="text" name="fname"><br>
+                      Last name: <input type="text" name="lname"><br>
+                      <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <!--new example-->
+                <h2>What are Pseudo-Elements?</h2>
+                <p>A CSS pseudo-element is used to style specified parts of 
+                    an element.</p>
+                <p>For example, it can be used to:</p>
+                <ul>
+                    <li>Style the first letter, or line, of an element</li>
+                    <li>Insert content before, or after, the content of an element </li>
+                </ul>
+                <p>
+                    Notice the double colon notation - 
+                    ::first-line versus :first-line
+                    The double colon replaced the single-colon notation for 
+                    pseudo-elements in CSS3. This was an attempt from W3C to 
+                    distinguish between pseudo-classes and pseudo-elements.
+                </p>
+                <!--new example-->
+                <div class="div7">
+                    <p>You can use the ::first-line pseudo-element to add a 
+                        special effect to the first line of a text. Some more 
+                        text. And even more, and more, and more, and more, and 
+                        more, and more, and more, and more, and more, and more, 
+                        and more, and more.
+                    </p>
+                </div>
+                <!--new example-->
+                <div class="div8">
+                    <p>
+                        You can use the ::first-letter pseudo-element to add a 
+                        special effect to the first character of a text!
+                    </p>         
+                </div>
+                <!--new example-->
+                <div class="div9">
+                    <p class="intro">This is an introduction.</p>
+                    <p>This is a paragraph with some text. 
+                        A bit more text even.</p>
+                </div>                
+                <!--new example-->
+                <div class="div10">
+                    <h1>This is a heading</h1>
+                    <p>The ::before pseudo-element inserts content before the 
+                        content of an element.</p>
+                    <h1>This is a heading</h1>
+                </div>
+                <!--new example-->
+                <div class="div11">
+                    <h1>Select some text on this page:</h1>
+                    <p>This is a paragraph.</p>
+                    <div>This is some text in a div element.</div>
+                    <p>
+                        <strong>Note:</strong> ::selection is not supported in 
+                        Internet Explorer 8 and earlier versions.
+                    </p>
+                    <p>
+                        <strong>Note:</strong> Firefox supports an alternative, 
+                        the ::-moz-selection property.
+                    </p>
+                </div>               
+                <!--new example-->                
+                <h2>All CSS Pseudo Classes</h2>
+                <table class="fancy_table">
+                    <tbody>
+                      <tr>
+                        <th style="width:20%">Selector</th>
+                        <th style="width:20%">Example</th>
+                        <th>Example description</th>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_active.asp">:active</a></td>
+                        <td>a:active</td>
+                        <td>Selects the active link</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_checked.asp">:checked</a></td>
+                        <td>input:checked</td>
+                        <td>Selects every checked &lt;input&gt; element</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_disabled.asp">:disabled</a></td>
+                        <td>input:disabled</td>
+                        <td>Selects every disabled &lt;input&gt; element</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_empty.asp">:empty</a></td>
+                        <td>p:empty</td>
+                        <td>Selects every &lt;p&gt; element that has no children</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_enabled.asp">:enabled</a></td>
+                        <td>input:enabled</td>
+                        <td>Selects every enabled &lt;input&gt; element</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_firstchild.asp">:first-child</a></td>
+                        <td>p:first-child</td>
+                        <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_first-of-type.asp">:first-of-type</a></td>
+                        <td>p:first-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_focus.asp">:focus</a></td>
+                        <td>input:focus</td>
+                        <td>Selects the &lt;input&gt; element that has focus</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></td>
+                        <td>a:hover</td>
+                        <td>Selects links on mouse over</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_in-range.asp">:in-range</a></td>
+                        <td>input:in-range</td>
+                        <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_invalid.asp">:invalid</a></td>
+                        <td>input:invalid</td>
+                        <td>Selects all &lt;input&gt; elements with an invalid value</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_lang.asp">:lang(<i>language</i>)</a></td>
+                        <td>p:lang(it)</td>
+                        <td>Selects every &lt;p&gt; element with a lang attribute value starting with "it"</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_last-child.asp">:last-child</a></td>
+                        <td>p:last-child</td>
+                        <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_last-of-type.asp">:last-of-type</a></td>
+                        <td>p:last-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a></td>
+                        <td>a:link</td>
+                        <td>Selects all unvisited links</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_not.asp">:not(selector)</a></td>
+                        <td>:not(p)</td>
+                        <td>Selects every element that is not a &lt;p&gt; element</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(n)</a></td>
+                        <td>p:nth-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">:nth-last-child(n)</a></td>
+                        <td>p:nth-last-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_nth-last-of-type.asp">:nth-last-of-type(n)</a></td>
+                        <td>p:nth-last-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_nth-of-type.asp">:nth-of-type(n)</a></td>
+                        <td>p:nth-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_only-of-type.asp">:only-of-type</a></td>
+                        <td>p:only-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_only-child.asp">:only-child</a></td>
+                        <td>p:only-child</td>
+                        <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_optional.asp">:optional</a></td>
+                        <td>input:optional</td>
+                        <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_out-of-range.asp">:out-of-range</a></td>
+                        <td>input:out-of-range</td>
+                        <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_read-only.asp">:read-only</a></td>
+                        <td>input:read-only</td>
+                        <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_read-write.asp">:read-write</a></td>
+                        <td>input:read-write</td>
+                        <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_required.asp">:required</a></td>
+                        <td>input:required</td>
+                        <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_root.asp">:root</a></td>
+                        <td>root</td>
+                        <td>Selects the document's root element</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_target.asp">:target</a></td>
+                        <td>#news:target</td>
+                        <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_valid.asp">:valid</a></td>
+                        <td>input:valid</td>
+                        <td>Selects all &lt;input&gt; elements with a valid value</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a></td>
+                        <td>a:visited</td>
+                        <td>Selects all visited links</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <h2>All CSS Pseudo Elements</h2>
+                <table class="fancy_table">
+                    <tbody><tr>
+                        <th style="width:20%">Selector</th>
+                        <th style="width:20%">Example</th>
+                        <th>Example description</th>
+                      </tr>
+                    <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_after.asp">::after</a></td>
+                        <td>p::after</td>
+                        <td>Insert content after every &lt;p&gt; element</td>
+                        </tr>
+                      <tr>
+                    <td><a href="http://www.w3schools.com/cssref/sel_before.asp">::before</a></td>
+                        <td>p::before</td>
+                        <td>Insert content before every &lt;p&gt; element</td>
+                        </tr>
+                    <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_firstletter.asp">::first-letter</a></td>
+                        <td>p::first-letter</td>
+                        <td>Selects the first letter of every &lt;p&gt; element</td>
+                      </tr>
+                    <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_firstline.asp">::first-line</a></td>
+                        <td>p::first-line</td>
+                        <td>Selects the first line of every &lt;p&gt; element</td>
+                      </tr>
+                    <tr>
+                        <td><a href="http://www.w3schools.com/cssref/sel_selection.asp">::selection</a></td>
+                        <td>p::selection</td>
+                        <td>Selects the portion of an element that is selected by a user</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            /* unvisited link */
+            a:link {
+                color: red;
+            }
+            /* visited link (not working in my5 firefox)*/
+            a:visited {
+                color: green;
+            }
+            /* mouse over link */
+            a:hover {
+                color: hotpink;
+            }
+            /* selected link */
+            a:active {
+                color: blue;
+            }
+            a.highlight:hover {
+                color: #ff0000;
+            } 
+            .div1 {
+                background-color: green;
+                color: white;
+                padding: 25px;
+                text-align: center;
+            }
+            .div1:hover {
+                background-color: blue;
+            }
+            .p2 {
+                display: none;
+                background-color: yellow;
+                padding: 20px;
+            }
+            .div2:hover .p2 {
+                display: block;
+            }
+            .div3 p:first-child {
+                color: blue;
+            }
+            .div4 p i:first-child {
+                color: blue;
+            } 
+            .div5 q:lang(no) {
+                quotes: "~" "~";
+            }
+            .div6 input:focus {
+                background-color: yellow;
+            }      
+            .div7 p::first-line {
+                color: #ff0000;
+                font-variant: small-caps;
+            }
+            .div8 p::first-letter {
+                color: #ff0000;
+                font-size: xx-large;
+            }
+            .div9 p.intro::first-letter {
+                color: #ff0000;
+                font-size:200%;
+            }  
+            .div10 h1::before {
+                content: url(../css/images/smiley.jpeg);
+            }       
+            .div11 ::-moz-selection { /* Code for Firefox */
+                color: red;
+                background: yellow;
+            }
+            .div11 ::selection {
+                color: red;
+                background: yellow;
+            }      
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &lth2>What are Pseudo-classes?&lt/h2>
+        &ltp>
+            A pseudo-class is used to define a special state 
+            of an element.
+        &lt/p>
+        &ltp>For example, it can be used to:&lt/p>
+        &ltul>
+            &ltli>Style an element when a user mouses over it&lt/li>
+            &ltli>Style visited and unvisited links differently&lt/li>
+            &ltli>Style an element when it gets focus&lt/li>
+        &lt/ul>          
+        &lt!--new example-->
+        &ltp>
+            &ltb>
+                &lta href="../php/001.html" target="_blank">This is a link&lt/a>
+            &lt/b>
+        &lt/p>
+        &ltp>
+            &ltb>Note:&lt/b>
+            a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.
+        &lt/p>
+        &ltp>
+            &ltb>Note:&lt/b> 
+            a:active MUST come after a:hover in the CSS definition in order to be effective.
+        &lt/p>
+        &lt!--new example-->
+        &ltp>&lta class="highlight" href="css_syntax.asp">CSS Syntax&lt/a>&lt/p>
+        &ltp>&lta href="../php/001.html">CSS Tutorial&lt/a>&lt/p>
+        &lt!--new example-->
+        &ltp>Mouse over the div element below to change its background 
+            color:&lt/p>
+        &ltdiv class="div1">Mouse Over Me&lt/div>
+        &lt!--new example-->
+        &ltdiv class="div2">Hover over me to show the p element
+          &ltp class="p2">Tada! Here I am!&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div3">
+            &ltp>This is some text.&lt/p>
+            &ltp>This is some text.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div4">
+            &ltp>I am a &lti>strong&lt/i> person. I am a &lti>strong&lt/i> person.&lt/p>
+            &ltp>I am a &lti>strong&lt/i> person. I am a &lti>strong&lt/i> person.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div5">
+            &ltp>
+                Some text &ltq lang="no">A quote in a paragraph&lt/q> Some text.
+            &lt/p>
+            &ltp>In this example, :lang defines the quotation marks 
+                for q elements with lang="no":
+            &lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div6">
+            &ltform action="form_action.asp" method="get">
+              First name: &ltinput type="text" name="fname">&ltbr>
+              Last name: &ltinput type="text" name="lname">&ltbr>
+              &ltinput type="submit" value="Submit">
+            &lt/form>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>What are Pseudo-Elements?&lt/h2>
+        &ltp>A CSS pseudo-element is used to style specified parts of 
+            an element.&lt/p>
+        &ltp>For example, it can be used to:&lt/p>
+        &ltul>
+            &ltli>Style the first letter, or line, of an element&lt/li>
+            &ltli>Insert content before, or after, the content of an element &lt/li>
+        &lt/ul>
+        &ltp>
+            Notice the double colon notation - 
+            ::first-line versus :first-line
+            The double colon replaced the single-colon notation for 
+            pseudo-elements in CSS3. This was an attempt from W3C to 
+            distinguish between pseudo-classes and pseudo-elements.
+        &lt/p>
+        &lt!--new example-->
+        &ltdiv class="div7">
+            &ltp>You can use the ::first-line pseudo-element to add a 
+                special effect to the first line of a text. Some more 
+                text. And even more, and more, and more, and more, and 
+                more, and more, and more, and more, and more, and more, 
+                and more, and more.
+            &lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div8">
+            &ltp>
+                You can use the ::first-letter pseudo-element to add a 
+                special effect to the first character of a text!
+            &lt/p>         
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div9">
+            &ltp class="intro">This is an introduction.&lt/p>
+            &ltp>This is a paragraph with some text. 
+                A bit more text even.&lt/p>
+        &lt/div>                
+        &lt!--new example-->
+        &ltdiv class="div10">
+            &lth1>This is a heading&lt/h1>
+            &ltp>The ::before pseudo-element inserts content before the 
+                content of an element.&lt/p>
+            &lth1>This is a heading&lt/h1>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div11">
+            &lth1>Select some text on this page:&lt/h1>
+            &ltp>This is a paragraph.&lt/p>
+            &ltdiv>This is some text in a div element.&lt/div>
+            &ltp>
+                &ltstrong>Note:&lt/strong> ::selection is not supported in 
+                Internet Explorer 8 and earlier versions.
+            &lt/p>
+            &ltp>
+                &ltstrong>Note:&lt/strong> Firefox supports an alternative, 
+                the ::-moz-selection property.
+            &lt/p>
+        &lt/div>               
+        &lt!--new example-->                
+        &lth2>All CSS Pseudo Classes&lt/h2>
+        &lttable class="fancy_table">
+            &lttbody>
+              &lttr>
+                &ltth style="width:20%">Selector&lt/th>
+                &ltth style="width:20%">Example&lt/th>
+                &ltth>Example description&lt/th>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_active.asp">:active&lt/a>&lt/td>
+                &lttd>a:active&lt/td>
+                &lttd>Selects the active link&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_checked.asp">:checked&lt/a>&lt/td>
+                &lttd>input:checked&lt/td>
+                &lttd>Selects every checked &lt;input&gt; element&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_disabled.asp">:disabled&lt/a>&lt/td>
+                &lttd>input:disabled&lt/td>
+                &lttd>Selects every disabled &lt;input&gt; element&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_empty.asp">:empty&lt/a>&lt/td>
+                &lttd>p:empty&lt/td>
+                &lttd>Selects every &lt;p&gt; element that has no children&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_enabled.asp">:enabled&lt/a>&lt/td>
+                &lttd>input:enabled&lt/td>
+                &lttd>Selects every enabled &lt;input&gt; element&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_firstchild.asp">:first-child&lt/a>&lt/td>
+                &lttd>p:first-child&lt/td>
+                &lttd>Selects every &lt;p&gt; elements that is the first child of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_first-of-type.asp">:first-of-type&lt/a>&lt/td>
+                &lttd>p:first-of-type&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_focus.asp">:focus&lt/a>&lt/td>
+                &lttd>input:focus&lt/td>
+                &lttd>Selects the &lt;input&gt; element that has focus&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_hover.asp">:hover&lt/a>&lt/td>
+                &lttd>a:hover&lt/td>
+                &lttd>Selects links on mouse over&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_in-range.asp">:in-range&lt/a>&lt/td>
+                &lttd>input:in-range&lt/td>
+                &lttd>Selects &lt;input&gt; elements with a value within a specified range&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_invalid.asp">:invalid&lt/a>&lt/td>
+                &lttd>input:invalid&lt/td>
+                &lttd>Selects all &lt;input&gt; elements with an invalid value&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_lang.asp">:lang(&lti>language&lt/i>)&lt/a>&lt/td>
+                &lttd>p:lang(it)&lt/td>
+                &lttd>Selects every &lt;p&gt; element with a lang attribute value starting with "it"&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_last-child.asp">:last-child&lt/a>&lt/td>
+                &lttd>p:last-child&lt/td>
+                &lttd>Selects every &lt;p&gt; elements that is the last child of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_last-of-type.asp">:last-of-type&lt/a>&lt/td>
+                &lttd>p:last-of-type&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_link.asp">:link&lt/a>&lt/td>
+                &lttd>a:link&lt/td>
+                &lttd>Selects all unvisited links&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_not.asp">:not(selector)&lt/a>&lt/td>
+                &lttd>:not(p)&lt/td>
+                &lttd>Selects every element that is not a &lt;p&gt; element&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(n)&lt/a>&lt/td>
+                &lttd>p:nth-child(2)&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the second child of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">:nth-last-child(n)&lt/a>&lt/td>
+                &lttd>p:nth-last-child(2)&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_nth-last-of-type.asp">:nth-last-of-type(n)&lt/a>&lt/td>
+                &lttd>p:nth-last-of-type(2)&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_nth-of-type.asp">:nth-of-type(n)&lt/a>&lt/td>
+                &lttd>p:nth-of-type(2)&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_only-of-type.asp">:only-of-type&lt/a>&lt/td>
+                &lttd>p:only-of-type&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_only-child.asp">:only-child&lt/a>&lt/td>
+                &lttd>p:only-child&lt/td>
+                &lttd>Selects every &lt;p&gt; element that is the only child of its parent&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_optional.asp">:optional&lt/a>&lt/td>
+                &lttd>input:optional&lt/td>
+                &lttd>Selects &lt;input&gt; elements with no "required" attribute&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_out-of-range.asp">:out-of-range&lt/a>&lt/td>
+                &lttd>input:out-of-range&lt/td>
+                &lttd>Selects &lt;input&gt; elements with a value outside a specified range&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_read-only.asp">:read-only&lt/a>&lt/td>
+                &lttd>input:read-only&lt/td>
+                &lttd>Selects &lt;input&gt; elements with a "readonly" attribute specified&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_read-write.asp">:read-write&lt/a>&lt/td>
+                &lttd>input:read-write&lt/td>
+                &lttd>Selects &lt;input&gt; elements with no "readonly" attribute&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_required.asp">:required&lt/a>&lt/td>
+                &lttd>input:required&lt/td>
+                &lttd>Selects &lt;input&gt; elements with a "required" attribute specified&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_root.asp">:root&lt/a>&lt/td>
+                &lttd>root&lt/td>
+                &lttd>Selects the document's root element&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_target.asp">:target&lt/a>&lt/td>
+                &lttd>#news:target&lt/td>
+                &lttd>Selects the current active #news element (clicked on a URL containing that anchor name)&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_valid.asp">:valid&lt/a>&lt/td>
+                &lttd>input:valid&lt/td>
+                &lttd>Selects all &lt;input&gt; elements with a valid value&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_visited.asp">:visited&lt/a>&lt/td>
+                &lttd>a:visited&lt/td>
+                &lttd>Selects all visited links&lt/td>
+              &lt/tr>
+            &lt/tbody>
+        &lt/table>
+        &lth2>All CSS Pseudo Elements&lt/h2>
+        &lttable class="fancy_table">
+            &lttbody>&lttr>
+                &ltth style="width:20%">Selector&lt/th>
+                &ltth style="width:20%">Example&lt/th>
+                &ltth>Example description&lt/th>
+              &lt/tr>
+            &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_after.asp">::after&lt/a>&lt/td>
+                &lttd>p::after&lt/td>
+                &lttd>Insert content after every &lt;p&gt; element&lt/td>
+                &lt/tr>
+              &lttr>
+            &lttd>&lta href="http://www.w3schools.com/cssref/sel_before.asp">::before&lt/a>&lt/td>
+                &lttd>p::before&lt/td>
+                &lttd>Insert content before every &lt;p&gt; element&lt/td>
+                &lt/tr>
+            &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_firstletter.asp">::first-letter&lt/a>&lt/td>
+                &lttd>p::first-letter&lt/td>
+                &lttd>Selects the first letter of every &lt;p&gt; element&lt/td>
+              &lt/tr>
+            &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_firstline.asp">::first-line&lt/a>&lt/td>
+                &lttd>p::first-line&lt/td>
+                &lttd>Selects the first line of every &lt;p&gt; element&lt/td>
+              &lt/tr>
+            &lttr>
+                &lttd>&lta href="http://www.w3schools.com/cssref/sel_selection.asp">::selection&lt/a>&lt/td>
+                &lttd>p::selection&lt/td>
+                &lttd>Selects the portion of an element that is selected by a user&lt/td>
+              &lt/tr>
+            &lt/tbody>
+        &lt/table>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./039.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./041.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

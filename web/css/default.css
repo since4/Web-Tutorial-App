@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2016, 2:54:42 PM
+    Author     : benzro
+*/
+
+/*whatever this is: it's sometimes important*/
+* {
+    box-sizing: border-box;
+}
+
+/*html tags*/
+body {
+    margin: 0;
+    background-color: lightcyan;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+/*classes*/
+div.mainbody {
+    /*Die Syntax für Außenabstände (oben, rechts, unten, links):*/
+    margin: 15px 40px 15px 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;    
+    background-color: lightblue;
+    /*border:red solid thick;*/
+}
+div.mainbody div.interactive {
+    /*center a div box of fixed width*/
+    margin: 0px auto;
+    width: 95%;    
+    padding-top: 20px;
+    padding-right:60px;
+    padding-bottom: 20px;
+    padding-left:60px;   
+    border: 3px solid  grey;
+}
+div.code {
+    /*Die Syntax für Außenabstände (oben, rechts, unten, links):*/
+    margin: 15px 40px 15px 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightsalmon;
+    /*border:blue solid thick;*/
+}
+div.code pre.code_ {
+    /*center a div box of fixed width in percent*/
+    margin: 0px auto;
+    width: 95%;    
+    padding-top: 20px;
+    padding-right:20px;
+    padding-bottom: 20px;
+    padding-left:0px;   
+    border: 3px solid #73AD21; 
+}
+div.code pre.code_ code.codespan {      
+    font-family: Consolas,"courier new";
+    font-size: 110%;
+    line-height: 1.5;
+    color: crimson;
+}
+
+/*Word wrap for small screen or high zoom*/
+@media screen and (max-width: 760px){    
+    div.code pre.code_ {
+        white-space: pre-wrap;
+        white-space: pre-line;
+        white-space: -moz-pre-wrap;
+        word-break:break-all;
+        word-wrap: break-word;
+    }                  
+} 
+
+
+
+

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./040.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./042.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        div.img {
+            border: 1px solid #ccc;
+        }
+        div.img:hover {
+            border: 1px solid #777;
+        }
+        div.img img {
+            width: 100%;
+            height: auto;
+        }
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        @media only screen and (max-width: 700px){
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 100%;
+            }
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }        
+        .div2 img {
+            opacity: 0.5;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+        }
+        .div2 img:hover {
+            opacity: 1.0;
+            filter: alpha(opacity=100); /* For IE8 and earlier */
+        }
+    </style>   
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <h2>Responsive Image Gallery</h2>
+                <h4>Resize the browser window to see the effect.</h4>
+                <div class="responsive">
+                  <div class="img">
+                    <a target="_blank" href="./images/img_fjords.jpg">
+                      <img src="./images/img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                <div class="responsive">
+                  <div class="img">
+                    <a target="_blank" href="./images/img_forest.jpg">
+                      <img src="./images/img_forest.jpg" alt="Forest" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                <div class="responsive">
+                  <div class="img">
+                    <a target="_blank" href="./images/img_lights.jpg">
+                      <img src="./images/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                <div class="responsive">
+                  <div class="img">
+                    <a target="_blank" href="./images/img_mountains.jpg">
+                      <img src="./images/img_mountains.jpg" alt="Mountains" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div style="padding:6px;">
+                  <p>This example use media queries to re-arrange the images on 
+                      different screen sizes: for screens larger than 700px wide, 
+                      it will show four images side by side, for screens smaller 
+                      than 700px, it will show two images side by side. 
+                      For screens smaller than 500px, the images will 
+                      stack vertically (100%).
+                  </p>
+                  <p>You will learn more about media queries and responsive 
+                      web design later in our CSS Tutorial.</p>
+                </div>
+                <!--new example-->
+                <div class="div2">
+                    <h1>Image Transparency</h1>
+                    <p>T
+                        he opacity property is often used together with 
+                        the :hover selector to change the opacity on mouse-over:
+                    </p>
+                    <img src="./images/img_forest.jpg" alt="Forest" width="170" height="100">
+                    <img src="./images/img_mountains.jpg" alt="Mountains" width="170" height="100">
+                    <img src="./images/img_fjords.jpg" alt="Fjords" width="170" height="100">
+                </div>               
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            div.img {
+                border: 1px solid #ccc;
+            }
+            div.img:hover {
+                border: 1px solid #777;
+            }
+            div.img img {
+                width: 100%;
+                height: auto;
+            }
+            div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .responsive {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+            }
+            @media only screen and (max-width: 700px){
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+            @media only screen and (max-width: 500px){
+                .responsive {
+                    width: 100%;
+                }
+            }
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }        
+            .div2 img {
+                opacity: 0.5;
+                filter: alpha(opacity=50); /* For IE8 and earlier */
+            }
+            .div2 img:hover {
+                opacity: 1.0;
+                filter: alpha(opacity=100); /* For IE8 and earlier */
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lt!--new example-->
+        &lth2>Responsive Image Gallery&lt/h2>
+        &lth4>Resize the browser window to see the effect.&lt/h4>
+        &ltdiv class="responsive">
+          &ltdiv class="img">
+            &lta target="_blank" href="./images/img_fjords.jpg">
+              &ltimg src="./images/img_fjords.jpg" alt="Trolltunga Norway" 
+                width="300" height="200">
+            &lt/a>
+            &ltdiv class="desc">Add a description of the image here&lt/div>
+          &lt/div>
+        &lt/div>
+        &ltdiv class="responsive">
+          &ltdiv class="img">
+            &lta target="_blank" href="./images/img_forest.jpg">
+              &ltimg src="./images/img_forest.jpg" alt="Forest" width="600" height="400">
+            &lt/a>
+            &ltdiv class="desc">Add a description of the image here&lt/div>
+          &lt/div>
+        &lt/div>
+        &ltdiv class="responsive">
+          &ltdiv class="img">
+            &lta target="_blank" href="./images/img_lights.jpg">
+              &ltimg src="./images/img_lights.jpg" alt="Northern Lights" 
+                width="600" height="400">
+            &lt/a>
+            &ltdiv class="desc">Add a description of the image here&lt/div>
+          &lt/div>
+        &lt/div>
+        &ltdiv class="responsive">
+          &ltdiv class="img">
+            &lta target="_blank" href="./images/img_mountains.jpg">
+              &ltimg src="./images/img_mountains.jpg" alt="Mountains" 
+                width="600" height="400">
+            &lt/a>
+            &ltdiv class="desc">Add a description of the image here&lt/div>
+          &lt/div>
+        &lt/div>
+        &ltdiv class="clearfix">&lt/div>
+        &ltdiv style="padding:6px;">
+          &ltp>This example use media queries to re-arrange the images on 
+            different screen sizes: for screens larger than 700px wide, it will 
+            show four images side by side, for screens smaller than 700px, 
+            it will show two images side by side. For screens smaller 
+            than 500px, the images will stack vertically (100%).
+          &lt/p>
+          &ltp>You will learn more about media queries and responsive web design 
+            later in our CSS Tutorial.
+          &lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltdiv class="div2">
+            &lth1>Image Transparency&lt/h1>
+            &ltp>T
+                he opacity property is often used together with 
+                the :hover selector to change the opacity on mouse-over:
+            &lt/p>
+            &ltimg src="./images/img_forest.jpg" alt="Forest" width="170" height="100">
+            &ltimg src="./images/img_mountains.jpg" alt="Mountains" width="170" height="100">
+            &ltimg src="./images/img_fjords.jpg" alt="Fjords" width="170" height="100">
+        &lt/div>  
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./040.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./042.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

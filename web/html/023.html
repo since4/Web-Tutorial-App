@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./022.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./024.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    <link rel="stylesheet" type="text/css" href="../css/001.css">
+    
+    <!--Internal Stylesheet-->
+        
+</head>
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2>External Style Sheet</h2>
+                <h3>This is a heading</h3>
+                <p>This is a paragraph.</p>
+                <h2>Cascading Order</h2>
+                <p>What style will be used when there is more than one style 
+                    specified for an HTML element?</p>
+                <p>Generally speaking we can say that all the styles will 
+                    "cascade" into a new "virtual" style
+                    sheet by the following rules, where number one has the highest 
+                    priority:</p>
+                <ol>
+                  <li>Inline style (inside an HTML element)</li>
+                  <li>External and internal style sheets (in the head section)
+                      <ul>
+                          <li>last mentioned is overruling previous</li>
+                          <li>here default.css is overridden by 001.css</li>
+                      </ul>
+                  </li>
+                  
+                  <li>Browser default</li>
+                </ol>
+                <p>So, an inline style (inside a specific HTML element) has the 
+                    highest priority, which means that it will override a style 
+                    defined inside the &lt;head&gt; tag, or in
+                    an external style sheet, or a browser default value.</p>           
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Header content-->
+        &lt!--External Stylesheets-->
+        &ltlink rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+        &ltlink rel="stylesheet" type="text/css" href="../css/default.css">
+        &ltlink rel="stylesheet" type="text/css" href="../css/001.css"> 
+        body {
+        background-color: darkcyan;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+        &lt!--Body content-->
+        &lth1>External Style Sheet&lt/h1>
+        &lth1>This is a heading&lt/h1>
+        &ltp>This is a paragraph.&lt/p> 
+        &lth2>Cascading Order&lt/h2>
+        &ltp>What style will be used when there is more than one style 
+            specified for an HTML element?&lt/p>
+        &ltp>Generally speaking we can say that all the styles will 
+            "cascade" into a new "virtual" style
+            sheet by the following rules, where number one has the highest 
+            priority:&lt/p>
+        &ltol>
+          &ltli>Inline style (inside an HTML element)&lt/li>
+          &ltli>External and internal style sheets (in the head section)
+              &ltul>
+                  &ltli>last mentioned is overruling previous&lt/li>
+                  &ltli>here default.css is overridden by 001.css&lt/li>
+              &lt/ul>
+          &lt/li>
+
+          &ltli>Browser default&lt/li>
+        &lt/ol>
+        &ltp>So, an inline style (inside a specific HTML element) has the 
+            highest priority, which means that it will override a style 
+            defined inside the &lt;head&gt; tag, or in
+            an external style sheet, or a browser default value.</p>
+        </code>
+        </pre>
+        </div>      
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./022.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./024.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

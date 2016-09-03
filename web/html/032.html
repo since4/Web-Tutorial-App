@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./031.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./033.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>      
+        h1.text {
+            text-align: center;
+        }
+        h2.text {
+            text-align: left;
+        }
+        h3.text {
+            text-align: right;
+        }       
+        div.text {
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 300px;
+            text-align: justify;
+        }       
+        p.uppercase {
+            text-transform: uppercase;
+        }
+        p.lowercase {
+            text-transform: lowercase;
+        }
+        p.capitalize {
+            text-transform: capitalize;
+        }       
+        p.indent {
+            text-indent: 50px;
+        }       
+        h1.letterspacing1 {
+            letter-spacing: 3px;
+        }
+        h2.letterspacing2 {
+            letter-spacing: -3px;
+        }       
+        p.small {
+            line-height: 0.7;
+        }
+        p.big {
+            line-height: 1.8;
+        }        
+        h1.wordspacing1 {
+            word-spacing: 10px;
+        }
+        h2.wordspacing2 {
+            word-spacing: -5px;
+        }
+       
+        p.nowrap {
+            white-space: nowrap;
+        }
+        p.wrap {
+            white-space: wrap;
+        }       
+        img.top {
+            vertical-align: text-top;
+        }
+        img.bottom {
+            vertical-align: text-bottom;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2>CSS Text Formatting</h2>                
+                <h1 class="text">Heading 1 (center)</h1>
+                <h2 class="text">Heading 2 (left)</h2>
+                <h3 class="text">Heading 3 (right)</h3>
+                <p>The three headings above are aligned center, left and right.</p>
+                <!--new example-->
+                <h1>Example text-align: justify;</h1>
+                <p>The text-align: justify; value stretches the lines so 
+                    that each line has equal width (like in newspapers and 
+                    magazines).
+                </p>
+                <div class="text">
+                    In my younger and more vulnerable years my father 
+                    gave me some advice that I've been turning over in my 
+                    mind ever since. 'Whenever you feel like criticizing 
+                    anyone,' he told me, 'just remember that all the people 
+                    in this world haven't had the advantages that you've had.'
+                </div>
+                <!--new example-->
+                <p class="uppercase">This is some text.</p>
+                <p class="lowercase">This is some text.</p>
+                <p class="capitalize">This is some text.</p>
+                <!--new example-->
+                <p class="indent">
+                    In my younger and more vulnerable years my father gave me 
+                    some advice that I've been turning over in my mind ever 
+                    since. 'Whenever you feel like criticizing anyone,' he 
+                    told me, 'just remember that all the people in this world 
+                    haven't had the advantages that you've had.'
+                </p>
+                <!--new example-->
+                <h1 class="letterspacing1">This is heading 1</h1>
+                <h2 class="letterspacing2">This is heading 2</h2>
+                <!--new example-->
+                <p>
+                This is a paragraph with a standard line-height.<br>
+                The default line height in most browsers is about 110% to 120%.<br>
+                </p>
+                <p class="small">
+                This is a paragraph with a smaller line-height.<br>
+                This is a paragraph with a smaller line-height.<br>
+                </p>
+                <p class="big">
+                This is a paragraph with a bigger line-height.<br>
+                This is a paragraph with a bigger line-height.<br>
+                </p>
+                <!--new example-->
+                <h1 class="wordspacing1">This is heading 1</h1>
+                <h2 class="wordspacing2">This is heading 2</h2>
+                <!--new example-->
+                <p class="nowrap">
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                </p>
+                <p class="wrap">
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                    This is some text. This is some text. This is some text.
+                </p>
+                <!--new example-->
+                <p>An <img src="./images/w3schools_logo.gif" alt="W3Schools" 
+                           width="270" height="50"> image with a default alignment.
+                </p><br>
+                <p>An <img class="top" src="./images/w3schools_logo.gif" alt="W3Schools" 
+                           width="270" height="50"> image with a text-top alignment.
+                </p><br>
+                <p>An <img class="bottom" src="./images/w3schools_logo.gif" alt="W3Schools" 
+                           width="270" height="50"> image with a text-bottom alignment.
+                </p>
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>      
+            h1.text {
+                text-align: center;
+            }
+            h2.text {
+                text-align: left;
+            }
+            h3.text {
+                text-align: right;
+            }       
+            div.text {
+                border: 1px solid black;
+                padding: 10px;
+                width: 200px;
+                height: 300px;
+                text-align: justify;
+            }       
+            p.uppercase {
+                text-transform: uppercase;
+            }
+            p.lowercase {
+                text-transform: lowercase;
+            }
+            p.capitalize {
+                text-transform: capitalize;
+            }       
+            p.indent {
+                text-indent: 50px;
+            }       
+            h1.letterspacing1 {
+                letter-spacing: 3px;
+            }
+            h2.letterspacing2 {
+                letter-spacing: -3px;
+            }       
+            p.small {
+                line-height: 0.7;
+            }
+            p.big {
+                line-height: 1.8;
+            }        
+            h1.wordspacing1 {
+                word-spacing: 10px;
+            }
+            h2.wordspacing2 {
+                word-spacing: -5px;
+            }
+
+            p.nowrap {
+                white-space: nowrap;
+            }
+            p.wrap {
+                white-space: wrap;
+            }       
+            img.top {
+                vertical-align: text-top;
+            }
+            img.bottom {
+                vertical-align: text-bottom;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lth2>CSS Text Formatting&lt/h2>                
+        &lth1 class="text">Heading 1 (center)&lt/h1>
+        &lth2 class="text">Heading 2 (left)&lt/h2>
+        &lth3 class="text">Heading 3 (right)&lt/h3>
+        &ltp>The three headings above are aligned center, left and right.&lt/p>
+        &lt!--new example-->
+        &lth1>Example text-align: justify;&lt/h1>
+        &ltp>The text-align: justify; value stretches the lines so 
+            that each line has equal width (like in newspapers and 
+            magazines).
+        &lt/p>
+        &ltdiv class="text">
+            In my younger and more vulnerable years my father 
+            gave me some advice that I've been turning over in my 
+            mind ever since. 'Whenever you feel like criticizing 
+            anyone,' he told me, 'just remember that all the people 
+            in this world haven't had the advantages that you've had.'
+        &lt/div>
+        &lt!--new example-->
+        &ltp class="uppercase">This is some text.&lt/p>
+        &ltp class="lowercase">This is some text.&lt/p>
+        &ltp class="capitalize">This is some text.&lt/p>
+        &lt!--new example-->
+        &ltp class="indent">
+            In my younger and more vulnerable years my father gave me 
+            some advice that I've been turning over in my mind ever 
+            since. 'Whenever you feel like criticizing anyone,' he 
+            told me, 'just remember that all the people in this world 
+            haven't had the advantages that you've had.'
+        &lt/p>
+        &lt!--new example-->
+        &lth1 class="letterspacing1">This is heading 1&lt/h1>
+        &lth2 class="letterspacing2">This is heading 2&lt/h2>
+        &lt!--new example-->
+        &ltp>
+        This is a paragraph with a standard line-height.&ltbr>
+        The default line height in most browsers is about 110% to 120%.&ltbr>
+        &lt/p>
+        &ltp class="small">
+        This is a paragraph with a smaller line-height.&ltbr>
+        This is a paragraph with a smaller line-height.&ltbr>
+        &lt/p>
+        &ltp class="big">
+        This is a paragraph with a bigger line-height.&ltbr>
+        This is a paragraph with a bigger line-height.&ltbr>
+        &lt/p>
+        &lt!--new example-->
+        &lth1 class="wordspacing1">This is heading 1&lt/h1>
+        &lth2 class="wordspacing2">This is heading 2&lt/h2>
+        &lt!--new example-->
+        &ltp class="nowrap">
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+        &lt/p>
+        &ltp class="wrap">
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+        &lt/p>
+        &lt!--new example-->
+        &ltp>An &ltimg src="./images/w3schools_logo.gif" alt="W3Schools" 
+                   width="270" height="50"> image with a default alignment.
+        &lt/p>&ltbr>
+        &ltp>An &ltimg class="top" src="./images/w3schools_logo.gif" alt="W3Schools" 
+                   width="270" height="50"> image with a text-top alignment.
+        &lt/p>&ltbr>
+        &ltp>An &ltimg class="bottom" src="./images/w3schools_logo.gif" alt="W3Schools" 
+                   width="270" height="50"> image with a text-bottom alignment.
+        &lt/p>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./031.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./033.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

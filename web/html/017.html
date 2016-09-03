@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./016.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./018.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>Java Script Event Listener</h2>
+                <p>- This example uses the addEventListener() method to attach 
+                        a click event to a button.</p>
+                <button id="myBtn1">Try it</button>
+                <script>
+                    document.getElementById("myBtn1").addEventListener("click", function(){
+                        alert("Hello World!");
+                    });
+                </script>
+                <!--new example-->
+                <p>- This example uses the addEventListener() method to add two 
+                        click events to the same button.</p>
+                <button id="myBtn2">Try it</button>
+                <script>
+                    var x = document.getElementById("myBtn2");
+                    x.addEventListener("click", myFunction2);
+                    x.addEventListener("click", someOtherFunction2);
+
+                    function myFunction2() {
+                        alert ("Hello World!");
+                    }
+                    function someOtherFunction2() {
+                        alert ("This function was also executed!");
+                    }
+                </script>
+                <!--new example-->
+                <p>- This example uses the addEventListener() method to add 
+                        many events on the same button.</p>
+                <button id="myBtn3">Try it</button>
+                <p id="demo3"></p>
+                <script>
+                    var x = document.getElementById("myBtn3");
+                    x.addEventListener("mouseover", myFunction3);
+                    x.addEventListener("click", mySecondFunction3);
+                    x.addEventListener("mouseout", myThirdFunction3);
+                    function myFunction3() {
+                        document.getElementById("demo3").innerHTML += "Moused over!<br>";
+                    }
+                    function mySecondFunction3() {
+                        document.getElementById("demo3").innerHTML += "Clicked!<br>";
+                    }
+                    function myThirdFunction3() {
+                        document.getElementById("demo3").innerHTML += "Moused out!<br>";
+                    }
+                </script>
+                <!--new example-->
+                <p>- This example uses the addEventListener() method on the window object.</p>
+                <p>Try resizing this browser window to trigger the "resize" event handler.</p>
+                <p id="demo4"></p>
+                <script>
+                    window.addEventListener("resize", function(){
+                        document.getElementById("demo4").innerHTML = Math.random();
+                    });
+                </script>
+                <!--new example-->
+                <p>- This example demonstrates how to pass parameter values when using the 
+                    addEventListener() method.</p>
+                <p>Click the button to perform a calculation.</p>
+                <button id="myBtn5">Try it</button>
+                <p id="demo5"></p>
+                <script>
+                    var p1 = 5;
+                    var p2 = 7;
+                    document.getElementById("myBtn5").addEventListener("click", function() {
+                        myFunction5(p1, p2);
+                    });
+                    function myFunction5(a, b) {
+                        var result = a * b;
+                        document.getElementById("demo5").innerHTML = result;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth2>Java Script Event Listener&lt/h2>
+        &ltp>- This example uses the addEventListener() method to attach 
+                a click event to a button.&lt/p>
+        &ltbutton id="myBtn1">Try it&lt/button>
+        &ltscript>
+            document.getElementById("myBtn1").addEventListener("click", function(){
+                alert("Hello World!");
+            });
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- This example uses the addEventListener() method to add two 
+                click events to the same button.&lt/p>
+        &ltbutton id="myBtn2">Try it&lt/button>
+        &ltscript>
+            var x = document.getElementById("myBtn2");
+            x.addEventListener("click", myFunction2);
+            x.addEventListener("click", someOtherFunction2);
+
+            function myFunction2() {
+                alert ("Hello World!");
+            }
+            function someOtherFunction2() {
+                alert ("This function was also executed!");
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- This example uses the addEventListener() method to add 
+                many events on the same button.&lt/p>
+        &ltbutton id="myBtn3">Try it&lt/button>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+            var x = document.getElementById("myBtn3");
+            x.addEventListener("mouseover", myFunction3);
+            x.addEventListener("click", mySecondFunction3);
+            x.addEventListener("mouseout", myThirdFunction3);
+            function myFunction3() {
+                document.getElementById("demo3").innerHTML += "Moused over!&ltbr>";
+            }
+            function mySecondFunction3() {
+                document.getElementById("demo3").innerHTML += "Clicked!&ltbr>";
+            }
+            function myThirdFunction3() {
+                document.getElementById("demo3").innerHTML += "Moused out!&ltbr>";
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- This example uses the addEventListener() method on 
+            the window object.&lt/p>
+        &ltp>Try resizing this browser window to trigger the "resize" 
+            event handler.&lt/p>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            window.addEventListener("resize", function(){
+                document.getElementById("demo4").innerHTML = Math.random();
+            });
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- This example demonstrates how to pass parameter values when using the 
+            addEventListener() method.&lt/p>
+        &ltp>Click the button to perform a calculation.&lt/p>
+        &ltbutton id="myBtn5">Try it&lt/button>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            var p1 = 5;
+            var p2 = 7;
+            document.getElementById("myBtn5").addEventListener("click", function() {
+                myFunction5(p1, p2);
+            });
+            function myFunction5(a, b) {
+                var result = a * b;
+                document.getElementById("demo5").innerHTML = result;
+            }
+        &lt/script>              
+        </code>
+        </pre>
+        </div>
+    </div>    
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./016.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./018.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

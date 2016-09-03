@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./014.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./016.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body onload="mymessage1(), checkCookies1()">       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody" onloadstart="checkCookies1"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript HTML DOM Events</h2>
+                <script>
+                    function mymessage1() {
+                        alert("This message was triggered from the onload event");
+                    }
+                </script>
+                <!--new example-->
+                <p>- This function checks cookies status:</p>
+                <p id="demo3">.</p>
+                <script>
+                    function checkCookies1() {
+                        var text = "";
+                        if (navigator.cookieEnabled === true) {
+                            text = "Cookies are enabled.";
+                        } else {
+                            text = "Cookies are not enabled.";
+                        }
+                        document.getElementById("demo3").innerHTML = text;
+                    }
+                </script>
+                <!--new example-->
+                <p>- An HTML event can be something the browser does, or 
+                        something a user does.</p>
+                <p>Here are some examples of HTML events:</p>
+                <ul>
+                    <li>An HTML web page has finished loading</li>
+                    <li>An HTML input field was changed</li>
+                    <li>An HTML button was clicked</li>        
+                </ul>
+                <!--new example-->
+                <p>- HTML Event Attributes</p>
+                <p>To assign events to HTML elements you can use event attributes.</p>
+                <p>Assign an onclick event to a button element:</p>
+                <p>Click the button to display the date.</p>
+                <button onclick="displayDate1()">The time is?</button>
+                <p id="demo1"></p>
+                <script>
+                    function displayDate1() {
+                        document.getElementById("demo1").innerHTML = Date();
+                    }
+                </script>
+                <!--new example-->
+                <p>- Assign Events Using the HTML DOM</p>
+                <p>The HTML DOM allows you to assign events to HTML elements using JavaScript.</p>
+                <p>Assign an onclick event to a button element:</p>
+                <p>Click "Try it" to execute the displayDate() function.</p>
+                <button id="myBtn1">Try it</button>
+                <p id="demo2"></p>
+                <script>
+                    document.getElementById("myBtn1").onclick = displayDate2;
+                    function displayDate2() {
+                        document.getElementById("demo2").innerHTML = Date();
+                    }
+                </script>
+                <!--new example-->
+                <p>When you leave the input field, a function is triggered which 
+                        transforms the input text to upper case.</p>
+                <script>
+                    function myFunction1() {
+                        var x = document.getElementById("fname1");
+                        x.value = x.value.toUpperCase();
+                    }
+                </script>
+                Enter your name: <input type="text" id="fname1" onchange="myFunction1()">              
+                <br><br>
+                <!--new example-->
+                <div onmouseover="mOver1(this)" onmouseout="mOut1(this)" 
+                    style="background-color:#D94A38;width:240px;height:100px;padding:20px;">
+                    Mouse Over Me
+                </div>
+                <script>
+                    function mOver1(obj) {
+                        obj.innerHTML = "Thank You"
+                    }
+                    function mOut1(obj) {
+                        obj.innerHTML = "Mouse Over Me"
+                    }
+                </script>
+                <!--new example-->
+                <br><br>
+                <div onmousedown="mDown1(this)" onmouseup="mUp1(this)"
+                    style="background-color:#D94A38;width:240px;height:100px;padding:20px;">
+                    Click Me
+                </div>
+                <br><br>
+                <script>
+                    function mDown1(obj) {
+                        obj.style.backgroundColor = "#1ec5e5";
+                        obj.innerHTML = "Release Me";
+                    }
+                    function mUp1(obj) {
+                        obj.style.backgroundColor="#D94A38";
+                        obj.innerHTML="Thank You";
+                    }
+                </script>
+                <!--new example-->
+                <p>When the input field gets focus, a function is triggered 
+                        which changes the background-color.</p>
+                <script>
+                    function myFunction2(x) {
+                        x.style.background = "yellow";
+                    }
+                </script>
+                Enter your name: <input type="text" onfocus="myFunction2(this)">
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &ltbody onload="mymessage1(), checkCookies1()">       
+        &lt!--Body content-->
+        &lth2>JavaScript HTML DOM Events&lt/h2>
+        &ltscript>
+            function mymessage1() {
+                alert("This message was triggered from the onload event");
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- This function checks cookies status:&lt/p>
+        &ltp id="demo3">.&lt/p>
+        &ltscript>
+            function checkCookies1() {
+                var text = "";
+                if (navigator.cookieEnabled === true) {
+                    text = "Cookies are enabled.";
+                } else {
+                    text = "Cookies are not enabled.";
+                }
+                document.getElementById("demo3").innerHTML = text;
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- An HTML event can be something the browser does, or 
+                something a user does.&lt/p>
+        &ltp>Here are some examples of HTML events:&lt/p>
+        &ltul>
+            &ltli>An HTML web page has finished loading&lt/li>
+            &ltli>An HTML input field was changed&lt/li>
+            &ltli>An HTML button was clicked&lt/li>        
+        &lt/ul>
+        &lt!--new example-->
+        &ltp>- HTML Event Attributes&lt/p>
+        &ltp>To assign events to HTML elements you can use event attributes.&lt/p>
+        &ltp>Assign an onclick event to a button element:&lt/p>
+        &ltp>Click the button to display the date.&lt/p>
+        &ltbutton onclick="displayDate1()">The time is?&lt/button>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+            function displayDate1() {
+                document.getElementById("demo1").innerHTML = Date();
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>- Assign Events Using the HTML DOM&lt/p>
+        &ltp>The HTML DOM allows you to assign events to HTML elements using JavaScript.&lt/p>
+        &ltp>Assign an onclick event to a button element:&lt/p>
+        &ltp>Click "Try it" to execute the displayDate() function.&lt/p>
+        &ltbutton id="myBtn1">Try it&lt/button>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            document.getElementById("myBtn1").onclick = displayDate2;
+            function displayDate2() {
+                document.getElementById("demo2").innerHTML = Date();
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>When you leave the input field, a function is triggered which 
+                transforms the input text to upper case.&lt/p>
+        &ltscript>
+            function myFunction1() {
+                var x = document.getElementById("fname1");
+                x.value = x.value.toUpperCase();
+            }
+        &lt/script>
+        Enter your name: &ltinput type="text" id="fname1" onchange="myFunction1()">              
+        &lt!--new example-->
+        &ltdiv onmouseover="mOver1(this)" onmouseout="mOut1(this)" 
+            style="background-color:#D94A38;width:240px;height:100px;padding:20px;">
+            Mouse Over Me
+        &lt/div>
+        &ltscript>
+            function mOver1(obj) {
+                obj.innerHTML = "Thank You"
+            }
+            function mOut1(obj) {
+                obj.innerHTML = "Mouse Over Me"
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltbr>&ltbr>
+        &ltdiv onmousedown="mDown1(this)" onmouseup="mUp1(this)"
+            style="background-color:#D94A38;width:240px;height:100px;padding:20px;">
+            Click Me
+        &lt/div>
+        &ltbr>&ltbr>
+        &ltscript>
+            function mDown1(obj) {
+                obj.style.backgroundColor = "#1ec5e5";
+                obj.innerHTML = "Release Me";
+            }
+            function mUp1(obj) {
+                obj.style.backgroundColor="#D94A38";
+                obj.innerHTML="Thank You";
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>When the input field gets focus, a function is triggered 
+                which changes the background-color.&lt/p>
+        &ltscript>
+            function myFunction2(x) {
+                x.style.background = "yellow";
+            }
+        &lt/script>
+        Enter your name: &ltinput type="text" onfocus="myFunction2(this)">        
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./014.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./016.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

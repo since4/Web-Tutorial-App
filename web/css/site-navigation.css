@@ -1,0 +1,208 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2016, 9:32:23 AM
+    Author     : benzro
+*/
+
+/*Header navigation V-1*/
+div.header_navigation_V-1 {
+    text-align: center;
+}
+div.header_navigation_V-1 ul {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    /* For IE, the outcast */
+    zoom:1;
+    *display: inline;
+}
+div.header_navigation_V-1 p {
+    float: left;
+    padding: 2px 35px;
+    border: 1px solid black;
+}
+/*
+<!--Header navigation-->
+    <div class="header_navigation_V-1">
+        <ul> 
+            <p><a href="./042.html">Previous</a></p>
+            <p><a href="../index.html">HOME</a></p>
+            <p><a href="./044.html">Next</a></p>
+        </ul>
+    </div>
+*/
+
+/*Header Navigation V-2*/
+div.header_navigation_V-2{    
+    margin: 0px auto; /*15px 40px 15px 40px;*/
+    position: static; /*static (default), fixed, relative, absolute*/
+    background-color: darkslategrey; 
+    /*border: brown  solid thick; /*debugging*/
+}
+div.header_navigation_V-2 ul {
+    width:450px;        
+    margin: auto;
+    padding: 0;
+    overflow: hidden;          
+    position: static;
+    text-align: center;
+    list-style-type: none; /*remove the bullets*/
+    /*border: blue  solid thick; /*debugging*/
+}
+div.header_navigation_V-2 ul li {
+    float: left;
+    width:150px;
+    border-right: aliceblue solid thin;
+    border-left: aliceblue solid thin;
+    /*border: green  solid thick; /*debugging*/    
+}
+div.header_navigation_V-2 ul #prev, #next {
+    background-color: red;
+}
+div.header_navigation_V-2 ul #home {
+    background-color: green;
+}
+div.header_navigation_V-2 ul li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    /*border: white  solid thick;/*debugging*/  
+}
+div.header_navigation_V-2 ul li a:hover {
+    color:black;
+}
+/*
+<!--Header navigation-->
+    <div class="header_navigation_V-2">
+        <ul> 
+            <li id="prev" class="active"><a href="./043.html">« Previous</a></li>
+            <li id="home" class="active"><a href="../index.html">HOME</a></li>
+            <li id="next" class="active"><a href="./045.html">Next »</a></li>
+        </ul>
+    </div>
+*/
+
+/*Footer navigation V-1*/
+div.footer_navigation_V-1, div.links {
+    font-size: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: auto;
+}
+div.footer_navigation_V-1 div.prev {
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    width: 22%;
+    padding-left:30px;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+div.footer_navigation_V-1 div.home {
+    float: left;
+    margin-left: 3%;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 46%;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+div.footer_navigation_V-1 div.next {
+    float: right;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    width: 28%;
+    padding-right:30px;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+/*
+<!--Body navigation-->  
+    <div class="footer_navigation_V-1" style="visibility: visible;">
+        <div class="prev">
+            <a href="./042.html" class="links" style="visibility: visible;">« Previous</a>
+        </div>
+        <div style="float:left;" class="home">
+            <a href="../index.html" class="links" style="visibility: visible;">HOME</a>
+        </div>
+        <div class="next">
+            <a href="./044.html" class="links" style="visibility: visible;">Next »</a>
+        </div>
+    </div>
+*/
+
+/*Footer Navigation V-2*/
+div.footer_navigation_V-2{    
+    margin: 0px auto; /*15px 40px 15px 40px;*/
+    position: static; /*static (default), fixed, relative, absolute*/
+    text-align: center;
+    background-color: darkslategrey; 
+    /*border: brown  solid thick; /*debugging*/
+}
+div.footer_navigation_V-2 ul {
+    width: 450px;/*100% OR 450px;*/
+    height:  border-box;
+    margin: 0px auto;
+    padding: 0;
+    overflow: auto;          
+    position: static;
+    text-align: center;
+    list-style-type: none; /*remove the bullet points*/
+    /*border: blue  solid thick;/*debugging*/
+}
+div.footer_navigation_V-2 ul li {
+    float: left;
+    margin: 0px auto;
+    width: 150px;
+    border-right: aliceblue solid thin;
+    border-left: aliceblue solid thin;
+    /*border: green  solid thick;/*debugging*/  
+}
+div.footer_navigation_V-2 ul li a {
+    display: inline-block; /*makes box look bigger*/
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    /*border: white  solid thick;/*debugging*/  
+}
+div.footer_navigation_V-2 ul li a:hover {
+    color:black;
+}
+div.footer_navigation_V-2 ul #prev, #next {
+    background-color: red;
+}
+div.footer_navigation_V-2 ul #prev {
+    background-color: red;
+}
+div.footer_navigation_V-2 ul #home {
+    background-color: green;
+}
+/*
+<!--Footer navigation-->  
+    <div class="header_navigation_V-2">
+        <ul> 
+            <li id="prev" class="active"><a href="./043.html">« Previous</a></li>
+            <li id="home" class="active"><a href="../index.html">HOME</a></li>
+            <li id="next" class="active"><a href="./045.html">Next »</a></li>
+        </ul>
+    </div>
+*/
+
+/*Header and footer navigation for small screen or high zoom*/
+@media screen and (max-width: 540px){
+    div.header_navigation_V-2 {background: rgba(0, 0, 0, 0)}
+    div.header_navigation_V-2 ul {width:150px;}       
+    div.header_navigation_V-2 ul li {float: top;}
+    div.footer_navigation_V-2 {background: rgba(0, 0, 0, 0)}
+    div.footer_navigation_V-2 ul {width:150px;}       
+    div.footer_navigation_V-2 ul li {float: top;}                  
+} 

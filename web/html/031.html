@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./030.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./032.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        p.one {
+            border: 1px solid black;
+            outline-style: double;
+            outline-color: red;
+            outline-width: thick;
+        }
+        p.two {
+            border: 1px solid black;
+            outline-style: double;
+            outline-color: green;
+            outline-width: 3px;
+        }
+    </style>
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <h2>CSS Outline</h2>
+                <p>The CSS <code class="w3-codespan">outline</code> properties 
+                    specify the style, color, and width of an outline.</p>
+                <p>An outline is a line that is drawn around elements 
+                    (outside the borders) to make the element "stand out". </p>
+                <p>However, the outline property is different from the border 
+                    property - The outline is a part of an element's dimensions; 
+                    the element's total width and height
+                    is not affected by the width of the outline.
+                </p>
+                <img src="./images/Boxmodel_Outline.png" width="350" height="263" 
+                     alt="CSS/HTML Boxmodel Outline">              
+                <h2>The outline-width Property</h2>
+                <p class="one">This is some text.</p>
+                <p class="two">This is some text.</p>
+                <b>Note:</b> IE8 supports the outline properties only if a !DOCTYPE is specified.               
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            p.one {
+                border: 1px solid black;
+                outline-style: double;
+                outline-color: red;
+                outline-width: thick;
+            }
+            p.two {
+                border: 1px solid black;
+                outline-style: double;
+                outline-color: green;
+                outline-width: 3px;
+            }
+        &lt/style>
+        &lt!--Body content-->
+        &lth2>CSS Outline&lt/h2>
+        &ltp>The CSS &ltcode class="w3-codespan">outline&lt/code> properties 
+            specify the style, color, and width of an outline.&lt/p>
+        &ltp>An outline is a line that is drawn around elements 
+            (outside the borders) to make the element "stand out". &lt/p>
+        &ltp>However, the outline property is different from the border 
+            property - The outline is a part of an element's dimensions; 
+            the element's total width and height
+            is not affected by the width of the outline.
+        &lt/p>
+        &ltimg src="./images/Boxmodel_Outline.png" width="350" height="263" 
+             alt="CSS/HTML Boxmodel Outline">              
+        &lth2>The outline-width Property&lt/h2>
+        &ltp class="one">This is some text.&lt/p>
+        &ltp class="two">This is some text.&lt/p>
+        &ltb>
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./030.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./032.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

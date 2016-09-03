@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./020.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./022.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    
+</head>    
+<body>       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can JavaScript Do?</h1>
+            <div class = "interactive">
+                <h2>JavaScript Forms</h2>
+                <script>
+                    function validateForm1() {
+                        var x = document.forms["myForm1"]["fname"].value;
+                        if (x == null || x == "") {
+                            alert("Name must be filled out");
+                            return false;
+                        }
+                    }
+                </script>
+                <form name="myForm1" action="../php/001.html"
+                      onsubmit="return validateForm1()" method="post">
+                    Name1: <input type="text" name="fname">
+                    <input type="submit" value="Submit">
+                </form>
+                <!--new example-->
+                <h3>JavaScript Can Validate Input</h3>
+                <p>Please input a number between 1 and 10:</p>
+                2: <input id="numb2">
+                <button type="button" onclick="myFunction2()">2Submit</button>
+                <p id="demo2"></p>
+                <script>
+                    function myFunction2() {
+                        var x, text;
+                        // Get the value of the input field with id="numb2"
+                        x = document.getElementById("numb2").value;
+                        // If x is Not a Number or less than one or greater than 10
+                        if (isNaN(x) || x < 1 || x > 10) {
+                            text = "Input not valid";
+                        } else {
+                            text = "Input OK";
+                        }
+                        document.getElementById("demo2").innerHTML = text;
+                    }
+                </script>
+                <!--new example-->
+                <form action="../php/001.html" method="post">
+                    3: <input type="text" name="fname" required>
+                    <input type="submit" value="3Submit">
+                </form>
+                <p>If you click submit, without filling out the text field,
+                    your browser will display an error message.</p>
+                <!--new example-->
+                <p>Enter a number and click OK:</p>
+                4: <input id="id14" type="number" min="100" max="300" required>
+                <button onclick="myFunction4()">4OK</button>
+                <p>If the number is less than 100 or greater than 300, an error 
+                    message will be displayed.</p>
+                <p id="demo4"></p>
+                <script>
+                    function myFunction4() {
+                        var inpObj = document.getElementById("id14");
+                        if (inpObj.checkValidity() == false) {
+                            document.getElementById("demo4").innerHTML = 
+                                    inpObj.validationMessage;
+                        } else {
+                            document.getElementById("demo4").innerHTML = "Input OK";
+                        }
+                    }
+                </script>
+                <!--new example-->
+                <p>Enter a number and click OK:</p>
+                5: <input id="id15" type="number" max="100">
+                <button onclick="myFunction5()">OK</button>
+                <p>If the number is greater than 100 (the input's max attribute), 
+                    an error message will be displayed.</p>
+                <p id="demo5"></p>
+                <script>
+                    function myFunction5() {
+                        var txt = "";
+                        if (document.getElementById("id15").validity.rangeOverflow) {
+                            txt = "Value too large";
+                        } else {
+                            txt = "Input OK";
+                        }
+                        document.getElementById("demo5").innerHTML = txt;
+                    }
+                </script>
+                <!--new example-->
+                <p>Enter a number and click OK:</p>
+                6: <input id="id16" type="number" min="100">
+                <button onclick="myFunction6()">OK</button>
+                <p>If the number is less than 100 (the input's min attribute), 
+                    an error message will be displayed.</p>
+                <p id="demo6"></p>
+                <script>
+                    function myFunction6() {
+                        var txt = "";
+                        if (document.getElementById("id16").validity.rangeUnderflow) {
+                            txt = "Value too small";
+                        } else {
+                            txt = "Input OK";
+                        }
+                        document.getElementById("demo6").innerHTML = txt;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Body content-->
+        &lth1>JavaScript Forms&lt/h1>
+        &ltscript>
+            function validateForm1() {
+                var x = document.forms["myForm1"]["fname"].value;
+                if (x == null || x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+            }
+        &lt/script>
+        &ltform name="myForm1" action="../php/001.html"
+              onsubmit="return validateForm1()" method="post">
+            Name1: &ltinput type="text" name="fname">
+            &ltinput type="submit" value="Submit">
+        &lt/form>
+        &lt!--new example-->
+        &lth1>JavaScript Can Validate Input&lt/h1>
+        &ltp>Please input a number between 1 and 10:&lt/p>
+        2: &ltinput id="numb2">
+        &ltbutton type="button" onclick="myFunction2()">2Submit&lt/button>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+            function myFunction2() {
+                var x, text;
+                // Get the value of the input field with id="numb2"
+                x = document.getElementById("numb2").value;
+                // If x is Not a Number or less than one or greater than 10
+                if (isNaN(x) || x &lt 1 || x > 10) {
+                    text = "Input not valid";
+                } else {
+                    text = "Input OK";
+                }
+                document.getElementById("demo2").innerHTML = text;
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltform action="../php/001.html" method="post">
+            3: &ltinput type="text" name="fname" required>
+            &ltinput type="submit" value="3Submit">
+        &lt/form>
+        &ltp>If you click submit, without filling out the text field,
+            your browser will display an error message.&lt/p>
+        &lt!--new example-->
+        &ltp>Enter a number and click OK:&lt/p>
+        4: &ltinput id="id14" type="number" min="100" max="300" required>
+        &ltbutton onclick="myFunction4()">4OK&lt/button>
+        &ltp>If the number is less than 100 or greater than 300, 
+            an error message will be displayed.&lt/p>
+        &ltp id="demo4">&lt/p>
+        &ltscript>
+            function myFunction4() {
+                var inpObj = document.getElementById("id14");
+                if (inpObj.checkValidity() == false) {
+                    document.getElementById("demo4").innerHTML = 
+                    inpObj.validationMessage;
+                } else {
+                    document.getElementById("demo4").innerHTML = "Input OK";
+                }
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>Enter a number and click OK:&lt/p>
+        5: &ltinput id="id15" type="number" max="100">
+        &ltbutton onclick="myFunction5()">OK&lt/button>
+        &ltp>If the number is greater than 100 (the input's max attribute), 
+            an error message will be displayed.&lt/p>
+        &ltp id="demo5">&lt/p>
+        &ltscript>
+            function myFunction5() {
+                var txt = "";
+                if (document.getElementById("id15").validity.rangeOverflow) {
+                    txt = "Value too large";
+                } else {
+                    txt = "Input OK";
+                }
+                document.getElementById("demo5").innerHTML = txt;
+            }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>Enter a number and click OK:&lt/p>
+        6: &ltinput id="id16" type="number" min="100">
+        &ltbutton onclick="myFunction6()">OK&lt/button>
+        &ltp>If the number is less than 100 (the input's min attribute), 
+            an error message will be displayed.&lt/p>
+        &ltp id="demo6">&lt/p>
+        &ltscript>
+            function myFunction6() {
+                var txt = "";
+                if (document.getElementById("id16").validity.rangeUnderflow) {
+                    txt = "Value too small";
+                } else {
+                    txt = "Input OK";
+                }
+                document.getElementById("demo6").innerHTML = txt;
+            }
+        &lt/script>                    
+        </code>
+        </pre>
+        </div>
+    </div>
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./020.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./022.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

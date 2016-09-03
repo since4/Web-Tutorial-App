@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Header navigation-->
+    <div class="header_image">
+        <div class="header_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./036.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./038.html">Next »</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    
+    <!--Internal Stylesheet-->
+    <style>
+        .center1 {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+        .center_text2 {
+            text-align: center;
+            border: 3px solid green;
+        }
+        .img3 {
+            display: block;
+            margin: 0 auto;
+        }
+        .container4 {
+            position: relative;
+            width: 100%;
+            height:350px; 
+            border: 3px solid orangered;
+        }
+        .right4 {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+        .body5 {
+            margin: 0;
+            padding: 0;
+        }
+        .container5 {
+            position: relative;
+            width: 100%;
+            height:350px; 
+            border: 3px solid orangered;
+        }
+        .right5 {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            background-color: #b0e0e6;
+        }
+        .container6 {
+            position: relative;
+            width: 100%;
+            height:350px; 
+            border: 3px solid orangered;
+        }
+        .right6 {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+        .center_text7 {
+            padding: 70px 0;
+            border: 3px solid green;
+        }
+        .center_text8 {
+            padding: 70px 0;
+            border: 3px solid green;
+            text-align: center;
+        }
+        .center9 {
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+        .center9 p {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .center10 { 
+            height: 200px;
+            position: relative;
+            border: 3px solid green; 
+        }
+        .center10 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style> 
+    
+</head>    
+<body class="body5">       
+    <div>
+        <!--Body content-->
+        <div class = "mainbody"> 
+            <h1>What Can CSS Do?</h1>
+            <div class = "interactive">
+                <!--new example-->
+                <h2>Center Align Elements</h2>
+                <p>To horizontally center a block element (like &lt;div&gt;), 
+                    use <code class="codespan">margin: auto;</code></p>
+                <p>Setting the width of the element will prevent 
+                    it from stretching out to the 
+                    edges of its container.
+                </p>
+                <p>The element will then take up the specified width, 
+                    and the remaining space 
+                    will be split equally between the two margins:
+                </p>
+                <h2>Center Align Elements</h2>
+                <p>To horizontally center a block element (like div), 
+                    use margin: auto;
+                </p>
+                <div class="center1">
+                  <p>
+                      <b>Note: </b>Using margin:auto will not work in IE8, 
+                      unless a !DOCTYPE is declared.
+                      Note: Center aligning has no effect if the width 
+                      property is not set (or set to 100%).
+                  </p>
+                </div>
+                <!--new example-->
+                <h2>Center Text</h2>
+                <div class="center_text2">
+                  <p>This text is centered. 
+                      Tip: For more examples on how to align text, 
+                      see the CSS Text chapter.
+                  </p>
+                </div>
+                <!--new example-->
+                <h2>Center an Image</h2>
+                <p>
+                    To center an image, use margin: 
+                    auto; and make it into a block element:
+                </p>
+                <img class="img3" src="./images/paris.jpg" alt="Paris" style="width:40%">
+                <!--new example-->
+                <h2>Right Align</h2>
+                <p>One method for aligning elements is to use 
+                    <code class="codespan">position: absolute;</code>:
+                </p>
+                <div class="container4">
+                    <p>The outer box has postition:relative property. This
+                        prevents overlapping of boxes with position: absolute
+                        or float property with other examples. (But, not completely
+                        waterproof, use zoom 300%)
+                    </p>
+                    <div class="right4">
+                      <p>
+                          4 In my younger and more vulnerable years my father gave 
+                          me some advice that I've been turning over in my mind 
+                          ever since.
+                      </p>
+                    </div>
+                </div>
+                <!--new example-->
+                <p>
+                    <b>Note:</b> Absolute positioned elements are removed from the 
+                    normal flow, and can overlap elements.
+                </p>
+                <p>
+                    <strong>Tip:</strong> When aligning elements with 
+                    <code class="codespan">position</code>, always define
+                    <code class="codespan">margin</code> and 
+                    <code class="codespan">padding</code> for
+                    the <code class="codespan">&lt;body&gt;</code> element. 
+                    This is to avoid visual differences in different browsers.
+                </p>
+                <h2>Right Align</h2>
+                <div class="container5">
+                    <p>The outer box has postition:relative property. This
+                        prevents overlapping of boxes with position: absolute
+                        or float property with other examples. (But, not completely
+                        waterproof, use zoom 300%)
+                    </p>                  
+                    <div class="right5">
+                        <p>
+                            <b>Note: </b>5 When aligning using the position property, 
+                            always include the !DOCTYPE declaration! If missing, 
+                            it can produce strange results in IE browsers.
+                        </p>
+                    </div>
+                    
+                </div>
+                <!--new example-->
+                <p>Another method for aligning elements is to use 
+                    the <code class="codespan">float</code> property:
+                </p>
+                <p><strong>Tip:</strong> When aligning elements with 
+                    <code class="codespan">float</code>, always define 
+                    <code class="codespan">margin</code> and 
+                    <code class="codespan">padding</code> for 
+                    codespan">&lt;body&gt;</code> element. 
+                    This is to avoid visual differences in different browsers.
+                </p>
+                <h2>Right Align</h2>
+                <p>An example of how to right align elements with the float 
+                    property:
+                </p>
+                <div class="container6">
+                    <p>The outer box has postition:relative property. This
+                        prevents overlapping of boxes with position: absolute
+                        or float property with other examples.(But, not completely
+                        waterproof, use zoom 300%)
+                    </p>
+                    <div class="right6">
+                      <p>6 In my younger and more vulnerable years my father gave me 
+                          some advice that I've been turning over in my mind ever 
+                          since.
+                      </p>
+                    </div>
+                </div>
+                <!--new example-->
+                <h2>Center Vertically</h2>
+                <p>In this example, we use the padding property to center 
+                    the div element vertically:</p>
+                <div class="center_text7">
+                  <p>I am vertically centered.</p>
+                </div>
+                <!--new example-->
+                <h2>Centering</h2>
+                <p>In this example, we use padding and text-align to center 
+                    the div element vertically and horizontally:
+                </p>
+                <div class="center_text8">
+                  <p>I am vertically and horizontally centered.</p>
+                </div>
+                <!--new example-->
+                <h2>Centering</h2>
+                <p>In this example, we use the line-height property with a 
+                    value that is equal to the height property to center the 
+                    div element:
+                </p>
+                <div class="center9">
+                  <p>I am vertically and horizontally centered.</p>
+                </div>
+                <!--new example-->
+                <h2>Centering</h2>
+                <p>In this example, we use positioning and the transform 
+                    property to vertically and horizontally center the div 
+                    element:
+                </p>
+                <div class="center">
+                  <p>I am vertically and horizontally centered.</p>
+                </div>
+                <p>Note: The transform property is not supported in IE8 and 
+                    earlier versions.
+                </p>               
+            </div>
+        </div>
+        
+        <!--Code verbose-->
+        <div class="code">
+        <pre class="code_">
+        <code class="language-html">
+        &lt!--Internal Stylesheet-->
+        &ltstyle>
+            .center1 {
+                margin: auto;
+                width: 60%;
+                border: 3px solid #73AD21;
+                padding: 10px;
+            }
+            .center_text2 {
+                text-align: center;
+                border: 3px solid green;
+            }
+            .img3 {
+                display: block;
+                margin: 0 auto;
+            }
+            .container4 {
+                position: relative;
+                width: 100%;
+                height:350px; 
+                border: 3px solid orangered;
+            }
+            .right4 {
+                position: absolute;
+                right: 0px;
+                width: 300px;
+                border: 3px solid #73AD21;
+                padding: 10px;
+            }
+            .body5 {
+                margin: 0;
+                padding: 0;
+            }
+            .container5 {
+                position: relative;
+                width: 100%;
+                height:350px; 
+                border: 3px solid orangered;
+            }
+            .right5 {
+                position: absolute;
+                right: 0px;
+                width: 300px;
+                background-color: #b0e0e6;
+            }
+            .container6 {
+                position: relative;
+                width: 100%;
+                height:350px; 
+                border: 3px solid orangered;
+            }
+            .right6 {
+                float: right;
+                width: 300px;
+                border: 3px solid #73AD21;
+                padding: 10px;
+            }
+            .center_text7 {
+                padding: 70px 0;
+                border: 3px solid green;
+            }
+            .center_text8 {
+                padding: 70px 0;
+                border: 3px solid green;
+                text-align: center;
+            }
+            .center9 {
+                line-height: 200px;
+                height: 200px;
+                border: 3px solid green;
+                text-align: center;
+            }
+            .center9 p {
+                line-height: 1.5;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .center10 { 
+                height: 200px;
+                position: relative;
+                border: 3px solid green; 
+            }
+            .center10 p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        &lt/style> 
+        &lt!--Body content-->
+        &lt!--new example-->
+        &lth2>Center Align Elements&lt/h2>
+        &ltp>To horizontally center a block element (like &lt;div&gt;), 
+            use &ltcode class="codespan">margin: auto;&lt/code>&lt/p>
+        &ltp>Setting the width of the element will prevent 
+            it from stretching out to the 
+            edges of its container.
+        &lt/p>
+        &ltp>The element will then take up the specified width, 
+            and the remaining space 
+            will be split equally between the two margins:
+        &lt/p>
+        &lth2>Center Align Elements&lt/h2>
+        &ltp>To horizontally center a block element (like div), 
+            use margin: auto;
+        &lt/p>
+        &ltdiv class="center1">
+          &ltp>
+              &ltb>Note: &lt/b>Using margin:auto will not work in IE8, 
+              unless a !DOCTYPE is declared.
+              Note: Center aligning has no effect if the width 
+              property is not set (or set to 100%).
+          &lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Center Text&lt/h2>
+        &ltdiv class="center_text2">
+          &ltp>This text is centered. 
+              Tip: For more examples on how to align text, 
+              see the CSS Text chapter.
+          &lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Center an Image&lt/h2>
+        &ltp>
+            To center an image, use margin: 
+            auto; and make it into a block element:
+        &lt/p>
+        &ltimg class="img3" src="./images/paris.jpg" alt="Paris" style="width:40%">
+        &lt!--new example-->
+        &lth2>Right Align&lt/h2>
+        &ltp>One method for aligning elements is to use 
+            &ltcode class="codespan">position: absolute;&lt/code>:
+        &lt/p>
+        &ltdiv class="container4">
+            &ltp>The outer box has postition:relative property. This
+                prevents overlapping of boxes with position: absolute
+                or float property with other examples. (But, not completely
+                waterproof, use zoom 300%)
+            &lt/p>
+            &ltdiv class="right4">
+              &ltp>
+                  4 In my younger and more vulnerable years my father gave 
+                  me some advice that I've been turning over in my mind 
+                  ever since.
+              &lt/p>
+            &lt/div>
+        &lt/div>
+        &lt!--new example-->
+        &ltp>
+            &ltb>Note:&lt/b> Absolute positioned elements are removed from the 
+            normal flow, and can overlap elements.
+        &lt/p>
+        &ltp>
+            &ltstrong>Tip:&lt/strong> When aligning elements with 
+            &ltcode class="codespan">position&lt/code>, always define
+            &ltcode class="codespan">margin&lt/code> and 
+            &ltcode class="codespan">padding&lt/code> for
+            the &ltcode class="codespan">&lt;body&gt;&lt/code> element. 
+            This is to avoid visual differences in different browsers.
+        &lt/p>
+        &lth2>Right Align&lt/h2>
+        &ltdiv class="container5">
+            &ltp>The outer box has postition:relative property. This
+                prevents overlapping of boxes with position: absolute
+                or float property with other examples. (But, not completely
+                waterproof, use zoom 300%)
+            &lt/p>                  
+            &ltdiv class="right5">
+                &ltp>
+                    &ltb>Note: &lt/b>5 When aligning using the position property, 
+                    always include the !DOCTYPE declaration! If missing, 
+                    it can produce strange results in IE browsers.
+                &lt/p>
+            &lt/div>
+
+        &lt/div>
+        &lt!--new example-->
+        &ltp>Another method for aligning elements is to use 
+            the &ltcode class="codespan">float&lt/code> property:
+        &lt/p>
+        &ltp>&ltstrong>Tip:&lt/strong> When aligning elements with 
+            &ltcode class="codespan">float&lt/code>, always define 
+            &ltcode class="codespan">margin&lt/code> and 
+            &ltcode class="codespan">padding&lt/code> for 
+            codespan">&lt;body&gt;&lt/code> element. 
+            This is to avoid visual differences in different browsers.
+        &lt/p>
+        &lth2>Right Align&lt/h2>
+        &ltp>An example of how to right align elements with the float 
+            property:
+        &lt/p>
+        &ltdiv class="container6">
+            &ltp>The outer box has postition:relative property. This
+                prevents overlapping of boxes with position: absolute
+                or float property with other examples.(But, not completely
+                waterproof, use zoom 300%)
+            &lt/p>
+            &ltdiv class="right6">
+              &ltp>6 In my younger and more vulnerable years my father gave me 
+                  some advice that I've been turning over in my mind ever 
+                  since.
+              &lt/p>
+            &lt/div>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Center Vertically&lt/h2>
+        &ltp>In this example, we use the padding property to center 
+            the div element vertically:&lt/p>
+        &ltdiv class="center_text7">
+          &ltp>I am vertically centered.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Centering&lt/h2>
+        &ltp>In this example, we use padding and text-align to center 
+            the div element vertically and horizontally:
+        &lt/p>
+        &ltdiv class="center_text8">
+          &ltp>I am vertically and horizontally centered.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Centering&lt/h2>
+        &ltp>In this example, we use the line-height property with a 
+            value that is equal to the height property to center the 
+            div element:
+        &lt/p>
+        &ltdiv class="center9">
+          &ltp>I am vertically and horizontally centered.&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &lth2>Centering&lt/h2>
+        &ltp>In this example, we use positioning and the transform 
+            property to vertically and horizontally center the div 
+            element:
+        &lt/p>
+        &ltdiv class="center">
+          &ltp>I am vertically and horizontally centered.&lt/p>
+        &lt/div>
+        &ltp>Note: The transform property is not supported in IE8 and 
+            earlier versions.
+        &lt/p>       
+        </code>
+        </pre>
+        </div>
+    </div>      
+
+    <!--Body picture-->
+    <div class="background_image"></div>
+
+    <!--Footer navigation--> 
+    <div style="margin:15px 40px 15px 40px">
+        <div class="footer_navigation_V-2">
+            <ul> 
+                <li id="prev" class="active"><a href="./036.html">« Previous</a></li>
+                <li id="home" class="active"><a href="../index.html">HOME</a></li>
+                <li id="next" class="active"><a href="./038.html">Next »</a></li>
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>
