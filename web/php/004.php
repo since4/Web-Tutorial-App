@@ -40,10 +40,64 @@ and open the template in the editor.
             <div class = "interactive">
                 <h2>PHP Conditional Statements</h2>
                 <!--new example-->
-                
+                <?php
+                $t = date("H");
+                echo "<p>The hour (of the server) is " . $t;
+                echo ", and will give the following message:</p>";
+
+                if ($t < "10") {
+                    echo "Have a good morning!";
+                } elseif ($t < "20") {
+                    echo "Have a good day!";
+                } else {
+                    echo "Have a good night!";
+                }
+                ?>
                 <!--new example-->
+                <?php
+                $favcolor = "red";
+
+                switch ($favcolor) {
+                    case "red":
+                        echo "Your favorite color is red!";
+                        break;
+                    case "blue":
+                        echo "Your favorite color is blue!";
+                        break;
+                    case "green":
+                        echo "Your favorite color is green!";
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+                ?>
                 <!--new example-->
+                <h2>PHP Loops</h2>
+                <?php  
+                $x = 1;
+
+                while($x <= 5) {
+                  echo "The number is: $x <br>";
+                  $x++;
+                }
+                ?>  
                 <!--new example-->
+                <?php
+                $x = 6;
+
+                do {
+                    echo "The number is: $x <br>";
+                    $x++;
+                } while ($x <= 5);
+                ?>
+                <!--new example-->
+                <?php  
+                $colors = array("red", "green", "blue", "yellow");
+
+                foreach ($colors as $value) {
+                  echo "$value <br>";
+                }
+                ?>  
             </div>
         </div>
         

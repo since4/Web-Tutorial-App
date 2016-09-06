@@ -38,12 +38,85 @@ and open the template in the editor.
         <div class = "mainbody"> 
             <h1>What Can PHP Do?</h1>
             <div class = "interactive">
-                <h2></h2>
+                <h2>PHP User Defined Functions</h2>
+                <p>Function names are NOT case-sensitive.</p>
                 <!--new example-->
-                
+                <?php
+                function setHeight($minheight = 50) {
+                    echo "The height is : $minheight <br>";
+                }
+
+                setHeight(350);
+                setHeight();
+                setHeight(135);
+                setHeight(80);
+                ?>
                 <!--new example-->
+                <?php
+                function sum($x, $y) {
+                    $z = $x + $y;
+                    return $z;
+                }
+
+                echo "5 + 10 = " . sum(5,10) . "<br>";
+                echo "7 + 13 = " . sum(7,13) . "<br>";
+                echo "2 + 4 = " . sum(2,4);
+                ?>
                 <!--new example-->
+                <h2>PHP 5 Arrays</h2>
+                <?php
+                $cars = array("Volvo", "BMW", "Toyota");
+                echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+                ?>
                 <!--new example-->
+                <?php
+                $cars = array("Volvo", "BMW", "Toyota");
+                echo count($cars);
+                ?>
+                <!--new example-->
+                <h3>Loop Through an Indexed Array</h3>
+                <?php
+                $cars = array("Volvo", "BMW", "Toyota");
+                $arrlength = count($cars);
+
+                for($x = 0; $x < $arrlength; $x++) {
+                    echo $cars[$x];
+                    echo "<br>";
+                }
+                ?>
+                <!--new example-->
+                <h3>PHP Associative Arrays</h3>
+                <?php
+                $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+                echo "Peter is " . $age['Peter'] . " years old.";
+                ?>
+                <!--new example-->
+                <h3>Loop Through an Associative Array</h3>
+                <?php
+                $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+                foreach($age as $x => $x_value) {
+                    echo "Key=" . $x . ", Value=" . $x_value;
+                    echo "<br>";
+                }
+                ?>
+                <!--new example-->
+                <?php
+                $cars = array("Volvo", "BMW", "Toyota");
+                sort($cars);
+                ?> 
+                 <?php
+                $numbers = array(4, 6, 2, 22, 11);
+                rsort($numbers);
+                ?> 
+                <?php
+                $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+                asort($age);
+                ?> 
+                <?php
+                $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+                ksort($age);
+                ?> 
             </div>
         </div>
         
