@@ -28,8 +28,20 @@ and open the template in the editor.
     
     <!--Internal Stylesheet-->
     <style>
-        
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+    }
     </style>
+    
+    <!--JQuery Library (downloaded from http://jquery.com/download/)-->
+    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
+    <!--JQuery Library (hosted)
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    -->
     
 </head>    
 <body>       
@@ -38,24 +50,199 @@ and open the template in the editor.
         <div class = "mainbody"> 
             <h1>What Can PHP Do?</h1>
             <div class = "interactive">
+                <h2>jQuery Introduction</h2>
                 <!--new example-->
-                <h2>Basic PHP Syntax</h2>
-                <p>A PHP script can be placed anywhere in the document.</p>
-                <p>
-                    A PHP script starts with <b>&lt;?php</b> 
-                    and ends with <b>?&gt;</b>:
+                <p>jQuery is a lightweight, "write less, do more", 
+                    JavaScript library.</p>
+                <p>The purpose of jQuery is to make it much easier to use 
+                    JavaScript on your website.</p>
+                <p>jQuery takes a lot of common tasks that require many lines 
+                    of JavaScript code to accomplish, and wraps them into 
+                    methods that you can call with a single line of code.</p>
+                <p>jQuery also simplifies a lot of the complicated things 
+                    from JavaScript, like AJAX calls and DOM manipulation.</p>
+                <p>The jQuery library contains the following features:</p>
+                <ul>
+                        <li>HTML/DOM manipulation</li>
+                        <li>CSS manipulation</li>
+                        <li>HTML event methods</li>
+                        <li>Effects and animations</li>
+                        <li>AJAX</li>
+                        <li>Utilities</li>
+                </ul>
+                <p><b>Tip:</b> In addition, jQuery has plugins for almost 
+                    any task out there.</p>
+                <!--new example-->
+                <p>There are two versions of jQuery available for downloading:<br>
+                    # Production version - this is for your live website because 
+                    it has been minified and compressed <br>
+                    # Development version - this is for testing and development 
+                    (uncompressed and readable code)<br>
+                    Both versions can be downloaded from jQuery.com.
+                    <br><br>One big advantage of using the hosted 
+                    (CDN, Content Delivery Network) jQuery from 
+                    Google or Microsoft: Many users already have downloaded 
+                    jQuery from Google or Microsoft when visiting another site. 
+                    As a result, it will be loaded from cache when they visit 
+                    your site, which leads to faster loading time. 
+                    Also, most CDN's will make sure that once a user requests 
+                    a file from it, it will be served from the server closest 
+                    to them, which also leads to faster loading time.</p>
+                <p>Tip: Place the downloaded file in the same directory as the 
+                    pages for which you wish to use it.</p>
+                <!--new example-->
+                <h2>jQuery Syntax</h2>               
+                <p>Basic syntax is: <b>$(<i>selector</i>).<i>action</i>()</b></p>
+                <!--new example-->
+                <h2>The Document Ready Event</h2>
+                <p>You might have noticed that all jQuery methods in our 
+                    examples, are inside a document ready event. This is to 
+                    prevent any jQuery code from running before the document 
+                    is finished loading (is ready). It is good practice to 
+                    wait for the document to be fully loaded and ready before 
+                    working with it. This also allows you to have your 
+                    JavaScript code before the body of your document, 
+                    in the head section.
                 </p>
-                <p>The default file extension for PHP files is ".php".</p>
-                <p>A PHP file normally contains HTML tags, and some PHP scripting code.</p>
+                <p>
+                    $(document).ready(function(){<br>
+                       // jQuery methods go here...<br>
+                    });
+                </p>
+                <p>OR the same with simpler syntax:</p>
+                <p>
+                    $(function(){<br>
+                       // jQuery methods go here...<br>
+                    });   
+                </p>
                 <!--new example-->
-                <h1>My first PHP page</h1>
-                <?php
-                echo "Hello World!";
-                ?>
+                <h2>jQuery Selectors</h2>
+                <p>jQuery selectors allow you to select and manipulate 
+                    HTML element(s).</p>
+                <p>jQuery selectors are used to "find" (or select) HTML elements 
+                    based on their name, id, classes, types, attributes, 
+                    values of attributes and much more. It's based on the existing 
+                    CSS Selectors and in addition, it has some own custom selectors.</p>
+                <p>All selectors in jQuery start with the dollar sign and 
+                    parentheses: $().</p>
                 <!--new example-->
+                <h3>The element (html-tag) Selector</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#button1").click(function(){
+                        $("h4").hide();
+                    });
+                });
+                </script>
+                <h4>This is a h4 heading.</h4>
+                <h4>This is another h4 heading.</h4>
+                <button id="button1">Click me to hide them</button>
                 <!--new example-->
+                <h3>The #id (html-tag-id) Selector</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#button2").click(function(){
+                        $("#test2").hide();
+                    });
+                });
+                </script>
+                <p>This is a paragraph.</p>
+                <p id="test2">This is another paragraph.</p>
+                <button id="button2">Click me</button>
                 <!--new example-->
+                <h3>The .class Selector</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#button3").click(function(){
+                        $(".test3").hide();
+                    });
+                });
+                </script>
+                <p class="test3">This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <button id="button3">Click me</button>
                 <!--new example-->
+                <br><br>
+                <table>
+                    <tbody><tr>
+                    <th style="width:35%">Syntax</th>
+                    <th style="width:65%">Description</th>
+                    </tr>
+                    <tr>
+                    <td>$("*")</td>
+                    <td>Selects all elements</td>
+                    </tr>
+                    <tr>
+                    <td>$(this)</td>
+                    <td>Selects the current HTML element</td>
+                    </tr>
+                    <tr>
+                    <td>$("p.intro")</td>
+                    <td>Selects all &lt;p&gt; elements with class="intro"</td>
+                    </tr>
+                    <tr>
+                    <td>$("p:first")</td>
+                    <td>Selects the first &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                    <td>$("ul li:first")</td>
+                    <td>Selects the first &lt;li&gt; element of the first &lt;ul&gt;</td>
+                    </tr>
+                    <tr>
+                    <td>$("ul li:first-child")</td>
+                    <td>Selects the first &lt;li&gt; element of every &lt;ul&gt;</td>
+                    </tr>
+                    <tr>
+                    <td>$("[href]")</td>
+                    <td>Selects all elements with an href attribute</td>
+                    </tr>
+                    <tr>
+                    <td>$("a[target='_blank']")</td>
+                    <td>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"</td>
+                    </tr>
+                    <tr>
+                    <td>$("a[target!='_blank']")</td>
+                    <td>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"</td>
+                    </tr>
+                    <tr>
+                    <td>$(":button")</td>
+                    <td>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"</td>
+                    </tr>
+                    <tr>
+                    <td>$("tr:even")</td>
+                    <td>Selects all even &lt;tr&gt; elements</td>
+                    </tr>
+                    <tr>
+                    <td>$("tr:odd")</td>
+                    <td>Selects all odd &lt;tr&gt; elements</td>
+                    </tr>
+                </tbody></table>
+                <!--new example-->
+                <h3>$(this)</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#button4").click(function(){
+                        $(this).hide();
+                    });
+                });
+                </script>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <button id="button4">Click me</button>
+                <!--new example-->
+                <h3>$("p.intro")</h3>
+                <script>
+                $(document).ready(function(){
+                    $("button5").click(function(){
+                        $("p.intro").hide();
+                    });
+                });
+                </script>
+                <h2 class="intro">This is a heading</h2>
+                <p class="intro">This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <button id="button5">Click me</button>
+                
             </div>
         </div>
         

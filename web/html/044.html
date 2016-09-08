@@ -25,12 +25,26 @@ and open the template in the editor.
     <link rel="stylesheet" type="text/css" href="../css/default.css">
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+    <!--JQuery UI Library (downloaded from http://jqueryui.com/download//)-->
+    <link rel="stylesheet" type="text/css" href="../jQuery_Library/jquery-ui-1.12.0.custom/jquery-ui.css">
     
     <!--Internal Stylesheet-->
     <style>
-        
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+    }
     </style>
     
+    <!--JQuery Library (downloaded from http://jquery.com/download/)-->
+    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
+    <!--JQuery UI Library (downloaded from http://jqueryui.com/download/)-->
+    <script src="../jQuery_Library/jquery-ui-1.12.0.custom/jquery-2.1.3.min.js"></script>
+    <script src="../jQuery_Library/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+       
 </head>    
 <body>       
     <div>
@@ -38,9 +52,393 @@ and open the template in the editor.
         <div class = "mainbody"> 
             <h1>What Can PHP Do?</h1>
             <div class = "interactive">
+                <h2>jQuery Event Methods</h2>
                 <!--new example-->
-                
-                
+                <h3>click and hide text</h3>
+                <script>
+                $(document).ready(function(){
+                    $("p.e1").click(function(){
+                        $(this).hide();
+                    });
+                });
+                </script>
+                <p class="e1">If you click on me, I will disappear.</p>
+                <p class="e1">Click me away!</p>
+                <p class="e1">Click me too!</p>
+                <!--new example-->
+                <h3>double click and hide text</h3>
+                <script>
+                $(document).ready(function(){
+                    $("p.e2").dblclick(function(){
+                        $(this).hide();
+                    });
+                });
+                </script>
+                <p class="e2">If you double-click on me, I will disappear.</p>
+                <p class="e2">Click me away!</p>
+                <p class="e2">Click me too!</p>
+                <!--new example-->
+                <h3>enter and leave block to change text</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e3").mouseenter(function(){
+                        document.getElementById('e3').innerHTML=
+                        "You entered the paragraph!. \n\
+                            You may leave now.";
+                    });
+                });
+                </script>
+                <script>
+                $(document).ready(function(){
+                    $("#e3").mouseleave(function(){
+                        document.getElementById('e3').innerHTML=
+                        "Bye! You now left the paragraph!\n\
+                            Enter this paragraph\n\
+                            it reaches out to the end of the line";
+                    });
+                });                
+                </script>
+                <p id="e3">Enter this paragraph.<br>
+                    it reaches out to the end of the line.</p>
+                <!--new example-->
+                <h3>click into block to change text</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e4").mousedown(function(){
+                        document.getElementById('e4').innerHTML=
+                        "Mouse down. Hold mouse up.";
+                    });
+                });
+                </script>
+                <script>
+                $(document).ready(function(){
+                    $("#e4").mouseup(function(){
+                        document.getElementById('e4').innerHTML=
+                        "Mouse up. Hold mouse down.";
+                    });
+                });
+                </script>
+                <p id="e4">Hold the right mouse key down.</p>
+                <!--new example-->
+                <h3>click to give and take fokus and change colour</h3>
+                <script>
+                $(document).ready(function(){
+                    $("input").focus(function(){
+                        $(this).css("background-color", "#cccccc");
+                    });
+                    //The function is executed when the form field loses focus
+                    $("input").blur(function(){
+                        $(this).css("background-color", "#ffffff");
+                    });
+                });
+                </script>
+                Name: <input type="text" name="fullname"><br>
+                Email: <input type="text" name="email">
+                <!--new example--> 
+                <h3>enter, leave and click into block to change colour</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e5").on({
+                        mouseenter: function(){
+                            $(this).css("background-color", "lightgray");
+                        },
+                        mouseleave: function(){
+                            $(this).css("background-color", "lightblue");
+                        },
+                        click: function(){
+                            $(this).css("background-color", "yellow");
+                        }
+                    });
+                });
+                </script>
+                <p id="e5">Click or move the mouse pointer over this paragraph.</p>
+                <!--new example-->
+                <h3>click buttons to slowly hide and show text</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#hide6").click(function(){
+                        $("#e6").hide(1000);
+                    });
+                    $("#show6").click(function(){
+                        $("#e6").show(2000);
+                    });
+                });
+                </script>
+                <p id="e6">If you click on the "Hide" button, I will disappear.</p>
+                <button id="hide6">Hide</button>
+                <button id="show6">Show</button>
+                <!--new example-->
+                <h3>click button to toggle between shown and hidden text </h3>
+                <script>
+                $(document).ready(function(){
+                    $("#toggle7").click(function(){
+                        $("p.e7").toggle();
+                    });
+                });
+                </script>
+                <br>
+                <button id="toggle7">Toggle between hiding and showing the paragraphs</button>
+                <p class="e7">This is a paragraph with little content.</p>
+                <p class="e7">This is another small paragraph.</p>
+                <!--new example-->
+                <h3>click button to fade toggle and disappear coloured blocks</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e8").click(function(){
+                        $("#div81").fadeToggle();
+                        $("#div82").fadeToggle("slow");
+                        $("#div83").fadeToggle(3000);
+                    });
+                });
+                </script>
+                <p>Demonstrate fadeToggle() with different speed parameters.</p>
+                <button id="e8">Click to fade in/out boxes</button><br><br>
+                <div id="div81" style="width:80px;height:80px;background-color:red;"></div>
+                <br>
+                <div id="div82" style="width:80px;height:80px;background-color:green;"></div>
+                <br>
+                <div id="div83" style="width:80px;height:80px;background-color:blue;"></div>
+                <!--new example-->
+                <h3>click button to make blocks transparent without disappearing</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e9").click(function(){
+                        $("#div91").fadeTo("slow", 0.15);
+                        $("#div92").fadeTo("slow", 0.4);
+                        $("#div93").fadeTo("slow", 0.7);
+                    });
+                });
+                </script>
+                <p>Demonstrate fadeTo() with different parameters.</p>
+                <button id="e9">Click to fade boxes</button><br><br>
+                <div id="div91" style="width:80px;height:80px;background-color:red;"></div><br>
+                <div id="div92" style="width:80px;height:80px;background-color:green;"></div><br>
+                <div id="div93" style="width:80px;height:80px;background-color:blue;"></div>
+                <!--new example-->
+                <h3>click to slide block open and close</h3>
+                <script> 
+                $(document).ready(function(){
+                    $("#flip10").click(function(){
+                        $("#panel10").slideToggle("slow");
+                    });
+                });
+                </script>
+                <style> 
+                #panel10, #flip10 {
+                    padding: 5px;
+                    text-align: center;
+                    background-color: #e5eecc;
+                    border: solid 1px #c3c3c3;
+                }
+
+                #panel10 {
+                    padding: 50px;
+                    display: none;
+                }
+                </style>
+                <div id="flip10">Click to slide the panel down or up</div>
+                <div id="panel10">Hello world!</div>
+                <!--new example-->
+                <h3>click and animate block dimensions, position and opacity</h3>
+                <script> 
+                $(document).ready(function(){
+                    $("#e11").click(function(){
+                        $("#div11").animate({
+                            left: '250px',
+                            opacity: '0.5',
+                            height: '150px',
+                            width: '150px'
+                        });
+                    });
+                    $("#f11").click(function(){
+                        $("#div11").animate({
+                            left: '0px',
+                            opacity: '1.0',
+                            height: '100px',
+                            width: '100px'
+                        });
+                    });
+                });
+                </script> 
+                <button id="e11">Start Animation</button>
+                <button id="f11">Back</button><br>
+                <p>By default, all HTML elements have a st
+                <p>By default, all HTML elements have a static position, 
+                    and cannot be moved. To manipulate the position, 
+                    remember to first set the CSS position property of 
+                    the element to relative, fixed, or absolute!</p>
+                <div style="height:150px">
+                    <div id="div11" 
+                         style="background:#98bf21;height:100px;width:100px;
+                         position:relative;">                       
+                    </div>
+                </div>
+                <!--new example-->
+                <h3>click and animate block dimensions and opacity</h3>
+                <script> 
+                $(document).ready(function(){
+                    $("#e12").click(function(){
+                        var div = $("#div12");
+                        div.animate({height: '300px', opacity: '0.4'}, "slow");
+                        div.animate({width: '300px', opacity: '0.8'}, "slow");
+                        div.animate({height: '100px', opacity: '0.4'}, "slow");
+                        div.animate({width: '100px', opacity: '0.8'}, "slow");
+                    });
+                });
+                </script> 
+                <button id="e12">Start Animation</button>
+                <p>By default, all HTML elements have a static position, 
+                    and cannot be moved. To manipulate the position, 
+                    remember to first set the CSS position property of 
+                    the element to relative, fixed, or absolute!</p>
+                <div style="height:300px">
+                    <div id="div12" style="background:#98bf21;
+                         height:100px;width:100px;
+                         position:absolute;">                             
+                    </div>
+                </div>
+                <!--new example-->
+                <h3>click and animate block position and font size</h3>
+                <script> 
+                $(document).ready(function(){
+                    $("#e13").click(function(){
+                        $("#div13"). 
+                        animate({left: '250px'}, "fast").
+                        animate({fontSize: '3em'}, "slow");
+                    });
+                    $("#f13").click(function(){
+                        $("#div13").  
+                        animate({left: '0px'}, "fast").
+                        animate({fontSize: '1em'}, "slow");
+                    });
+                });
+                </script>           
+                <button id="f13">Left Animation</button>
+                <button id="e13">Right Animation</button><br>
+                <p>By default, all HTML elements have a static position, 
+                    and cannot be moved. To manipulate the position, 
+                    remember to first set the CSS position property of 
+                    the element to relative, fixed, or absolute!</p>
+                <div style="height:150px">
+                    <div id="div13" style="background:#98bf21;
+                         height:100px;width:200px;position:relative;">HELLO</div>
+                </div>
+                <!--new example-->
+                <h3>click and hide paragraph and alert box</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e14").click(function(){
+                        $("#p14").hide("slow", function(){
+                            alert("The paragraph is now hidden");
+                        });
+                    });
+                });
+                </script>
+                <button id="e14">Hide</button>
+                <p id="p14">This is a paragraph with little content.</p>
+                <!--new example-->
+                <h3>click button change colour and slide paragrap up and down</h3>
+                <script>
+                $(document).ready(function(){
+                    $("#e15").click(function(){
+                        $("#p15").css("color", "red").
+                                slideUp(2000).
+                                slideDown(2000);
+                    });
+                });
+                </script>
+                <p id="p15">jQuery is fun!!</p>
+                <button id="e15">Click me</button>
+                <!--new example-->
+                <h3>jQuery UI dialog box</h3>                
+                <p>needs jquery-ui-1.12.0.custom library</p>
+                <input type="button" id ="btnTest16" value="Test"/>             
+                <!--html defining a non-displayed dialog box:
+                The code for displaying a window is in $("#dialog16").dialog()-->
+                <div id="dialog16" title="Alert message" style="display: none">
+                    <div class="ui-dialog-content ui-widget-content">
+                        <p>
+                            <!--places a !-icon-->
+                            <span class="ui-icon ui-icon-alert" 
+                                  style="float: left; margin: 0 7px 20px 0">                                      
+                            </span>
+                            <label id="lblMessage16">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <!--Code downloaded from http://jsfiddle.net/Lyto9558/-->
+                <style>
+                    .showcss16{ 
+                        display:block;
+                    }
+
+                    .hidecss16{ 
+                        display:none;
+                    }
+                </style>
+                <script>
+                $(document).ready(function () {
+                    $('#btnTest16').click(function () {
+                        ShowCustomDialog16();
+                    });
+                });
+
+                function ShowCustomDialog16()
+                {
+                    ShowDialogBox16('Warning', 'You have clicked the button.', 
+                            'Ok', '', 
+                            '', null);
+                }
+
+                function ShowDialogBox16(title, content, 
+                                btn1text, btn2text, 
+                                functionText, parameterList) {
+                    var btn1css;
+                    var btn2css;
+
+                    if (btn1text === '') {
+                        btn1css = "hidecss16";
+                    } else {
+                        btn1css = "showcss16";
+                    }
+
+                    if (btn2text === '') {
+                        btn2css = "hidecss16";
+                    } else {
+                        btn2css = "showcss16";
+                    }
+                    
+                    $("#lblMessage16").html(content);
+
+                    $("#dialog16").dialog({
+                        resizable: false,
+                        title: title,
+                        modal: true,
+                        width: '400px',
+                        height: 'auto',
+                        bgiframe: false,
+                        hide: {effect: 'scale', duration: 400},
+                        buttons: [
+                            {
+                                text: btn1text,
+                                "class": btn1css,
+                                click: function () {
+                                    $("#dialog16").dialog('close');
+                                }
+                            },
+                            {
+                                text: btn2text,
+                                "class": btn2css,
+                                click: function () {
+                                    $("#dialog16").dialog('close');
+                                }
+                            }
+                        ]
+                    });
+                }
+                </script>
+                                                            
             </div>
         </div>
         
