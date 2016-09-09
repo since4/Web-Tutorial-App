@@ -1,3 +1,4 @@
+<!--used for 010.php-->
 <?php
 #upload directory relative to his file
 $target_dir = "uploads/";

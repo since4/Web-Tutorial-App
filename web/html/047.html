@@ -16,7 +16,7 @@ and open the template in the editor.
             <ul> 
                 <li id="prev" class="active"><a href="./046.html">« Previous</a></li>
                 <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="./048.html">Next »</a></li>
+                <li id="next" class="active"><a href="../php/001.php">Next »</a></li>
             </ul>
         </div>
     </div>
@@ -48,11 +48,133 @@ and open the template in the editor.
     <div>
         <!--Body content-->
         <div class = "mainbody"> 
-            <h1>What Can PHP Do?</h1>
+            <h1>What Can jQuery Do?</h1>
             <div class = "interactive">
                 <!--new example-->
-                <h2></h2>
-                
+                <h2>jQuery - AJAX Introduction</h2>
+                <!--new example-->
+                <script>
+                $(document).ready(function(){
+                    $("#button1").click(function(){
+                        $("#div1").load("../txt/sometext.txt");
+                    });
+                });
+                </script>
+                <div id="div1"><h3>Let jQuery AJAX Change This Text</h3></div>
+                <button id="button1">Get External Content</button>
+                <!--new example-->
+                <h2>jQuery - AJAX load() Method</h2>
+                <p>With the jQuery AJAX methods, you can request text, HTML, 
+                    XML, or JSON from a remote server using both HTTP Get and 
+                    HTTP Post - And you can load the external data directly 
+                    into the selected HTML elements of your web page!
+                    Writing regular AJAX code can be a bit tricky, because 
+                    different browsers have different syntax for AJAX 
+                    implementation. This means that you will have to write 
+                    extra code to test for different browsers. However, 
+                    the jQuery team has taken care of this for us, so that 
+                    we can write AJAX functionality with only one single 
+                    line of code.
+                </p>
+                <!--new example-->
+                <script>
+                $(document).ready(function(){
+                    $("#button2").click(function(){
+                        $("#div2").load("../txt/sometext.txt #p1");
+                    });
+                });
+                </script>
+                <div id="div2"><h3>Let jQuery AJAX Change This Text</h3></div>
+                <button id="button2">Get External Content</button>
+                <!--new example-->
+                <p>The optional callback parameter specifies a callback function 
+                    to run when the load() method is completed. 
+                    The callback function can have different parameters:</p>
+                <ul>
+                        <li>responseTxt - contains the resulting content if 
+                            the call succeeds</li>
+                        <li>statusTxt - contains the status of the call</li>
+                        <li>xhr - contains the XMLHttpRequest object</li>
+                </ul>
+                <script>
+                $(document).ready(function(){
+                    $("#button3").click(function(){
+                        $("#div3").load(
+                            "../txt/sometext.txt", 
+                            function(responseTxt, statusTxt, xhr){
+                                if(statusTxt === "success")
+                                    alert("External content loaded successfully!");
+                                if(statusTxt === "error")
+                                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+                            });
+                    });
+                });
+                </script>
+                <div id="div3"><h2>Let jQuery AJAX Change This Text</h2></div>
+                <button id="button3">Get External Content</button>
+                <!--new example-->
+                <h2>jQuery - AJAX get() and post() Methods</h2>
+                <p>Two commonly used methods for a request-response between a 
+                    client and server are: GET and 
+                POST.</p>
+                <ul>
+                        <li><b>GET</b> - Requests data from a specified resource</li>
+                        <li><b>POST</b> - Submits data to be processed to a 
+                            specified resource (and requests the results)</li>
+                </ul>
+                <p>GET is basically used for just getting (retrieving) some 
+                    data from the server.
+                <b>Note:</b> The GET method may return cached data.</p>
+                <p>POST can also be used to get some data from the server. 
+                    However, the POST method NEVER caches data, and is often 
+                    used to send data along with the request.</p>
+                <!--new example-->
+                <h2>jQuery $.get() Method</h2>
+                <p>The optional callback parameter is the name of a function 
+                    to be executed if the request succeeds.</p>
+                <script>
+                $(document).ready(function(){
+                    $("#button4").click(function(){
+                        $.get("../php/mysql_select.php", 
+                        function(data, status){
+                            $("#div4").html("Data: " + data + 
+                                    "\nStatus: " + status);
+                        });
+                    });
+                });
+                </script>
+                <div id="div4"></div>
+                <button id="button4">Send an HTTP GET request to a page and 
+                    get the result back</button>    
+                <!--new example-->
+                <h2>jQuery $.post() Method</h2>
+                <p>The $.post() method requests data from the server 
+                    using an HTTP POST request.</p>
+                <p>The required URL parameter specifies the URL you wish to request.</p>
+                <p>The optional data parameter specifies some data to send along 
+                    with the request.</p>
+                <p>The optional callback parameter is the name of a function 
+                    to be executed if the request succeeds.</p>        
+                <!--new example-->
+                <script>
+                $(document).ready(function(){
+                    $("#button5").click(function(){
+                        $.post("../php/demo_post_request.php",
+                        {
+                          name: "Donald Duck",
+                          city: "Duckburg"
+                        },
+                        function(data, status){
+                            $("#div5").html("Data: " + data + 
+                                    "\nStatus: " + status);
+                        });
+                        
+                    });
+                });
+                </script>
+                <div id="div5"></div>
+                <button id="button5">Send an HTTP POST request to a page and 
+                    get the result back</button>                
             </div>
         </div>
         
@@ -60,9 +182,144 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>jQuery - AJAX Introduction&lt/h2>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#div1").load("../txt/sometext.txt");
+            });
+        });
+        &lt/script>
+        &ltdiv id="div1">&lth3>Let jQuery AJAX Change This Text&lt/h3>&lt/div>
+        &ltbutton id="button1">Get External Content&lt/button>
+        &lt!--new example-->
+        &lth2>jQuery - AJAX load() Method&lt/h2>
+        &ltp>With the jQuery AJAX methods, you can request text, HTML, 
+            XML, or JSON from a remote server using both HTTP Get and 
+            HTTP Post - And you can load the external data directly 
+            into the selected HTML elements of your web page!
+            Writing regular AJAX code can be a bit tricky, because 
+            different browsers have different syntax for AJAX 
+            implementation. This means that you will have to write 
+            extra code to test for different browsers. However, 
+            the jQuery team has taken care of this for us, so that 
+            we can write AJAX functionality with only one single 
+            line of code.
+        &lt/p>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button2").click(function(){
+                $("#div2").load("../txt/sometext.txt #p1");
+            });
+        });
+        &lt/script>
+        &ltdiv id="div2">&lth3>Let jQuery AJAX Change This Text&lt/h3>&lt/div>
+        &ltbutton id="button2">Get External Content&lt/button>
+        &lt!--new example-->
+        &ltp>The optional callback parameter specifies a callback function 
+            to run when the load() method is completed. 
+            The callback function can have different parameters:&lt/p>
+        &ltul>
+                &ltli>responseTxt - contains the resulting content if 
+                    the call succeeds&lt/li>
+                &ltli>statusTxt - contains the status of the call&lt/li>
+                &ltli>xhr - contains the XMLHttpRequest object&lt/li>
+        &lt/ul>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button3").click(function(){
+                $("#div3").load(
+                    "../txt/sometext.txt", 
+                    function(responseTxt, statusTxt, xhr){
+                        if(statusTxt === "success")
+                            alert("External content loaded successfully!");
+                        if(statusTxt === "error")
+                            alert("Error: " + xhr.status + ": " + xhr.statusText);
+                    });
+            });
+        });
+        &lt/script>
+        &ltdiv id="div3">&lth2>Let jQuery AJAX Change This Text&lt/h2>&lt/div>
+        &ltbutton id="button3">Get External Content&lt/button>
+        &lt!--new example-->
+        &lth2>jQuery - AJAX get() and post() Methods&lt/h2>
+        &ltp>Two commonly used methods for a request-response between a 
+            client and server are: GET and 
+        POST.&lt/p>
+        &ltul>
+                &ltli>&ltb>GET&lt/b> - Requests data from a specified resource&lt/li>
+                &ltli>&ltb>POST&lt/b> - Submits data to be processed to a 
+                    specified resource (and requests the results)&lt/li>
+        &lt/ul>
+        &ltp>GET is basically used for just getting (retrieving) some 
+            data from the server.
+        &ltb>Note:&lt/b> The GET method may return cached data.&lt/p>
+        &ltp>POST can also be used to get some data from the server. 
+            However, the POST method NEVER caches data, and is often 
+            used to send data along with the request.&lt/p>
+        &lt!--new example-->
+        &lth2>jQuery $.get() Method&lt/h2>
+        &ltp>The optional callback parameter is the name of a function 
+            to be executed if the request succeeds.&lt/p>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button4").click(function(){
+                $.get("../php/mysql_select.php", 
+                function(data, status){
+                    $("#div4").html("Data: " + data + 
+                            "\nStatus: " + status);
+                });
+            });
+        });
+        &lt/script>
+        &ltdiv id="div4">&lt/div>
+        &ltbutton id="button4">Send an HTTP GET request to a page and 
+            get the result back&lt/button>    
+        &lt!--new example-->
+        &lth2>jQuery $.post() Method&lt/h2>
+        &ltp>The $.post() method requests data from the server 
+            using an HTTP POST request.&lt/p>
+        &ltp>The required URL parameter specifies the URL you wish to request.&lt/p>
+        &ltp>The optional data parameter specifies some data to send along 
+            with the request.&lt/p>
+        &ltp>The optional callback parameter is the name of a function 
+            to be executed if the request succeeds.&lt/p>        
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button5").click(function(){
+                $.post("../php/demo_post_request.php",
+                {
+                  name: "Donald Duck",
+                  city: "Duckburg"
+                },
+                function(data, status){
+                    $("#div5").html("Data: " + data + 
+                            "\nStatus: " + status);
+                });
 
-
+            });
+        });
+        &lt/script>
+        &ltdiv id="div5">&lt/div>
+        &ltbutton id="button5">Send an HTTP POST request to a page and 
+            get the result back&lt/button>
+        
+        
+        &lt!--demo_post_request.php-->
+        &lt!DOCTYPE html>
+        &lt!--called from 047.html-->
+        &lt?php
+        //fetch the posted data
+        $fname = htmlspecialchars($_POST["name"]);
+        $city = htmlspecialchars($_POST["city"]);
+        //send response
+        echo "Dear " . $fname . ". " ;
+        echo "Hope you live well in " . $city . "." ;
+        ?>
         </code>
         </pre>
         </div>
@@ -77,7 +334,7 @@ and open the template in the editor.
             <ul> 
                 <li id="prev" class="active"><a href="./046.html">« Previous</a></li>
                 <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="./048.html">Next »</a></li>
+                <li id="next" class="active"><a href="../php/001.php">Next »</a></li>
             </ul>
         </div>
     </div> 

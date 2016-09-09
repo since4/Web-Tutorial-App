@@ -48,14 +48,140 @@ and open the template in the editor.
     <div>
         <!--Body content-->
         <div class = "mainbody"> 
-            <h1>What Can PHP Do?</h1>
+            <h1>What Can jQuery Do?</h1>
             <div class = "interactive">
                 <!--new example-->
                 <h2>jQuery Traversing</h2>
                 <h2>Traversing the DOM</h2>
                 <p>jQuery provides a variety of methods that allows us to traverse the DOM.</p>
                 <p>The largest category of traversal methods are tree-traversal.</p>
-                
+                <!--new example-->
+                <style>
+                .ancestors1 * { 
+                    display: block;
+                    border: 2px solid darkgrey;
+                    color: darkgrey;
+                    padding: 5px;
+                    margin: 15px;
+                }
+                </style>
+                <script>
+                $(document).ready(function(){
+                    $(".span1").parent().css({
+                        "color": "red", "border": "2px solid red"});
+                    $(".span1").parents("ul").css({
+                        "color": "green", "border": "2px solid green"});
+                });
+                </script>
+                <div class="ancestors1">
+                  <div style="width:500px;">div (great-grandparent)
+                    <ul>ul (grandparent)  
+                      <li>li (direct parent)
+                        <span class="span1">span</span>
+                      </li>
+                    </ul>   
+                  </div>
+                  <div style="width:500px;">div (grandparent)   
+                    <p>p (direct parent)
+                        <span class="span1">span</span>
+                      </p> 
+                  </div>
+                </div>
+                <!--new example-->
+                <style>
+                .descendants2 * { 
+                    display: block;
+                    border: 2px solid darkgrey;
+                    color: darkgrey;
+                    padding: 5px;
+                    margin: 15px;
+                }
+                </style>           
+                <script>
+                $(document).ready(function(){
+                    $("#div2").children("p.first").css({
+                        "color": "red", "border": "2px solid red"});
+                });
+                </script>
+                <div id="div2" class="descendants2" style="width:500px;">
+                    div (current element) 
+                  <p class="first">p (child)
+                    <span>span (grandchild)</span>     
+                  </p>
+                  <p class="second">p (child)
+                    <span>span (grandchild)</span>
+                  </p> 
+                </div>
+                <!--new example-->
+                <style>
+                .descendants3 * { 
+                    display: block;
+                    border: 2px solid darkgrey;
+                    color: darkgrey;
+                    padding: 5px;
+                    margin: 15px;
+                }
+                </style>
+                <script>
+                $(document).ready(function(){
+                    $("#div3").find("span").css({
+                        "color": "red", "border": "2px solid red"});
+                });
+                </script>
+                <div id="div3" class="descendants3" style="width:500px;">
+                    div (current element) 
+                  <p>p (child)
+                    <span>span (grandchild)</span>     
+                  </p>
+                  <p>p (child)
+                    <span>span (grandchild)</span>
+                  </p> 
+                </div>
+                <!--new example-->
+                <style>
+                .siblings4 * { 
+                    display: block;
+                    border: 2px solid darkgrey;
+                    color: darkgrey;
+                    padding: 5px;
+                    margin: 15px;
+                }
+                </style>              
+                <script>
+                $(document).ready(function(){
+                    $("#h2_4").siblings("p").css({
+                        "color": "red", "border": "2px solid red"});
+                });
+                </script>
+                <div class="siblings4">div (parent)
+                  <p>p</p>
+                  <span>span</span>
+                  <h2 id="h2_4">h2</h2>
+                  <h3>h3</h3>
+                  <p>p</p>
+                </div>
+                <!--new example-->
+                <script>
+                $(document).ready(function(){
+                    $(".p4").eq(1).css("background-color", "yellow");
+                });
+                </script>
+                <h1>Welcome to My Homepage</h1>
+                <p class="p4">My name is Donald (index 0).</p>
+                <p class="p4">Donald Duck (index 1).</p>
+                <p class="p4">I live in Duckburg (index 2).</p>
+                <p class="p4">My best friend is Mickey (index 3).</p>
+                <!--new example-->
+                <script>
+                $(document).ready(function(){
+                    $("p").filter(".intro5").css("background-color", "yellow");
+                });
+                </script>
+                <h1>Welcome to My Homepage</h1>
+                <p>My name is Donald.</p>
+                <p class="intro5">I live in Duckburg.</p>
+                <p class="intro5">I love Duckburg.</p>
+                <p>My best friend is Mickey.</p>               
             </div>
         </div>
         
@@ -63,9 +189,139 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
-
-
+        &lt!--Body content-->
+        <!--new example-->
+        &lth2>jQuery Traversing&lt/h2>
+        &lth2>Traversing the DOM&lt/h2>
+        &ltp>jQuery provides a variety of methods that allows us to traverse the DOM.&lt/p>
+        &ltp>The largest category of traversal methods are tree-traversal.&lt/p>
+        &lt!--new example-->
+        &ltstyle>
+        .ancestors1 * { 
+            display: block;
+            border: 2px solid darkgrey;
+            color: darkgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+        &lt/style>
+        &ltscript>
+        $(document).ready(function(){
+            $(".span1").parent().css({
+                "color": "red", "border": "2px solid red"});
+            $(".span1").parents("ul").css({
+                "color": "green", "border": "2px solid green"});
+        });
+        &lt/script>
+        &ltdiv class="ancestors1">
+          &ltdiv style="width:500px;">div (great-grandparent)
+            &ltul>ul (grandparent)  
+              &ltli>li (direct parent)
+                &ltspan class="span1">span&lt/span>
+              &lt/li>
+            &lt/ul>   
+          &lt/div>
+          &ltdiv style="width:500px;">div (grandparent)   
+            &ltp>p (direct parent)
+                &ltspan class="span1">span&lt/span>
+              &lt/p> 
+          &lt/div>
+        &lt/div>
+        &lt!--new example-->
+        &ltstyle>
+        .descendants2 * { 
+            display: block;
+            border: 2px solid darkgrey;
+            color: darkgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+        &lt/style>           
+        &ltscript>
+        $(document).ready(function(){
+            $("#div2").children("p.first").css({
+                "color": "red", "border": "2px solid red"});
+        });
+        &lt/script>
+        &ltdiv id="div2" class="descendants2" style="width:500px;">
+            div (current element) 
+          &ltp class="first">p (child)
+            &ltspan>span (grandchild)&lt/span>     
+          &lt/p>
+          &ltp class="second">p (child)
+            &ltspan>span (grandchild)&lt/span>
+          &lt/p> 
+        &lt/div>
+        &lt!--new example-->
+        &ltstyle>
+        .descendants3 * { 
+            display: block;
+            border: 2px solid darkgrey;
+            color: darkgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+        &lt/style>
+        &ltscript>
+        $(document).ready(function(){
+            $("#div3").find("span").css({
+                "color": "red", "border": "2px solid red"});
+        });
+        &lt/script>
+        &ltdiv id="div3" class="descendants3" style="width:500px;">
+            div (current element) 
+          &ltp>p (child)
+            &ltspan>span (grandchild)&lt/span>     
+          &lt/p>
+          &ltp>p (child)
+            &ltspan>span (grandchild)&lt/span>
+          &lt/p> 
+        &lt/div>
+        &lt!--new example-->
+        &ltstyle>
+        .siblings4 * { 
+            display: block;
+            border: 2px solid darkgrey;
+            color: darkgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+        &lt/style>              
+        &ltscript>
+        $(document).ready(function(){
+            $("#h2_4").siblings("p").css({
+                "color": "red", "border": "2px solid red"});
+        });
+        &lt/script>
+        &ltdiv class="siblings4">div (parent)
+          &ltp>p&lt/p>
+          &ltspan>span&lt/span>
+          &lth2 id="h2_4">h2&lt/h2>
+          &lth3>h3&lt/h3>
+          &ltp>p&lt/p>
+        &lt/div>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $(".p4").eq(1).css("background-color", "yellow");
+        });
+        &lt/script>
+        &lth1>Welcome to My Homepage&lt/h1>
+        &ltp class="p4">My name is Donald (index 0).&lt/p>
+        &ltp class="p4">Donald Duck (index 1).&lt/p>
+        &ltp class="p4">I live in Duckburg (index 2).&lt/p>
+        &ltp class="p4">My best friend is Mickey (index 3).&lt/p>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("p").filter(".intro5").css("background-color", "yellow");
+        });
+        &lt/script>
+        &lth1>Welcome to My Homepage&lt/h1>
+        &ltp>My name is Donald.&lt/p>
+        &ltp class="intro5">I live in Duckburg.&lt/p>
+        &ltp class="intro5">I love Duckburg.&lt/p>
+        &ltp>My best friend is Mickey.&lt/p>
         </code>
         </pre>
         </div>

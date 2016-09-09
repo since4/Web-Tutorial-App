@@ -102,8 +102,64 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
-
+        &lt!--Body content-->
+        &lth2>PHP 5 Form Handling&lt/h2>
+        &lt!--new example-->
+        &ltp>When the user fills out the form above and clicks 
+            the submit button, the form data is sent for processing 
+            to a PHP file. 
+            The form data is sent with the HTTP POST method.&lt/p>
+        &ltp>To display the submitted data you could simply 
+            echo all the variables. &lt/p>
+        &ltform action="&lt?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            Name: &ltinput type="text" name="name">&ltbr>
+            E-mail: &ltinput type="text" name="email">&ltbr>
+            &ltinput type="submit">
+        &lt/form>
+        Welcome &lt?php echo $_POST["name"]; ?>&ltbr>
+        Your email address is: &lt?php echo $_POST["email"]; ?>
+        &lt!--new example-->
+        &ltp>The same with HTTP GET&lt/p>
+        &ltform action="&lt?php echo $_SERVER['PHP_SELF'];?>" method="get">
+        Name: &ltinput type="text" name="name">&ltbr>
+        E-mail: &ltinput type="text" name="email">&ltbr>
+        &ltinput type="submit">
+        &lt/form>Welcome &lt?php echo $_GET["name"]; ?>&ltbr>
+        Your email address is: &lt?php echo $_GET["email"]; ?>
+        &lt!--new example-->
+        &lth2>GET vs. POST&lt/h2>
+        &ltp>Both GET and POST create an array 
+            (e.g. array( key =&gt; value, key2 =&gt; value2, 
+            key3 =&gt; value3, ...)). This array holds key/value pairs, 
+            where keys are the names of the form controls and values 
+            are the input data from the user.&lt/p>
+        &ltp>Both GET and POST are treated as $_GET and $_POST. 
+            These are superglobals,which means that they are 
+            always accessible, regardless of scope - 
+            and you can access them from any function,
+            class or file without having to do anything special.&lt/p>
+        &ltp>$_GET is an array of variables passed to the current 
+            script via the URL parameters.&lt/p>
+        &ltp>Information sent from a form with the GET method is 
+            &ltstrong>visible to everyone&lt/strong> (all variable names 
+            and values are displayed in the URL). GET also has limits 
+            on the amount of information to send. The limitation is 
+            about 2000 characters. However, because the variables are 
+            displayed in the URL, it is possible to bookmark the page. 
+            This can be useful in some cases.&lt/p>
+        &ltp>GET may be used for sending non-sensitive data.&lt/p>
+        &ltp>$_POST is an array of variables passed to the current 
+            script via the HTTP POST method.&lt/p>
+        &ltp>Information sent from a form with the POST method is 
+            &ltstrong>invisible to others&lt/strong> 
+            (all names/values are embedded within the body 
+            of the HTTP request) and has &ltstrong>no limits&lt/strong> 
+            on the amount of information to send.&lt/p>
+        &ltp>Moreover POST supports advanced functionality such as 
+            support for multi-part binary input while uploading files 
+            to server.&lt/p>
+        &ltp>However, because the variables are not displayed in the URL, 
+            it is not possible to bookmark the page.&lt/p>  
 
         </code>
         </pre>

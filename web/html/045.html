@@ -48,7 +48,7 @@ and open the template in the editor.
     <div>
         <!--Body content-->
         <div class = "mainbody"> 
-            <h1>What Can PHP Do?</h1>
+            <h1>What Can jQuery Do?</h1>
             <div class = "interactive">
                 <h2>JQuery HTML</h2>
                 <!--new example-->
@@ -269,12 +269,6 @@ and open the template in the editor.
                     (includes padding, border, and margin).</p>
                 <p>outerHeight(true) - returns the height of an element 
                     (includes padding, border, and margin).</p>
-
-                <!--new example-->
-                
-                <!--new example-->
-                
-                <!--new example-->
                 
             </div>
         </div>
@@ -284,9 +278,226 @@ and open the template in the editor.
         <pre class="code_">
         <code class="language-html">
         &lt!--Body content-->
+        &lth2>JQuery HTML&lt/h2>
+        &lt!--new example-->
+        &lth3>jQuery - DOM Manipulation- Get Content and Attributes&lt/h3>
+        &ltp>One very important part of jQuery is the possibility to 
+            manipulate the DOM. jQuery comes with a bunch of DOM related 
+            methods that make it easy to access and manipulate elements 
+            and attributes.&lt/p>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#btn_a1").click(function(){
+                $("#test_1").text($("#test_a1").text());
+                $("#test_a1").text("Hello world!");
+            });
+            $("#btn_b1").click(function(){
+                $("#test_1").html($("#test_b1").html());
+                $("#test_b1").html("&ltb>Hello world!&lt/b>");
+            });
+            $("#btn_c1").click(function(){
+                $("#test_1").text($("#test_c1").val()
+                        +" "+$("#test_c1").attr("type"));
+                $("#test_c1").val("Dolly Duck");
+            });
+        });
+        &lt/script>
+        &ltp id="test_1">This demonstrates Get&lt/p>
+        &ltp id="test_a1">This is a paragraph.&lt/p>
+        &ltp id="test_b1">This is another paragraph.&lt/p>
+        &ltp>Input field: &ltinput type="text" id="test_c1" 
+                               value="Mickey Mouse">&lt/p>
+        &ltbutton id="btn_a1">Set Text&lt/button>
+        &ltbutton id="btn_b1">Set HTML&lt/button>
+        &ltbutton id="btn_c1">Set Value&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#btn_a2").click(function(){
+                $("#img_2").before("&ltb>Before&lt/b>");
+            });
+            $("#btn_b2").click(function(){
+                $("#img_2").after("&lti>After&lt/i>");
+            });
+        });
+        &lt/script>
+        &ltbr>&ltbr>
+        &ltimg id="img_2" src="./images/w3schools_logo.gif" 
+             alt="jQuery" width="100" height="140">&ltbr>&ltbr>
+        &ltbutton id="btn_a2">Insert before&lt/button>
+        &ltbutton id="btn_b2">Insert after&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        function appendText3() {
+            var txt_a3 = "&ltp>Created Text with HTML.&lt/p>";// Create text with HTML
+            var txt_b3 = $("&ltp>&lt/p>").
+                    text("Created Text with jQuery.");// Create text with jQuery
+            var txt_c3 = document.createElement("p");
+            txt_c3.innerHTML = "Created Text with DOM.";// Create text with DOM
+            $("#div_3").append(txt_a3, txt_b3, txt_c3);// Append new elements
+        }
+        &lt/script>
+        &ltdiv id="div_3">
+            &ltp>This is a paragraph.&lt/p>
+        &lt/div>
+        &ltbutton onclick="appendText3()">Append text&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        function afterText4() {
+            var txt_a4 = "&ltb>I (created with HTML) &lt/b>";// Create element with HTML
+            var txt_b4 = $("&lti>&lt/i>").text("love (Created with jQuery) ");// Create with jQuery
+            var txt_c4 = document.createElement("b");// Create with DOM
+            txt_c4.innerHTML = "jQuery! (Created with DOM)";
+            $("#img4").after(txt_a4, txt_b4, txt_c4);// Insert new elements after img
+        }
+        &lt/script>
+        &ltbr>&ltbr>
+        &ltimg id="img4" src="./images/w3schools_logo.gif" 
+             alt="jQuery" width="100" height="140">
+        &ltp>Click the button to insert text after the image.&lt/p>
+        &ltbutton onclick="afterText4()">Insert after&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button5").click(function(){
+            //remove those p-tags with class test5 and demo5    
+            $("p").remove(".test5, .demo5");
+            //empty children of div5    
+            $("#_div5").empty();
+            });
+        });
+        &lt/script>
+        &ltstyle>
+            .test5 {
+                color: red;
+                font-size: 20px;
+            }
+            .demo5 {
+                color: green;
+                font-size: 25px;
+            }
+            .div5 {
+                border-style: dashed;
+                border-width: 7px;
+                border-color: greenyellow;
+            }
+        &lt/style>
+        &ltp>This is a paragraph.&lt/p>
+        &ltp class="test5">This is p element with class="test".&lt/p>
+        &ltp class="test5">This is p element with class="test".&lt/p>
+        &ltp class="demo5">This is p element with class="demo".&lt/p>
+        &ltdiv class="div5" id="_div5">
+            &ltp>This is p element in div.&lt/p>
+            &ltp>This is p element in div.&lt/p>
+            &ltp>This is p element in div.&lt/p>
+        &lt/div>
+        &ltbutton id="button5">Remove all p elements with 
+            class="test5" and class="demo5" and those in class="div5"&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button6").click(function(){
+                $("#h1_6, #h2_6, #p_6").addClass("blue6");
+                $("#div_6").addClass("important6 blue6");
+            });
+            $("#button6_").click(function(){
+                $("#h1_6, #h2_6, #p_6").removeClass("blue6");
+                $("#div_6").removeClass("important6 blue6");
+            });
+        });
+        &lt/script>
+        &ltstyle>
+        .important6 {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .blue6 {
+            color: blue;
+        }
+        &lt/style>
+        &lth1 id="h1_6">Heading 1&lt/h1>
+        &lth2 id="h2_6">Heading 2&lt/h2>
+        &ltp id="p_6">This is a paragraph.&lt/p>
+        &ltp id="p_6">This is another paragraph.&lt/p>
+        &ltdiv id="div_6">This is some important text!&lt/div>&ltbr>
+        &ltbutton id="button6">Add classes to elements&lt/button>
+        &ltbutton id="button6_">Remove class from elements&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button7").click(function(){
+                $("#h1_7, #h2_7, #p_7").toggleClass("blue7");
+            });
+        });
+        &lt/script>
+        &ltstyle>
+        .blue7 {
+            color: blue;
+        }
+        &lt/style>
+        &lth1 id="h1_7">Heading 1&lt/h1>
+        &lth2 id="h2_7">Heading 2&lt/h2>
+        &ltp id="p_7">This is a paragraph.&lt/p>
+        &ltp id="p_7">This is another paragraph.&lt/p>
+        &ltbutton id="button7">Toggle class&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button8").click(function(){
+                $("#p8").css({"background-color": "yellow", "font-size": "200%"});
+            });
+        });
+        &lt/script>
+        &lth2>This is a heading&lt/h2>
+        &ltp id="p8" style="background-color:#ff0000">This is a paragraph.&lt/p>
+        &ltp id="p8" style="background-color:#00ff00">This is a paragraph.&lt/p>
+        &ltp id="p8" style="background-color:#0000ff">This is a paragraph.&lt/p>
+        &ltp>This is a paragraph.&lt/p>
+        &ltbutton id="button8">Set background-color of p&lt/button>
+        &lt!--new example-->
+        &ltscript>
+        $(document).ready(function(){
+            $("#button9").click(function(){
+                $("#div9").width(300).height(300);
+                var txt = "";
+                txt += "Width of div: " + $("#div9").width() + "&lt/br>";
+                txt += "Height of div: " + $("#div9").height() + "&lt/br>";
+                txt += "Inner width of div: " + $("#div9").innerWidth() + "&lt/br>";
+                txt += "Inner height of div: " + $("#div9").innerHeight() + "&lt/br>";
+                txt += "Outer width of div: " + $("#div9").outerWidth() + "&lt/br>";
+                txt += "Outer height of div: " + $("#div9").outerHeight() + "&lt/br>";                       
+                txt += "Document width/height: " + $(document).width();
+                txt += "x" + $(document).height() + "\n"  + "&lt/br>";
+                txt += "Window width/height: " + $(window).width();
+                txt += "x" + $(window).height()  + "&lt/br>";                                   
+                $("#div9").html(txt);
 
-
-        </code>
+            });
+        });
+        &lt/script>
+        &ltstyle>
+        #div9 {
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background-color: lightblue;
+        }
+        &lt/style>
+        &ltdiv id="div9">&lt/div>
+        &ltbr>
+        &ltbutton id="button9" >Display dimensions of div&lt/button>
+        &ltp>width() - returns the width of an element.&lt/p>
+        &ltp>height() - returns the height of an element.&lt/p>
+        &ltp>innerWidth() - returns the width of an element (includes padding).&lt/p>
+        &ltp>innerHeight() - returns the height of an element (includes padding).&lt/p>
+        &ltp>outerWidth(true) - returns the width of an element 
+            (includes padding, border, and margin).&lt/p>
+        &ltp>outerHeight(true) - returns the height of an element 
+            (includes padding, border, and margin).&lt/p>
+        &lt/code>
         </pre>
         </div>
     </div>      

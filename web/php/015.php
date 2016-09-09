@@ -502,8 +502,340 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        
+        &lt!--get_hint.php--> 
+        &lt!--used for 015.php--> 
+        &lt?php
+        // Array with names
+        $a[] = "Anna";
+        $a[] = "Brittany";
+        $a[] = "Cinderella";
+        $a[] = "Diana";
+        $a[] = "Eva";
+        $a[] = "Fiona";
+        $a[] = "Gunda";
+        $a[] = "Hege";
+        $a[] = "Inga";
+        $a[] = "Johanna";
+        $a[] = "Kitty";
+        $a[] = "Linda";
+        $a[] = "Nina";
+        $a[] = "Ophelia";
+        $a[] = "Petunia";
+        $a[] = "Amanda";
+        $a[] = "Raquel";
+        $a[] = "Cindy";
+        $a[] = "Doris";
+        $a[] = "Eve";
+        $a[] = "Evita";
+        $a[] = "Sunniva";
+        $a[] = "Tove";
+        $a[] = "Unni";
+        $a[] = "Violet";
+        $a[] = "Liza";
+        $a[] = "Elizabeth";
+        $a[] = "Ellen";
+        $a[] = "Wenche";
+        $a[] = "Vicky";
 
+        // get the q parameter from URL
+        $q = $_REQUEST["q"];
+
+        $hint = "";
+
+        // lookup all hints from array if $q is different from ""
+        if ($q !== "") {
+            $q = strtolower($q);
+            $len=strlen($q);
+            foreach($a as $name) {
+                if (stristr($q, substr($name, 0, $len))) {
+                    if ($hint === "") {
+                        $hint = $name;
+                    } else {
+                        $hint .= ", $name";
+                    }
+                }
+            }
+        }
+
+        // Output "no suggestion" if no hint was found or output correct values
+        echo $hint === "" ? "no suggestion" : $hint;
+        ?> 
+        &lt!--get_cd.php-->
+        &lt!--used for 015.php--> 
+        &lt?php
+        $q=$_GET["q"];
+
+        $xmlDoc = new DOMDocument();
+        $xmlDoc->load("../xml/cd_catalog.xml");
+
+        $x=$xmlDoc->getElementsByTagName('ARTIST');
+
+        for ($i=0; $i&lt=$x->length-1; $i++) {
+          //Process only element nodes
+          if ($x->item($i)->nodeType==1) {
+            if ($x->item($i)->childNodes->item(0)->nodeValue == $q) {
+              $y=($x->item($i)->parentNode);
+            }
+          }
+        }
+
+        $cd=($y->childNodes);
+
+        for ($i=0;$i&lt$cd->length;$i++) {
+          //Process only element nodes
+          if ($cd->item($i)->nodeType==1) {
+            echo("&ltb>" . $cd->item($i)->nodeName . ":&lt/b> ");
+            echo($cd->item($i)->childNodes->item(0)->nodeValue);
+            echo("&ltbr>");
+          }
+        }
+        ?> 
+
+        &lt!--cd_catalog.php-->
+        &lt?xml version="1.0" encoding="ISO-8859-1"?>
+        &ltCATALOG>
+            &ltCD>
+                &ltTITLE>Empire Burlesque&lt/TITLE>
+                &ltARTIST>Bob Dylan&lt/ARTIST>
+                &ltCOUNTRY>USA&lt/COUNTRY>
+                &ltCOMPANY>Columbia&lt/COMPANY>
+                &ltPRICE>10.90&lt/PRICE>
+                &ltYEAR>1985&lt/YEAR>
+            &lt/CD>
+            &ltCD>
+                &ltTITLE>Hide your heart&lt/TITLE>
+                &ltARTIST>Bonnie Tyler&lt/ARTIST>
+                &ltCOUNTRY>UK&lt/COUNTRY>
+                &ltCOMPANY>CBS Records&lt/COMPANY>
+                &ltPRICE>9.90&lt/PRICE>
+                &ltYEAR>1988&lt/YEAR>
+            &lt/CD>
+        &lt/CATALOG>
+
+
+
+        &lt!--get_rss.php-->
+        &lt!--used for 015.php--> 
+        &lt?php
+        //get the q parameter from URL
+        $q=$_GET["q"];
+
+        //find out which feed was selected
+        if($q=="Google") {
+          $xml=("http://news.google.com/news?ned=us&topic=h&output=rss");
+        } elseif($q=="NBC") {
+          $xml=("http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml");
+        }
+
+        $xmlDoc = new DOMDocument();
+        $xmlDoc->load($xml);
+
+        //get elements from "&ltchannel>"
+        $channel=$xmlDoc->getElementsByTagName('channel')->item(0);
+        $channel_title = $channel->getElementsByTagName('title')
+        ->item(0)->childNodes->item(0)->nodeValue;
+        $channel_link = $channel->getElementsByTagName('link')
+        ->item(0)->childNodes->item(0)->nodeValue;
+        $channel_desc = $channel->getElementsByTagName('description')
+        ->item(0)->childNodes->item(0)->nodeValue;
+
+        //output elements from "&ltchannel>"
+        echo("&ltp>&lta href='" . $channel_link
+          . "'>" . $channel_title . "&lt/a>");
+        echo("&ltbr>");
+        echo($channel_desc . "&lt/p>");
+
+        //get and output "&ltitem>" elements
+        $x=$xmlDoc->getElementsByTagName('item');
+        for ($i=0; $i&lt=2; $i++) {
+          $item_title=$x->item($i)->getElementsByTagName('title')
+          ->item(0)->childNodes->item(0)->nodeValue;
+          $item_link=$x->item($i)->getElementsByTagName('link')
+          ->item(0)->childNodes->item(0)->nodeValue;
+          $item_desc=$x->item($i)->getElementsByTagName('description')
+          ->item(0)->childNodes->item(0)->nodeValue;
+          echo ("&ltp>&lta href='" . $item_link
+          . "'>" . $item_title . "&lt/a>");
+          echo ("&ltbr>");
+          echo ($item_desc . "&lt/p>");
+        }
+        ?> 
+
+
+        &lt!--get_user.php-->
+        &lt!--used for 015.php--> 
+        &lt!DOCTYPE html>
+        &lthtml>
+        &lthead>
+            &ltstyle>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+
+                table, td, th {
+                    border: 1px solid black;
+                    padding: 5px;
+                }
+
+                th {text-align: left;}
+            &lt/style>
+        &lt/head>
+        &ltbody>
+
+            &lt?php
+            $q = intval($_GET['q']);
+
+            $con = mysqli_connect('localhost','phpuser','K1m?sRt7*','php_tutorial');
+            if (!$con) {
+                die('Could not connect: ' . mysqli_error($con));
+            }
+
+            mysqli_select_db($con,"php_tutorial");
+            $sql="SELECT * FROM user WHERE id = '".$q."'";
+            $result = mysqli_query($con,$sql);
+
+            echo "&lttable>
+            &lttr>
+            &ltth>Firstname&lt/th>
+            &ltth>Lastname&lt/th>
+            &ltth>Age&lt/th>
+            &ltth>Hometown&lt/th>
+            &ltth>Job&lt/th>
+            &lt/tr>";
+            while($row = mysqli_fetch_array($result)) {
+                echo "&lttr>";
+                echo "&lttd>" . $row['FirstName'] . "&lt/td>";
+                echo "&lttd>" . $row['LastName'] . "&lt/td>";
+                echo "&lttd>" . $row['Age'] . "&lt/td>";
+                echo "&lttd>" . $row['Hometown'] . "&lt/td>";
+                echo "&lttd>" . $row['Job'] . "&lt/td>";
+                echo "&lt/tr>";
+            }
+            echo "&lt/table>";
+            mysqli_close($con);
+            ?>
+        &lt/body>
+        &lt/html>
+
+
+        &lt!--livesearch.php-->
+        &lt!--used for 015.php--> 
+
+        &lt?php
+        $xmlDoc=new DOMDocument();
+        $xmlDoc->load("../xml/links.xml");
+
+        $x=$xmlDoc->getElementsByTagName('link');
+
+        //get the q parameter from URL
+        $q=$_GET["q"];
+
+        //lookup all links from the xml file if length of q>0
+        if (strlen($q)>0) {
+          $hint="";
+          for($i=0; $i&lt($x->length); $i++) {
+            $y=$x->item($i)->getElementsByTagName('title');
+            $z=$x->item($i)->getElementsByTagName('url');
+            if ($y->item(0)->nodeType==1) {
+              //find a link matching the search text
+              if (stristr($y->item(0)->childNodes->item(0)->nodeValue,$q)) {
+                if ($hint=="") {
+                  $hint="&lta href='" .
+                  $z->item(0)->childNodes->item(0)->nodeValue .
+                  "' target='_blank'>" .
+                  $y->item(0)->childNodes->item(0)->nodeValue . "&lt/a>";
+                } else {
+                  $hint=$hint . "&ltbr />&lta href='" .
+                  $z->item(0)->childNodes->item(0)->nodeValue .
+                  "' target='_blank'>" .
+                  $y->item(0)->childNodes->item(0)->nodeValue . "&lt/a>";
+                }
+              }
+            }
+          }
+        }
+
+        // Set output to "no suggestion" if no hint was found
+        // or to the correct values
+        if ($hint=="") {
+          $response="no suggestion";
+        } else {
+          $response=$hint;
+        }
+
+        //output the response
+        echo $response;
+        ?> 
+
+        &lt!--links.xml-->
+        &lt?xml version="1.0" encoding="utf-8"?>
+        &ltpages>
+          &ltlink>
+            &lttitle>HTML a tag&lt/title>
+            &lturl>http://www.w3schools.com/tags/tag_a.asp&lt/url>
+          &lt/link>
+          &ltlink>
+            &lttitle>HTML br tag&lt/title>
+            &lturl>http://www.w3schools.com/tags/tag_br.asp&lt/url>
+          &lt/link>
+        &lt/pages>
+
+        &lt!--poll_vote.php-->
+        &lt!--used for 015.php--> 
+        &lt?php
+        $vote = $_REQUEST['vote'];
+
+        //get content of textfile
+        $filename = "../txt/poll_result.txt";
+        $content = file($filename);
+
+        //put content in array
+        $array = explode("||", $content[0]);
+        $yes = $array[0];
+        $no = $array[1];
+
+        if ($vote == 0) {
+          $yes = $yes + 1;
+        }
+        if ($vote == 1) {
+          $no = $no + 1;
+        }
+
+        //insert votes to txt file
+        $insertvote = $yes."||".$no;
+        $fp = fopen($filename,"w");
+        fputs($fp,$insertvote);
+        fclose($fp);
+        ?>
+
+        &lth2>Result:&lt/h2>
+        &lttable>
+        &lttr>
+        &lttd>Yes:&lt/td>
+        &lttd>
+        &ltimg src="../pic/poll.gif"
+        width='&lt?php echo(100*round($yes/($no+$yes),2)); ?>'
+        height='20'>
+        &lt?php echo(100*round($yes/($no+$yes),2)); ?>%
+        &lt/td>
+        &lt/tr>
+        &lttr>
+        &lttd>No:&lt/td>
+        &lttd>
+        &ltimg src="../pic/poll.gif"
+        width='&lt?php echo(100*round($no/($no+$yes),2)); ?>'
+        height='20'>
+        &lt?php echo(100*round($no/($no+$yes),2)); ?>%
+        &lt/td>
+        &lt/tr>
+        &lt/table> 
+
+
+        &lt!--poll_result.txt-->
+        2||1
 
         </code>
         </pre>

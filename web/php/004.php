@@ -105,8 +105,67 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP Conditional Statements&lt/h2>
+        &lt!--new example-->
+        &lt?php
+        $t = date("H");
+        echo "&ltp>The hour (of the server) is " . $t;
+        echo ", and will give the following message:&lt/p>";
 
+        if ($t &lt "10") {
+            echo "Have a good morning!";
+        } elseif ($t &lt "20") {
+            echo "Have a good day!";
+        } else {
+            echo "Have a good night!";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        $favcolor = "red";
+
+        switch ($favcolor) {
+            case "red":
+                echo "Your favorite color is red!";
+                break;
+            case "blue":
+                echo "Your favorite color is blue!";
+                break;
+            case "green":
+                echo "Your favorite color is green!";
+                break;
+            default:
+                echo "Your favorite color is neither red, blue, nor green!";
+        }
+        ?>
+        &lt!--new example-->
+        &lth2>PHP Loops&lt/h2>
+        &lt?php  
+        $x = 1;
+
+        while($x &lt= 5) {
+          echo "The number is: $x &ltbr>";
+          $x++;
+        }
+        ?>  
+        &lt!--new example-->
+        &lt?php
+        $x = 6;
+
+        do {
+            echo "The number is: $x &ltbr>";
+            $x++;
+        } while ($x &lt= 5);
+        ?>
+        &lt!--new example-->
+        &lt?php  
+        $colors = array("red", "green", "blue", "yellow");
+
+        foreach ($colors as $value) {
+          echo "$value &ltbr>";
+        }
+        ?>  
 
         </code>
         </pre>

@@ -1,3 +1,4 @@
+<!--used for 011.php-->
 <?php
 
 session_start(['use_only_cookies' =>0 , 'use_trans_sid'=> 1]);

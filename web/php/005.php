@@ -124,8 +124,86 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP User Defined Functions&lt/h2>
+        &ltp>Function names are NOT case-sensitive.&lt/p>
+        &lt!--new example-->
+        &lt?php
+        function setHeight($minheight = 50) {
+            echo "The height is : $minheight &ltbr>";
+        }
 
+        setHeight(350);
+        setHeight();
+        setHeight(135);
+        setHeight(80);
+        ?>
+        &lt!--new example-->
+        &lt?php
+        function sum($x, $y) {
+            $z = $x + $y;
+            return $z;
+        }
+
+        echo "5 + 10 = " . sum(5,10) . "&ltbr>";
+        echo "7 + 13 = " . sum(7,13) . "&ltbr>";
+        echo "2 + 4 = " . sum(2,4);
+        ?>
+        &lt!--new example-->
+        &lth2>PHP 5 Arrays&lt/h2>
+        &lt?php
+        $cars = array("Volvo", "BMW", "Toyota");
+        echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        $cars = array("Volvo", "BMW", "Toyota");
+        echo count($cars);
+        ?>
+        &lt!--new example-->
+        &lth3>Loop Through an Indexed Array&lt/h3>
+        &lt?php
+        $cars = array("Volvo", "BMW", "Toyota");
+        $arrlength = count($cars);
+
+        for($x = 0; $x &lt $arrlength; $x++) {
+            echo $cars[$x];
+            echo "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lth3>PHP Associative Arrays&lt/h3>
+        &lt?php
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        echo "Peter is " . $age['Peter'] . " years old.";
+        ?>
+        &lt!--new example-->
+        &lth3>Loop Through an Associative Array&lt/h3>
+        &lt?php
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+        foreach($age as $x => $x_value) {
+            echo "Key=" . $x . ", Value=" . $x_value;
+            echo "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        $cars = array("Volvo", "BMW", "Toyota");
+        sort($cars);
+        ?> 
+         &lt?php
+        $numbers = array(4, 6, 2, 22, 11);
+        rsort($numbers);
+        ?> 
+        &lt?php
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        asort($age);
+        ?> 
+        &lt?php
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        ksort($age);
+        ?> 
 
         </code>
         </pre>

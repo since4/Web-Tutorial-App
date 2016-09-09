@@ -180,8 +180,134 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP Filters&lt/h2>                
+        &lt!--new example-->
+        &ltp>Validating data = Determine if the data is in proper form. &ltbr>
+            Sanitizing data = Remove any illegal character from the data.
+        &lt/p>
+        &ltp>PHP filters are used to validate and sanitize external input. 
+            The PHP filter extension has many of the functions needed 
+            for checking user input, and is designed to make data 
+            validation easier and quicker.
+        &lt/p>
+        &lt!--new example-->
+        &ltp>The filter_list() function can be used to list what the 
+            PHP filter extension offers: &lt/p>
+        &lttable>
+            &lttr>
+              &lttd>Filter Name&lt/td>
+              &lttd>Filter ID&lt/td>
+            &lt/tr>
+            &lt?php
+                foreach (filter_list() as $id =>$filter) {
+                    echo '&lttr>'
+                            . '&lttd>' . $filter . '&lt/td>'
+                            . '&lttd>' . filter_id($filter) . '&lt/td>'
+                      . '&lt/tr>';
+                }
+            ?>
+        &lt/table>
+        &lt!--new example-->
+        &lth2>PHP filter_var() Function&lt/h2>
+        &ltp>The filter_var() function both validate and sanitize data.&lt/p>
+        &ltp>The filter_var() function filters a single variable with a 
+            specified filter. It takes two pieces of data:&lt/p>
+        &ltul>
+                &ltli>The variable you want to check&lt/li>
+                &ltli>The type of check to use&lt/li>
+        &lt/ul>
+        &lthr>
+        &lt!--new example-->
+        &lt?php
+        echo "str=&lth1>Hello World!&lt/h1>" . "&ltbr>";
+        $str = "&lth1>Hello World!&lt/h1>";
+        $newstr = filter_var($str, FILTER_SANITIZE_STRING);               
+        echo $newstr;
+        ?>
+        &lt?php
+        echo "int=0" . "&ltbr>";
+        $int = 0;
+        if (filter_var($int, FILTER_VALIDATE_INT) === 0 || !filter_var($int, FILTER_VALIDATE_INT) === false) {
+            echo("Integer is valid");
+        } else {
+            echo("Integer is not valid");
+        }
+        ?> 
+        &lt?php
+        echo "ip = 127.0.0.1" . "&ltbr>";
+        $ip = "127.0.0.1";
 
+        if (!filter_var($ip, FILTER_VALIDATE_IP) === false) {
+            echo("$ip is a valid IP address");
+        } else {
+            echo("$ip is not a valid IP address");
+        }
+        ?> 
+        &lt?php
+        echo "email = john.doe@example.com" . "&ltbr>";
+        $email = "john.doe@example.com";
+
+        // Remove all illegal characters from email
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+        // Validate e-mail
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            echo("$email is a valid email address");
+        } else {
+            echo("$email is not a valid email address");
+        }
+        ?> 
+        &lt?php
+        echo "url = http://www.w3schools.com" . "&ltbr>";
+        $url = "http://www.w3schools.com";
+
+        // Remove all illegal characters from a url
+        $url = filter_var($url, FILTER_SANITIZE_URL);
+
+        // Validate url
+        if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
+            echo("$url is a valid URL");
+        } else {
+            echo("$url is not a valid URL");
+        }
+        ?> 
+        &lt!--new example-->
+        &lt?php
+        echo "int = 122" . "&ltbr>";
+        /* variable to check */
+        $int = 122;
+
+        /* min value */
+        $min = 1;
+        /* max value */
+        $max = 200;
+
+        if (filter_var($int, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min, "max_range"=>$max))) === false) {
+            echo("Variable value is not within the legal range");
+        } else {
+            echo("Variable value is within the legal range");
+        }
+        ?>
+        &lt?php
+        echo "http://www.w3schools.com" . "&ltbr>";
+        $url = "http://www.w3schools.com";
+
+        if (!filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED) === false) {
+            echo("$url is a valid URL");
+        } else {
+            echo("$url is not a valid URL");
+        }
+        ?> 
+        &lt?php
+        echo "str=&lth1>Hello WorldÆØÅ!&lt/h1>" . "&ltbr>";
+        // Variable to check
+        $str = "&lth1>Hello WorldÆØÅ!&lt/h1>";
+
+        // Remove HTML tags and all characters with ASCII value > 127
+        $newstr = filter_var($str, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+        echo $newstr;
+        ?>
 
         </code>
         </pre>

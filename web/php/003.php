@@ -177,9 +177,138 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP 5 Data Types&lt/h2>
+        &lt!--new example-->
+        &ltp>The PHP var_dump() function returns 
+            the data type and value:
+        &lt/p>
+         &lt?php
+        $x = 5985;
+        var_dump($x);
+        ?>
+        &lt?php
+        $x = 10;  
+        echo ++$x;
+        ?> 
+        &lt?php
+        $x = 10;  
+        echo $x++;
+        ?>  
+        &lt!--new example-->
+        &lth2>PHP Array&lt/h2>
+        &lt?php  
+        $cars = array("Volvo","BMW","Toyota");
+        var_dump($cars);
+        echo $cars[0];
+        $cars[0]="Mazda";
+        echo $cars[0];
+        ?> 
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
 
+        print_r($x + $y); // union of $x and $y
+        ?>  
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
 
+        var_dump($x == $y);
+        ?>  
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
+
+        var_dump($x === $y);
+        ?>  
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
+
+        var_dump($x != $y);
+        ?>  
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
+
+        var_dump($x &lt> $y);
+        ?>  
+        &lt?php
+        $x = array("a" => "red", "b" => "green");  
+        $y = array("c" => "blue", "d" => "yellow");  
+
+        var_dump($x !== $y);
+        ?>  
+        &lt!--new example-->
+        &lth2>PHP Objects&lt/h2>
+        &lt?php
+        class Car {
+            function Car($model) {
+                $this->model = $model;
+            }
+        }
+        // create an object
+        $herbie = new Car("VW");
+        // show object properties
+        echo $herbie->model;
+        ?>
+        &lt!--new example-->
+        &lth2>PHP NULL&lt/h2>
+        &ltp>Null is a special data type which can have only one value: NULL.&lt/p>
+        &ltp>A variable of data type NULL is a variable that has no value assigned to it.&lt/p>
+        &ltp>&ltstrong>Tip:&lt/strong> If a variable is created without a value, it is 
+        automatically assigned a value of NULL.&lt/p>
+        &ltp>Variables can also be emptied by setting the value to NULL:&lt/p>
+        &lt?php
+        $x = "Hello world!";
+        $x = null;
+        var_dump($x);
+        ?>
+        &lt!--new example-->
+        &lth2>PHP String Functions&lt/h2>
+         &lt?php
+        echo strlen("Hello world!"); // outputs 12
+        ?> 
+         &lt?php
+        echo str_word_count("Hello world!"); // outputs 2
+        ?> 
+        &lt?php
+        echo strrev("Hello world!"); // outputs !dlrow olleH
+        ?>
+        &lt?php
+        echo strpos("Hello world!", "world"); // outputs 6
+        ?> 
+        &lt?php
+        echo str_replace("world", "Dolly", "Hello world!"); // outputs Hello Dolly!
+        ?> 
+        &lt?php
+        $txt1 = "Hello";
+        $txt2 = " world!";
+        $txt1 .= $txt2;
+        echo $txt1;
+        ?>  
+        &lt?php
+        $txt1 = "Hello";
+        $txt2 = " world!";
+        echo $txt1 . $txt2;
+        ?>  
+        &lt!--new example-->
+        &lth2>Create a PHP Constant&lt/h2>
+        &ltp>To create a constant, use the define() function.&lt/p>
+        &lth3>Syntax&lt/h3>
+        &ltdiv>
+            define(&lti>name&lt/i>, &lti>value&lt/i>, &lti>case-insensitive&lt/i>)
+        &lt/div>
+        &lt?php
+        define("GREETING", "Welcome to W3Schools.com!");
+
+        function myTest1() {
+            echo GREETING;
+        }
+
+        myTest1();
+        ?> 
         </code>
         </pre>
         </div>

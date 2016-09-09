@@ -185,9 +185,551 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP MySQL Database&lt/h2>
+        &lth2>Should I Use MySQLi or PDO?&lt/h2>
+        &ltp>If you need a short answer, it would be "Whatever you like".&lt/p>
+        &ltp>Both MySQLi and PDO have their advantages:&lt/p>
+        &ltp>PDO will work on 12 different database systems, 
+            where as MySQLi will only work with MySQL databases.&lt/p>
+        &ltp>So, if you have to switch your project to use another 
+            database, PDO makes the process easy. 
+            You only have to change the connection string and a few 
+            queries. With MySQLi, you will need to rewrite the 
+            entire code - queries included.
+        &lt/p>
+        &lt!--new example-->
+        &lt?php
+        $host_port= "localhost:8000/";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #create db
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_create_db.php>"
+        . "mysql_create_db.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #create table
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_create_tb.php>"
+        . "mysql_create_tb.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Insert Data Into MySQL
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_insert_record.php>"
+        . "mysql_insert_record.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Insert Multiple Records Into MySQL
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_insert_multi_records.php>"
+        . "mysql_insert_multi_records.php&lt/a>"
+        . "&ltbr>";                   
+        ?>
+        &lt!--new example-->
+        &lth2>Prepared Statements and Bound Parameters&lt/h2>
+        &ltp>A prepared statement is a feature used to execute 
+            the same (or similar) SQL 
+            statements repeatedly with high efficiency.&lt/p>
+        &ltp>Prepared statements basically work like this:&lt/p>
+        &ltol>
+            &ltli>Prepare: An SQL statement template is created and 
+                sent to the database. Certain values are left 
+                unspecified, called 
+                parameters (labeled "?"). Example: INSERT 
+                INTO MyGuests VALUES(?, ?, ?)
+            &lt/li>
+            &ltli>The database parses, compiles, and performs query 
+                optimization on 
+                the SQL statement template, and stores the result 
+                without executing it
+            &lt/li>
+            &ltli>Execute: At a later time, the application binds 
+                the values to the 
+                parameters, and the database executes the statement. 
+                The application may 
+                execute the statement as many times as it wants with 
+                different values
+            &lt/li>
+        &lt/ol>
+        &ltp>Compared to executing SQL statements directly, prepared statements 
+            have two main advantages:&lt/p>
+        &ltul>
+            &ltli>Prepared statements reduces parsing time as the 
+                preparation on the query is done only 
+                once (although the statement is executed multiple times)
+            &lt/li>
+            &ltli>Bound parameters minimize bandwidth to the server as 
+                you need send only 
+                the parameters each time, and not the whole query
+            &lt/li>
+            &ltli>Prepared statements are very useful against 
+                SQL injections, because 
+                parameter values, which are transmitted later using 
+                a different protocol, 
+                need not be correctly escaped. If the original 
+                statement template is not 
+                derived from external input, SQL injection cannot occur.
+            &lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &lt?php
+        #Prepared Statements              
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_prepared_statements.php>"
+        . "mysql_prepared_statements.php&lt/a>"
+        . "&ltbr>";  
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Select Data From MySQL
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_select.php>"
+        . "mysql_select.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Delete Data From MySQL
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_delete_record.php>"
+        . "mysql_delete_record.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Update Data in MySQL
+        echo "1: &lta href=http://" 
+        . $host_port
+        . "php/mysql_update_record.php>"
+        . "mysql_update_record.php&lt/a>"
+        . "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+        &lt!--new example-->       
+        
+        
+        &lt!--mysql_create_db.php-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname = "php_tutorial"; #existing db needed to connect with pdo
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #create db
+        try {                   
+            $sql = "CREATE DATABASE " . $dbname_new;
+            // use exec() because no results are returned
+            $conn->exec($sql);
+            echo "Database " . $dbname_new . " created successfully&ltbr>";
+        } catch(PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_create_tb.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #create table
+        try {
+            // sql to create table
+            $sql = "CREATE TABLE " . $tbname_new . " (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            firstname VARCHAR(30) NOT NULL,
+            lastname VARCHAR(30) NOT NULL,
+            email VARCHAR(50),
+            reg_date TIMESTAMP
+            )";
+            // use exec() because no results are returned
+            $conn->exec($sql);
+            echo "Table " . $tbname_new . " created successfully" . "&ltbr>";
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_delete_record.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Delete Data From MySQL
+        #DELETE FROM table ORDER BY 'the field' DESC|ASC LIMIT 'nr of records to delete'
+        try {
+            // sql to delete a record
+            $sql = "DELETE FROM " . $tbname_new 
+                    . " ORDER BY id" 
+                    . " DESC LIMIT 1";
+            // use exec() because no results are returned
+            $conn->exec($sql);
+            echo "Record deleted successfully" . "&ltbr>";                   
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_insert_multi_records.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Insert Multiple Records Into MySQL
+        try {
+            // begin the transaction
+            $conn->beginTransaction();
+            // our SQL statements
+            $conn->exec("INSERT INTO " . $tbname_new . " (firstname, lastname, email)
+            VALUES ('John', 'Doe1', 'john@example.com')");
+            $conn->exec("INSERT INTO " . $tbname_new . " (firstname, lastname, email)
+            VALUES ('Mary', 'Moe1', 'mary@example.com')");
+            $conn->exec("INSERT INTO " . $tbname_new . " (firstname, lastname, email)
+            VALUES ('Julie', 'Dooley1', 'julie@example.com')");
+            // commit the transaction
+            $conn->commit();
+            echo "New records created successfully" . "&ltbr>"; 
+            //Get ID of Last Inserted Record
+            $last_id = $conn->lastInsertId(); #doesn't seem to work without exec()
+            echo "Last inserted ID is: " . $last_id . "&ltbr>";
+        } catch (PDOException $e) {
+            // roll back the transaction if something failed
+            $conn->rollback();
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }                      
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
 
 
+        &lt!--mysql_insert_record.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Insert Data Into MySQL
+        try {
+            $sql = "INSERT INTO " . $tbname_new . " (firstname, lastname, email)
+            VALUES ('John', 'Doe', 'john@example.com')";
+            // use exec() because no results are returned
+            $conn->exec($sql);
+            echo "New record created successfully" . "&ltbr>";
+            //Get ID of Last Inserted Record
+            $last_id = $conn->lastInsertId();
+            echo "Last inserted ID is: " . $last_id . "&ltbr>";
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_prepared_statements.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Prepared Statements              
+        try {
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("INSERT INTO " . $tbname_new . " 
+                (firstname, lastname, email)
+                VALUES (:firstname, :lastname, :email)");
+            $stmt->bindParam(':firstname', $firstname);
+            $stmt->bindParam(':lastname', $lastname);
+            $stmt->bindParam(':email', $email);
+            // insert a row
+            $firstname = "John";
+            $lastname = "Doe2";
+            $email = "john@example.com";
+            $stmt->execute();
+            // insert another row
+            $firstname = "Mary";
+            $lastname = "Moe2";
+            $email = "mary@example.com";
+            $stmt->execute();
+            // insert another row
+            $firstname = "Julie";
+            $lastname = "Dooley2";
+            $email = "julie@example.com";
+            $stmt->execute();
+            echo "New records created successfully" . "&ltbr>";
+            //Get ID of Last Inserted Record
+            $last_id = $conn->lastInsertId();
+            echo "Last inserted ID is: " . $last_id . "&ltbr>";
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_select.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Select Data From MySQL
+        echo "&lttable style='border: solid 1px black;'>";
+        echo "&lttr>&ltth>Id&lt/th>&ltth>Firstname&lt/th>&ltth>Lastname&lt/th>&lt/tr>";
+        class TableRows extends RecursiveIteratorIterator {
+            function __construct($it) {
+                parent::__construct($it, self::LEAVES_ONLY);
+            }
+            function current() {
+                return "&lttd style='width:150px;border:1px solid black;'>" 
+                . parent::current(). "&lt/td>";
+            }
+            function beginChildren() {
+                echo "&lttr>";
+            }
+            function endChildren() {
+                echo "&lt/tr>" . "\n";
+            }
+        } 
+        try {
+            $stmt = $conn->prepare("SELECT id, firstname, "
+                    . "lastname FROM " . $tbname_new );
+            $stmt->execute();
+            // set the resulting array to associative
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            foreach(new TableRows(
+                    new RecursiveArrayIterator(
+                            $stmt->fetchAll())) 
+                    as $k=>$v) { echo $v; }                    
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        } 
+        echo "&lt/table>";
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+        &lt!--mysql_update_record.php-->
+        &lt!--new example-->
+        &lt?php
+        $servername = "localhost";
+        $username = "phpuser";
+        $password = "K1m?sRt7*";
+        $dbname_new = "php_tutorial_pdo";
+        $tbname_new = "MyGuests";
+        ?>
+        &lt?php
+        #connect
+        try {
+            $conn = new PDO("mysql:host=$servername;"
+                    . "dbname=$dbname_new", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, 
+                    PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully" . "&ltbr>";
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage() . "&ltbr>";
+        } 
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #Update Data in MySQL
+        try {
+            $sql = "UPDATE " . $tbname_new . " SET "
+                    . "lastname='Doe3' WHERE id=2";
+            // Prepare statement
+            $stmt = $conn->prepare($sql);
+            // execute the query
+            $stmt->execute();
+            // echo a message to say the UPDATE succeeded
+            echo $stmt->rowCount() . " records UPDATED successfully" . "&ltbr>";                   
+        } catch (PDOException $e) {
+            echo $sql . "&ltbr>" . $e->getMessage() . "&ltbr>";
+        }
+        ?>
+        &lt!--new example-->
+        &lt?php
+        #disconnect
+        $conn = null;
+        ?> 
+
+
+
+        &lt!--new example-->
+        
         </code>
         </pre>
         </div>

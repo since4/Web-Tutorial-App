@@ -1,3 +1,4 @@
+<!--used for 015.php--> 
 <?php
 $vote = $_REQUEST['vote'];
 

@@ -190,9 +190,150 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth2>PHP Global Variables - Superglobals&lt/h2>
+        &lt!--new example-->
+        &lt?php
+        $x = 75;
+        $y = 25;
 
+        function addition() {
+            $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+        }
 
+        addition();
+        echo $z;
+        ?>
+        &lt!--new example-->
+        &lt?php
+        echo "&ltbr>-PHP_SELF&ltbr>";
+        echo $_SERVER['PHP_SELF'];
+        echo "-GATEWAY_INTERFACE&ltbr>";
+        echo $_SERVER['GATEWAY_INTERFACE'];
+        echo "-SERVER_ADDR&ltbr>";
+        echo $_SERVER['SERVER_ADDR'];
+        echo "-SERVER_NAME&ltbr>";
+        echo $_SERVER['SERVER_NAME'];
+        echo "-SERVER_SOFTWARE&ltbr>";
+        echo $_SERVER['SERVER_SOFTWARE'];
+        echo "-SERVER_PROTOCOL&ltbr>";
+        echo $_SERVER['SERVER_PROTOCOL'];
+        echo "-REQUEST_METHOD&ltbr>";
+        echo $_SERVER['REQUEST_METHOD'];
+        echo "-REQUEST_TIME&ltbr>";
+        echo $_SERVER['REQUEST_TIME'];
+        echo "-QUERY_STRING&ltbr>";
+        echo $_SERVER['QUERY_STRING'];
+        echo "-HTTP_ACCEPT&ltbr>";
+        echo $_SERVER['HTTP_ACCEPT'];
+        echo "-HTTP_ACCEPT_CHARSET&ltbr>";
+        echo $_SERVER['HTTP_ACCEPT_CHARSET'];
+        echo "-HTTP_HOST&ltbr>";
+        echo $_SERVER['HTTP_HOST'];
+        echo "-HTTP_REFERER&ltbr>";
+        echo $_SERVER['HTTP_REFERER'];
+        echo "-HTTPS&ltbr>";
+        echo $_SERVER['HTTPS'];
+        echo "-REMOTE_ADDR&ltbr>";
+        echo $_SERVER['REMOTE_ADDR'];
+        echo "-REMOTE_HOST&ltbr>";
+        echo $_SERVER['REMOTE_HOST'];
+        echo "-REMOTE_PORT&ltbr>";
+        echo $_SERVER['REMOTE_PORT'];
+        echo "-SCRIPT_FILENAME&ltbr>";
+        echo $_SERVER['SCRIPT_FILENAME'];
+        echo "-SERVER_ADMIN&ltbr>";
+        echo $_SERVER['SERVER_ADMIN'];
+        echo "-SERVER_PORT&ltbr>";
+        echo $_SERVER['SERVER_PORT'];
+        echo "-SERVER_SIGNATURE&ltbr>";
+        echo $_SERVER['SERVER_SIGNATURE'];
+        echo "-PATH_TRANSLATED&ltbr>";
+        echo $_SERVER['PATH_TRANSLATED'];
+        echo "-SCRIPT_NAME&ltbr>";
+        echo $_SERVER['SCRIPT_NAME'];
+        echo "-SCRIPT_URI&ltbr>";
+        echo $_SERVER['SCRIPT_URI'];
+        echo "&ltbr>";
+        ?>
+        &lt!--new example-->
+        &lth2>PHP $_REQUEST&lt/h2>
+        &ltp>PHP $_REQUEST is used to collect data after submitting 
+            an HTML form.&lt/p>
+        When a user submits the data by clicking on "Submit", 
+            the form data is sent to the file specified in the 
+            action attribute of the &lt;form&gt; tag. 
+            In this example, we point to the file itself 
+            for processing form data. Then, we can use the super 
+            global variable $_REQUEST to collect the value of the input field:&lt/p>
+
+        &ltform method="post" action="&lt?php echo $_SERVER['PHP_SELF'];?>">
+            &lt!--input text field-->
+            Name: &ltinput type="text" name="fname1">
+            &lt!--input submit button-->
+            &ltinput type="submit">
+        &lt/form>
+
+        &lt?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $name = $_REQUEST['fname1'];
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+        ?>
+        &lt!--new example-->
+        &lth2>PHP $_POST&lt/h2>
+        &ltp>PHP $_POST is widely used to collect form data after submitting an HTML form 
+        with method="post". 
+        $_POST is also widely used to pass variables.&lt/p>
+        &ltp>Same form as in example above... Then, we can use the super 
+            global variable $_POST to collect the value of the input field:&lt/p>
+        &ltform method="post" action="&lt?php echo $_SERVER['PHP_SELF'];?>">
+            &lt!--input text field-->
+            Name: &ltinput type="text" name="fname2">
+            &lt!--input submit button-->
+            &ltinput type="submit">
+        &lt/form>
+
+        &lt?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $name = $_POST['fname2'];
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+        ?>
+        &lt!--new example-->
+        &lth2>PHP $_GET&lt/h2>
+        &ltp>PHP $_GET can also be used to collect form data after 
+            submitting an HTML form with method="get".&lt/p>
+        &ltp>$_GET can also collect data sent in the URL.&lt/p>
+        &ltp>Assume we have an HTML page that contains a 
+            hyperlink with parameters:&lt/p>
+        &ltp>When a user clicks on the link "Test $GET", 
+            the parameters "subject" and "web" are sent to the file
+            "&lt?php echo $_SERVER['PHP_SELF'];?>", 
+            and you can then access their values in the file with $_GET.&lt/p>
+        &lta href="&lt?php echo $_SERVER['PHP_SELF'];?>?subject=PHP&web=W3schools.com">Test $GET&lt/a>
+        &lt?php
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            // collect value of input field
+            $subject = $_GET['subject'];
+            $web = $_GET['web'];
+            if (empty($subject) or empty($web)) {
+                echo "&ltbr>subject or web is empty";
+            } else {
+                echo "&ltbr>$subject &ltbr>$web";
+            }
+        }
+        ?>
         </code>
         </pre>
         </div>

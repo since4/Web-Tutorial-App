@@ -48,7 +48,7 @@ and open the template in the editor.
     <div>
         <!--Body content-->
         <div class = "mainbody"> 
-            <h1>What Can PHP Do?</h1>
+            <h1>What Can jQuery Do?</h1>
             <div class = "interactive">
                 <h2>jQuery Introduction</h2>
                 <!--new example-->
@@ -233,16 +233,15 @@ and open the template in the editor.
                 <h3>$("p.intro")</h3>
                 <script>
                 $(document).ready(function(){
-                    $("button5").click(function(){
+                    $("#button5").click(function(){
                         $("p.intro").hide();
                     });
                 });
                 </script>
-                <h2 class="intro">This is a heading</h2>
+                <h3 class="intro">This is a heading</h3>
                 <p class="intro">This is a paragraph.</p>
                 <p>This is another paragraph.</p>
-                <button id="button5">Click me</button>
-                
+                <button id="button5">Click me</button>               
             </div>
         </div>
         
@@ -250,9 +249,199 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
-
-
+        &lt!--Body content-->
+        &lth2>jQuery Introduction&lt/h2>
+        &lt!--new example-->
+        &ltp>jQuery is a lightweight, "write less, do more", 
+            JavaScript library.&lt/p>
+        &ltp>The purpose of jQuery is to make it much easier to use 
+            JavaScript on your website.&lt/p>
+        &ltp>jQuery takes a lot of common tasks that require many lines 
+            of JavaScript code to accomplish, and wraps them into 
+            methods that you can call with a single line of code.&lt/p>
+        &ltp>jQuery also simplifies a lot of the complicated things 
+            from JavaScript, like AJAX calls and DOM manipulation.&lt/p>
+        &ltp>The jQuery library contains the following features:&lt/p>
+        &ltul>
+                &ltli>HTML/DOM manipulation&lt/li>
+                &ltli>CSS manipulation&lt/li>
+                &ltli>HTML event methods&lt/li>
+                &ltli>Effects and animations&lt/li>
+                &ltli>AJAX&lt/li>
+                &ltli>Utilities&lt/li>
+        &lt/ul>
+        &ltp>&ltb>Tip:&lt/b> In addition, jQuery has plugins for almost 
+            any task out there.&lt/p>
+        &lt!--new example-->
+        &ltp>There are two versions of jQuery available for downloading:&ltbr>
+            # Production version - this is for your live website because 
+            it has been minified and compressed &ltbr>
+            # Development version - this is for testing and development 
+            (uncompressed and readable code)&ltbr>
+            Both versions can be downloaded from jQuery.com.
+            &ltbr>&ltbr>One big advantage of using the hosted 
+            (CDN, Content Delivery Network) jQuery from 
+            Google or Microsoft: Many users already have downloaded 
+            jQuery from Google or Microsoft when visiting another site. 
+            As a result, it will be loaded from cache when they visit 
+            your site, which leads to faster loading time. 
+            Also, most CDN's will make sure that once a user requests 
+            a file from it, it will be served from the server closest 
+            to them, which also leads to faster loading time.&lt/p>
+        &ltp>Tip: Place the downloaded file in the same directory as the 
+            pages for which you wish to use it.&lt/p>
+        &lt!--new example-->
+        &lth2>jQuery Syntax&lt/h2>               
+        &ltp>Basic syntax is: &ltb>$(&lti>selector&lt/i>).&lti>action&lt/i>()&lt/b>&lt/p>
+        &lt!--new example-->
+        &lth2>The Document Ready Event&lt/h2>
+        &ltp>You might have noticed that all jQuery methods in our 
+            examples, are inside a document ready event. This is to 
+            prevent any jQuery code from running before the document 
+            is finished loading (is ready). It is good practice to 
+            wait for the document to be fully loaded and ready before 
+            working with it. This also allows you to have your 
+            JavaScript code before the body of your document, 
+            in the head section.
+        &lt/p>
+        &ltp>
+            $(document).ready(function(){&ltbr>
+               // jQuery methods go here...&ltbr>
+            });
+        &lt/p>
+        &ltp>OR the same with simpler syntax:&lt/p>
+        &ltp>
+            $(function(){&ltbr>
+               // jQuery methods go here...&ltbr>
+            });   
+        &lt/p>
+        &lt!--new example-->
+        &lth2>jQuery Selectors&lt/h2>
+        &ltp>jQuery selectors allow you to select and manipulate 
+            HTML element(s).&lt/p>
+        &ltp>jQuery selectors are used to "find" (or select) HTML elements 
+            based on their name, id, classes, types, attributes, 
+            values of attributes and much more. It's based on the existing 
+            CSS Selectors and in addition, it has some own custom selectors.&lt/p>
+        &ltp>All selectors in jQuery start with the dollar sign and 
+            parentheses: $().&lt/p>
+        &lt!--new example-->
+        &lth3>The element (html-tag) Selector&lt/h3>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("h4").hide();
+            });
+        });
+        &lt/script>
+        &lth4>This is a h4 heading.&lt/h4>
+        &lth4>This is another h4 heading.&lt/h4>
+        &ltbutton id="button1">Click me to hide them&lt/button>
+        &lt!--new example-->
+        &lth3>The #id (html-tag-id) Selector&lt/h3>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button2").click(function(){
+                $("#test2").hide();
+            });
+        });
+        &lt/script>
+        &ltp>This is a paragraph.&lt/p>
+        &ltp id="test2">This is another paragraph.&lt/p>
+        &ltbutton id="button2">Click me&lt/button>
+        &lt!--new example-->
+        &lth3>The .class Selector&lt/h3>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button3").click(function(){
+                $(".test3").hide();
+            });
+        });
+        &lt/script>
+        &ltp class="test3">This is a paragraph.&lt/p>
+        &ltp>This is another paragraph.&lt/p>
+        &ltbutton id="button3">Click me&lt/button>
+        &lt!--new example-->
+        &ltbr>&ltbr>
+        &lttable>
+            &lttbody>&lttr>
+            &ltth style="width:35%">Syntax&lt/th>
+            &ltth style="width:65%">Description&lt/th>
+            &lt/tr>
+            &lttr>
+            &lttd>$("*")&lt/td>
+            &lttd>Selects all elements&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$(this)&lt/td>
+            &lttd>Selects the current HTML element&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("p.intro")&lt/td>
+            &lttd>Selects all &lt;p&gt; elements with class="intro"&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("p:first")&lt/td>
+            &lttd>Selects the first &lt;p&gt; element&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("ul li:first")&lt/td>
+            &lttd>Selects the first &lt;li&gt; element of the first &lt;ul&gt;&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("ul li:first-child")&lt/td>
+            &lttd>Selects the first &lt;li&gt; element of every &lt;ul&gt;&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("[href]")&lt/td>
+            &lttd>Selects all elements with an href attribute&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("a[target='_blank']")&lt/td>
+            &lttd>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("a[target!='_blank']")&lt/td>
+            &lttd>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$(":button")&lt/td>
+            &lttd>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("tr:even")&lt/td>
+            &lttd>Selects all even &lt;tr&gt; elements&lt/td>
+            &lt/tr>
+            &lttr>
+            &lttd>$("tr:odd")&lt/td>
+            &lttd>Selects all odd &lt;tr&gt; elements&lt/td>
+            &lt/tr>
+        &lt/tbody>&lt/table>
+        &lt!--new example-->
+        &lth3>$(this)&lt/h3>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button4").click(function(){
+                $(this).hide();
+            });
+        });
+        &lt/script>
+        &ltp>This is a paragraph.&lt/p>
+        &ltp>This is another paragraph.&lt/p>
+        &ltbutton id="button4">Click me&lt/button>
+        &lt!--new example-->
+        &lth3>$("p.intro")&lt/h3>
+        &ltscript>
+        $(document).ready(function(){
+            $("#button5").click(function(){
+                $("p.intro").hide();
+            });
+        });
+        &lt/script>
+        &lth3 class="intro">This is a heading&lt/h3>
+        &ltp class="intro">This is a paragraph.&lt/p>
+        &ltp>This is another paragraph.&lt/p>
+        &ltbutton id="button5">Click me&lt/button>
         </code>
         </pre>
         </div>

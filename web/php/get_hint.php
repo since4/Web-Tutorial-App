@@ -1,4 +1,5 @@
- <?php
+<!--used for 015.php--> 
+<?php
 // Array with names
 $a[] = "Anna";
 $a[] = "Brittany";
