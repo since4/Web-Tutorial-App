@@ -36,11 +36,8 @@ and open the template in the editor.
         padding: 5px;
     }
     </style>
-    <!--JQuery Library (downloaded from http://jquery.com/download/)-->
-    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
-    <!--JQuery Library (hosted)
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
-    -->
+        
+            
    
 </head>    
 <body>       
@@ -49,7 +46,27 @@ and open the template in the editor.
         <div class = "mainbody"> 
             <h1>What Can jQuery Do?</h1>
             <div class = "interactive">
-                
+                <h1>My First Google Map</h1>
+
+                <div id="map" style="width:100%;height:500px"></div>
+
+                <script>
+                function myMap() {
+                  var mapCanvas = document.getElementById("map");
+                  var mapOptions = {
+                    center: new google.maps.LatLng(51.508742,-0.120850),
+                    zoom: 5
+                  };
+                  var map = new google.maps.Map(mapCanvas, mapOptions);
+                }
+                </script>
+                <p>
+                    Now Google wants an API key to authenticate users to access their APIs:
+                    https://developers.google.com/maps/documentation/javascript/get-api-key
+                </p>
+                <script 
+                    src="https://maps.googleapis.com/maps/api/js?callback=myMap">                   
+                </script>
                 
             </div>
         </div>
@@ -58,8 +75,28 @@ and open the template in the editor.
         <div class="code">
         <pre class="code_">
         <code class="language-html">
-            &lt!--Body content-->
+        &lt!--Body content-->
+        &lth1>My First Google Map&lt/h1>
 
+        &ltdiv id="map" style="width:100%;height:500px">&lt/div>
+
+        &ltscript>
+        function myMap() {
+          var mapCanvas = document.getElementById("map");
+          var mapOptions = {
+            center: new google.maps.LatLng(51.508742,-0.120850),
+            zoom: 5
+          };
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+        &lt/script>
+        &ltp>
+            Now Google wants an API key to authenticate users to access their APIs:
+            https://developers.google.com/maps/documentation/javascript/get-api-key
+        &lt/p>
+        &ltscript 
+            src="https://maps.googleapis.com/maps/api/js?callback=myMap">                   
+        &lt/script>
 
         </code>
         </pre>

@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-<head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Header navigation-->
+        <!--Header navigation-->
     <div class="header_image">
         <div class="header_navigation_V-2">
             <ul> 
                 <li id="prev" class="active"><a href="./048.html">« Previous</a></li>
                 <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="../php/001.php">Next »</a></li>
+                <li id="next" class="active"><a href="./050.html">Next »</a></li>
             </ul>
         </div>
     </div>
@@ -25,47 +20,94 @@ and open the template in the editor.
     <link rel="stylesheet" type="text/css" href="../css/default.css">
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
-    
-    <!--Internal Stylesheet-->
-    <style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 5px;
-    }
-    </style>
-    
-    <!--JQuery Library (downloaded from http://jquery.com/download/)-->
+
+    <!--Internet Libraries    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
+            bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/
+            jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
+            3.3.7/js/bootstrap.min.js"></script>-->
+
+    <!--Libraries-->
+    <link rel="stylesheet" type="text/css" 
+          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../jQuery_Library/jquery-3.1.0.js"></script>
-    <!--JQuery Library (hosted)
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
-    -->
-    
-</head>    
-<body>       
-    <div>
-        <!--Body content-->
-        <div class = "mainbody"> 
-            <h1>What Can jQuery Do?</h1>
-            <div class = "interactive">
-                
-                
+
+</head>
+<body>
+    <!--Body content-->
+    <div class="jumbotron text-center">
+        <h1>What Can Bootstrap Do?</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+    </div>
+
+    <div class="container">
+        <div class="row"> 
+            
+            <div class="col-sm-4">
+                <p>The official <a href="http://getbootstrap.com/">
+                        boostrap website</a> is updated and includes a clear definition.</p>
+
+                <p>"Bootstrap is the most popular HTML, CSS, and JS framework 
+                    for developing responsive, mobile first projects on the web."</p>
+            </div>      
+            <div class="col-sm-8">
+                <p>It is an html, css, javascript framework that you can use as 
+                    basis for creating  web sites or web applications. </p>
+
+                <ul>
+                    <li><p><a href="http://stackoverflow.com/tags/twitter-bootstrap/info">
+                                More information and links to download</a></p></li>
+                    <li><p><a href="http://getbootstrap.com/getting-started/">
+                                Getting started</a></p></li>
+                    <li><p><a href="http://bootsnipp.com/">Examples</a></p></li>
+                    <li><p><a href="http://bootswatch.com/">Themes</a></p></li>
+                    <li><p><a href="http://www.bootply.com/">Bootply - 
+                                Bootstrap Editor and Builder</a></p></li>
+                </ul>           
             </div>
         </div>
-        
-        <!--Code verbose-->
-        <div class="code">
-        <pre class="code_">
-        <code class="language-html">
-            &lt!--Body content-->
-
-
-        </code>
-        </pre>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Bootstrap Grid System</h2>
+                <p>Bootstrap's grid system allows up to 12 columns across the page.</p>
+                <p>If you do not want to use all 12 columns individually, you can group the 
+                    columns together to create wider columns:</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Grid Classes</h2>
+                <p>The Bootstrap grid system has four classes:</p>
+                <ul>
+                    <li>xs (for phones)</li>
+                    <li>sm (for tablets)</li>
+                    <li>md (for desktops)</li>
+                    <li>lg (for larger desktops)</li>
+                </ul>
+                <p>The classes above can be combined to create more dynamic and flexible layouts.</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Basic Structure of a Bootstrap Grid</h2>
+                <span style="color:mediumblue">&lt;</span>div<span style="color:red"> 
+                class<span style="color:mediumblue">="row"</span></span><span style="color:mediumblue">&gt;</span></span><br>&nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> class<span style="color:mediumblue">="col-*-*"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br><span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> 
+                class<span style="color:mediumblue">="row"</span></span><span style="color:mediumblue">&gt;</span></span><br>&nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> class<span style="color:mediumblue">="col-*-*"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br>&nbsp; 
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> class<span style="color:mediumblue">="col-*-*"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br>&nbsp; 
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> class<span style="color:mediumblue">="col-*-*"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span></span><br><span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span style="color:red"> 
+                class<span style="color:mediumblue">="row"</span></span><span style="color:mediumblue">&gt;</span></span><br>&nbsp; ...<br><span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span style="color:mediumblue">&gt;</span>
+                
+            </div>            
         </div>
-    </div>      
+    </div>
+                   
+    <div class="code">
+    <pre class="code_">
+    <code class="language-html"></code>
+    <!--Code verbose-->
+
+
+    </pre>
+    </div>
 
     <!--Body picture-->
     <div class="background_image"></div>
@@ -76,9 +118,11 @@ and open the template in the editor.
             <ul> 
                 <li id="prev" class="active"><a href="./048.html">« Previous</a></li>
                 <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="../php/001.php">Next »</a></li>
+                <li id="next" class="active"><a href="./050.html">Next »</a></li>
             </ul>
         </div>
     </div> 
+
 </body>
 </html>
+

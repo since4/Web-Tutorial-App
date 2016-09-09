@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-<head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Header navigation-->
+        <!--Header navigation-->
     <div class="header_image">
         <div class="header_navigation_V-2">
             <ul> 
@@ -25,48 +20,129 @@ and open the template in the editor.
     <link rel="stylesheet" type="text/css" href="../css/default.css">
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
-    
-    <!--Internal Stylesheet-->
-    <style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 5px;
-    }
-    </style>
-    
-    <!--JQuery Library (downloaded from http://jquery.com/download/)-->
+
+    <!--Internet Libraries    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
+            bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/
+            jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
+            3.3.7/js/bootstrap.min.js"></script>-->
+
+    <!--Libraries-->
+    <link rel="stylesheet" type="text/css" 
+          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../jQuery_Library/jquery-3.1.0.js"></script>
-    <!--JQuery Library (hosted)
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
-    -->
-    
-</head>    
-<body>       
-    <div>
-        <!--Body content-->
-        <div class = "mainbody"> 
-            <h1>What Can jQuery Do?</h1>
-            <div class = "interactive">
-                <!--new example-->
-                <h2></h2>
-                
+
+</head>
+<body>
+    <!--Body content-->
+    <div class="jumbotron text-center">
+        <h1>What Can Bootstrap Do?</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+    </div>
+
+    <div class="container">
+        <div class="row">            
+            <div class="col-sm-4">
+                <h1>Lighter, Secondary Text</h1>
+                <p>The small element is used to create a lighter, 
+                    secondary text in any heading:</p>       
+                <h1>h1 heading <small>secondary text</small></h1>
+                <h1>Highlight Text</h1> <p>Use the mark element 
+                    to <mark>highlight</mark> text.</p>               
+            </div>      
+            <div class="col-sm-4">
+                <h1>Abbreviations</h1>
+                <p>The abbr element is used to mark up an abbreviation or acronym:</p>
+                <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+            </div>
+            <div class="col-sm-4">
+                <h1>Blockquotes</h1>
+                <p>The blockquote element is used to present content from another source:</p>
+                <blockquote>
+                  <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+                  <footer>From WWF's website</footer>
+                </blockquote>
             </div>
         </div>
-        
-        <!--Code verbose-->
-        <div class="code">
-        <pre class="code_">
-        <code class="language-html">
-            &lt!--Body content-->
-
-
-        </code>
-        </pre>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>Description Lists</h1>    
+                <p>The dl element indicates a description list:</p>
+                <dl>
+                  <dt>Coffee</dt>
+                  <dd>- black hot drink</dd>
+                  <dt>Milk</dt>
+                  <dd>- white cold drink</dd>
+                </dl>     
+            </div>
+            <div class="col-sm-4">
+                <h1>Code Snippets</h1>
+                <p>Inline snippets of code should be embedded in the code element:</p>
+                <p>The following HTML elements: <code>span</code>, 
+                    <code>section</code>, and <code>div</code> defines a 
+                    section in a document.</p>
+            </div>
+            <div class="col-sm-4">
+                <h1>Keyboard Inputs</h1>
+                <p>To indicate input that is typically entered via the keyboard, 
+                    use the kbd element:</p>
+                <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+            </div>            
         </div>
-    </div>      
+        <div class="row">
+            <div class="col-sm-3">
+                <h1>Multiple Code Lines</h1>
+                <p>For multiple lines of code, use the pre element:</p>
+                <pre>
+                Text in a pre element
+                is displayed in a fixed-width
+                font, and it preserves
+                both      spaces and
+                line breaks.
+                </pre>
+            </div>
+            <div class="col-sm-3">
+                <h2>Contextual Colors</h2>
+                <p>Use the contextual classes to provide "meaning through colors":</p>
+                <p class="text-muted">This text is muted.</p>
+                <p class="text-primary">This text is important.</p>
+                <p class="text-success">This text indicates success.</p>
+                <p class="text-info">This text represents some information.</p>
+                <p class="text-warning">This text represents a warning.</p>
+                <p class="text-danger">This text represents danger.</p>
+            </div>
+            <div class="col-sm-3">
+                <h2>Contextual Backgrounds</h2>
+                <p>Use the contextual background classes to provide "meaning through colors":</p>
+                <p class="bg-primary">This text is important.</p>
+                <p class="bg-success">This text indicates success.</p>
+                <p class="bg-info">This text represents some information.</p>
+                <p class="bg-warning">This text represents a warning.</p>
+                <p class="bg-danger">This text represents danger.</p>
+            </div> 
+            <div class="col-sm-3">
+                 <h2>Typography</h2>
+                <p class="text-left">Left-aligned text.</p>
+                <p class="text-right">Right-aligned text.</p>      
+                <p class="text-center">Center-aligned text.</p>
+                <p class="text-justify">Justified text. Justified text. Justified text. Justified text. Justified text. Justified text.</p>      
+                <p class="text-nowrap">No wrap text. No wrap text. No wrap text. No wrap text.</p>
+                <p><strong>Tip:</strong> Try to resize the browser window to see the behaviour of justify and nowrap.</p> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="code">
+    <pre class="code_">
+    <code class="language-html"></code>
+    <!--Code verbose-->
+
+
+    </pre>
+    </div>
 
     <!--Body picture-->
     <div class="background_image"></div>
@@ -77,9 +153,11 @@ and open the template in the editor.
             <ul> 
                 <li id="prev" class="active"><a href="./049.html">« Previous</a></li>
                 <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="../php/001.php">Next »</a></li>
+                <li id="next" class="active"><a href="./051.html">Next »</a></li>
             </ul>
         </div>
     </div> 
+
 </body>
 </html>
+
