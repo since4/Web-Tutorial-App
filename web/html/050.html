@@ -21,13 +21,11 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
+    <!--Internet Libraries (do not break lines or the links break)  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    --> 
 
     <!--Libraries-->
     <link rel="stylesheet" type="text/css" 
@@ -37,7 +35,10 @@
 
 </head>
 <body>
-    <!--Body content-->
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    <!--Body content-->  
+
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -53,7 +54,7 @@
                 <h1>Highlight Text</h1> <p>Use the mark element 
                     to <mark>highlight</mark> text.</p>               
             </div>      
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h1>Abbreviations</h1>
                 <p>The abbr element is used to mark up an abbreviation or acronym:</p>
                 <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
@@ -78,7 +79,7 @@
                   <dd>- white cold drink</dd>
                 </dl>     
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h1>Code Snippets</h1>
                 <p>Inline snippets of code should be embedded in the code element:</p>
                 <p>The following HTML elements: <code>span</code>, 
@@ -93,7 +94,7 @@
             </div>            
         </div>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <h1>Multiple Code Lines</h1>
                 <p>For multiple lines of code, use the pre element:</p>
                 <pre>
@@ -135,12 +136,123 @@
         </div>
     </div>
     
+    <!--Body content-->
+    </div>
+    </div>
+    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    &lt!--Code verbose-->
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
 
-
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-4">
+                &lth1>Lighter, Secondary Text&lt/h1>
+                &ltp>The small element is used to create a lighter, 
+                    secondary text in any heading:&lt/p>       
+                &lth1>h1 heading &ltsmall>secondary text&lt/small>&lt/h1>
+                &lth1>Highlight Text&lt/h1> &ltp>Use the mark element 
+                    to &ltmark>highlight&lt/mark> text.&lt/p>               
+            &lt/div>      
+            &ltdiv class="col-sm-3">
+                &lth1>Abbreviations&lt/h1>
+                &ltp>The abbr element is used to mark up an abbreviation or acronym:&lt/p>
+                &ltp>The &ltabbr title="World Health Organization">WHO&lt/abbr> 
+                was founded in 1948.&lt/p>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth1>Blockquotes&lt/h1>
+                &ltp>The blockquote element is used to present content from another source:&lt/p>
+                &ltblockquote>
+                  &ltp>For 50 years, WWF has been protecting the future of nature. 
+                  The world's leading conservation organization, WWF works in 100 
+                  countries and is supported by 1.2 million members in the United 
+                  States and close to 5 million globally.&lt/p>
+                  &ltfooter>From WWF's website&lt/footer>
+                &lt/blockquote>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth1>Description Lists&lt/h1>    
+                &ltp>The dl element indicates a description list:&lt/p>
+                &ltdl>
+                  &ltdt>Coffee&lt/dt>
+                  &ltdd>- black hot drink&lt/dd>
+                  &ltdt>Milk&lt/dt>
+                  &ltdd>- white cold drink&lt/dd>
+                &lt/dl>     
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth1>Code Snippets&lt/h1>
+                &ltp>Inline snippets of code should be embedded in the code element:&lt/p>
+                &ltp>The following HTML elements: &ltcode>span&lt/code>, 
+                    &ltcode>section&lt/code>, and &ltcode>div&lt/code> defines a 
+                    section in a document.&lt/p>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth1>Keyboard Inputs&lt/h1>
+                &ltp>To indicate input that is typically entered via the keyboard, 
+                    use the kbd element:&lt/p>
+                &ltp>Use &ltkbd>ctrl + p&lt/kbd> to open the Print dialog box.&lt/p>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-2">
+                &lth1>Multiple Code Lines&lt/h1>
+                &ltp>For multiple lines of code, use the pre element:&lt/p>
+                &ltpre>
+                Text in a pre element
+                is displayed in a fixed-width
+                font, and it preserves
+                both      spaces and
+                line breaks.
+                &lt/pre>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Contextual Colors&lt/h2>
+                &ltp>Use the contextual classes to provide "meaning through colors":&lt/p>
+                &ltp class="text-muted">This text is muted.&lt/p>
+                &ltp class="text-primary">This text is important.&lt/p>
+                &ltp class="text-success">This text indicates success.&lt/p>
+                &ltp class="text-info">This text represents some information.&lt/p>
+                &ltp class="text-warning">This text represents a warning.&lt/p>
+                &ltp class="text-danger">This text represents danger.&lt/p>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Contextual Backgrounds&lt/h2>
+                &ltp>Use the contextual background classes to provide "meaning 
+                through colors":&lt/p>
+                &ltp class="bg-primary">This text is important.&lt/p>
+                &ltp class="bg-success">This text indicates success.&lt/p>
+                &ltp class="bg-info">This text represents some information.&lt/p>
+                &ltp class="bg-warning">This text represents a warning.&lt/p>
+                &ltp class="bg-danger">This text represents danger.&lt/p>
+            &lt/div> 
+            &ltdiv class="col-sm-3">
+                 &lth2>Typography&lt/h2>
+                &ltp class="text-left">Left-aligned text.&lt/p>
+                &ltp class="text-right">Right-aligned text.&lt/p>      
+                &ltp class="text-center">Center-aligned text.&lt/p>
+                &ltp class="text-justify">Justified text. Justified text. Justified text. 
+                Justified text. Justified text. Justified text.&lt/p>      
+                &ltp class="text-nowrap">No wrap text. No wrap text. No wrap text. 
+                No wrap text.&lt/p>
+                &ltp>&ltstrong>Tip:&lt/strong> Try to resize the browser window 
+                to see the behaviour of justify and nowrap.&lt/p> 
+            &lt/div>
+        &lt/div>
+    &lt/div>
+    </div>
+    </div>
+    </code>
     </pre>
     </div>
 

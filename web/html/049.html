@@ -21,13 +21,11 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
+    <!--Internet Libraries (do not break lines or the links break)  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    --> 
 
     <!--Libraries-->
     <link rel="stylesheet" type="text/css" 
@@ -37,7 +35,10 @@
 
 </head>
 <body>
-    <!--Body content-->
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    <!--Body content--> 
+    
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -46,14 +47,14 @@
     <div class="container">
         <div class="row"> 
             
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <p>The official <a href="http://getbootstrap.com/">
                         boostrap website</a> is updated and includes a clear definition.</p>
 
                 <p>"Bootstrap is the most popular HTML, CSS, and JS framework 
                     for developing responsive, mobile first projects on the web."</p>
             </div>      
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <p>It is an html, css, javascript framework that you can use as 
                     basis for creating  web sites or web applications. </p>
 
@@ -76,7 +77,7 @@
                 <p>If you do not want to use all 12 columns individually, you can group the 
                     columns together to create wider columns:</p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h2>Grid Classes</h2>
                 <p>The Bootstrap grid system has four classes:</p>
                 <ul>
@@ -99,13 +100,84 @@
             </div>            
         </div>
     </div>
+    
+    <!--Body content-->
+    </div>
+    </div>
                    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    &lt!--Code verbose-->  
+    &lt!--Body content-->
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
 
+    &ltdiv class="container">
+        &ltdiv class="row"> 
+            
+            &ltdiv class="col-sm-5">
+                &ltp>The official &lta href="http://getbootstrap.com/">
+                        boostrap website&lt/a> is updated and includes a clear definition.&lt/p>
 
+                &ltp>"Bootstrap is the most popular HTML, CSS, and JS framework 
+                    for developing responsive, mobile first projects on the web."&lt/p>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &ltp>It is an html, css, javascript framework that you can use as 
+                    basis for creating  web sites or web applications. &lt/p>
+
+                &ltul>
+                    &ltli>&ltp>&lta href="http://stackoverflow.com/tags/twitter-bootstrap/info">
+                                More information and links to download&lt/a>&lt/p>&lt/li>
+                    &ltli>&ltp>&lta href="http://getbootstrap.com/getting-started/">
+                                Getting started&lt/a>&lt/p>&lt/li>
+                    &ltli>&ltp>&lta href="http://bootsnipp.com/">Examples&lt/a>&lt/p>&lt/li>
+                    &ltli>&ltp>&lta href="http://bootswatch.com/">Themes&lt/a>&lt/p>&lt/li>
+                    &ltli>&ltp>&lta href="http://www.bootply.com/">Bootply - 
+                                Bootstrap Editor and Builder&lt/a>&lt/p>&lt/li>
+                &lt/ul>           
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>Bootstrap Grid System&lt/h2>
+                &ltp>Bootstrap's grid system allows up to 12 columns across the page.&lt/p>
+                &ltp>If you do not want to use all 12 columns individually, you can group the 
+                    columns together to create wider columns:&lt/p>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Grid Classes&lt/h2>
+                &ltp>The Bootstrap grid system has four classes:&lt/p>
+                &ltul>
+                    &ltli>xs (for phones)&lt/li>
+                    &ltli>sm (for tablets)&lt/li>
+                    &ltli>md (for desktops)&lt/li>
+                    &ltli>lg (for larger desktops)&lt/li>
+                &lt/ul>
+                &ltp>The classes above can be combined to create more dynamic and flexible layouts.&lt/p>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Basic Structure of a Bootstrap Grid&lt/h2>
+                &ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> 
+                class&ltspan style="color:mediumblue">="row"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&nbsp; &ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> class&ltspan style="color:mediumblue">="col-*-*"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> 
+                class&ltspan style="color:mediumblue">="row"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&nbsp; &ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> class&ltspan style="color:mediumblue">="col-*-*"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&nbsp; 
+                &ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> class&ltspan style="color:mediumblue">="col-*-*"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&nbsp; 
+                &ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> class&ltspan style="color:mediumblue">="col-*-*"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>div&ltspan style="color:red"> 
+                class&ltspan style="color:mediumblue">="row"&lt/span>&lt/span>&ltspan style="color:mediumblue">&gt;&lt/span>&lt/span>&ltbr>&nbsp; ...&ltbr>&ltspan style="color:brown">&ltspan style="color:mediumblue">&lt;&lt/span>/div&ltspan style="color:mediumblue">&gt;&lt/span>
+                
+            &lt/div>            
+        &lt/div>
+    &lt/div>   
+    
+    &lt!--Code verbose-->        
+    </div>
+    </div>        
+    </code>
     </pre>
     </div>
 

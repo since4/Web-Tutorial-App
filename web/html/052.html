@@ -21,13 +21,11 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
+    <!--Internet Libraries (do not break lines or the links break)  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    --> 
 
     <!--Libraries-->
     <link rel="stylesheet" type="text/css" 
@@ -37,7 +35,10 @@
 
 </head>
 <body>
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
     <!--Body content-->
+    
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -45,32 +46,59 @@
 
     <div class="container">
         <div class="row">            
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>      
-            <div class="col-sm-8">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
+            <div class="col-sm-11">
+                <h2>Image Gallery</h2>
+                <p>The .thumbnail class can be used to display an image gallery. Click on the images to see it in full size:</p>            
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="./images/pulpitrock.jpg" class="thumbnail">
+                      <p>Pulpit Rock: A famous tourist attraction in Forsand, Ryfylke, Norway.</p>    
+                      <img src="./images/pulpitrock.jpg" alt="Pulpit Rock" style="width:150px;height:150px">
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="./images/moustiers-sainte-marie.jpg" class="thumbnail">
+                      <p>Moustiers-Sainte-Marie: Considered as one of the "most beautiful villages of France".</p>
+                      <img src="./images/moustiers-sainte-marie.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px">
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="./images/cinqueterre.jpg" class="thumbnail">
+                      <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>      
+                      <img src="./images/cinqueterre.jpg" alt="Cinque Terre" style="width:150px;height:150px">
+                    </a>
+                  </div>
+                </div>
+            </div> 
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+        <div class="row" style="margin: 0px auto; width: 70%;"> 
+            <div class="col-sm-9" >
+                <h2>Responsive Embed</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" 
+                          src="http://www.youtube.com/embed/XGSy3_Czz8k">                             
+                  </iframe>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>            
         </div>
     </div>
     
+    <!--Body content-->
+    </div>
+    </div>
+    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
-
-
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    <!--Code verbose-->  
+       
+    
+    <!--Code verbose-->        
+    </div>
+    </div>        
+    </code>
     </pre>
     </div>
 

@@ -15,29 +15,31 @@
             </ul>
         </div>
     </div>
-
-    <!--External Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
-    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
-    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
-
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
-
+    
     <!--Libraries-->
     <link rel="stylesheet" type="text/css" 
           href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../jQuery_Library/jquery-3.1.0.js"></script>
 
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+
+    <!--Internet Libraries (do not break lines or the links break)  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    --> 
+
 </head>
 <body>
-    <!--Body content-->
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    <!--Body content-->      
+    
+    
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -45,32 +47,207 @@
 
     <div class="container">
         <div class="row">            
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-5">
+                <h2>Basic Table</h2>
+                <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td>Dooley</td>
+                      <td>july@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>      
-            <div class="col-sm-8">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
+            <div class="col-sm-6">
+                <h2>Striped Rows</h2>
+                <p>The .table-striped class adds zebra-stripes to a table:</p>            
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td>Dooley</td>
+                      <td>july@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>           
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-5">
+                <h2>Table</h2>
+                <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>                                                                                      
+                <div class="table-responsive">          
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Age</th>
+                      <th>City</th>
+                      <th>Country</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Anna</td>
+                      <td>Pitt</td>
+                      <td>35</td>
+                      <td>New York</td>
+                      <td>USA</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-6">
+                <h2>Bordered Table</h2>
+                <p>The .table-bordered class adds borders to a table:</p>            
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td>Dooley</td>
+                      <td>july@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>                     
+        </div>
+        <div class="row">          
+            <div class="col-sm-5">
+                <h2>Hover Rows</h2>
+                <p>The .table-hover class enables a hover state on table rows:</p>            
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td>Dooley</td>
+                      <td>july@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-6">
+                <h2>Contextual Classes</h2>
+                <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>            
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                    <tr class="info">
+                      <td>July</td>
+                      <td>Dooley</td>
+                      <td>july@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>            
         </div>
     </div>
     
+    <!--Body content-->
+    </div>
+    </div>
+    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
-
-
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    <!--Code verbose-->  
+       
+    
+    <!--Code verbose-->        
+    </div>
+    </div>        
+    </code>
     </pre>
     </div>
 

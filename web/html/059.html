@@ -1,92 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Header navigation-->
-    <div class="header_image">
-        <div class="header_navigation_V-2">
-            <ul> 
-                <li id="prev" class="active"><a href="./058.html">« Previous</a></li>
-                <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="./060.html">Next »</a></li>
-            </ul>
-        </div>
+    <!--Header navigation-->
+<div class="header_image">
+    <div class="header_navigation_V-2">
+        <ul> 
+            <li id="prev" class="active"><a href="./058.html">« Previous</a></li>
+            <li id="home" class="active"><a href="../index.html">HOME</a></li>
+            <li id="next" class="active"><a href="./060.html">Next »</a></li>
+        </ul>
     </div>
+</div>
 
-    <!--External Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
-    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
-    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+<!--External Stylesheets-->
+<link rel="stylesheet" type="text/css" href="../css/default.css">
+<link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
+<!--Internet Libraries (do not break lines or the links break)-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--Libraries-->
-    <link rel="stylesheet" type="text/css" 
-          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
+<!--Libraries-->
+<link rel="stylesheet" type="text/css" 
+      href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../jQuery_Library/jquery-3.1.0.js"></script>-->
 
 </head>
 <body>
-    <!--Body content-->
-    <div class="jumbotron text-center">
-        <h1>What Can Bootstrap Do?</h1>
-        <p>Resize this responsive page to see the effect!</p> 
-    </div>
+<div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+        <!--Body content--> 
 
-    <div class="container">
-        <div class="row">            
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>      
-            <div class="col-sm-8">
-                <p>Resize this responsive page to see the effect!</p>
+        <div class="jumbotron text-center">
+            <h1>What Can Bootstrap Do?</h1>
+            <p>Dropdown works with online libraries, but not with downloaded versions</p>
+            <p style="text-align:justify">
+                <strong>Note:</strong> 
+                This example shows how to create a 
+                basic navigation tab. It is not toggleable / dynamic yet 
+                (you can't click on the links to display different content)- 
+                see the last example in the Bootstrap Tabs and Pills 
+                Tutorial to find out how this can be done.</p>
+            <p>Resize this responsive page to see the effect!</p> 
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Inline List</h3>
+                    <ul class="list-inline">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Tabs</h3>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                    <br>                
+                </div>
+                <div class="col-sm-4">
+                    <h3>Tabs With Dropdown Menu</h3>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" 
+                               href="#">Menu 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Submenu 1-1</a></li>
+                                <li><a href="#">Submenu 1-2</a></li>
+                                <li><a href="#">Submenu 1-3</a></li>                        
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>            
+            </div>
+            <div class="row">            
+                <div class="col-sm-5">
+                    <h3>Pills</h3>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>      
+                <div class="col-sm-6">
+                    <h3>Vertical Pills</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">            
+                <h3>Vertical Pills</h3>
+                <div class="row">
+                    <div class="col-md-2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="col-md-2"> 
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="col-md-2"> 
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                            accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Menu 1</a></li>
+                            <li><a href="#">Menu 2</a></li>
+                            <li><a href="#">Menu 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix visible-lg"></div>
+                </div>           
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <h3>Pills With Dropdown Menu</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" 
+                               href="#">Menu 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Submenu 1-1</a></li>
+                                <li><a href="#">Submenu 1-2</a></li>
+                                <li><a href="#">Submenu 1-3</a></li>                        
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h3>Centered Tabs</h3>
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                    <br>
+                    <h3>Centered Pills</h3>
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>            
+            </div>
+            <div class="row">            
+                <div class="col-sm-5">
+                    <h2>Dynamic Tabs</h2>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home_1">Home</a></li>
+                        <li><a data-toggle="tab" href="#menu_a1">Menu 1</a></li>
+                        <li><a data-toggle="tab" href="#menu_b1">Menu 2</a></li>
+                        <li><a data-toggle="tab" href="#menu_c1">Menu 3</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home_1" class="tab-pane fade in active">
+                            <h3>HOME</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="menu_a1" class="tab-pane fade">
+                            <h3>Menu 1</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div id="menu_b1" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                        <div id="menu_c1" class="tab-pane fade">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi 
+                                architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                    </div>
+                </div>      
+                <div class="col-sm-6">
+                    <h2>Dynamic Pills</h2>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#home_2">Home</a></li>
+                        <li><a data-toggle="pill" href="#menu_a2">Menu 1</a></li>
+                        <li><a data-toggle="pill" href="#menu_b2">Menu 2</a></li>
+                        <li><a data-toggle="pill" href="#menu_c2">Menu 3</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home_2" class="tab-pane fade in active">
+                            <h3>HOME</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="menu_a2" class="tab-pane fade">
+                            <h3>Menu 1</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div id="menu_b2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                        <div id="menu_c2" class="tab-pane fade">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+                                beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div>
+                        <h3>Basic Navbar Example</h3>
+                        <p>A navigation bar is a navigation header that is 
+                            placed at the top of the page.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <h3>Inverted Navbar</h3>
+                        <p>An inverted navbar is black instead of gray.</p>
+                    </div>
+                </div>          
+            </div>
+            <div class="row">                       
+                <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Page 1</a></li>
+                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">Page 3</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container">
+                    <h3>Fixed Bottom Navbar</h3>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="clearfix visible-lg"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="clearfix visible-lg"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="clearfix visible-lg"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.</p>
+                        </div>
+                        <div class="clearfix visible-lg"></div>
+                    </div>
+                </div>           
+            </div>
+            <div class="row">   
+                <div class="col-sm-11">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Page 1-1</a></li>
+                                        <li><a href="#">Page 1-2</a></li>
+                                        <li><a href="#">Page 1-3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="container">
+                        <h3>Navbar With Dropdown</h3>
+                        <p>This example adds a dropdown menu for the "Page 1" 
+                            button in the navigation bar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">            
+                <div class="col-sm-5">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Page 1-1</a></li>
+                                        <li><a href="#">Page 1-2</a></li>
+                                        <li><a href="#">Page 1-3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Page 2</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div>
+                        <h3>Right Aligned Navbar</h3>
+                        <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+                    </div>
+                </div>      
+                <div class="col-sm-6">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Page 1-1</a></li>
+                                            <li><a href="#">Page 1-2</a></li>
+                                            <li><a href="#">Page 1-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Page 2</a></li>
+                                    <li><a href="#">Page 3</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div>
+                        <h3>Collapsible Navbar</h3>
+                        <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+                        <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+                    </div>
+
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>            
-        </div>
+
+        <!--Body content-->
     </div>
-    
-    <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
+</div>
+
+<div class="code">
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+<code class="language-html">
+<div class="container">
+<div class="col-sm-12">
+<!--Code verbose-->  
 
 
+<!--Code verbose-->        
+</div>
+</div>        
+</code>
     </pre>
+</div>
+
+<!--Body picture-->
+<div class="background_image"></div>
+
+<!--Footer navigation--> 
+<div style="margin:15px 40px 15px 40px">
+    <div class="footer_navigation_V-2">
+        <ul> 
+            <li id="prev" class="active"><a href="./058.html">« Previous</a></li>
+            <li id="home" class="active"><a href="../index.html">HOME</a></li>
+            <li id="next" class="active"><a href="./060.html">Next »</a></li>
+        </ul>
     </div>
-
-    <!--Body picture-->
-    <div class="background_image"></div>
-
-    <!--Footer navigation--> 
-    <div style="margin:15px 40px 15px 40px">
-        <div class="footer_navigation_V-2">
-            <ul> 
-                <li id="prev" class="active"><a href="./058.html">« Previous</a></li>
-                <li id="home" class="active"><a href="../index.html">HOME</a></li>
-                <li id="next" class="active"><a href="./060.html">Next »</a></li>
-            </ul>
-        </div>
-    </div> 
+</div> 
 
 </body>
 </html>

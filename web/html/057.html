@@ -21,56 +21,176 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
-
-    <!--Libraries-->
-    <link rel="stylesheet" type="text/css" 
-          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--Internet Libraries (do not break lines or the links break)-->   
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--Libraries
+    <link rel="stylesheet" type="text/css" href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../jQuery_Library/jquery-3.1.0.js"></script>
+    -->
 
 </head>
 <body>
-    <!--Body content-->
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    <!--Body content--> 
+    
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
-        <p>Resize this responsive page to see the effect!</p> 
+        <p>Dropdown works with online libraries, but not with downloaded versions</p>
+        <p>Resize this responsive page to see the effect!</p>
     </div>
 
     <div class="container">
-        <div class="row">            
+        <div class="row">
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Dropdowns</h2>
+                <p>The .dropdown class is used to indicate a dropdown menu.</p>
+                <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+                <p>To open the dropdown menu, use a button or a link with a 
+                    class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropdown Example
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2>Dropdowns</h2>
+                <p>The .divider class is used to separate links inside the dropdown menu:</p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h2>Dropdowns</h2>
+                <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Dropdown header 1</li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Dropdown header 2</li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
+            </div>            
+        </div>
+        <div class="row">            
+            <div class="col-sm-5">
+                <h2>Dropdowns</h2>
+                <p>The .disabled class is used to disable an item in the dropdown menu:</p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li class="disabled"><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
             </div>      
-            <div class="col-sm-8">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-6">
+                <h2>Dropdowns</h2>
+                <p>Add the .dropdown-menu-right class to .dropdown-menu to 
+                    right-align the dropdown menu:</p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropdown Example
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-5">
+                <h2>Dropdowns</h2>
+                <p>The .dropup class makes the dropdown menu expand upwards 
+                    instead of downwards:</p>
+                <div class="dropup">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropup Example
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>            
+            <div class="col-sm-6">
+                <h2>Dropdowns</h2>
+                <p>The .dropdown class is used to indicate a dropdown menu.</p>
+                <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>                                          
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" 
+                          id="menu1" data-toggle="dropdown">Tutorials
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" 
+                                               href="#">HTML</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" 
+                                               href="#">CSS</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" 
+                                               href="#">JavaScript</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" 
+                                               href="#">About Us</a></li>
+                  </ul>
+                </div>
+            </div>                    
         </div>
     </div>
     
+    <!--Body content-->
+    </div>
+    </div>
+    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
-
-
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    <!--Code verbose-->  
+       
+    
+    <!--Code verbose-->        
+    </div>
+    </div>        
+    </code>
     </pre>
     </div>
 

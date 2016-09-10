@@ -21,13 +21,11 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-            bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/
-            jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/
-            3.3.7/js/bootstrap.min.js"></script>-->
+    <!--Internet Libraries (do not break lines or the links break)  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    --> 
 
     <!--Libraries-->
     <link rel="stylesheet" type="text/css" 
@@ -37,7 +35,10 @@
 
 </head>
 <body>
-    <!--Body content-->
+    <div class="mainbody">
+    <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    <!--Body content--> 
+    
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -45,32 +46,107 @@
 
     <div class="container">
         <div class="row">            
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-5">
+                <h2>Pagination</h2>
+                <p>The .pagination class provides pagination links:</p>                  
+                <ul class="pagination">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
             </div>      
-            <div class="col-sm-8">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-6">
+                <h2>Pagination - Active State</h2>
+                <p>Add class .active to let the user know which page he/she is on:</p>
+                <ul class="pagination">
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Pagination - Disabled State</h2>
+                <p>Add class .disabled if a page for some reason is disabled:</p>
+                <ul class="pagination">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="disabled"><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h2>Pagination - Sizing</h2>
+                <p>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks:</p>
+                <ul class="pagination pagination-lg">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
+
+                <ul class="pagination pagination-sm">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
             </div>
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Breadcrumbs</h2>
+                <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                  
+                <ul class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Private</a></li>
+                  <li><a href="#">Pictures</a></li>
+                  <li class="active">Vacation</li>        
+                </ul>
             </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Pager</h2>
+                <p>The .pager class provides previous and next buttons (links):</p>                  
+                <ul class="pager">
+                  <li><a href="#">Previous</a></li>
+                  <li><a href="#">Next</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <h2>Pager</h2>
+                <p>The .previous and .next classes align each link to the sides of the page:</p>                  
+                <ul class="pager">
+                  <li class="previous"><a href="#">Previous</a></li>
+                  <li class="next"><a href="#">Next</a></li>
+                </ul>
+            </div>         
         </div>
     </div>
     
+    <!--Body content-->
+    </div>
+    </div>
+    
     <div class="code">
-    <pre class="code_">
-    <code class="language-html"></code>
-    <!--Code verbose-->
-
-
+    <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
+    <code class="language-html">
+    <div class="container">
+    <div class="col-sm-12">
+    <!--Code verbose-->  
+       
+    
+    <!--Code verbose-->        
+    </div>
+    </div>        
+    </code>
     </pre>
     </div>
 
