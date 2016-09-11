@@ -41,6 +41,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Wells & Alerts & Buttons</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
@@ -236,11 +237,203 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Wells & Alerts & Buttons&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">                          
+            &ltdiv class="col-sm-5">
+                &lth2>Alerts&lt/h2>
+                &ltdiv class="alert alert-success">
+                  &ltstrong>Success!&lt/strong> This alert box could indicate a 
+                  successful or positive action.
+                &lt/div>
+                &ltdiv class="alert alert-info">
+                  &ltstrong>Info!&lt/strong> This alert box could indicate a 
+                  neutral informative change or action.
+                &lt/div>
+                &ltdiv class="alert alert-warning">
+                  &ltstrong>Warning!&lt/strong> This alert box could indicate a 
+                  warning that might need attention.
+                &lt/div>
+                &ltdiv class="alert alert-danger">
+                  &ltstrong>Danger!&lt/strong> This alert box could indicate a 
+                  dangerous or potentially negative action.
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Alerts&lt/h2>
+                &ltp>The a element with class="close" and data-dismiss="alert" is used to close the alert box.&lt/p>
+                &ltdiv class="alert alert-success">
+                  &lta href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt/a>
+                  &ltstrong>Success!&lt/strong> This alert box could indicate a successful or positive action.
+                &lt/div>
+                &ltdiv class="alert alert-info">
+                  &lta href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt/a>
+                  &ltstrong>Info!&lt/strong> This alert box could indicate a neutral informative change or action.
+                &lt/div>
+                &ltdiv class="alert alert-warning">
+                  &lta href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt/a>
+                  &ltstrong>Warning!&lt/strong> This alert box could indicate a warning that might need attention.
+                &lt/div>
+                &ltdiv class="alert alert-danger">
+                  &lta href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt/a>
+                  &ltstrong>Danger!&lt/strong> This alert box could indicate a dangerous or potentially negative action.
+                &lt/div>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Well Size&lt/h2>
+                &ltdiv class="well well-sm">Small Well&lt/div>
+                &ltdiv class="well">Normal Well&lt/div>
+                &ltdiv class="well well-lg">Large Well&lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &ltdiv class="page-header">
+                    &lth1>Example Page Header&lt/h1>      
+                &lt/div>
+                &ltp>This is some text.&lt/p>      
+                &ltp>This is another text.&lt/p>   
+            &lt/div>             
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Button Styles&lt/h2>
+                &ltbutton type="button" class="btn btn-default">Default&lt/button>
+                &ltbutton type="button" class="btn btn-primary">Primary&lt/button>
+                &ltbutton type="button" class="btn btn-success">Success&lt/button>
+                &ltbutton type="button" class="btn btn-info">Info&lt/button>
+                &ltbutton type="button" class="btn btn-warning">Warning&lt/button>
+                &ltbutton type="button" class="btn btn-danger">Danger&lt/button>
+                &ltbutton type="button" class="btn btn-link">Link&lt/button>  
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Button Tags&lt/h2>
+                &lta href="#" class="btn btn-info" role="button">Link Button&lt/a>
+                &ltbutton type="button" class="btn btn-info">Button&lt/button>
+                &ltinput type="button" class="btn btn-info" value="Input Button">
+                &ltinput type="submit" class="btn btn-info" value="Submit Button">
+            &lt/div>
+                        
+        &lt/div>
+         &ltdiv class="row">                           
+            &ltdiv class="col-sm-11">                
+                &lth2>Block Level Buttons&lt/h2>
+                &ltbutton type="button" class="btn btn-primary btn-block">Button 1&lt/button>
+                &ltbutton type="button" class="btn btn-default btn-block">Button 2&lt/button>
+
+                &lth2>Large Block Level Buttons&lt/h2>
+                &ltbutton type="button" class="btn btn-primary btn-lg btn-block">Button 1&lt/button>
+                &ltbutton type="button" class="btn btn-default btn-lg btn-block">Button 2&lt/button>
+
+                &lth2>Small Block Level Buttons&lt/h2>
+                &ltbutton type="button" class="btn btn-primary btn-sm btn-block">Button 1&lt/button>
+                &ltbutton type="button" class="btn btn-default btn-sm btn-block">Button 2&lt/button>       
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">           
+            &ltdiv class="col-sm-6">
+                &lth2>Button States&lt/h2>
+                &ltbutton type="button" class="btn btn-primary">Primary Button&lt/button>
+                &ltbutton type="button" class="btn btn-primary active">Active Primary&lt/button>
+                &ltbutton type="button" class="btn btn-primary disabled">Disabled Primary&lt/button>
+            &lt/div>
+            &ltdiv class="col-sm-5">
+                &lth2>Button Group&lt/h2>
+                &ltdiv class="btn-group">
+                  &ltbutton type="button" class="btn btn-primary">Apple&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Samsung&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Sony&lt/button>
+                &lt/div>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-6">
+                &lth2>Button Groups - Set Sizes&lt/h2>
+                &ltp>Add class .btn-group-* to size all buttons in a button group.&lt/p>
+                &lth3>Large Buttons:&lt/h3>
+                &ltdiv class="btn-group btn-group-lg">
+                  &ltbutton type="button" class="btn btn-primary">Apple&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Samsung&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Sony&lt/button>
+                &lt/div>
+                &lth3>Extra Small Buttons:&lt/h3>
+                &ltdiv class="btn-group btn-group-xs">
+                  &ltbutton type="button" class="btn btn-primary">Apple&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Samsung&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Sony&lt/button>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-5">
+                &lth2>Vertical Button Group&lt/h2>
+                &ltdiv class="btn-group-vertical">
+                  &ltbutton type="button" class="btn btn-primary">Apple&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Samsung&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Sony&lt/button>
+                &lt/div>
+            &lt/div>                   
+        &lt/div>
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Justified Button Groups&lt/h2>
+                &ltdiv class="btn-group btn-group-justified">
+                  &lta href="#" class="btn btn-primary">Apple&lt/a>
+                  &lta href="#" class="btn btn-primary">Samsung&lt/a>
+                  &lta href="#" class="btn btn-primary">Sony&lt/a>
+                &lt/div>
+            &lt/div>         
+            &ltdiv class="col-sm-6">               
+                &lth2>Button Sizes&lt/h2>
+                &ltbutton type="button" class="btn btn-primary btn-lg">Large&lt/button>
+                &ltbutton type="button" class="btn btn-primary btn-md">Medium&lt/button>    
+                &ltbutton type="button" class="btn btn-primary btn-sm">Small&lt/button>
+                &ltbutton type="button" class="btn btn-primary btn-xs">XSmall&lt/button>              
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Nesting Button Groups&lt/h2>
+                &ltp>Nest button groups to create drop down menus:&lt/p>
+                &ltdiv class="btn-group">
+                  &ltbutton type="button" class="btn btn-primary">Apple&lt/button>
+                  &ltbutton type="button" class="btn btn-primary">Samsung&lt/button>
+                  &ltdiv class="btn-group">
+                    &ltbutton type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Sony &ltspan class="caret">&lt/span>&lt/button>
+                    &ltul class="dropdown-menu" role="menu">
+                      &ltli>&lta href="#">Tablet&lt/a>&lt/li>
+                      &ltli>&lta href="#">Smartphone&lt/a>&lt/li>
+                    &lt/ul>
+                  &lt/div>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Split Buttons&lt/h2>
+                &ltdiv class="btn-group">
+                  &ltbutton type="button" class="btn btn-primary">Sony&lt/button>
+                  &ltbutton type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    &ltspan class="caret">&lt/span>
+                  &lt/button>
+                  &ltul class="dropdown-menu" role="menu">
+                    &ltli>&lta href="#">Tablet&lt/a>&lt/li>
+                    &ltli>&lta href="#">Smartphone&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>           
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->  
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

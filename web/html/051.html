@@ -42,6 +42,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Tables</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
@@ -240,11 +241,204 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Tables&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Basic Table&lt/h2>
+                &ltp>The .table class adds basic styling (light padding and only horizontal dividers) to a table:&lt/p>            
+                &lttable class="table">
+                  &ltthead>
+                    &lttr>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Email&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr>
+                      &lttd>John&lt/td>
+                      &lttd>Doe&lt/td>
+                      &lttd>john@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>Mary&lt/td>
+                      &lttd>Moe&lt/td>
+                      &lttd>mary@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>July&lt/td>
+                      &lttd>Dooley&lt/td>
+                      &lttd>july@example.com&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>Striped Rows&lt/h2>
+                &ltp>The .table-striped class adds zebra-stripes to a table:&lt/p>            
+                &lttable class="table table-striped">
+                  &ltthead>
+                    &lttr>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Email&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr>
+                      &lttd>John&lt/td>
+                      &lttd>Doe&lt/td>
+                      &lttd>john@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>Mary&lt/td>
+                      &lttd>Moe&lt/td>
+                      &lttd>mary@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>July&lt/td>
+                      &lttd>Dooley&lt/td>
+                      &lttd>july@example.com&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+            &lt/div>           
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Table&lt/h2>
+                &ltp>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:&lt/p>                                                                                      
+                &ltdiv class="table-responsive">          
+                &lttable class="table">
+                  &ltthead>
+                    &lttr>
+                      &ltth>#&lt/th>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Age&lt/th>
+                      &ltth>City&lt/th>
+                      &ltth>Country&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr>
+                      &lttd>1&lt/td>
+                      &lttd>Anna&lt/td>
+                      &lttd>Pitt&lt/td>
+                      &lttd>35&lt/td>
+                      &lttd>New York&lt/td>
+                      &lttd>USA&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Bordered Table&lt/h2>
+                &ltp>The .table-bordered class adds borders to a table:&lt/p>            
+                &lttable class="table table-bordered">
+                  &ltthead>
+                    &lttr>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Email&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr>
+                      &lttd>John&lt/td>
+                      &lttd>Doe&lt/td>
+                      &lttd>john@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>Mary&lt/td>
+                      &lttd>Moe&lt/td>
+                      &lttd>mary@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>July&lt/td>
+                      &lttd>Dooley&lt/td>
+                      &lttd>july@example.com&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+            &lt/div>                     
+        &lt/div>
+        &ltdiv class="row">          
+            &ltdiv class="col-sm-5">
+                &lth2>Hover Rows&lt/h2>
+                &ltp>The .table-hover class enables a hover state on table rows:&lt/p>            
+                &lttable class="table table-hover">
+                  &ltthead>
+                    &lttr>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Email&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr>
+                      &lttd>John&lt/td>
+                      &lttd>Doe&lt/td>
+                      &lttd>john@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>Mary&lt/td>
+                      &lttd>Moe&lt/td>
+                      &lttd>mary@example.com&lt/td>
+                    &lt/tr>
+                    &lttr>
+                      &lttd>July&lt/td>
+                      &lttd>Dooley&lt/td>
+                      &lttd>july@example.com&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Contextual Classes&lt/h2>
+                &ltp>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.&lt/p>            
+                &lttable class="table">
+                  &ltthead>
+                    &lttr>
+                      &ltth>Firstname&lt/th>
+                      &ltth>Lastname&lt/th>
+                      &ltth>Email&lt/th>
+                    &lt/tr>
+                  &lt/thead>
+                  &lttbody>
+                    &lttr class="success">
+                      &lttd>John&lt/td>
+                      &lttd>Doe&lt/td>
+                      &lttd>john@example.com&lt/td>
+                    &lt/tr>
+                    &lttr class="danger">
+                      &lttd>Mary&lt/td>
+                      &lttd>Moe&lt/td>
+                      &lttd>mary@example.com&lt/td>
+                    &lt/tr>
+                    &lttr class="info">
+                      &lttd>July&lt/td>
+                      &lttd>Dooley&lt/td>
+                      &lttd>july@example.com&lt/td>
+                    &lt/tr>
+                  &lt/tbody>
+                &lt/table>
+            &lt/div>            
+        &lt/div>
+    &lt/div>
     
-    <!--Code verbose-->        
+    &lt!--Body content-->  
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

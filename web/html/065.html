@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Header navigation-->
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+
+    <!--Internet Libraries (do not break lines or the links break)-->  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    <!--Libraries
+    <link rel="stylesheet" type="text/css" 
+          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../jQuery_Library/jquery-3.1.0.js"></script>-->
+    
+    <!--Internal Stylesheets-->
+    <style>
+    body {
+        position: relative;
+    }
+    .affix {
+        top: 20px;
+    }
+    div.col-sm-9 div {
+        height: 250px;
+        font-size: 28px;
+    }
+    #section1 {color: #fff; background-color: #1E88E5;}
+    #section2 {color: #fff; background-color: #673ab7;}
+    #section3 {color: #fff; background-color: #ff9800;}
+    #section41 {color: #fff; background-color: #00bcd4;}
+    #section42 {color: #fff; background-color: #009688;}
+
+    @media screen and (max-width: 810px) {
+      #section1, #section2, #section3, #section41, #section42  {
+          margin-left: 150px;
+      }
+    }
+    </style>
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+ 
+    <div class="container-fluid" style="background-color:#2196F3;color:#fff;height:320px;">
+      <h1>Scrollspy & Affix Example</h1>
+      <h2>Bootstrap Affix Plugin (Sidenav)</h2>
+      <h3>Fixed vertical sidenav on scroll</h3>
+      <p>Scroll this page to see how the navbar behaves with data-spy="affix" and 
+          data-spy="scrollspy".</p>
+      <p>The left menu sticks the page after you have scrolled a specified amount 
+          of pixels, and the links in the menu are automatically updated based on 
+          scroll position.</p>
+    </div>
+    <br>
+     
+    
+    <!--Header navigation-->
     <div class="header_image">
         <div class="header_navigation_V-2">
             <ul> 
@@ -15,26 +73,7 @@
             </ul>
         </div>
     </div>
-
-    <!--External Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
-    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
-    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
-
-    <!--Internet Libraries (do not break lines or the links break)  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    --> 
-
-    <!--Libraries-->
-    <link rel="stylesheet" type="text/css" 
-          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
-
-</head>
-<body>
+    
     <div class="mainbody">
     <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
     <!--Body content--> 
@@ -45,27 +84,45 @@
     </div>
 
     <div class="container">
-        <div class="row">            
-            <div class="col-sm-5">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>      
-            <div class="col-sm-6">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
+      <div class="row">
+        <nav class="col-sm-2" id="myScrollspy">
+          <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#section41">Section 4-1</a></li>
+                <li><a href="#section42">Section 4-2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="col-sm-8">
+          <div id="section1">    
+            <h1>Section 1</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+          </div>
+          <div id="section2"> 
+            <h1>Section 2</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+          </div>        
+          <div id="section3">
+            <h1>Section 3</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+          </div>
+          <div id="section41">
+            <h1>Section 4-1</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+          </div>      
+          <div id="section42">
+            <h1>Section 4-2</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>            
-        </div>
+     </div>
     </div>
-    
     <!--Body content-->
     </div>
     </div>
@@ -74,11 +131,111 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Internal Stylesheets-->
+    &ltstyle>
+    body {
+        position: relative;
+    }
+    .affix {
+        top: 20px;
+    }
+    div.col-sm-9 div {
+        height: 250px;
+        font-size: 28px;
+    }
+    #section1 {color: #fff; background-color: #1E88E5;}
+    #section2 {color: #fff; background-color: #673ab7;}
+    #section3 {color: #fff; background-color: #ff9800;}
+    #section41 {color: #fff; background-color: #00bcd4;}
+    #section42 {color: #fff; background-color: #009688;}
+
+    @media screen and (max-width: 810px) {
+      #section1, #section2, #section3, #section41, #section42  {
+          margin-left: 150px;
+      }
+    }
+    &lt/style>
+           
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="container-fluid" style="background-color:#2196F3;color:#fff;height:320px;">
+      &lth1>Scrollspy & Affix Example&lt/h1>
+      &lth2>Bootstrap Affix Plugin (Sidenav)&lt/h2>
+      &lth3>Fixed vertical sidenav on scroll&lt/h3>
+      &ltp>Scroll this page to see how the navbar behaves with data-spy="affix" 
+      and data-spy="scrollspy".&lt/p>
+      &ltp>The left menu sticks the page after you have scrolled a specified 
+      amount of pixels, and the links in the menu are automatically updated based 
+      on scroll position.&lt/p>
+    &lt/div>
+    &ltbr>
+     
+    
+    &lt!--Header navigation-->
+    &ltdiv class="header_image">
+        &ltdiv class="header_navigation_V-2">
+            &ltul> 
+                &ltli id="prev" class="active">&lta href="./064.html">« Previous&lt/a>&lt/li>
+                &ltli id="home" class="active">&lta href="../index.html">HOME&lt/a>&lt/li>
+                &ltli id="next" class="active">&lta href="./066.html">Next »&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>
+    &lt/div>
+    
+    &ltdiv class="mainbody">
+    &ltdiv class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
+    
+    
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+      &ltdiv class="row">
+        &ltnav class="col-sm-2" id="myScrollspy">
+          &ltul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+            &ltli>&lta href="#section1">Section 1&lt/a>&lt/li>
+            &ltli>&lta href="#section2">Section 2&lt/a>&lt/li>
+            &ltli>&lta href="#section3">Section 3&lt/a>&lt/li>
+            &ltli class="dropdown">
+              &lta class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 &ltspan class="caret">&lt/span>&lt/a>
+              &ltul class="dropdown-menu">
+                &ltli>&lta href="#section41">Section 4-1&lt/a>&lt/li>
+                &ltli>&lta href="#section42">Section 4-2&lt/a>&lt/li>
+              &lt/ul>
+            &lt/li>
+          &lt/ul>
+        &lt/nav>
+        &ltdiv class="col-sm-8">
+          &ltdiv id="section1">    
+            &lth1>Section 1&lt/h1>
+            &ltp>Try to scroll this section and look at the navigation list while scrolling!&lt/p>
+          &lt/div>
+          &ltdiv id="section2"> 
+            &lth1>Section 2&lt/h1>
+            &ltp>Try to scroll this section and look at the navigation list while scrolling!&lt/p>
+          &lt/div>        
+          &ltdiv id="section3">
+            &lth1>Section 3&lt/h1>
+            &ltp>Try to scroll this section and look at the navigation list while scrolling!&lt/p>
+          &lt/div>
+          &ltdiv id="section41">
+            &lth1>Section 4-1&lt/h1>
+            &ltp>Try to scroll this section and look at the navigation list while scrolling!&lt/p>
+          &lt/div>      
+          &ltdiv id="section42">
+            &lth1>Section 4-2&lt/h1>
+            &ltp>Try to scroll this section and look at the navigation list while scrolling!&lt/p>
+          &lt/div>
+        &lt/div>
+     &lt/div>
+    &lt/div>
+    &lt!--Body content-->
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

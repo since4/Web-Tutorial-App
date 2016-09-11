@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <title>Bootstrap Example</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Header navigation-->
+    <!--External Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
+
+    <!--Internet Libraries (do not break lines or the links break)-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+
+    <!--Libraries
+    <link rel="stylesheet" type="text/css" 
+          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../jQuery_Library/jquery-3.1.0.js"></script>-->
+    
+    <!--Internal Stylesheets-->
+    <style>
+        /* Note: Try to remove the following lines to see the effect of CSS positioning */
+        .affix {
+            top: 0;
+            width: 100%;
+        }
+
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid" style="background-color:#F44336;color:#fff;height:280px;">
+        <h1>Bootstrap Affix Example</h1>
+        <h3>Fixed (sticky) navbar on scroll</h3>
+        <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
+        <p>The navbar is attached to the top of the page after you have scrolled 
+            a specified amount of pixels.</p>
+    </div>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Basic Topnav</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+    </nav>
+    
+    <!--Header navigation-->
     <div class="header_image">
         <div class="header_navigation_V-2">
             <ul> 
@@ -15,55 +64,29 @@
             </ul>
         </div>
     </div>
-
-    <!--External Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
-    <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
-    <link rel="stylesheet" type="text/css" href="../css/background-images.css">
-
-    <!--Internet Libraries (do not break lines or the links break)  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    --> 
-
-    <!--Libraries-->
-    <link rel="stylesheet" type="text/css" 
-          href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
-
-</head>
-<body>
+    
     <div class="mainbody">
     <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
     <!--Body content--> 
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Affix Plugin (horizontal Nav)</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
-    <div class="container">
-        <div class="row">            
-            <div class="col-sm-5">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>      
-            <div class="col-sm-6">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
-            </div>            
-        </div>
+    <div class="container-fluid" style="height:1000px">
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
     </div>
     
     <!--Body content-->
@@ -75,10 +98,44 @@
     <code class="language-html">
     <div class="container">
     <div class="col-sm-12">
-    <!--Code verbose-->  
+    &lt!--Code verbose-->  
+    &lt!--Internal Stylesheets-->
+    &ltstyle>
+        /* Note: Try to remove the following lines to see the effect of CSS positioning */
+        .affix {
+            top: 0;
+            width: 100%;
+        }
+
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+    &lt/style>   
        
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Affix Plugin (horizontal Nav)&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container-fluid" style="height:1000px">
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+        &lth1>Some text to enable scrolling&lt/h1>
+    &lt/div>
+    
+    &lt!--Body content-->
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

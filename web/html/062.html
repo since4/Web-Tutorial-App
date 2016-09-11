@@ -21,48 +21,284 @@
     <link rel="stylesheet" type="text/css" href="../css/site-navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/background-images.css">
 
-    <!--Internet Libraries (do not break lines or the links break)  
+    <!--Internet Libraries (do not break lines or the links break) --> 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    --> 
-
-    <!--Libraries-->
+     
+    <!--Libraries
     <link rel="stylesheet" type="text/css" 
           href="../Bootstrap_Library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <script src="../Bootstrap_Library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../jQuery_Library/jquery-3.1.0.js"></script>
+    <script src="../jQuery_Library/jquery-3.1.0.js"></script>-->
+    
+    <!--Internal Stylesheets-->
+    <style>
+        #body1 {
+            position: relative; 
+        }
+        #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+        #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+        #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+        #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+        #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+    </style>
 
 </head>
-<body>
+<body id="body1" data-spy="scroll" data-target=".navbar" data-offset="50">
     <div class="mainbody">
     <div class="interactive" style="padding-left:5px;padding-right:5px;width:96%;">
     <!--Body content--> 
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>ootstrap Modal & Tooltip & Popover</h2>
+        <p>Works with online libraries, but not with downloaded versions</p>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
     <div class="container">
         <div class="row">            
-            <div class="col-sm-5">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-4">
+                <h2>Modal Example</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal1">
+                    Open Modal</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal1" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" 
+                                data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
             </div>      
-            <div class="col-sm-6">
-                <p>Resize this responsive page to see the effect!</p>
+            <div class="col-sm-3">
+                <h2>Small Modal</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal2">
+                    Open Small Modal</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" role="dialog">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" 
+                                data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>This is a small modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
+            <div class="col-sm-4">
+                 <h2>Large Modal</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal3">
+                    Open Large Modal</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" 
+                                data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>This is a large modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>          
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <h3>Tooltip Example</h3>
+                <a href="#" data-toggle="tooltip1" title="Hooray!">
+                    Hover over me</a>         
+                <script>
+                $(document).ready(function(){
+                  $('[data-toggle="tooltip1"]').tooltip();   
+                });
+                </script>
+            </div>
+            <div class="col-sm-6">
+                <h3>Tooltip Example</h3>
+                <p>The data-placement attribute specifies the tooltip position.</p>
+                <ul class="list-inline">
+                  <li><a href="#" data-toggle="tooltip2" data-placement="top" 
+                         title="Hooray!">Top</a></li>
+                  <li><a href="#" data-toggle="tooltip2" data-placement="bottom" 
+                         title="Hooray!">Bottom</a></li>
+                  <li><a href="#" data-toggle="tooltip2" data-placement="left" 
+                         title="Hooray!">Left</a></li>
+                  <li><a href="#" data-toggle="tooltip2" data-placement="right" 
+                         title="Hooray!">Right</a></li>
+                </ul>            
+                <script>
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip2"]').tooltip();   
+                });
+                </script>
+            </div>        
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h3>Popover Example</h3>
+                <a href="#" data-toggle="popover1" title="Popover Header" 
+                   data-content="Some content inside the popover">
+                    Toggle popover</a>
+              <script>
+              $(document).ready(function(){
+                  $('[data-toggle="popover1"]').popover();   
+              });
+              </script>
             </div>
             <div class="col-sm-3">
-                <p>Resize this responsive page to see the effect!</p>
+                <h3>Popover Example</h3>
+                <ul class="list-inline">
+                  <li><a href="#" title="Header" data-toggle="popover2" 
+                         data-placement="top" data-content="Content">Top</a></li>
+                  <li><a href="#" title="Header" data-toggle="popover2" 
+                         data-placement="bottom" data-content="Content">Bottom</a></li>
+                  <li><a href="#" title="Header" data-toggle="popover2" 
+                         data-placement="left" data-content="Content">Left</a></li>
+                  <li><a href="#" title="Header" data-toggle="popover2" 
+                         data-placement="right" data-content="Content">Right</a></li>
+                </ul>
+                <script>
+                $(document).ready(function(){
+                    $('[data-toggle="popover2"]').popover();   
+                });
+                </script>
             </div>
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h3>Popover Example</h3>
+                <a href="#" title="Header" data-toggle="popover3" 
+                   data-content="Some content">Click Me</a><br>
+                <a href="#" title="Header" data-toggle="popover3" 
+                   data-trigger="hover" data-content="Some content">Hover over me</a>
+                <script>
+                $(document).ready(function(){
+                    $('[data-toggle="popover3"]').popover();   
+                });
+                </script>
             </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-11">
+                <div>
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                      <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" 
+                                    data-toggle="collapse" data-target="#myNavbar4">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>                        
+                          </button>
+                          <a class="navbar-brand" href="#">WebSiteName</a>
+                        </div>
+                        <div>
+                          <div class="collapse navbar-collapse" id="myNavbar4">
+                            <ul class="nav navbar-nav">
+                              <li><a href="#section1">Section 1</a></li>
+                              <li><a href="#section2">Section 2</a></li>
+                              <li><a href="#section3">Section 3</a></li>
+                              <li class="dropdown"><a class="dropdown-toggle" 
+                                        data-toggle="dropdown" href="#">Section 4 
+                                        <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#section41">Section 4-1</a></li>
+                                  <li><a href="#section42">Section 4-2</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>    
+
+                    <div id="section1" class="container-fluid">
+                      <h1>Section 1</h1>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                    </div>
+                    <div id="section2" class="container-fluid">
+                      <h1>Section 2</h1>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                    </div>
+                    <div id="section3" class="container-fluid">
+                      <h1>Section 3</h1>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                    </div>
+                    <div id="section41" class="container-fluid">
+                      <h1>Section 4 Submenu 1</h1>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                    </div>
+                    <div id="section42" class="container-fluid">
+                      <h1>Section 4 Submenu 2</h1>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                      <p>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!</p>
+                    </div>
+                </div>
+            </div>                  
         </div>
     </div>
     
@@ -74,11 +310,278 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose--> 
     
-    <!--Code verbose-->        
+    &lt!--Internal Stylesheets-->
+    &ltstyle>
+        #body1 {
+            position: relative; 
+        }
+        #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+        #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+        #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+        #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+        #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+    &lt/style>
+    
+    &lt!--Body content--> 
+    
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>ootstrap Modal & Tooltip & Popover&lt/h2>
+        &ltp>Works with online libraries, but not with downloaded versions&lt/p>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-4">
+                &lth2>Modal Example&lt/h2>
+                &lt!-- Trigger the modal with a button -->
+                &ltbutton type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal1">
+                    Open Modal&lt/button>
+
+                &lt!-- Modal -->
+                &ltdiv class="modal fade" id="myModal1" role="dialog">
+                  &ltdiv class="modal-dialog">
+
+                    &lt!-- Modal content-->
+                    &ltdiv class="modal-content">
+                      &ltdiv class="modal-header">
+                        &ltbutton type="button" class="close" 
+                                data-dismiss="modal">&times;&lt/button>
+                        &lth4 class="modal-title">Modal Header&lt/h4>
+                      &lt/div>
+                      &ltdiv class="modal-body">
+                        &ltp>Some text in the modal.&lt/p>
+                      &lt/div>
+                      &ltdiv class="modal-footer">
+                        &ltbutton type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close&lt/button>
+                      &lt/div>
+                    &lt/div>
+
+                  &lt/div>
+                &lt/div>
+            &lt/div>      
+            &ltdiv class="col-sm-3">
+                &lth2>Small Modal&lt/h2>
+                &lt!-- Trigger the modal with a button -->
+                &ltbutton type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal2">
+                    Open Small Modal&lt/button>
+
+                &lt!-- Modal -->
+                &ltdiv class="modal fade" id="myModal2" role="dialog">
+                  &ltdiv class="modal-dialog modal-sm">
+                    &ltdiv class="modal-content">
+                      &ltdiv class="modal-header">
+                        &ltbutton type="button" class="close" 
+                                data-dismiss="modal">&times;&lt/button>
+                        &lth4 class="modal-title">Modal Header&lt/h4>
+                      &lt/div>
+                      &ltdiv class="modal-body">
+                        &ltp>This is a small modal.&lt/p>
+                      &lt/div>
+                      &ltdiv class="modal-footer">
+                        &ltbutton type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close&lt/button>
+                      &lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                 &lth2>Large Modal&lt/h2>
+                &lt!-- Trigger the modal with a button -->
+                &ltbutton type="button" class="btn btn-info btn-lg" 
+                        data-toggle="modal" data-target="#myModal3">
+                    Open Large Modal&lt/button>
+
+                &lt!-- Modal -->
+                &ltdiv class="modal fade" id="myModal3" role="dialog">
+                  &ltdiv class="modal-dialog modal-lg">
+                    &ltdiv class="modal-content">
+                      &ltdiv class="modal-header">
+                        &ltbutton type="button" class="close" 
+                                data-dismiss="modal">&times;&lt/button>
+                        &lth4 class="modal-title">Modal Header&lt/h4>
+                      &lt/div>
+                      &ltdiv class="modal-body">
+                        &ltp>This is a large modal.&lt/p>
+                      &lt/div>
+                      &ltdiv class="modal-footer">
+                        &ltbutton type="button" class="btn btn-default" 
+                                data-dismiss="modal">Close&lt/button>
+                      &lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>          
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth3>Tooltip Example&lt/h3>
+                &lta href="#" data-toggle="tooltip1" title="Hooray!">
+                    Hover over me&lt/a>         
+                &ltscript>
+                $(document).ready(function(){
+                  $('[data-toggle="tooltip1"]').tooltip();   
+                });
+                &lt/script>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth3>Tooltip Example&lt/h3>
+                &ltp>The data-placement attribute specifies the tooltip position.&lt/p>
+                &ltul class="list-inline">
+                  &ltli>&lta href="#" data-toggle="tooltip2" data-placement="top" 
+                         title="Hooray!">Top&lt/a>&lt/li>
+                  &ltli>&lta href="#" data-toggle="tooltip2" data-placement="bottom" 
+                         title="Hooray!">Bottom&lt/a>&lt/li>
+                  &ltli>&lta href="#" data-toggle="tooltip2" data-placement="left" 
+                         title="Hooray!">Left&lt/a>&lt/li>
+                  &ltli>&lta href="#" data-toggle="tooltip2" data-placement="right" 
+                         title="Hooray!">Right&lt/a>&lt/li>
+                &lt/ul>            
+                &ltscript>
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip2"]').tooltip();   
+                });
+                &lt/script>
+            &lt/div>        
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth3>Popover Example&lt/h3>
+                &lta href="#" data-toggle="popover1" title="Popover Header" 
+                   data-content="Some content inside the popover">
+                    Toggle popover&lt/a>
+              &ltscript>
+              $(document).ready(function(){
+                  $('[data-toggle="popover1"]').popover();   
+              });
+              &lt/script>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth3>Popover Example&lt/h3>
+                &ltul class="list-inline">
+                  &ltli>&lta href="#" title="Header" data-toggle="popover2" 
+                         data-placement="top" data-content="Content">Top&lt/a>&lt/li>
+                  &ltli>&lta href="#" title="Header" data-toggle="popover2" 
+                         data-placement="bottom" data-content="Content">Bottom&lt/a>&lt/li>
+                  &ltli>&lta href="#" title="Header" data-toggle="popover2" 
+                         data-placement="left" data-content="Content">Left&lt/a>&lt/li>
+                  &ltli>&lta href="#" title="Header" data-toggle="popover2" 
+                         data-placement="right" data-content="Content">Right&lt/a>&lt/li>
+                &lt/ul>
+                &ltscript>
+                $(document).ready(function(){
+                    $('[data-toggle="popover2"]').popover();   
+                });
+                &lt/script>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth3>Popover Example&lt/h3>
+                &lta href="#" title="Header" data-toggle="popover3" 
+                   data-content="Some content">Click Me&lt/a>&ltbr>
+                &lta href="#" title="Header" data-toggle="popover3" 
+                   data-trigger="hover" data-content="Some content">Hover over me&lt/a>
+                &ltscript>
+                $(document).ready(function(){
+                    $('[data-toggle="popover3"]').popover();   
+                });
+                &lt/script>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-11">
+                &ltdiv>
+                    &ltnav class="navbar navbar-inverse navbar-fixed-top">
+                      &ltdiv class="container-fluid">
+                        &ltdiv class="navbar-header">
+                            &ltbutton type="button" class="navbar-toggle" 
+                                    data-toggle="collapse" data-target="#myNavbar4">
+                              &ltspan class="icon-bar">&lt/span>
+                              &ltspan class="icon-bar">&lt/span>
+                              &ltspan class="icon-bar">&lt/span>                        
+                          &lt/button>
+                          &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                        &lt/div>
+                        &ltdiv>
+                          &ltdiv class="collapse navbar-collapse" id="myNavbar4">
+                            &ltul class="nav navbar-nav">
+                              &ltli>&lta href="#section1">Section 1&lt/a>&lt/li>
+                              &ltli>&lta href="#section2">Section 2&lt/a>&lt/li>
+                              &ltli>&lta href="#section3">Section 3&lt/a>&lt/li>
+                              &ltli class="dropdown">&lta class="dropdown-toggle" 
+                                        data-toggle="dropdown" href="#">Section 4 
+                                        &ltspan class="caret">&lt/span>&lt/a>
+                                &ltul class="dropdown-menu">
+                                  &ltli>&lta href="#section41">Section 4-1&lt/a>&lt/li>
+                                  &ltli>&lta href="#section42">Section 4-2&lt/a>&lt/li>
+                                &lt/ul>
+                              &lt/li>
+                            &lt/ul>
+                          &lt/div>
+                        &lt/div>
+                      &lt/div>
+                    &lt/nav>    
+
+                    &ltdiv id="section1" class="container-fluid">
+                      &lth1>Section 1&lt/h1>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                    &lt/div>
+                    &ltdiv id="section2" class="container-fluid">
+                      &lth1>Section 2&lt/h1>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                    &lt/div>
+                    &ltdiv id="section3" class="container-fluid">
+                      &lth1>Section 3&lt/h1>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                    &lt/div>
+                    &ltdiv id="section41" class="container-fluid">
+                      &lth1>Section 4 Submenu 1&lt/h1>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                    &lt/div>
+                    &ltdiv id="section42" class="container-fluid">
+                      &lth1>Section 4 Submenu 2&lt/h1>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                      &ltp>Try to scroll this section and look at the navigation 
+                          bar while scrolling! Try to scroll this section and 
+                          look at the navigation bar while scrolling!&lt/p>
+                    &lt/div>
+                &lt/div>
+            &lt/div>                  
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->   
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

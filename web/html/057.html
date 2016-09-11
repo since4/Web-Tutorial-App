@@ -40,6 +40,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Dropdowns & Panels</h2>
         <p>Dropdown works with online libraries, but not with downloaded versions</p>
         <p>Resize this responsive page to see the effect!</p>
     </div>
@@ -173,6 +174,60 @@
                 </div>
             </div>                    
         </div>
+        <div class="row">            
+            <div class="col-sm-5">
+                <h2>Panels with Contextual Classes</h2>
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Panel with panel-default class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">Panel with panel-primary class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+
+                  <div class="panel panel-success">
+                    <div class="panel-heading">Panel with panel-success class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+
+                  <div class="panel panel-info">
+                    <div class="panel-heading">Panel with panel-info class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+
+                  <div class="panel panel-warning">
+                    <div class="panel-heading">Panel with panel-warning class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">Panel with panel-danger class</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+                </div>
+            </div>      
+            <div class="col-sm-6">
+                <h2>Panel Group</h2>
+                <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                  </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!--Body content-->
@@ -183,11 +238,205 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Dropdowns & Panels&lt/h2>
+        &ltp>Dropdown works with online libraries, but not with downloaded versions&lt/p>
+        &ltp>Resize this responsive page to see the effect!&lt/p>
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .dropdown class is used to indicate a dropdown menu.&lt/p>
+                &ltp>Use the .dropdown-menu class to actually build the dropdown menu.&lt/p>
+                &ltp>To open the dropdown menu, use a button or a link with a 
+                    class of .dropdown-toggle and data-toggle="dropdown".&lt/p>                                          
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-primary dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropdown Example
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu">
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli>&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .divider class is used to separate links inside the dropdown menu:&lt/p>
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu">
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli>&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                    &ltli class="divider">&lt/li>
+                    &ltli>&lta href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .dropdown-header class is used to add headers inside the dropdown menu:&lt/p>
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu">
+                    &ltli class="dropdown-header">Dropdown header 1&lt/li>
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli>&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                    &ltli class="divider">&lt/li>
+                    &ltli class="dropdown-header">Dropdown header 2&lt/li>
+                    &ltli>&lta href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .disabled class is used to disable an item in the dropdown menu:&lt/p>
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Tutorials
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu">
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli class="disabled">&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                    &ltli class="divider">&lt/li>
+                    &ltli>&lta href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>Add the .dropdown-menu-right class to .dropdown-menu to 
+                    right-align the dropdown menu:&lt/p>
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropdown Example
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu dropdown-menu-right">
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli>&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                    &ltli class="divider">&lt/li>
+                    &ltli>&lta href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .dropup class makes the dropdown menu expand upwards 
+                    instead of downwards:&lt/p>
+                &ltdiv class="dropup">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          data-toggle="dropdown">Dropup Example
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu">
+                    &ltli>&lta href="#">HTML&lt/a>&lt/li>
+                    &ltli>&lta href="#">CSS&lt/a>&lt/li>
+                    &ltli>&lta href="#">JavaScript&lt/a>&lt/li>
+                    &ltli class="divider">&lt/li>
+                    &ltli>&lta href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Dropdowns&lt/h2>
+                &ltp>The .dropdown class is used to indicate a dropdown menu.&lt/p>
+                &ltp>Use the .dropdown-menu class to actually build the dropdown menu.&lt/p>                                          
+                &ltdiv class="dropdown">
+                  &ltbutton class="btn btn-default dropdown-toggle" type="button" 
+                          id="menu1" data-toggle="dropdown">Tutorials
+                  &ltspan class="caret">&lt/span>&lt/button>
+                  &ltul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    &ltli role="presentation">&lta role="menuitem" tabindex="-1" 
+                                               href="#">HTML&lt/a>&lt/li>
+                    &ltli role="presentation">&lta role="menuitem" tabindex="-1" 
+                                               href="#">CSS&lt/a>&lt/li>
+                    &ltli role="presentation">&lta role="menuitem" tabindex="-1" 
+                                               href="#">JavaScript&lt/a>&lt/li>
+                    &ltli role="presentation" class="divider">&lt/li>
+                    &ltli role="presentation">&lta role="menuitem" tabindex="-1" 
+                                               href="#">About Us&lt/a>&lt/li>
+                  &lt/ul>
+                &lt/div>
+            &lt/div>                    
+        &lt/div>
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Panels with Contextual Classes&lt/h2>
+                &ltdiv class="panel-group">
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">Panel with panel-default class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+
+                  &ltdiv class="panel panel-primary">
+                    &ltdiv class="panel-heading">Panel with panel-primary class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+
+                  &ltdiv class="panel panel-success">
+                    &ltdiv class="panel-heading">Panel with panel-success class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+
+                  &ltdiv class="panel panel-info">
+                    &ltdiv class="panel-heading">Panel with panel-info class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+
+                  &ltdiv class="panel panel-warning">
+                    &ltdiv class="panel-heading">Panel with panel-warning class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+
+                  &ltdiv class="panel panel-danger">
+                    &ltdiv class="panel-heading">Panel with panel-danger class&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>Panel Group&lt/h2>
+                &ltp>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.&lt/p>
+                &ltdiv class="panel-group">
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">Panel Header&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">Panel Header&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">Panel Header&lt/div>
+                    &ltdiv class="panel-body">Panel Content&lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->  
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

@@ -41,6 +41,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Pagination & Pager</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
@@ -140,10 +141,105 @@
     <code class="language-html">
     <div class="container">
     <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Pagination & Pager&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Pagination&lt/h2>
+                &ltp>The .pagination class provides pagination links:&lt/p>                  
+                &ltul class="pagination">
+                  &ltli>&lta href="#">1&lt/a>&lt/li>
+                  &ltli>&lta href="#">2&lt/a>&lt/li>
+                  &ltli>&lta href="#">3&lt/a>&lt/li>
+                  &ltli>&lta href="#">4&lt/a>&lt/li>
+                  &ltli>&lta href="#">5&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>Pagination - Active State&lt/h2>
+                &ltp>Add class .active to let the user know which page he/she is on:&lt/p>
+                &ltul class="pagination">
+                  &ltli>&lta href="#">1&lt/a>&lt/li>
+                  &ltli class="active">&lta href="#">2&lt/a>&lt/li>
+                  &ltli>&lta href="#">3&lt/a>&lt/li>
+                  &ltli>&lta href="#">4&lt/a>&lt/li>
+                  &ltli>&lta href="#">5&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>Pagination - Disabled State&lt/h2>
+                &ltp>Add class .disabled if a page for some reason is disabled:&lt/p>
+                &ltul class="pagination">
+                  &ltli>&lta href="#">1&lt/a>&lt/li>
+                  &ltli>&lta href="#">2&lt/a>&lt/li>
+                  &ltli>&lta href="#">3&lt/a>&lt/li>
+                  &ltli class="disabled">&lta href="#">4&lt/a>&lt/li>
+                  &ltli>&lta href="#">5&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Pagination - Sizing&lt/h2>
+                &ltp>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks:&lt/p>
+                &ltul class="pagination pagination-lg">
+                  &ltli>&lta href="#">1&lt/a>&lt/li>
+                  &ltli>&lta href="#">2&lt/a>&lt/li>
+                  &ltli>&lta href="#">3&lt/a>&lt/li>
+                  &ltli>&lta href="#">4&lt/a>&lt/li>
+                  &ltli>&lta href="#">5&lt/a>&lt/li>
+                &lt/ul>
+
+                &ltul class="pagination pagination-sm">
+                  &ltli>&lta href="#">1&lt/a>&lt/li>
+                  &ltli>&lta href="#">2&lt/a>&lt/li>
+                  &ltli>&lta href="#">3&lt/a>&lt/li>
+                  &ltli>&lta href="#">4&lt/a>&lt/li>
+                  &ltli>&lta href="#">5&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Breadcrumbs&lt/h2>
+                &ltp>The .breadcrumb class indicates the current page's location within a navigational hierarchy:&lt/p>                  
+                &ltul class="breadcrumb">
+                  &ltli>&lta href="#">Home&lt/a>&lt/li>
+                  &ltli>&lta href="#">Private&lt/a>&lt/li>
+                  &ltli>&lta href="#">Pictures&lt/a>&lt/li>
+                  &ltli class="active">Vacation&lt/li>        
+                &lt/ul>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Pager&lt/h2>
+                &ltp>The .pager class provides previous and next buttons (links):&lt/p>                  
+                &ltul class="pager">
+                  &ltli>&lta href="#">Previous&lt/a>&lt/li>
+                  &ltli>&lta href="#">Next&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Pager&lt/h2>
+                &ltp>The .previous and .next classes align each link to the sides of the page:&lt/p>                  
+                &ltul class="pager">
+                  &ltli class="previous">&lta href="#">Previous&lt/a>&lt/li>
+                  &ltli class="next">&lta href="#">Next&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>         
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->  
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

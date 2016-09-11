@@ -41,6 +41,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap List Groups</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
@@ -136,11 +137,103 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap List Groups&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Basic List Group&lt/h2>
+                &ltul class="list-group">
+                  &ltli class="list-group-item">First item&lt/li>
+                  &ltli class="list-group-item">Second item&lt/li>
+                  &ltli class="list-group-item">Third item&lt/li>
+                &lt/ul>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>List Group With Badges&lt/h2>
+                &ltul class="list-group">
+                  &ltli class="list-group-item">New &ltspan class="badge">12&lt/span>&lt/li>
+                  &ltli class="list-group-item">Deleted &ltspan class="badge">5&lt/span>&lt/li>
+                  &ltli class="list-group-item">Warnings &ltspan class="badge">3&lt/span>&lt/li>
+                &lt/ul>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>List Group With Linked Items&lt/h2>
+                &ltdiv class="list-group">
+                  &lta href="#" class="list-group-item">First item&lt/a>
+                  &lta href="#" class="list-group-item">Second item&lt/a>
+                  &lta href="#" class="list-group-item">Third item&lt/a>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Active Item in a List Group&lt/h2>
+                &ltdiv class="list-group">
+                  &lta href="#" class="list-group-item active">First item&lt/a>
+                  &lta href="#" class="list-group-item">Second item&lt/a>
+                  &lta href="#" class="list-group-item">Third item&lt/a>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>List Group With a Disabled Item&lt/h2>
+                &ltdiv class="list-group">
+                  &lta href="#" class="list-group-item disabled">First item&lt/a>
+                  &lta href="#" class="list-group-item">Second item&lt/a>
+                  &lta href="#" class="list-group-item">Third item&lt/a>
+                &lt/div>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>List Group With Contextual Classes&lt/h2>
+                &ltul class="list-group">
+                  &ltli class="list-group-item list-group-item-success">First item&lt/li>
+                  &ltli class="list-group-item list-group-item-info">Second item&lt/li>
+                  &ltli class="list-group-item list-group-item-warning">Third item&lt/li>
+                  &ltli class="list-group-item list-group-item-danger">Fourth item&lt/li>
+                &lt/ul>
+
+                &lth2>Linked Items With Contextual Classes&lt/h2>
+                &ltp>Move the mouse over the linked items to see the hover effect:&lt/p>
+                &ltdiv class="list-group">
+                  &lta href="#" class="list-group-item list-group-item-success">First item&lt/a>
+                  &lta href="#" class="list-group-item list-group-item-info">Second item&lt/a>
+                  &lta href="#" class="list-group-item list-group-item-warning">Third item&lt/a>
+                  &lta href="#" class="list-group-item list-group-item-danger">Fourth item&lt/a>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>List Group With Custom Content&lt/h2>
+                &ltdiv class="list-group">
+                  &lta href="#" class="list-group-item active">
+                    &lth4 class="list-group-item-heading">First List Group Item Heading&lt/h4>
+                    &ltp class="list-group-item-text">List Group Item Text&lt/p>
+                  &lt/a>
+                  &lta href="#" class="list-group-item">
+                    &lth4 class="list-group-item-heading">Second List Group Item Heading&lt/h4>
+                    &ltp class="list-group-item-text">List Group Item Text&lt/p>
+                  &lt/a>
+                  &lta href="#" class="list-group-item">
+                    &lth4 class="list-group-item-heading">Third List Group Item Heading&lt/h4>
+                    &ltp class="list-group-item-text">List Group Item Text&lt/p>
+                  &lt/a>
+                &lt/div>
+            &lt/div>                     
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->   
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

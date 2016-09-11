@@ -40,6 +40,7 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Collapse</h2>
         <p>Dropdown works with online libraries, but not with downloaded versions</p>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
@@ -184,11 +185,152 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Collapse&lt/h2>
+        &ltp>Dropdown works with online libraries, but not with downloaded versions&lt/p>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-4">
+                &lth2>Simple Collapsible&lt/h2>
+                &ltbutton type="button" class="btn btn-info" data-toggle="collapse" 
+                        data-target="#demo1">Simple collapsible&lt/button>
+                &ltdiv id="demo1" class="collapse">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat.
+                &lt/div>
+            &lt/div>      
+            &ltdiv class="col-sm-3">
+                &lth2>Simple Collapsible&lt/h2>
+                &lta href="#demo2" class="btn btn-info" data-toggle="collapse">Simple collapsible&lt/a>
+                &ltdiv id="demo2" class="collapse">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Simple Collapsible&lt/h2>
+                &ltbutton type="button" class="btn btn-info" data-toggle="collapse" 
+                        data-target="#demo3">Simple collapsible&lt/button>
+                &ltdiv id="demo3" class="collapse in">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt/div>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Collapsible Panel&lt/h2>
+                &ltdiv class="panel-group">
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">
+                      &lth4 class="panel-title">
+                        &lta data-toggle="collapse" href="#collapse4">Collapsible panel&lt/a>
+                      &lt/h4>
+                    &lt/div>
+                    &ltdiv id="collapse4" class="panel-collapse collapse">
+                      &ltdiv class="panel-body">Panel Body&lt/div>
+                      &ltdiv class="panel-footer">Panel Footer&lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Collapsible List Group&lt/h2>
+                &ltdiv class="panel-group">
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">
+                      &lth4 class="panel-title">
+                        &lta data-toggle="collapse" href="#collapse5">Collapsible list group&lt/a>
+                      &lt/h4>
+                    &lt/div>
+                    &ltdiv id="collapse5" class="panel-collapse collapse">
+                      &ltul class="list-group">
+                        &ltli class="list-group-item">One&lt/li>
+                        &ltli class="list-group-item">Two&lt/li>
+                        &ltli class="list-group-item">Three&lt/li>
+                      &lt/ul>
+                      &ltdiv class="panel-footer">Footer&lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-11">
+                &lth2>Accordion Example&lt/h2>
+                &ltp>&ltstrong>Note:&lt/strong> The &ltstrong>data-parent&lt/strong> attribute 
+                    makes sure that all collapsible elements under the specified 
+                    parent will be closed when one of the collapsible item is shown.&lt/p>
+                &ltdiv class="panel-group" id="accordion">
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">
+                      &lth4 class="panel-title">
+                        &lta data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapse6">Collapsible Group 1&lt/a>
+                      &lt/h4>
+                    &lt/div>
+                    &ltdiv id="collapse6" class="panel-collapse collapse in">
+                      &ltdiv class="panel-body">Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat.&lt/div>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">
+                      &lth4 class="panel-title">
+                        &lta data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapse7">Collapsible Group 2&lt/a>
+                      &lt/h4>
+                    &lt/div>
+                    &ltdiv id="collapse7" class="panel-collapse collapse">
+                      &ltdiv class="panel-body">Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat.&lt/div>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="panel panel-default">
+                    &ltdiv class="panel-heading">
+                      &lth4 class="panel-title">
+                        &lta data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapse8">Collapsible Group 3&lt/a>
+                      &lt/h4>
+                    &lt/div>
+                    &ltdiv id="collapse8" class="panel-collapse collapse">
+                      &ltdiv class="panel-body">Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat.&lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div> 
+            &lt/div>            
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->   
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>

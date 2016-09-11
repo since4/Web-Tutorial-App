@@ -40,6 +40,7 @@
 
         <div class="jumbotron text-center">
             <h1>What Can Bootstrap Do?</h1>
+            <h2>Bootstrap Tabs and Pills & Navigation Bar (Navbar)</h2>
             <p>Dropdown works with online libraries, but not with downloaded versions</p>
             <p style="text-align:justify">
                 <strong>Note:</strong> 
@@ -478,11 +479,446 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
 <code class="language-html">
 <div class="container">
-<div class="col-sm-12">
-<!--Code verbose-->  
+<div class="col-sm-11">
+&lt!--Code verbose-->  
+&lt!--Body content--> 
 
+&ltdiv class="jumbotron text-center">
+    &lth1>What Can Bootstrap Do?&lt/h1>
+    &lth2>Bootstrap Tabs and Pills (Navigation)&lt/h2>
+    &ltp>Dropdown works with online libraries, but not with downloaded versions&lt/p>
+    &ltp style="text-align:justify">
+        &ltstrong>Note:&lt/strong> 
+        This example shows how to create a 
+        basic navigation tab. It is not toggleable / dynamic yet 
+        (you can't click on the links to display different content)- 
+        see the last example in the Bootstrap Tabs and Pills 
+        Tutorial to find out how this can be done.&lt/p>
+    &ltp>Resize this responsive page to see the effect!&lt/p> 
+&lt/div>
 
-<!--Code verbose-->        
+&ltdiv class="container">
+    &ltdiv class="row">
+        &ltdiv class="col-sm-4">
+            &lth3>Inline List&lt/h3>
+            &ltul class="list-inline">
+                &ltli>&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>
+        &ltdiv class="col-sm-3">
+            &lth3>Tabs&lt/h3>
+            &ltul class="nav nav-tabs">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+            &ltbr>                
+        &lt/div>
+        &ltdiv class="col-sm-4">
+            &lth3>Tabs With Dropdown Menu&lt/h3>
+            &ltul class="nav nav-tabs">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli class="dropdown">
+                    &lta class="dropdown-toggle" data-toggle="dropdown" 
+                       href="#">Menu 1 &ltspan class="caret">&lt/span>&lt/a>
+                    &ltul class="dropdown-menu">
+                        &ltli>&lta href="#">Submenu 1-1&lt/a>&lt/li>
+                        &ltli>&lta href="#">Submenu 1-2&lt/a>&lt/li>
+                        &ltli>&lta href="#">Submenu 1-3&lt/a>&lt/li>                        
+                    &lt/ul>
+                &lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>            
+    &lt/div>
+    &ltdiv class="row">            
+        &ltdiv class="col-sm-5">
+            &lth3>Pills&lt/h3>
+            &ltul class="nav nav-pills">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>      
+        &ltdiv class="col-sm-6">
+            &lth3>Vertical Pills&lt/h3>
+            &ltul class="nav nav-pills nav-stacked">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>
+    &lt/div>
+    &ltdiv class="row">            
+        &lth3>Vertical Pills&lt/h3>
+        &ltdiv class="row">
+            &ltdiv class="col-md-2">
+                &ltp>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt/p>
+            &lt/div>
+            &ltdiv class="col-md-2"> 
+                &ltp>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat.&lt/p>
+            &lt/div>
+            &ltdiv class="col-md-2"> 
+                &ltp>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                    accusantium doloremque laudantium, totam rem aperiam.&lt/p>
+            &lt/div>
+            &ltdiv class="col-md-5">
+                &ltul class="nav nav-pills nav-stacked">
+                    &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                    &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                    &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                    &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+            &ltdiv class="clearfix visible-lg">&lt/div>
+        &lt/div>           
+    &lt/div>
+    &ltdiv class="row">
+        &ltdiv class="col-sm-5">
+            &lth3>Pills With Dropdown Menu&lt/h3>
+            &ltul class="nav nav-pills nav-stacked">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli class="dropdown">
+                    &lta class="dropdown-toggle" data-toggle="dropdown" 
+                       href="#">Menu 1 &ltspan class="caret">&lt/span>&lt/a>
+                    &ltul class="dropdown-menu">
+                        &ltli>&lta href="#">Submenu 1-1&lt/a>&lt/li>
+                        &ltli>&lta href="#">Submenu 1-2&lt/a>&lt/li>
+                        &ltli>&lta href="#">Submenu 1-3&lt/a>&lt/li>                        
+                    &lt/ul>
+                &lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>
+        &ltdiv class="col-sm-6">
+            &lth3>Centered Tabs&lt/h3>
+            &ltul class="nav nav-tabs nav-justified">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+            &ltbr>
+            &lth3>Centered Pills&lt/h3>
+            &ltul class="nav nav-pills nav-justified">
+                &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 1&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 2&lt/a>&lt/li>
+                &ltli>&lta href="#">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+        &lt/div>            
+    &lt/div>
+    &ltdiv class="row">            
+        &ltdiv class="col-sm-5">
+            &lth2>Dynamic Tabs&lt/h2>
+            &ltul class="nav nav-tabs">
+                &ltli class="active">&lta data-toggle="tab" href="#home_1">Home&lt/a>&lt/li>
+                &ltli>&lta data-toggle="tab" href="#menu_a1">Menu 1&lt/a>&lt/li>
+                &ltli>&lta data-toggle="tab" href="#menu_b1">Menu 2&lt/a>&lt/li>
+                &ltli>&lta data-toggle="tab" href="#menu_c1">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+
+            &ltdiv class="tab-content">
+                &ltdiv id="home_1" class="tab-pane fade in active">
+                    &lth3>HOME&lt/h3>
+                    &ltp>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_a1" class="tab-pane fade">
+                    &lth3>Menu 1&lt/h3>
+                    &ltp>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                        laboris nisi ut aliquip ex ea commodo consequat.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_b1" class="tab-pane fade">
+                    &lth3>Menu 2&lt/h3>
+                    &ltp>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                        accusantium doloremque laudantium, totam rem aperiam.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_c1" class="tab-pane fade">
+                    &lth3>Menu 3&lt/h3>
+                    &ltp>Eaque ipsa quae ab illo inventore veritatis et quasi 
+                        architecto beatae vitae dicta sunt explicabo.&lt/p>
+                &lt/div>
+            &lt/div>
+        &lt/div>      
+        &ltdiv class="col-sm-6">
+            &lth2>Dynamic Pills&lt/h2>
+            &ltul class="nav nav-pills">
+                &ltli class="active">&lta data-toggle="pill" href="#home_2">Home&lt/a>&lt/li>
+                &ltli>&lta data-toggle="pill" href="#menu_a2">Menu 1&lt/a>&lt/li>
+                &ltli>&lta data-toggle="pill" href="#menu_b2">Menu 2&lt/a>&lt/li>
+                &ltli>&lta data-toggle="pill" href="#menu_c2">Menu 3&lt/a>&lt/li>
+            &lt/ul>
+
+            &ltdiv class="tab-content">
+                &ltdiv id="home_2" class="tab-pane fade in active">
+                    &lth3>HOME&lt/h3>
+                    &ltp>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_a2" class="tab-pane fade">
+                    &lth3>Menu 1&lt/h3>
+                    &ltp>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                        laboris nisi ut aliquip ex ea commodo consequat.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_b2" class="tab-pane fade">
+                    &lth3>Menu 2&lt/h3>
+                    &ltp>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                        accusantium doloremque laudantium, totam rem aperiam.&lt/p>
+                &lt/div>
+                &ltdiv id="menu_c2" class="tab-pane fade">
+                    &lth3>Menu 3&lt/h3>
+                    &ltp>Eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+                        beatae vitae dicta sunt explicabo.&lt/p>
+                &lt/div>
+            &lt/div>
+        &lt/div>
+    &lt/div>
+    &ltdiv class="row">
+        &ltdiv class="col-sm-5">
+            &ltnav class="navbar navbar-default">
+                &ltdiv class="container-fluid">
+                    &ltdiv class="navbar-header">
+                        &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                    &lt/div>
+                    &ltul class="nav navbar-nav">
+                        &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 1&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 3&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/nav>
+
+            &ltdiv>
+                &lth3>Basic Navbar Example&lt/h3>
+                &ltp>A navigation bar is a navigation header that is 
+                    placed at the top of the page.&lt/p>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="col-sm-6">
+            &ltnav class="navbar navbar-inverse">
+                &ltdiv class="container-fluid">
+                    &ltdiv class="navbar-header">
+                        &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                    &lt/div>
+                    &ltul class="nav navbar-nav">
+                        &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 1&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 3&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/nav>
+            &ltdiv class="container">
+                &lth3>Inverted Navbar&lt/h3>
+                &ltp>An inverted navbar is black instead of gray.&lt/p>
+            &lt/div>
+        &lt/div>          
+    &lt/div>
+    &ltdiv class="row">                       
+        &ltnav class="navbar navbar-inverse navbar-fixed-bottom">
+            &ltdiv class="container-fluid">
+                &ltdiv class="navbar-header">
+                    &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                &lt/div>
+                &ltul class="nav navbar-nav">
+                    &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                    &ltli>&lta href="#">Page 1&lt/a>&lt/li>
+                    &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                    &ltli>&lta href="#">Page 3&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+        &lt/nav>
+
+        &ltdiv class="container">
+            &lth3>Fixed Bottom Navbar&lt/h3>
+            &ltdiv class="row">
+                &ltdiv class="col-md-2">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="clearfix visible-lg">&lt/div>
+            &lt/div>
+        &lt/div>
+
+        &ltdiv class="container">
+            &ltdiv class="row">
+                &ltdiv class="col-md-2">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="clearfix visible-lg">&lt/div>
+            &lt/div>
+        &lt/div>
+
+        &ltdiv class="container">
+            &ltdiv class="row">
+                &ltdiv class="col-md-2">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="clearfix visible-lg">&lt/div>
+            &lt/div>
+        &lt/div>
+
+        &ltdiv class="container">
+            &ltdiv class="row">
+                &ltdiv class="col-md-2">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3"> 
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="col-md-3">
+                    &ltp>The .navbar-fixed-bottom class makes the navigation bar stay at the bottom.&lt/p>
+                &lt/div>
+                &ltdiv class="clearfix visible-lg">&lt/div>
+            &lt/div>
+        &lt/div>           
+    &lt/div>
+    &ltdiv class="row">   
+        &ltdiv class="col-sm-11">
+            &ltnav class="navbar navbar-inverse">
+                &ltdiv class="container-fluid">
+                    &ltdiv class="navbar-header">
+                        &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                    &lt/div>
+                    &ltul class="nav navbar-nav">
+                        &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                        &ltli class="dropdown">&lta class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 &ltspan class="caret">&lt/span>&lt/a>
+                            &ltul class="dropdown-menu">
+                                &ltli>&lta href="#">Page 1-1&lt/a>&lt/li>
+                                &ltli>&lta href="#">Page 1-2&lt/a>&lt/li>
+                                &ltli>&lta href="#">Page 1-3&lt/a>&lt/li>
+                            &lt/ul>
+                        &lt/li>
+                        &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                        &ltli>&lta href="#">Page 3&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/nav>
+
+            &ltdiv class="container">
+                &lth3>Navbar With Dropdown&lt/h3>
+                &ltp>This example adds a dropdown menu for the "Page 1" 
+                    button in the navigation bar.&lt/p>
+            &lt/div>
+        &lt/div>
+    &lt/div>
+    &ltdiv class="row">            
+        &ltdiv class="col-sm-5">
+            &ltnav class="navbar navbar-inverse">
+                &ltdiv class="container-fluid">
+                    &ltdiv class="navbar-header">
+                        &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                    &lt/div>
+                    &ltul class="nav navbar-nav">
+                        &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                        &ltli class="dropdown">&lta class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 &ltspan class="caret">&lt/span>&lt/a>
+                            &ltul class="dropdown-menu">
+                                &ltli>&lta href="#">Page 1-1&lt/a>&lt/li>
+                                &ltli>&lta href="#">Page 1-2&lt/a>&lt/li>
+                                &ltli>&lta href="#">Page 1-3&lt/a>&lt/li>
+                            &lt/ul>
+                        &lt/li>
+                        &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                    &lt/ul>
+                    &ltul class="nav navbar-nav navbar-right">
+                        &ltli>&lta href="#">&ltspan class="glyphicon glyphicon-user">&lt/span> Sign Up&lt/a>&lt/li>
+                        &ltli>&lta href="#">&ltspan class="glyphicon glyphicon-log-in">&lt/span> Login&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/nav>
+
+            &ltdiv>
+                &lth3>Right Aligned Navbar&lt/h3>
+                &ltp>The .navbar-right class is used to right-align navigation bar buttons.&lt/p>
+            &lt/div>
+        &lt/div>      
+        &ltdiv class="col-sm-6">
+            &ltnav class="navbar navbar-inverse">
+                &ltdiv class="container-fluid">
+                    &ltdiv class="navbar-header">
+                        &ltbutton type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            &ltspan class="icon-bar">&lt/span>
+                            &ltspan class="icon-bar">&lt/span>
+                            &ltspan class="icon-bar">&lt/span>                        
+                        &lt/button>
+                        &lta class="navbar-brand" href="#">WebSiteName&lt/a>
+                    &lt/div>
+                    &ltdiv class="collapse navbar-collapse" id="myNavbar">
+                        &ltul class="nav navbar-nav">
+                            &ltli class="active">&lta href="#">Home&lt/a>&lt/li>
+                            &ltli class="dropdown">
+                                &lta class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 &ltspan class="caret">&lt/span>&lt/a>
+                                &ltul class="dropdown-menu">
+                                    &ltli>&lta href="#">Page 1-1&lt/a>&lt/li>
+                                    &ltli>&lta href="#">Page 1-2&lt/a>&lt/li>
+                                    &ltli>&lta href="#">Page 1-3&lt/a>&lt/li>
+                                &lt/ul>
+                            &lt/li>
+                            &ltli>&lta href="#">Page 2&lt/a>&lt/li>
+                            &ltli>&lta href="#">Page 3&lt/a>&lt/li>
+                        &lt/ul>
+                        &ltul class="nav navbar-nav navbar-right">
+                            &ltli>&lta href="#">&ltspan class="glyphicon glyphicon-user">&lt/span> Sign Up&lt/a>&lt/li>
+                            &ltli>&lta href="#">&ltspan class="glyphicon glyphicon-log-in">&lt/span> Login&lt/a>&lt/li>
+                        &lt/ul>
+                    &lt/div>
+                &lt/div>
+            &lt/nav>
+
+            &ltdiv>
+                &lth3>Collapsible Navbar&lt/h3>
+                &ltp>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+                &ltp>Only when the button is clicked, the navigation bar will be displayed.&lt/p>
+            &lt/div>
+
+        &lt/div>
+    &lt/div>
+&lt/div>
+
+&lt!--Body content-->
+
+&lt!--Code verbose-->        
 </div>
 </div>        
 </code>

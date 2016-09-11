@@ -41,28 +41,334 @@
     
     <div class="jumbotron text-center">
         <h1>What Can Bootstrap Do?</h1>
+        <h2>Bootstrap Forms & Form Inputs</h2>
         <p>Resize this responsive page to see the effect!</p> 
     </div>
 
     <div class="container">
         <div class="row">            
             <div class="col-sm-5">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Vertical (basic) form</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>      
             <div class="col-sm-6">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Inline form</h2>
+                <p>Make the viewport larger than 768px wide to see that all 
+                    of the form elements are inline, left aligned, and the labels 
+                    are alongside.</p>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
         </div>
         <div class="row">
+            <div class="col-sm-5">
+                <h2>Inline form with .sr-only class</h2>
+                <p>Make the viewport larger than 768px wide to see that all 
+                    of the form elements are inline, left aligned, and the labels 
+                    are alongside.</p>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label class="sr-only" for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>           
+            <div class="col-sm-6">
+                <h2>Horizontal form</h2>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" 
+                             placeholder="Enter email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                      <input type="password" class="form-control" id="pwd" 
+                             placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+        </div>
+        <div class="row">
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                 <h2>Form control: input</h2>
+                <p>The form below contains two input elements; one of type text 
+                    and one of type password:</p>
+                <form>
+                  <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="usr">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                  </div>
+                </form>
             </div>
             <div class="col-sm-3">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Form control: textarea</h2>
+                <p>The form below contains a textarea for comments:</p>
+                <form>
+                  <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                </form>
             </div>
             <div class="col-sm-4">
-                <p>Resize this responsive page to see the effect!</p>
+                <h2>Form control: checkbox</h2>
+                <p>The form below contains three checkboxes. The last option is 
+                    disabled:</p>
+                <form>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 1</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 2</label>
+                  </div>
+                  <div class="checkbox disabled">
+                    <label><input type="checkbox" value="" disabled>Option 3</label>
+                  </div>
+                </form>
             </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Form control: inline checkbox</h2>
+                <p>The form below contains three inline checkboxes:</p>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 1
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 2
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 3
+                  </label>
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h2>Form control: radio buttons</h2>
+                <p>The form below contains three radio buttons. The last option is 
+                    disabled:</p>
+                <form>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Option 1</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Option 2</label>
+                  </div>
+                  <div class="radio disabled">
+                    <label><input type="radio" name="optradio" disabled>Option 3</label>
+                  </div>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <h2>Form control: inline radio buttons</h2>
+                <p>The form below contains three inline radio buttons:</p>
+                <form>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 1
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 2
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 3
+                  </label>
+                </form>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Form control: select</h2>
+                <p>The form below contains two dropdown menus (select lists):</p>
+                <form>
+                  <div class="form-group">
+                    <label for="sel1">Select list (select one):</label>
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                    <br>
+                    <label for="sel2">Mutiple select list (hold shift to select 
+                        more than one):</label>
+                    <select multiple class="form-control" id="sel2">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h2>Horizontal form with static control</h2>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static">someone@example.com</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                      <input type="password" class="form-control" id="pwd" 
+                             placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </form>
+            </div>      
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Bootstrap Form Control States</h2>
+                <ul>
+                    <li><strong>INPUT FOCUS</strong> - The outline of the input 
+                        is removed and a box-shadow is applied on focus</li>
+                    <li><strong>DISABLED INPUTS</strong> - Add a <code class="w3-codespan">
+                            disabled</code> attribute to disable an input field</li>
+                    <li><strong>DISABLED FIELDSETS</strong> - Add a <code class="w3-codespan">
+                            disabled</code> attribute to a fieldset to disable all controls within</li>
+                    <li><strong>READONLY INPUTS</strong> - Add a <code class="w3-codespan">
+                            readonly</code> attribute to an input to prevent user input</li>
+                    <li><strong>VALIDATION STATES</strong> - Bootstrap includes 
+                        validation styles for error, warning, and
+                    success messages. To use, add <code class="w3-codespan">
+                        .has-warning</code>, <code class="w3-codespan">.has-error
+                        </code>, or <code class="w3-codespan">.has-success</code> 
+                        to the parent element</li>
+                    <li><strong>ICONS</strong> - You can add feedback icons 
+                        with the <code class="w3-codespan">.has-feedback</code> class and an icon</li>
+                    <li><strong>HIDDEN LABELS</strong> - Add a <code class="w3-codespan">
+                            .sr-only</code> class on non-visible labels</li>
+                </ul>
+            </div>
+            <div class="col-sm-7">
+                <h2>Horizontal form: control states</h2>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Focused</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="focusedInput" type="text" 
+                             value="Click to focus...">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-sm-4 control-label">Disabled</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="disabledInput" type="text" 
+                             placeholder="Disabled input here..." disabled>
+                    </div>
+                  </div>
+                  <fieldset disabled>
+                    <div class="form-group">
+                      <label for="disabledTextInput" class="col-sm-4 control-label">Disabled input and select list (Fieldset disabled)</label>
+                      <div class="col-sm-8">
+                        <input type="text" id="disabledTextInput" class="form-control" 
+                               placeholder="Disabled input">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect" class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <select id="disabledSelect" class="form-control">
+                          <option>Disabled select</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group has-success has-feedback">
+                    <label class="col-sm-4 control-label" for="inputSuccess">
+                        Input with success and glyphicon</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputSuccess">
+                      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                  </div>
+                  <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-4 control-label" for="inputWarning">
+                        Input with warning and glyphicon</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputWarning">
+                      <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                  </div>
+                  <div class="form-group has-error has-feedback">
+                    <label class="col-sm-4 control-label" for="inputError">
+                        Input with error and glyphicon</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputError">
+                      <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                  </div>
+                </form>
+            </div>                  
         </div>
     </div>
     
@@ -74,11 +380,346 @@
     <pre class="code_" style="padding-left:5px;padding-right:5px;width:96%;">
     <code class="language-html">
     <div class="container">
-    <div class="col-sm-12">
-    <!--Code verbose-->  
-       
+    <div class="col-sm-11">
+    &lt!--Code verbose-->  
+    &lt!--Body content--> 
     
-    <!--Code verbose-->        
+    &ltdiv class="jumbotron text-center">
+        &lth1>What Can Bootstrap Do?&lt/h1>
+        &lth2>Bootstrap Forms&lt/h2>
+        &ltp>Resize this responsive page to see the effect!&lt/p> 
+    &lt/div>
+
+    &ltdiv class="container">
+        &ltdiv class="row">            
+            &ltdiv class="col-sm-5">
+                &lth2>Vertical (basic) form&lt/h2>
+                &ltform>
+                  &ltdiv class="form-group">
+                    &ltlabel for="email">Email:&lt/label>
+                    &ltinput type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel for="pwd">Password:&lt/label>
+                    &ltinput type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  &lt/div>
+                  &ltdiv class="checkbox">
+                    &ltlabel>&ltinput type="checkbox"> Remember me&lt/label>
+                  &lt/div>
+                  &ltbutton type="submit" class="btn btn-default">Submit&lt/button>
+                &lt/form>
+            &lt/div>      
+            &ltdiv class="col-sm-6">
+                &lth2>Inline form&lt/h2>
+                &ltp>Make the viewport larger than 768px wide to see that all 
+                    of the form elements are inline, left aligned, and the labels 
+                    are alongside.&lt/p>
+                &ltform class="form-inline">
+                  &ltdiv class="form-group">
+                    &ltlabel for="email">Email:&lt/label>
+                    &ltinput type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel for="pwd">Password:&lt/label>
+                    &ltinput type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  &lt/div>
+                  &ltdiv class="checkbox">
+                    &ltlabel>&ltinput type="checkbox"> Remember me&lt/label>
+                  &lt/div>
+                  &ltbutton type="submit" class="btn btn-default">Submit&lt/button>
+                &lt/form>
+            &lt/div>
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Inline form with .sr-only class&lt/h2>
+                &ltp>Make the viewport larger than 768px wide to see that all 
+                    of the form elements are inline, left aligned, and the labels 
+                    are alongside.&lt/p>
+                &ltform class="form-inline">
+                  &ltdiv class="form-group">
+                    &ltlabel class="sr-only" for="email">Email:&lt/label>
+                    &ltinput type="email" class="form-control" id="email" 
+                           placeholder="Enter email">
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel class="sr-only" for="pwd">Password:&lt/label>
+                    &ltinput type="password" class="form-control" id="pwd" 
+                           placeholder="Enter password">
+                  &lt/div>
+                  &ltdiv class="checkbox">
+                    &ltlabel>&ltinput type="checkbox"> Remember me&lt/label>
+                  &lt/div>
+                  &ltbutton type="submit" class="btn btn-default">Submit&lt/button>
+                &lt/form>
+            &lt/div>           
+            &ltdiv class="col-sm-6">
+                &lth2>Horizontal form&lt/h2>
+                &ltform class="form-horizontal">
+                  &ltdiv class="form-group">
+                    &ltlabel class="control-label col-sm-2" for="email">Email:&lt/label>
+                    &ltdiv class="col-sm-10">
+                      &ltinput type="email" class="form-control" id="email" 
+                             placeholder="Enter email">
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel class="control-label col-sm-2" for="pwd">Password:&lt/label>
+                    &ltdiv class="col-sm-10">          
+                      &ltinput type="password" class="form-control" id="pwd" 
+                             placeholder="Enter password">
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">        
+                    &ltdiv class="col-sm-offset-2 col-sm-10">
+                      &ltdiv class="checkbox">
+                        &ltlabel>&ltinput type="checkbox"> Remember me&lt/label>
+                      &lt/div>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">        
+                    &ltdiv class="col-sm-offset-2 col-sm-10">
+                      &ltbutton type="submit" class="btn btn-default">Submit&lt/button>
+                    &lt/div>
+                  &lt/div>
+                &lt/form>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                 &lth2>Form control: input&lt/h2>
+                &ltp>The form below contains two input elements; one of type text 
+                    and one of type password:&lt/p>
+                &ltform>
+                  &ltdiv class="form-group">
+                    &ltlabel for="usr">Name:&lt/label>
+                    &ltinput type="text" class="form-control" id="usr">
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel for="pwd">Password:&lt/label>
+                    &ltinput type="password" class="form-control" id="pwd">
+                  &lt/div>
+                &lt/form>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Form control: textarea&lt/h2>
+                &ltp>The form below contains a textarea for comments:&lt/p>
+                &ltform>
+                  &ltdiv class="form-group">
+                    &ltlabel for="comment">Comment:&lt/label>
+                    &lttextarea class="form-control" rows="5" id="comment">&lt/textarea>
+                  &lt/div>
+                &lt/form>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Form control: checkbox&lt/h2>
+                &ltp>The form below contains three checkboxes. The last option is 
+                    disabled:&lt/p>
+                &ltform>
+                  &ltdiv class="checkbox">
+                    &ltlabel>&ltinput type="checkbox" value="">Option 1&lt/label>
+                  &lt/div>
+                  &ltdiv class="checkbox">
+                    &ltlabel>&ltinput type="checkbox" value="">Option 2&lt/label>
+                  &lt/div>
+                  &ltdiv class="checkbox disabled">
+                    &ltlabel>&ltinput type="checkbox" value="" disabled>Option 3&lt/label>
+                  &lt/div>
+                &lt/form>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>Form control: inline checkbox&lt/h2>
+                &ltp>The form below contains three inline checkboxes:&lt/p>
+                &ltform>
+                  &ltlabel class="checkbox-inline">
+                    &ltinput type="checkbox" value="">Option 1
+                  &lt/label>
+                  &ltlabel class="checkbox-inline">
+                    &ltinput type="checkbox" value="">Option 2
+                  &lt/label>
+                  &ltlabel class="checkbox-inline">
+                    &ltinput type="checkbox" value="">Option 3
+                  &lt/label>
+                &lt/form>
+            &lt/div>
+            &ltdiv class="col-sm-3">
+                &lth2>Form control: radio buttons&lt/h2>
+                &ltp>The form below contains three radio buttons. The last option is 
+                    disabled:&lt/p>
+                &ltform>
+                  &ltdiv class="radio">
+                    &ltlabel>&ltinput type="radio" name="optradio">Option 1&lt/label>
+                  &lt/div>
+                  &ltdiv class="radio">
+                    &ltlabel>&ltinput type="radio" name="optradio">Option 2&lt/label>
+                  &lt/div>
+                  &ltdiv class="radio disabled">
+                    &ltlabel>&ltinput type="radio" name="optradio" disabled>Option 3&lt/label>
+                  &lt/div>
+                &lt/form>
+            &lt/div>
+            &ltdiv class="col-sm-4">
+                &lth2>Form control: inline radio buttons&lt/h2>
+                &ltp>The form below contains three inline radio buttons:&lt/p>
+                &ltform>
+                  &ltlabel class="radio-inline">
+                    &ltinput type="radio" name="optradio">Option 1
+                  &lt/label>
+                  &ltlabel class="radio-inline">
+                    &ltinput type="radio" name="optradio">Option 2
+                  &lt/label>
+                  &ltlabel class="radio-inline">
+                    &ltinput type="radio" name="optradio">Option 3
+                  &lt/label>
+                &lt/form>
+            &lt/div>            
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-5">
+                &lth2>Form control: select&lt/h2>
+                &ltp>The form below contains two dropdown menus (select lists):&lt/p>
+                &ltform>
+                  &ltdiv class="form-group">
+                    &ltlabel for="sel1">Select list (select one):&lt/label>
+                    &ltselect class="form-control" id="sel1">
+                      &ltoption>1&lt/option>
+                      &ltoption>2&lt/option>
+                      &ltoption>3&lt/option>
+                      &ltoption>4&lt/option>
+                    &lt/select>
+                    &ltbr>
+                    &ltlabel for="sel2">Mutiple select list (hold shift to select 
+                        more than one):&lt/label>
+                    &ltselect multiple class="form-control" id="sel2">
+                      &ltoption>1&lt/option>
+                      &ltoption>2&lt/option>
+                      &ltoption>3&lt/option>
+                      &ltoption>4&lt/option>
+                      &ltoption>5&lt/option>
+                    &lt/select>
+                  &lt/div>
+                &lt/form>
+            &lt/div>
+            &ltdiv class="col-sm-6">
+                &lth2>Horizontal form with static control&lt/h2>
+                &ltform class="form-horizontal">
+                  &ltdiv class="form-group">
+                    &ltlabel class="control-label col-sm-2" for="email">Email:&lt/label>
+                    &ltdiv class="col-sm-10">
+                      &ltp class="form-control-static">someone@example.com&lt/p>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel class="control-label col-sm-2" for="pwd">Password:&lt/label>
+                    &ltdiv class="col-sm-10">          
+                      &ltinput type="password" class="form-control" id="pwd" 
+                             placeholder="Enter password">
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">        
+                    &ltdiv class="col-sm-offset-2 col-sm-10">
+                      &ltbutton type="submit" class="btn btn-default">Submit&lt/button>
+                    &lt/div>
+                  &lt/div>
+                &lt/form>
+            &lt/div>      
+        &lt/div>
+        &ltdiv class="row">
+            &ltdiv class="col-sm-4">
+                &lth2>Bootstrap Form Control States&lt/h2>
+                &ltul>
+                    &ltli>&ltstrong>INPUT FOCUS&lt/strong> - The outline of the input 
+                        is removed and a box-shadow is applied on focus&lt/li>
+                    &ltli>&ltstrong>DISABLED INPUTS&lt/strong> - Add a &ltcode class="w3-codespan">
+                            disabled&lt/code> attribute to disable an input field&lt/li>
+                    &ltli>&ltstrong>DISABLED FIELDSETS&lt/strong> - Add a &ltcode class="w3-codespan">
+                            disabled&lt/code> attribute to a fieldset to disable all controls within&lt/li>
+                    &ltli>&ltstrong>READONLY INPUTS&lt/strong> - Add a &ltcode class="w3-codespan">
+                            readonly&lt/code> attribute to an input to prevent user input&lt/li>
+                    &ltli>&ltstrong>VALIDATION STATES&lt/strong> - Bootstrap includes 
+                        validation styles for error, warning, and
+                    success messages. To use, add &ltcode class="w3-codespan">
+                        .has-warning&lt/code>, &ltcode class="w3-codespan">.has-error
+                        &lt/code>, or &ltcode class="w3-codespan">.has-success&lt/code> 
+                        to the parent element&lt/li>
+                    &ltli>&ltstrong>ICONS&lt/strong> - You can add feedback icons 
+                        with the &ltcode class="w3-codespan">.has-feedback&lt/code> class and an icon&lt/li>
+                    &ltli>&ltstrong>HIDDEN LABELS&lt/strong> - Add a &ltcode class="w3-codespan">
+                            .sr-only&lt/code> class on non-visible labels&lt/li>
+                &lt/ul>
+            &lt/div>
+            &ltdiv class="col-sm-7">
+                &lth2>Horizontal form: control states&lt/h2>
+                &ltform class="form-horizontal">
+                  &ltdiv class="form-group">
+                    &ltlabel class="col-sm-4 control-label">Focused&lt/label>
+                    &ltdiv class="col-sm-8">
+                      &ltinput class="form-control" id="focusedInput" type="text" 
+                             value="Click to focus...">
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group">
+                    &ltlabel for="inputPassword" class="col-sm-4 control-label">Disabled&lt/label>
+                    &ltdiv class="col-sm-8">
+                      &ltinput class="form-control" id="disabledInput" type="text" 
+                             placeholder="Disabled input here..." disabled>
+                    &lt/div>
+                  &lt/div>
+                  &ltfieldset disabled>
+                    &ltdiv class="form-group">
+                      &ltlabel for="disabledTextInput" class="col-sm-4 control-label">Disabled input and select list (Fieldset disabled)&lt/label>
+                      &ltdiv class="col-sm-8">
+                        &ltinput type="text" id="disabledTextInput" class="form-control" 
+                               placeholder="Disabled input">
+                      &lt/div>
+                    &lt/div>
+                    &ltdiv class="form-group">
+                      &ltlabel for="disabledSelect" class="col-sm-4 control-label">&lt/label>
+                      &ltdiv class="col-sm-8">
+                        &ltselect id="disabledSelect" class="form-control">
+                          &ltoption>Disabled select&lt/option>
+                        &lt/select>
+                      &lt/div>
+                    &lt/div>
+                  &lt/fieldset>
+                  &ltdiv class="form-group has-success has-feedback">
+                    &ltlabel class="col-sm-4 control-label" for="inputSuccess">
+                        Input with success and glyphicon&lt/label>
+                    &ltdiv class="col-sm-8">
+                      &ltinput type="text" class="form-control" id="inputSuccess">
+                      &ltspan class="glyphicon glyphicon-ok form-control-feedback">&lt/span>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group has-warning has-feedback">
+                    &ltlabel class="col-sm-4 control-label" for="inputWarning">
+                        Input with warning and glyphicon&lt/label>
+                    &ltdiv class="col-sm-8">
+                      &ltinput type="text" class="form-control" id="inputWarning">
+                      &ltspan class="glyphicon glyphicon-warning-sign form-control-feedback">&lt/span>
+                    &lt/div>
+                  &lt/div>
+                  &ltdiv class="form-group has-error has-feedback">
+                    &ltlabel class="col-sm-4 control-label" for="inputError">
+                        Input with error and glyphicon&lt/label>
+                    &ltdiv class="col-sm-8">
+                      &ltinput type="text" class="form-control" id="inputError">
+                      &ltspan class="glyphicon glyphicon-remove form-control-feedback">&lt/span>
+                    &lt/div>
+                  &lt/div>
+                &lt/form>
+            &lt/div>                  
+        &lt/div>
+    &lt/div>
+    
+    &lt!--Body content-->   
+    
+    &lt!--Code verbose-->        
     </div>
     </div>        
     </code>
