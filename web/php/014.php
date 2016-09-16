@@ -66,7 +66,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #create table
-                echo "1: <a href=http://" 
+                echo "2: <a href=http://" 
                 . $host_port
                 . "php/mysql_create_tb.php>"
                 . "mysql_create_tb.php</a>"
@@ -75,7 +75,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Insert Data Into MySQL
-                echo "1: <a href=http://" 
+                echo "3: <a href=http://" 
                 . $host_port
                 . "php/mysql_insert_record.php>"
                 . "mysql_insert_record.php</a>"
@@ -84,7 +84,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Insert Multiple Records Into MySQL
-                echo "1: <a href=http://" 
+                echo "4: <a href=http://" 
                 . $host_port
                 . "php/mysql_insert_multi_records.php>"
                 . "mysql_insert_multi_records.php</a>"
@@ -139,7 +139,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Prepared Statements              
-                echo "1: <a href=http://" 
+                echo "5: <a href=http://" 
                 . $host_port
                 . "php/mysql_prepared_statements.php>"
                 . "mysql_prepared_statements.php</a>"
@@ -148,7 +148,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Select Data From MySQL
-                echo "1: <a href=http://" 
+                echo "6: <a href=http://" 
                 . $host_port
                 . "php/mysql_select.php>"
                 . "mysql_select.php</a>"
@@ -157,7 +157,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Delete Data From MySQL
-                echo "1: <a href=http://" 
+                echo "7: <a href=http://" 
                 . $host_port
                 . "php/mysql_delete_record.php>"
                 . "mysql_delete_record.php</a>"
@@ -166,7 +166,7 @@ and open the template in the editor.
                 <!--new example-->
                 <?php
                 #Update Data in MySQL
-                echo "1: <a href=http://" 
+                echo "8: <a href=http://" 
                 . $host_port
                 . "php/mysql_update_record.php>"
                 . "mysql_update_record.php</a>"
@@ -214,7 +214,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #create table
-        echo "1: &lta href=http://" 
+        echo "2: &lta href=http://" 
         . $host_port
         . "php/mysql_create_tb.php>"
         . "mysql_create_tb.php&lt/a>"
@@ -223,7 +223,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Insert Data Into MySQL
-        echo "1: &lta href=http://" 
+        echo "3: &lta href=http://" 
         . $host_port
         . "php/mysql_insert_record.php>"
         . "mysql_insert_record.php&lt/a>"
@@ -232,7 +232,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Insert Multiple Records Into MySQL
-        echo "1: &lta href=http://" 
+        echo "4: &lta href=http://" 
         . $host_port
         . "php/mysql_insert_multi_records.php>"
         . "mysql_insert_multi_records.php&lt/a>"
@@ -287,7 +287,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Prepared Statements              
-        echo "1: &lta href=http://" 
+        echo "5: &lta href=http://" 
         . $host_port
         . "php/mysql_prepared_statements.php>"
         . "mysql_prepared_statements.php&lt/a>"
@@ -296,7 +296,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Select Data From MySQL
-        echo "1: &lta href=http://" 
+        echo "6: &lta href=http://" 
         . $host_port
         . "php/mysql_select.php>"
         . "mysql_select.php&lt/a>"
@@ -305,7 +305,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Delete Data From MySQL
-        echo "1: &lta href=http://" 
+        echo "7: &lta href=http://" 
         . $host_port
         . "php/mysql_delete_record.php>"
         . "mysql_delete_record.php&lt/a>"
@@ -314,7 +314,7 @@ and open the template in the editor.
         &lt!--new example-->
         &lt?php
         #Update Data in MySQL
-        echo "1: &lta href=http://" 
+        echo "8: &lta href=http://" 
         . $host_port
         . "php/mysql_update_record.php>"
         . "mysql_update_record.php&lt/a>"

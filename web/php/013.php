@@ -68,7 +68,7 @@ and open the template in the editor.
                 <?php
                 if(!file_exists("welcome.txt")) {
                   //die("File not found");
-                    ("File not found");
+                    echo "File not found";
                 } else {
                   $file=fopen("welcome.txt","r");
                 }
@@ -220,8 +220,9 @@ and open the template in the editor.
                 }
 
                 set_exception_handler('myException');
-
-                throw new Exception('Uncaught Exception occurred');
+                
+                #uncomment line, will stop page execution
+                //throw new Exception('Uncaught Exception occurred');
                 ?> 
                 <!--new example-->
             </div>
@@ -262,7 +263,7 @@ and open the template in the editor.
         &lt?php
         if(!file_exists("welcome.txt")) {
           //die("File not found");
-            ("File not found");
+          echo "File not found";
         } else {
           $file=fopen("welcome.txt","r");
         }
@@ -414,8 +415,9 @@ and open the template in the editor.
         }
 
         set_exception_handler('myException');
-
-        throw new Exception('Uncaught Exception occurred');
+        
+        #to uncomment would stop the page execution
+        //throw new Exception('Uncaught Exception occurred');
         ?> 
 
         </code>

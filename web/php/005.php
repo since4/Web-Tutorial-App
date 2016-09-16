@@ -104,18 +104,31 @@ and open the template in the editor.
                 <?php
                 $cars = array("Volvo", "BMW", "Toyota");
                 sort($cars);
+                var_dump($cars);
+                echo "<br>";
+                $clength = count($cars);
+                for($x = 0; $x < $clength; $x++) {
+                    echo $cars[$x];
+                    echo "<br>";
+                }
                 ?> 
                  <?php
                 $numbers = array(4, 6, 2, 22, 11);
                 rsort($numbers);
+                var_dump($numbers);
+                echo "<br>";
                 ?> 
                 <?php
                 $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
                 asort($age);
+                var_dump($age);
+                echo "<br>";
                 ?> 
                 <?php
                 $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
                 ksort($age);
+                var_dump($age);
+                echo "<br>";
                 ?> 
             </div>
         </div>
@@ -191,18 +204,31 @@ and open the template in the editor.
         &lt?php
         $cars = array("Volvo", "BMW", "Toyota");
         sort($cars);
+        var_dump($cars);
+        echo "&ltbr>";
+        $clength = count($cars);
+        for($x = 0; $x &lt $clength; $x++) {
+            echo $cars[$x];
+            echo "&ltbr>";
+        }
         ?> 
          &lt?php
         $numbers = array(4, 6, 2, 22, 11);
         rsort($numbers);
+        var_dump($numbers);
+        echo "&ltbr>";
         ?> 
         &lt?php
         $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
         asort($age);
+        var_dump($age);
+        echo "&ltbr>";
         ?> 
         &lt?php
         $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
         ksort($age);
+        var_dump($age);
+        echo "&ltbr>";
         ?> 
 
         </code>

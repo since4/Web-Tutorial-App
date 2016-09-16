@@ -51,6 +51,7 @@ and open the template in the editor.
                 <p>When a browser requests a web page from a server, cookies 
                         belonging to the page is added to the request. This way the server 
                 gets the necessary data to "remember" information about users.</p>
+                <p id="cookies"></p>
                 <script>
                     function setCookie(cname,cvalue,exdays) {
                         var d = new Date();
@@ -61,6 +62,7 @@ and open the template in the editor.
                     function getCookie(cname) {
                         var name = cname + "=";
                         var ca = document.cookie.split(';');
+                        document.getElementById("cookies").innerHTML = ca;
                         for(var i=0; i<ca.length; i++) {
                             var c = ca[i];
                             while (c.charAt(0)==' ') {
@@ -109,6 +111,7 @@ and open the template in the editor.
         &ltp>When a browser requests a web page from a server, cookies belonging 
             to the page is added to the request. This way the server 
         gets the necessary data to "remember" information about users.&lt/p>
+        &ltp id="cookies">&lt/p>
         &ltscript>
             function setCookie(cname,cvalue,exdays) {
                 var d = new Date();
@@ -119,6 +122,7 @@ and open the template in the editor.
             function getCookie(cname) {
                 var name = cname + "=";
                 var ca = document.cookie.split(';');
+                document.getElementById("cookies").innerHTML = ca;
                 for(var i=0; i&ltca.length; i++) {
                     var c = ca[i];
                     while (c.charAt(0)==' ') {

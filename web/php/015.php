@@ -504,6 +504,460 @@ and open the template in the editor.
         <code class="language-html">
         &lt!--Body content-->
         
+        &lth2>AJAX&lt/h2>
+        &lt!--new example-->
+        &lth2>What is AJAX?&lt/h2>
+        &ltp>AJAX = Asynchronous JavaScript and XML.&lt/p>
+        &ltp>AJAX is a technique for creating fast and dynamic web pages.&lt/p>
+        &ltp>AJAX allows web pages to be updated asynchronously 
+            by exchanging small amounts of data with the server 
+            behind the scenes. This means that it is possible to 
+            update parts of a web page, without reloading the whole page.
+        &lt/p>
+        &ltp>Classic web pages, (which do not use AJAX) must reload 
+            the entire page if the content should change.
+        &lt/p>
+        &ltp>AJAX is based on internet standards, and uses a combination of:&lt/p>
+        &ltul>
+            &ltli>XMLHttpRequest object (to exchange data asynchronously 
+                with a server)&lt/li>
+            &ltli>JavaScript/DOM (to display/interact with the information)&lt/li>
+            &ltli>CSS (to style the data)&lt/li>
+            &ltli>XML (often used as the format for transferring data)&lt/li>
+        &lt/ul>
+        &ltp>AJAX applications are browser- and platform-independent! 
+            AJAX was made popular in 2005 by Google, with Google Suggest.&lt/p>
+        &lt!--new example-->
+        &lth2>AJAX&lt/h2>
+        &ltbutton type="button" onclick="loadDoc1()">Request data&lt/button>
+        &ltp id="demo1">&lt/p>
+        &ltscript>
+        function loadDoc1() {
+            /*All modern browsers support the XMLHttpRequest object.*/
+            var xhttp = new XMLHttpRequest();
+            /*When using async=true, specify a function to execute 
+             * when the response is ready in the onreadystatechange 
+             * event:*/
+            xhttp.onreadystatechange = function() {
+              if (this.readyState === 4 && this.status === 200) {
+                /*If the response from the server is not XML, 
+                * use the responseText property. 
+                * The responseText property returns the response as a string, 
+                * and you can use it accordingly:*/
+                document.getElementById("demo1").innerHTML = this.responseText;
+              }
+            };
+            /*To send a request to a server, we use the open() and send() 
+             * methods of the XMLHttpRequest object:
+             * Request the file:sometext.txt*/
+            xhttp.open("POST", "../txt/sometext1.txt", true);
+            /*To POST data like an HTML form, add an HTTP header 
+             * with setRequestHeader(). Specify the data you want 
+             * to send in the send() method:*/
+            xhttp.setRequestHeader("Content-type", "../xml/cd_catalog.xml");
+            xhttp.send("fname=Henry&lname=Ford");
+        }
+        &lt/script>
+        &lt!--new example-->
+        &lth2>AJAX&lt/h2>
+        &ltbutton type="button" onclick="loadDoc2()">Request data&lt/button>
+        &ltp>Click the button several times to see if the time changes, or if the file is cached.&lt/p>
+        &ltp id="demo2">&lt/p>
+        &ltscript>
+        function loadDoc2() {
+          /*All modern browsers support the XMLHttpRequest object.*/
+          var xhttp = new XMLHttpRequest();
+          /*When using async=true, specify a function to execute 
+           * when the response is ready in the onreadystatechange event:*/
+          xhttp.onreadystatechange=function() {
+            if (this.readyState === 4 && this.status === 200) {
+              /*If the response from the server is not XML, 
+               * use the responseText property. 
+               * The responseText property returns the response as a string, 
+               * and you can use it accordingly:*/
+              document.getElementById("demo2").innerHTML = this.responseText;
+            }
+          };
+          /*To send a request to a server, we use the open() and send() 
+           * methods of the XMLHttpRequest object:
+           * Request the file:sometext.txt
+           * you may get a cached result. 
+           * To avoid this, add a unique ID to the URL:
+           * If you want to send information with the GET method, 
+           * add the information to the URL:*/
+          xhttp.open("GET", "../txt/sometext1.txt?t=" 
+                  + Math.random() + 
+                  "fname=Henry&lname=Ford", true);
+          xhttp.send();
+        }
+        &lt/script>
+        &lt!--new example-->
+        &ltp>When using async=true, specify a function to execute when 
+            the response is ready in the onreadystatechange event:&lt/p>
+        &ltp>Using async=false is not recommended, but for a few small 
+            requests this can be ok.&lt/p>
+        &ltp>Remember that the JavaScript will NOT continue to execute, 
+            until the server response is ready. If the server is busy 
+            or slow, the application will hang or stop.&lt/p>
+        &ltp>&ltb>Note:&lt/b> When you use async=false, do NOT write an 
+            onreadystatechange function - just put the code after 
+            the send() statement:&lt/p>
+        &lt!--new example-->
+        &ltp>Sending asynchronous requests is a huge improvement for 
+            web developers. Many of the tasks  performed on the server 
+            are very time consuming. Before AJAX, this operation could 
+            cause the application to hang or stop.&lt/p>
+        &ltp>With AJAX, the JavaScript does not have to wait for the 
+            server response, but can instead:&lt/p>
+        &ltul>
+            &ltli>execute other scripts while waiting for server response&lt/li>
+            &ltli>deal with the response when the response ready&lt/li>
+        &lt/ul>
+        &lt!--new example-->
+        &lth2>My CD Collection:&lt/h2>
+        &ltbutton type="button" onclick="loadDoc3()">Get my CD collection&lt/button>
+        &ltp id="demo3">&lt/p>
+        &ltscript>
+        function loadDoc3() {
+          var xhttp, xmlDoc, txt, x, i;
+          /*All modern browsers support the XMLHttpRequest object.*/
+          xhttp = new XMLHttpRequest();
+          /*When using async=true, specify a function to execute 
+           * when the response is ready in the onreadystatechange event:*/
+          xhttp.onreadystatechange = function() {
+          if (this.readyState === 4 && this.status === 200) {
+            /*If the response from the server is XML, and you want to 
+             * parse it as an XML object, use the responseXML property:*/
+            xmlDoc = this.responseXML;
+            txt = "";
+            /*get an array of all artist nodes*/
+            x = xmlDoc.getElementsByTagName("ARTIST");
+            /*array of nodes to text string*/
+            for (i = 0; i &lt x.length; i++) {
+              txt = txt + x[i].childNodes[0].nodeValue + "&ltbr>";
+            }
+            /*write result into tag with id='demo'*/
+            document.getElementById("demo3").innerHTML = txt;
+            }
+          };
+          /*To send a request to a server, we use the open() and send() 
+           * methods of the XMLHttpRequest object:
+           * Request the file cd_catalog.xml*/
+          xhttp.open("GET", "../xml/cd_catalog.xml", true);
+          xhttp.send();
+        }
+        &lt/script>
+        &lt!--new example-->
+        &lth2>The onreadystatechange event&lt/h2>
+        &ltp>When a request to a server is sent, we want to perform 
+            some actions based on the response.&lt/p>
+        &ltp>The onreadystatechange event is triggered every time the 
+            readyState changes. The onreadystatechange event is 
+            triggered five times (0-4), one time for each change in 
+            readyState.&lt/p>
+        &ltp>The readyState property holds the status of the XMLHttpRequest.&lt/p>
+        &ltp>Three important properties of the XMLHttpRequest object:&lt/p>
+        &lttable> 
+          &lttbody>
+              &lttr>
+                &ltth style="width:20%">Property&lt/th>
+                &ltth>Description&lt/th>
+              &lt/tr>  
+              &lttr>
+                &lttd>onreadystatechange&lt/td>
+                &lttd>Stores a function (or the name of a function) to be 
+                    called automatically each time the readyState 
+                    property changes&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>readyState&lt/td>
+                &lttd>Holds the status of the XMLHttpRequest. Changes from 0 to 4: &ltbr>
+                    0: request not initialized &ltbr>
+                    1: server connection established&ltbr>
+                    2: request received &ltbr>
+                    3: processing request &ltbr>
+                    4: request finished and response is ready&lt/td>
+              &lt/tr>
+              &lttr>
+                &lttd>status&lt/td>
+                &lttd>200: "OK"&ltbr>
+                    404: Page not found&lt/td>
+              &lt/tr>
+            &lt/tbody>
+        &lt/table>
+        &lt!--new example-->
+        &lth2>Using a Callback Function&lt/h2>
+        &ltp>A callback function is a function passed as a parameter 
+            to another function.&lt/p>
+        &ltp>If you have more than one AJAX task on your website, 
+            you should create ONE standard function for creating 
+            the XMLHttpRequest object, and call this for each 
+            AJAX task.&lt/p>
+        &ltp>The function call should contain the URL and what to do 
+            on onreadystatechange (which is probably different for each call):&lt/p>
+        &lt!--new example-->
+        &ltp id="demo4">Let AJAX change this text.&lt/p>
+        &ltbutton type="button"
+        onclick="loadDoc4('../txt/sometext1.txt', myFunction4)">
+            Change Content
+        &lt/button>
+
+        &ltscript>
+        /*If you have more than one AJAX task on your website, 
+         * you should create ONE standard function for creating 
+         * the XMLHttpRequest object, and call this for each AJAX task. 
+         * The function call should contain the URL and what to do 
+         * on onreadystatechange (which is probably different 
+         * for each call):
+         * cfunc: variable for the callback function*/
+        function loadDoc4(url, cfunc) {
+          var xhttp;
+          xhttp=new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+              /*what to do on onreadystatechange (which is probably 
+               * different for each call)*/
+              cfunc(this);
+            }
+          };
+          xhttp.open("GET", url, true);
+          xhttp.send();
+        }
+        /*callback function: A callback function is a 
+         * function passed as a parameter 
+         * to another function.*/
+        function myFunction4(xhttp) {
+          document.getElementById("demo4").innerHTML = xhttp.responseText;
+        }
+        &lt/script>
+        &lt!--new example-->
+        &lth3>Start typing a name in the input field below:&lt/h3>
+        &ltform action=""> 
+            First name: &ltinput type="text" id="txt1" 
+                               onkeyup="showHint5(this.value)">
+        &lt/form>
+        &ltp>Suggestions: &ltspan id="txtHint5">&lt/span>&lt/p> 
+        &ltscript>
+        function showHint5(str) {
+          var xhttp;
+          /*if str is empty do nothing*/
+          if (str.length === 0) { 
+            document.getElementById("txtHint5").innerHTML = "";
+            return;
+          }
+          /*make the request to the server*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+              document.getElementById("txtHint5").innerHTML =
+                      this.responseText;
+            }
+          };
+          /*call get_hint.php 
+           * and pass parameter q
+           * with value of variable str
+           * to the file*/
+          xhttp.open("GET", "get_hint.php?q="+str, true);
+          xhttp.send();   
+        }
+        &lt/script>
+        &lt!--new example-->
+        &ltform action=""> 
+            &ltselect name="customers" onchange="showCustomer6(this.value)">
+                &ltoption value="">Select a customer:&lt/option>
+                &ltoption value="ALFKI">Alfreds Futterkiste&lt/option>
+                &ltoption value="NORTS ">North/South&lt/option>
+                &ltoption value="WOLZA">Wolski Zajazd&lt/option>
+            &lt/select>
+        &lt/form>
+        &ltbr>
+        &ltdiv id="txtHint6">Customer info will be listed here...&lt/div>
+        &ltscript>
+        function showCustomer6(str) {
+          var xhttp;    
+          if (str === "") {
+            document.getElementById("txtHint6").innerHTML = "";
+            return;
+          }
+          /*make the request to the server*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+              document.getElementById("txtHint6").innerHTML = 
+                      this.responseText;
+            }
+          };
+          /*call mysql_select.php 
+           * and pass parameter q
+           * with value of variable str
+           * to the file*/
+          xhttp.open("GET", "mysql_select.php?q="+str, true);
+          xhttp.send();
+        }
+        &lt/script>
+        &lt!--new example-->
+        &ltscript>
+        function showUser7(str) {
+          if (str==="") {
+            document.getElementById("txtHint7").innerHTML="";
+            return;
+          }
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else { // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange=function() {
+            if (this.readyState===4 && this.status===200) {
+              document.getElementById("txtHint7").innerHTML=this.responseText;
+            }
+          }
+          xmlhttp.open("GET","get_user.php?q="+str,true);
+          xmlhttp.send();
+        }
+        &lt/script>
+        &ltbr>
+        &ltform>
+            &ltselect name="users" onchange="showUser7(this.value)">
+                &ltoption value="">Select a person:&lt/option>
+                &ltoption value="1">Peter Griffin&lt/option>
+                &ltoption value="2">Lois Griffin&lt/option>
+                &ltoption value="3">Joseph Swanson&lt/option>
+                &ltoption value="4">Glenn Quagmire&lt/option>
+            &lt/select>
+        &lt/form>
+        &ltbr>
+        &ltdiv id="txtHint7">&ltb>Person info will be listed here.&lt/b>&lt/div>
+        &lt!--new example-->
+        &ltscript>
+        function showCD8(str) {
+          if (str==="") {
+            document.getElementById("txtHint8").innerHTML="";
+            return;
+          }
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else {  // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange=function() {
+            if (this.readyState===4 && this.status===200) {
+              document.getElementById("txtHint8").innerHTML=this.responseText;
+            }
+          }
+          xmlhttp.open("GET","get_cd.php?q="+str,true);
+          xmlhttp.send();
+        }
+        &lt/script>
+        &ltform>
+            Select a CD:
+            &ltselect name="cds" onchange="showCD8(this.value)">
+                &ltoption value="">Select a CD:&lt/option>
+                &ltoption value="Bob Dylan">Bob Dylan&lt/option>
+                &ltoption value="Bee Gees">Bee Gees&lt/option>
+                &ltoption value="Cat Stevens">Cat Stevens&lt/option>
+            &lt/select>
+        &lt/form>
+        &ltdiv id="txtHint8">&ltb>CD info will be listed here...&lt/b>&lt/div>
+        &lt!--new example-->
+        &ltscript>
+        function showResult9(str) {
+          if (str.length===0) {
+            document.getElementById("livesearch9").innerHTML="";
+            document.getElementById("livesearch9").style.border="0px";
+            return;
+          }
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else {  // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange=function() {
+            if (this.readyState===4 && this.status===200) {
+              document.getElementById("livesearch9").innerHTML=this.responseText;
+              document.getElementById("livesearch9").style.border="1px solid #A5ACB2";
+            }
+          }
+          xmlhttp.open("GET","livesearch.php?q="+str,true);
+          xmlhttp.send();
+        }
+        &lt/script>
+        &lt/head>
+        &ltbody>
+
+        &ltform>
+        &ltinput type="text" size="30" onkeyup="showResult9(this.value)">
+        &ltdiv id="livesearch9">&lt/div>
+        &lt/form>
+        &lt!--new example-->
+        &ltscript>
+        function showRSS10(str) {
+          if (str.length===0) {
+            document.getElementById("rssOutput10").innerHTML="";
+            return;
+          }
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else {  // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange=function() {
+            if (this.readyState===4 && this.status===200) {
+              document.getElementById("rssOutput10").innerHTML=
+                      this.responseText;
+            }
+          }
+          xmlhttp.open("GET","get_rss.php?q="+str,true);
+          xmlhttp.send();
+        }
+        &lt/script>
+        &ltform>
+        &ltselect onchange="showRSS10(this.value)">
+        &ltoption value="">Select an RSS-feed:&lt/option>
+        &ltoption value="Google">Google News&lt/option>
+        &ltoption value="NBC">NBC News&lt/option>
+        &lt/select>
+        &lt/form>
+        &ltbr>
+        &ltdiv id="rssOutput10">RSS-feed will be listed here...&lt/div>
+        &lt!--new example-->
+        &ltscript>
+        function getVote11(int) {
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else {  // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange=function() {
+            if (this.readyState===4 && this.status===200) {
+              document.getElementById("poll11").innerHTML=this.responseText;
+            }
+          }
+          xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+          xmlhttp.send();
+        }
+        &lt/script>
+        &ltdiv id="poll11">
+        &lth3>Do you like PHP and AJAX so far?&lt/h3>
+        &ltform>
+        Yes:
+        &ltinput type="radio" name="vote" value="0" 
+               onclick="getVote11(this.value)">
+        &ltbr>
+        No:
+        &ltinput type="radio" name="vote" value="1" 
+               onclick="getVote11(this.value)">
+        &lt/form>
+        &lt/div>
+        &lt!--new example-->
+        
+        
+              
         &lt!--get_hint.php--> 
         &lt!--used for 015.php--> 
         &lt?php
@@ -562,6 +1016,9 @@ and open the template in the editor.
         // Output "no suggestion" if no hint was found or output correct values
         echo $hint === "" ? "no suggestion" : $hint;
         ?> 
+        
+        
+        
         &lt!--get_cd.php-->
         &lt!--used for 015.php--> 
         &lt?php
@@ -593,6 +1050,8 @@ and open the template in the editor.
         }
         ?> 
 
+        
+        
         &lt!--cd_catalog.php-->
         &lt?xml version="1.0" encoding="ISO-8859-1"?>
         &ltCATALOG>
@@ -721,6 +1180,8 @@ and open the template in the editor.
         &lt/html>
 
 
+        
+        
         &lt!--livesearch.php-->
         &lt!--used for 015.php--> 
 
@@ -770,6 +1231,8 @@ and open the template in the editor.
         echo $response;
         ?> 
 
+        
+        
         &lt!--links.xml-->
         &lt?xml version="1.0" encoding="utf-8"?>
         &ltpages>

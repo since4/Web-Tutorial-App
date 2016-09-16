@@ -55,6 +55,395 @@ and open the template in the editor.
                 Click me to display Date and Time.&lt/button>
             &ltp id="demo">&lt/p>
         &lt/div>
+        
+        
+        &lt!--Whole Page-->
+        
+        &lt!DOCTYPE html>
+        &lt!--
+        To change this license header, choose License Headers in Project Properties.
+        To change this template file, choose Tools | Templates
+        and open the template in the editor.
+        -->
+        &lthtml>
+        &lthead>
+            &lttitle>TODO supply a title&lt/title>
+            &ltmeta charset="UTF-8">
+            &ltmeta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            &lt!--Header navigation-->
+            &ltdiv class="header_image">
+                &ltdiv class="header_navigation_V-2">
+                    &ltul> 
+                        &ltli id="prev" class="active">&lta href="./001.html">« Previous&lt/a>&lt/li>
+                        &ltli id="home" class="active">&lta href="../index.html">HOME&lt/a>&lt/li>
+                        &ltli id="next" class="active">&lta href="./002.html">Next »&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/div>
+
+            &lt!--External Stylesheets-->
+            &ltlink rel="stylesheet" type="text/css" href="../css/default.css">
+            &ltlink rel="stylesheet" type="text/css" href="../css/site-navigation.css">
+            &ltlink rel="stylesheet" type="text/css" href="../css/background-images.css">
+
+            &lt!--Internal Stylesheet-->
+
+        &lt/head>    
+        &ltbody>       
+            &ltdiv>
+                &lt!--Body content-->
+                &ltdiv class = "mainbody"> 
+                    &lth1>My First JavaScript&lt/h1>
+                    &ltdiv class = "interactive">
+                        &ltbutton type="button"
+                                onclick="document.getElementById('demo').innerHTML = Date()">
+                            Click me to display Date and Time.&lt/button>
+
+                        &ltp id="demo">&lt/p>
+                    &lt/div>
+                &lt/div>
+
+                &lt!--Code verbose-->
+                &ltdiv class="code">
+                &ltpre class="code_">
+                &ltcode class="language-html">
+                &lt!--Body content-->
+                &ltdiv>
+                    &lth1>My First JavaScript&lt/h1>
+                    &ltbutton type="button"
+                            onclick="document.getElementById('demo').innerHTML = Date()">
+                        Click me to display Date and Time.&lt/button>
+                    &ltp id="demo">&lt/p>
+                &lt/div>
+                &lt/code>
+                &lt/pre>
+                &lt/div>
+            &lt/div>
+
+            &lt!--Body picture-->
+            &ltdiv class="background_image">&lt/div>
+
+            &lt!--Footer navigation--> 
+            &ltdiv style="margin:15px 40px 15px 40px">
+                &ltdiv class="footer_navigation_V-2">
+                    &ltul> 
+                        &ltli id="prev" class="active">&lta href="./001.html">« Previous&lt/a>&lt/li>
+                        &ltli id="home" class="active">&lta href="../index.html">HOME&lt/a>&lt/li>
+                        &ltli id="next" class="active">&lta href="./002.html">Next »&lt/a>&lt/li>
+                    &lt/ul>
+                &lt/div>
+            &lt/div>
+        &lt/body>
+        &lt/html>
+        &lt!--Whole Page-->
+        
+        &lt!--Style Sheet:default -->
+        /*whatever this is: it's sometimes important*/
+        * {
+            box-sizing: border-box;
+        }
+
+        /*html tags*/
+        body {
+            margin: 0;
+            background-color: lightcyan;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+
+        /*classes*/
+        div.mainbody {
+            /*Die Syntax für Außenabstände (oben, rechts, unten, links):*/
+            margin: 15px 40px 15px 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;    
+            background-color: lightblue;
+            /*border:red solid thick;*/
+        }
+        div.mainbody div.interactive {
+            /*center a div box of fixed width*/
+            margin: 0px auto;
+            width: 95%;    
+            padding-top: 20px;
+            padding-right:60px;
+            padding-bottom: 20px;
+            padding-left:60px;   
+            border: 3px solid  grey;
+        }
+        div.code {
+            /*Die Syntax für Außenabstände (oben, rechts, unten, links):*/
+            margin: 15px 40px 15px 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: lightsalmon;
+            /*border:blue solid thick;*/
+        }
+        div.code pre.code_ {
+            /*center a div box of fixed width in percent*/
+            margin: 0px auto;
+            width: 95%;    
+            padding-top: 20px;
+            padding-right:20px;
+            padding-bottom: 20px;
+            padding-left:0px;   
+            border: 3px solid #73AD21;
+            /*responsible for the scrollbar*/
+            overflow:auto
+        }
+        div.code pre.code_ code.codespan {      
+            font-family: Consolas,"courier new";
+            font-size: 110%;
+            line-height: 1.5;
+            color: crimson;
+        }
+
+        /*Word wrap for small screen or high zoom*/
+        @media screen and (max-width: 760px){    
+            div.code pre.code_ {
+                white-space: pre-wrap;
+                white-space: pre-line;
+                white-space: -moz-pre-wrap;
+                word-break:break-all;
+                word-wrap: break-word;
+            }                  
+        } 
+        
+        &lt!--Style Sheet:site-navigation -->
+        /*Header navigation V-1*/
+        div.header_navigation_V-1 {
+            text-align: center;
+        }
+        div.header_navigation_V-1 ul {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            /* For IE, the outcast */
+            zoom:1;
+            *display: inline;
+        }
+        div.header_navigation_V-1 p {
+            float: left;
+            padding: 2px 35px;
+            border: 1px solid black;
+        }
+        /*
+        &lt!--Header navigation-->
+            &ltdiv class="header_navigation_V-1">
+                &ltul> 
+                    &ltp>&lta href="./042.html">Previous&lt/a>&lt/p>
+                    &ltp>&lta href="../index.html">HOME&lt/a>&lt/p>
+                    &ltp>&lta href="./044.html">Next&lt/a>&lt/p>
+                &lt/ul>
+            &lt/div>
+        */
+
+        /*Header Navigation V-2*/
+        div.header_navigation_V-2{    
+            margin: 0px auto; /*15px 40px 15px 40px;*/
+            position: static; /*static (default), fixed, relative, absolute*/
+            background-color: darkslategrey; 
+            /*border: brown  solid thick; /*debugging*/
+        }
+        div.header_navigation_V-2 ul {
+            width:450px;        
+            margin: auto;
+            padding: 0;
+            overflow: hidden;          
+            position: static;
+            text-align: center;
+            list-style-type: none; /*remove the bullets*/
+            /*border: blue  solid thick; /*debugging*/
+        }
+        div.header_navigation_V-2 ul li {
+            float: left;
+            width:150px;
+            border-right: aliceblue solid thin;
+            border-left: aliceblue solid thin;
+            /*border: green  solid thick; /*debugging*/    
+        }
+        div.header_navigation_V-2 ul #prev, #next {
+            background-color: red;
+        }
+        div.header_navigation_V-2 ul #home {
+            background-color: green;
+        }
+        div.header_navigation_V-2 ul li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            /*border: white  solid thick;/*debugging*/  
+        }
+        div.header_navigation_V-2 ul li a:hover {
+            color:black;
+        }
+        /*
+        &lt!--Header navigation-->
+            &ltdiv class="header_navigation_V-2">
+                &ltul> 
+                    &ltli id="prev" class="active">&lta href="./043.html">« Previous&lt/a>&lt/li>
+                    &ltli id="home" class="active">&lta href="../index.html">HOME&lt/a>&lt/li>
+                    &ltli id="next" class="active">&lta href="./045.html">Next »&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+        */
+
+        /*Footer navigation V-1*/
+        div.footer_navigation_V-1, div.links {
+            font-size: 20px;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            width: auto;
+        }
+        div.footer_navigation_V-1 div.prev {
+            float: left;
+            overflow: hidden;
+            text-align: left;
+            white-space: nowrap;
+            width: 22%;
+            padding-left:30px;
+            padding-bottom:20px;
+            padding-top:20px;
+        }
+        div.footer_navigation_V-1 div.home {
+            float: left;
+            margin-left: 3%;
+            overflow: hidden;
+            text-align: center;
+            white-space: nowrap;
+            width: 46%;
+            padding-bottom:20px;
+            padding-top:20px;
+        }
+        div.footer_navigation_V-1 div.next {
+            float: right;
+            overflow: hidden;
+            text-align: right;
+            white-space: nowrap;
+            width: 28%;
+            padding-right:30px;
+            padding-bottom:20px;
+            padding-top:20px;
+        }
+        /*
+        &lt!--Body navigation-->  
+            &ltdiv class="footer_navigation_V-1" style="visibility: visible;">
+                &ltdiv class="prev">
+                    &lta href="./042.html" class="links" style="visibility: visible;">« Previous&lt/a>
+                &lt/div>
+                &ltdiv style="float:left;" class="home">
+                    &lta href="../index.html" class="links" style="visibility: visible;">HOME&lt/a>
+                &lt/div>
+                &ltdiv class="next">
+                    &lta href="./044.html" class="links" style="visibility: visible;">Next »&lt/a>
+                &lt/div>
+            &lt/div>
+        */
+
+        /*Footer Navigation V-2*/
+        div.footer_navigation_V-2{    
+            margin: 0px auto; /*15px 40px 15px 40px;*/
+            position: static; /*static (default), fixed, relative, absolute*/
+            text-align: center;
+            background-color: darkslategrey; 
+            /*border: brown  solid thick; /*debugging*/
+        }
+        div.footer_navigation_V-2 ul {
+            width: 450px;/*100% OR 450px;*/
+            height:  border-box;
+            margin: 0px auto;
+            padding: 0;
+            overflow: auto;          
+            position: static;
+            text-align: center;
+            list-style-type: none; /*remove the bullet points*/
+            /*border: blue  solid thick;/*debugging*/
+        }
+        div.footer_navigation_V-2 ul li {
+            float: left;
+            margin: 0px auto;
+            width: 150px;
+            border-right: aliceblue solid thin;
+            border-left: aliceblue solid thin;
+            /*border: green  solid thick;/*debugging*/  
+        }
+        div.footer_navigation_V-2 ul li a {
+            display: inline-block; /*makes box look bigger*/
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            /*border: white  solid thick;/*debugging*/  
+        }
+        div.footer_navigation_V-2 ul li a:hover {
+            color:black;
+        }
+        div.footer_navigation_V-2 ul #prev, #next {
+            background-color: red;
+        }
+        div.footer_navigation_V-2 ul #prev {
+            background-color: red;
+        }
+        div.footer_navigation_V-2 ul #home {
+            background-color: green;
+        }
+        /*
+        &lt!--Footer navigation-->  
+            &ltdiv class="header_navigation_V-2">
+                &ltul> 
+                    &ltli id="prev" class="active">&lta href="./043.html">« Previous&lt/a>&lt/li>
+                    &ltli id="home" class="active">&lta href="../index.html">HOME&lt/a>&lt/li>
+                    &ltli id="next" class="active">&lta href="./045.html">Next »&lt/a>&lt/li>
+                &lt/ul>
+            &lt/div>
+        */
+
+        /*Header and footer navigation for small screen or high zoom*/
+        @media screen and (max-width: 540px){
+            div.header_navigation_V-2 {background: rgba(0, 0, 0, 0)}
+            div.header_navigation_V-2 ul {width:150px;}       
+            div.header_navigation_V-2 ul li {float: top;}
+            div.footer_navigation_V-2 {background: rgba(0, 0, 0, 0)}
+            div.footer_navigation_V-2 ul {width:150px;}       
+            div.footer_navigation_V-2 ul li {float: top;}                  
+        } 
+               
+        &lt!--Style Sheet:background-images -->
+        .header_image {
+            margin: 15px 40px 15px 40px;    
+            padding-top: 20px;
+            padding-bottom: 2px;
+            height: 230px;
+            background-image: url("./images/Caumasee.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /*100% OR to crop: "cover"*/
+            /*border: darkorange  solid thick;/*debugging*/
+
+        }
+        .background_image {
+            margin: 15px 40px 15px 40px;
+            height: 200px;  
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background-image: url("./images/Küste.jpg");
+            background-repeat: no-repeat;
+            background-position: center;    
+            background-size:100%; /*100% OR to crop: "cover"*/
+            background-attachment: fixed;   
+        }
+               
         </code>
         </pre>
         </div>

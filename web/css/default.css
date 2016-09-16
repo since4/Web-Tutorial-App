@@ -50,6 +50,11 @@ div.mainbody div.interactive {
     padding-left:60px;   
     border: 3px solid  grey;
 }
+div.mainbody div.interactive div.container div.row div {
+    /*responsible for the scrollbar*/
+    /*BUT: may kill dropdowns*/
+    overflow: auto;
+}
 div.code {
     /*Die Syntax für Außenabstände (oben, rechts, unten, links):*/
     margin: 15px 40px 15px 40px;
@@ -67,14 +72,15 @@ div.code pre.code_ {
     padding-bottom: 20px;
     padding-left:0px;   
     border: 3px solid #73AD21; 
+    /*responsible for the scrollbar*/
+    overflow: auto;
 }
-div.code pre.code_ code.codespan {      
+div.code pre.code_ code.language-html {      
     font-family: Consolas,"courier new";
     font-size: 110%;
     line-height: 1.5;
     color: crimson;
 }
-
 /*Word wrap for small screen or high zoom*/
 @media screen and (max-width: 760px){    
     div.code pre.code_ {
@@ -84,8 +90,4 @@ div.code pre.code_ code.codespan {
         word-break:break-all;
         word-wrap: break-word;
     }                  
-} 
-
-
-
-
+}

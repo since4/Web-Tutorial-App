@@ -150,7 +150,7 @@ and open the template in the editor.
         &lt!--upload.php-->
         &lt!--used for 010.php-->
         &lt?php
-        #upload directory relative to his file
+        #upload directory relative to this file
         $target_dir = "uploads/";
         #get filename (incl. extension) to upload
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
